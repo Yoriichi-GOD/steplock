@@ -133,11 +133,16 @@ class Detector:
             cv2.putText(out, name.replace("_SLOT", ""), tuple(p[0]+[4, 17]), cv2.FONT_HERSHEY_SIMPLEX, .38, (100, 145, 80), 1, cv2.LINE_AA)
         for ob in record.observations:
             p = np.int32(ob.corners)
-            color = (120, 230, 170) if ob.part_id != "UNKNOWN" and ob.zone_id else (100, 130, 255)
+            expected=next((s.zone for s in self.recipe.steps if s.part==ob.part_id),None)
+            color = (120, 230, 170) if expected is not None and ob.zone_id==expected else (100, 130, 255)
             cv2.polylines(out, [p], True, color, 2, cv2.LINE_AA)
             label = f"{ob.marker_id} {ob.part_id} / {ob.zone_id or 'OUTSIDE'}"
             cv2.putText(out, label, (max(0,int(p[0,0])-10), max(20,int(p[0,1])-10)), cv2.FONT_HERSHEY_SIMPLEX, .4, color, 1, cv2.LINE_AA)
         if record.quality_flags:
             cv2.rectangle(out, (0, out.shape[0]-34), (out.shape[1], out.shape[0]), (25, 25, 60), -1)
-            cv2.putText(out, "HOLD: " + ", ".join(record.quality_flags), (12, out.shape[0]-12), cv2.FONT_HERSHEY_SIMPLEX, .48, (170, 200, 255), 1, cv2.LINE_AA)
+            # This image describes perception, not the procedure verdict. A near
+            # repeat adds no support while earlier proof may still be fresh.
+            flags=[f for f in record.quality_flags if f!="NEAR_DUPLICATE_FRAME"]
+            label="FRAME QUALITY: " + ", ".join(flags) if flags else "NO NEW TEMPORAL SUPPORT / NEAR-REPEATED IMAGE"
+            cv2.putText(out, label, (12, out.shape[0]-12), cv2.FONT_HERSHEY_SIMPLEX, .45, (170, 200, 255), 1, cv2.LINE_AA)
         return out

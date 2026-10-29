@@ -1,0 +1,25 @@
+{
+  "source": "assembly101-mistake-detection",
+  "source_url": "https://codeload.github.com/assembly-101/assembly101-mistake-detection/zip/6f3a953267ffb86cdeabf6751af05a75a011a4f8",
+  "source_commit": "6f3a953267ffb86cdeabf6751af05a75a011a4f8",
+  "archive_sha256": "7b741c2122fdafa47aa77f18f129dd5773cf1735e3fc0d1898e728c7a8bd1b54",
+  "download_bytes": 195207,
+  "license": "CC BY-NC 4.0",
+  "attribution": "Sener et al., Assembly101 (CVPR 2022); Ding et al., Every Mistake Counts in Assembly (2023)",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "acquired_at": "2026-10-29T06:27:20.987530+00:00",
+  "sequence_csv_count": 328,
+  "annotation_rows": 3964,
+  "labels": {
+    "correct": 2927,
+    "mistake": 707,
+    "correction": 330
+  },
+  "visual_benchmark": "NOT_RUN",
+  "action_annotation_benchmark": "NOT_RUN \u2014 no defensible mapping from toy actions to the four tagged placement recipe",
+  "raw_video_downloaded": false,
+  "redistribution": "Raw annotations remain local under ignored data/; inventory contains counts and hashes only",
+  "parser": "headerless seven-column CSV; first annotation retained; boundary units not assumed",
+  "inventory_corrected_at": "2026-10-29T06:30:23.733111+00:00",
+  "prior_inventory_status": "Original used DictReader and treated first data row as header; retained for audit, superseded by this inventory"
+}

@@ -1,0 +1,326 @@
+{
+  "created_at": "2026-10-29T06:32:39.049230+00:00",
+  "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+  "source_kind": "SYNTHETIC_FIXTURE",
+  "real_staged_data": "NOT_PROVIDED",
+  "cases": [
+    {
+      "case": "clean",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "abf61e9286aa5d79145822dcfe5192a905ef4e84b59835021e9ca0880fa8832f",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "Supported PASS or conservative HOLD",
+      "status": "PASS",
+      "safe_gate_passed": true,
+      "reason_codes": [],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "light_minus25",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "0095d4864bea4402527e6ec046ed31181b419b864d3e91b567a62d5ddbd03187",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "Supported PASS or conservative HOLD",
+      "status": "PASS",
+      "safe_gate_passed": true,
+      "reason_codes": [],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "light_minus50",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "6d2859bbf7d6f66db9fb938727753ca5983f514dad2dc09ecdf8b5e46f0dd170",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "Supported PASS or conservative HOLD",
+      "status": "PASS",
+      "safe_gate_passed": true,
+      "reason_codes": [],
+      "perception_flags": {
+        "LOW_FOCUS": 11
+      },
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "severe_blur",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "01e5b3d7a222e484b3c456bf5b1f365041dcb80c04590e2a6d36e1c914c5ef68",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 0,
+      "expected": "HOLD / abstain",
+      "status": "CALIBRATION_REQUIRED",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "CALIBRATION_REQUIRED",
+        "LOW_FOCUS"
+      ],
+      "perception_flags": {
+        "CALIBRATION_REQUIRED": 30,
+        "LOW_FOCUS": 30,
+        "NEAR_DUPLICATE_FRAME": 1
+      },
+      "confirmed_steps": []
+    },
+    {
+      "case": "occlusion",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "2aad4c7f8e1f0f933cc4ca76607caf7f8d07872898b28a055a9ac9863d7736f7",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "CONFIRMED_COMPONENT_NOT_CURRENTLY_VISIBLE"
+      ],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "repeated_pixels",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "ab4b70335dd1cd84c0f59d462c59acada051858c77f9aff3937fdf8d2b530876",
+      "frames_analyzed": 12,
+      "calibration_valid_frames": 12,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "DUPLICATE_FRAME",
+        "HISTORY_GAP_RESTART_REQUIRED",
+        "INDEPENDENT_SUPPORT_STALE"
+      ],
+      "perception_flags": {
+        "NEAR_DUPLICATE_FRAME": 11
+      },
+      "confirmed_steps": []
+    },
+    {
+      "case": "drop30",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "78e275373b34f187e9096acd19f0272f4d08b1418249265044b98cc4aaa05e5b",
+      "frames_analyzed": 21,
+      "calibration_valid_frames": 21,
+      "expected": "Supported PASS or conservative HOLD",
+      "status": "PASS",
+      "safe_gate_passed": true,
+      "reason_codes": [],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "extreme_tilt",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "9e6a8f5792214bca8279c9316dab5ee47c7ac16f9d714cfa26c5f062197c253f",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 0,
+      "expected": "HOLD / abstain",
+      "status": "CALIBRATION_REQUIRED",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "CALIBRATION_REQUIRED",
+        "MARKER_TOO_SMALL"
+      ],
+      "perception_flags": {
+        "CALIBRATION_REQUIRED": 30,
+        "NEAR_DUPLICATE_FRAME": 1,
+        "MARKER_TOO_SMALL": 17
+      },
+      "confirmed_steps": []
+    },
+    {
+      "case": "wrong_dictionary",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "b44784b5ffba0cd6f9e2b2abd95b7abe818a54531f46d1992ba119b62bfe58e7",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 0,
+      "expected": "HOLD / abstain",
+      "status": "CALIBRATION_REQUIRED",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "CALIBRATION_REQUIRED",
+        "DUPLICATE_FRAME"
+      ],
+      "perception_flags": {
+        "CALIBRATION_REQUIRED": 30,
+        "NEAR_DUPLICATE_FRAME": 25
+      },
+      "confirmed_steps": []
+    },
+    {
+      "case": "midassembly",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "ce76ead8bd2386f4f043c574c9267a97a27149a9c225baa237e448f8d655765c",
+      "frames_analyzed": 12,
+      "calibration_valid_frames": 12,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "HOLD_UNCERTAIN",
+        "MISSING_AT_CHECKPOINT"
+      ],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1"
+      ]
+    },
+    {
+      "case": "backwards_time",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "abf61e9286aa5d79145822dcfe5192a905ef4e84b59835021e9ca0880fa8832f",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "HISTORY_GAP_RESTART_REQUIRED",
+        "INDEPENDENT_SUPPORT_STALE"
+      ],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "case": "anchors_lost",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "2c262cdfd342dd74ac3edf8e12da2a87519cc5fbf24623f5b5f2123f2316b557",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 26,
+      "expected": "HOLD / abstain",
+      "status": "CALIBRATION_REQUIRED",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "CALIBRATION_REQUIRED"
+      ],
+      "perception_flags": {
+        "CALIBRATION_REQUIRED": 4
+      },
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "case": "unknown_tag",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "30c38f954c424eaf8dfbb323ff6eeedc2cb8fcabebe98e47e7cd97186b61cdc2",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "UNKNOWN_COMPONENT"
+      ],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1"
+      ]
+    },
+    {
+      "case": "source_gap",
+      "seed": 902626,
+      "source_kind": "SYNTHETIC_FIXTURE",
+      "source_hash_kind": "CONCATENATED_DECODED_PNG_STREAM",
+      "source_sha256": "abf61e9286aa5d79145822dcfe5192a905ef4e84b59835021e9ca0880fa8832f",
+      "frames_analyzed": 30,
+      "calibration_valid_frames": 30,
+      "expected": "HOLD / abstain",
+      "status": "HOLD_FOR_REVIEW",
+      "safe_gate_passed": true,
+      "reason_codes": [
+        "MISSING_AT_CHECKPOINT",
+        "HISTORY_GAP_RESTART_REQUIRED",
+        "INDEPENDENT_SUPPORT_STALE"
+      ],
+      "perception_flags": {},
+      "confirmed_steps": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    }
+  ],
+  "safe_gates_passed": 14,
+  "case_count": 14,
+  "vision_p50_ms": 18.42209999449551,
+  "vision_p95_ms": 28.93445995869115,
+  "unknown_tag_rejection": {
+    "correct": 30,
+    "opportunities": 30,
+    "rate": 1.0
+  },
+  "limits": [
+    "Designed synthetic safety checks, not an independent accuracy benchmark.",
+    "Light/drop cases permit abstention; a passing safety gate does not mean successful procedure completion.",
+    "No physical capture, hand recognition or uniform-occluder guarantee."
+  ]
+}

@@ -16,7 +16,7 @@ from scripts.fixture_lib import render_board
 
 @pytest.fixture
 def client(tmp_path):
-    with TestClient(create_app(runtime_root=tmp_path)) as client:
+    with TestClient(create_app(runtime_root=tmp_path),base_url="http://127.0.0.1") as client:
         yield client
 
 
@@ -33,6 +33,9 @@ def test_safe_request_errors_and_explicit_consent(client):
     assert client.post("/api/sessions",json={"source_kind":"LIVE_TAGGED"}).status_code==400
     assert client.post("/api/sessions",json={"source_kind":"REPLAY_TAGGED","example_id":"normal"}).status_code==400
     assert client.get("/api/health",headers={"Origin":"https://evil.example"}).status_code==403
+    assert client.get("/api/health",headers={"Host":"evil.example"}).status_code==400
+    duplicate=client.post("/api/recipes",content='{"recipe_id":"one","recipe_id":"two"}',headers={"Content-Type":"application/json"})
+    assert duplicate.status_code==422 and "Duplicate recipe key" in duplicate.json()["detail"]
 
 
 def test_isolation_tokens_and_empty_checkpoint(client):

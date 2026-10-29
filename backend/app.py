@@ -13,6 +13,7 @@ from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel, ConfigDict, Field
 from steplock.config import ROOT, RUNTIME, MAX_UPLOAD, MAX_SECONDS
 from steplock.evidence.report import html_report
@@ -75,6 +76,7 @@ def create_app(runtime_root=None):
     app=FastAPI(title="STEPLOCK",version="1.0.0",lifespan=lifespan)
     app.state.manager=manager
     app.state.recipes=recipes
+    app.add_middleware(TrustedHostMiddleware,allowed_hosts=["127.0.0.1","localhost"])
     allowed=[origin for origin in os.environ.get("STEPLOCK_ALLOWED_ORIGINS","").split(",") if origin]
     app.add_middleware(CORSMiddleware,allow_origins=allowed,allow_credentials=False,
                        allow_methods=["GET","POST","PUT","DELETE"],allow_headers=["Authorization","Content-Type"])
@@ -84,6 +86,17 @@ def create_app(runtime_root=None):
         origin=request.headers.get("origin")
         if origin and origin.rstrip("/")!=str(request.base_url).rstrip("/") and origin not in allowed:
             return JSONResponse({"detail":"This local application accepts only its configured browser origin."},status_code=403)
+        if request.method=="POST" and request.url.path=="/api/recipes":
+            raw=await request.body()
+            if len(raw)>65536: return JSONResponse({"detail":"Recipe exceeds the 64 KiB limit"},status_code=413)
+            def unique_keys(pairs):
+                result={}
+                for key,value in pairs:
+                    if key in result: raise ValueError(f"Duplicate recipe key: {key}")
+                    result[key]=value
+                return result
+            try: json.loads(raw,object_pairs_hook=unique_keys)
+            except ValueError as exc: return JSONResponse({"detail":str(exc)},status_code=422)
         response=await call_next(request)
         response.headers["X-Content-Type-Options"]="nosniff"
         response.headers["Referrer-Policy"]="no-referrer"

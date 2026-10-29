@@ -144,7 +144,8 @@ class ProcedureEngine:
             if pair in pairs:
                 continue
             replacement = any(p[1] == pair[1] and self._stable(self.tracks.get(p)) for p in pairs)
-            clear = pair[1] in frame.clear_empty_zones or replacement
+            moved = any(p[0] == pair[0] and p != pair and self._stable(self.tracks.get(p)) for p in pairs)
+            clear = pair[1] in frame.clear_empty_zones or replacement or moved
             if clear:
                 absence = self._push(self.absences, pair, frame)
                 if self._stable(absence):
@@ -212,7 +213,7 @@ class ProcedureEngine:
         self._emit("PLACEMENT_REMOVED", f"Supported visible removal/replacement of {pair[0]} from {pair[1]}.", pair=pair, support=support)
         self.checkpointed = False
         step = self.by_part.get(pair[0])
-        if step and step.id in self.confirmed:
+        if step and pair == (step.part,step.zone) and step.id in self.confirmed:
             del self.confirmed[step.id]
             affected = {step.id}
             for _ in self.recipe.steps:

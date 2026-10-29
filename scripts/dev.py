@@ -1,5 +1,6 @@
 """One-command local setup/launch. Reserves a free loopback socket without a port race."""
 import argparse
+import hashlib
 import os
 from pathlib import Path
 import socket
@@ -29,7 +30,11 @@ def main():
     if args.setup:
         subprocess.run([sys.executable,"-m","pip","install","--disable-pip-version-check","-r","backend/requirements.lock.txt"],check=True)
         npm="npm.cmd" if os.name=="nt" else "npm"
-        if not (ROOT/"frontend/node_modules").exists(): subprocess.run([npm,"ci","--no-audit","--no-fund"],cwd=ROOT/"frontend",check=True)
+        lock_hash=hashlib.sha256((ROOT/"frontend/package-lock.json").read_bytes()).hexdigest()
+        stamp=ROOT/"frontend/node_modules/.steplock-lock"
+        if not stamp.exists() or stamp.read_text(encoding="utf-8")!=lock_hash:
+            subprocess.run([npm,"ci","--no-audit","--no-fund"],cwd=ROOT/"frontend",check=True)
+            stamp.write_text(lock_hash,encoding="utf-8")
         subprocess.run([npm,"run","build"],cwd=ROOT/"frontend",check=True)
     if not (ROOT/"frontend/dist/index.html").exists(): parser.error("Frontend build missing. Run with --setup, or npm run build in frontend")
     sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/"backend"))
@@ -40,7 +45,7 @@ def main():
         listener.bind((args.host,args.port));listener.listen(128)
         actual=listener.getsockname()[1]
         print(f"\nSTEPLOCK Studio: http://127.0.0.1:{actual}\nAPI health: http://127.0.0.1:{actual}/api/health\nLoopback only. No camera starts automatically. Ctrl+C stops this server.\n",flush=True)
-        uvicorn.Server(uvicorn.Config(app,host=args.host,port=actual,log_level="info")).run(sockets=[listener])
+        uvicorn.Server(uvicorn.Config(app,host=args.host,port=actual,log_level="info",access_log=False)).run(sockets=[listener])
     finally: listener.close()
     return 0
 

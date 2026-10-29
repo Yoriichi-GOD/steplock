@@ -19,17 +19,17 @@ def test_development_regression_missed_spacer_is_decoded():
 
 
 def test_saved_recipe_versions_survive_restart(tmp_path):
-    with TestClient(create_app(runtime_root=tmp_path)) as client:
+    with TestClient(create_app(runtime_root=tmp_path),base_url="http://127.0.0.1") as client:
         recipe=client.get("/api/recipes").json()[0]
         recipe.pop("key");recipe.pop("sha256");recipe["version"]=2
         saved=client.post("/api/recipes",json=recipe).json()
-    with TestClient(create_app(runtime_root=tmp_path)) as client:
+    with TestClient(create_app(runtime_root=tmp_path),base_url="http://127.0.0.1") as client:
         versions=client.get("/api/recipes").json()
         assert any(r["sha256"]==saved["sha256"] for r in versions)
 
 
 def test_recorded_camera_requires_consent(tmp_path):
-    with TestClient(create_app(runtime_root=tmp_path)) as client:
+    with TestClient(create_app(runtime_root=tmp_path),base_url="http://127.0.0.1") as client:
         assert client.post("/api/sessions",json={"source_kind":"REPLAY_TAGGED"}).status_code==400
 
 
