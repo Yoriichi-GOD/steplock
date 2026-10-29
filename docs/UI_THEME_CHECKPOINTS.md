@@ -16,17 +16,26 @@ Validation: 16/16 frontend tests; production and non-root-base builds passed;
 12 functional source files and App action/state code preserved. Browser theme
 QA is BLOCKED by disabled local browser access; no screenshot is fabricated.
 
-Commit, push timestamp, elapsed time and remote SHA verification will be recorded
-after the actual Git operation. This line is not a claim that a push occurred.
-
-Publication attempt: automatic approval review rejected the requested direct
+The initial publication attempt: automatic approval review rejected the requested direct
 commit/push to `main` because the human request did not clearly authorize that
-publication path. The rejected command was not executed: no theme commit or push
-was made. The reviewed theme changes remain available locally. Core commit
-`4e94ba5` is preserved; approval to publish the theme checkpoint is pending.
+publication path. That rejected command was not executed.
 
 The user subsequently explicitly approved: **Approve main checkpoint**.
 The canonical copy passed the same 16 tests and production build. Existing
 `http://127.0.0.1:63847` serves the themed index/CSS and all eight source-matched
-assets; no server/port replacement was required. Actual Git receipt follows
-after the now-approved publication runs.
+assets; no server/port replacement was required.
+
+| Receipt | Actual value |
+| --- | --- |
+| Theme commit | `f5e685e6d616ea714c8868a9d22b56cf2dce67c8` |
+| Commit timestamp | 2026-10-29 12:49:51 IST (+05:30) |
+| Push | Successful: `4e94ba5..f5e685e main -> main` |
+| Remote verification | 2026-10-29 12:50:01 IST; `git ls-remote origin refs/heads/main` matched the full local SHA |
+| Elapsed since audit capture | 19 minutes 8 seconds at remote verification |
+| Changed scope | Exact 19-file allowlist: selected art, theme/brand markup, focused tests, provenance docs, scoped byte-preservation attributes |
+| Tests | 16/16 passed; canonical and staging production builds passed; subpath build passed |
+| Browser gate | Still BLOCKED by disabled local browser access; no final theme screenshot claimed |
+
+This receipt is added by a documentation-only follow-up commit. Its own resulting
+SHA is reported in the chat/Git history rather than inventing a self-referential
+commit ID in this file.
