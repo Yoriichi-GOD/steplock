@@ -1,5 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
+  "near_duplicate_gate": {"signature":"gray gaussian5 resize240x150 vs last accepted image","mean_difference_below":0.15,"fraction_difference_gt8_below":0.0003,"both_conditions_required":true},
+  "temporal_ablation": "single_frame bypasses temporal duplicate flags; stable_only and steplock enforce them; visual exposure, focus and calibration gates are shared",
+  "near_duplicate_semantics": "adds no support; does not clear prior evidence; prior support expires after 1800ms; exact repeated bytes HOLD immediately",
   "detector_settings": {"adaptiveThreshWinSizeMax":45,"adaptiveThreshWinSizeStep":4,"cornerRefinementMethod":"CORNER_REFINE_SUBPIX"},
   "tuning_source": "development split only; first run 20261029_055525_293456_dev retained",
   "frozen_before_scored_run": true,

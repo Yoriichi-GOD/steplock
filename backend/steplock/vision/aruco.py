@@ -25,6 +25,7 @@ class Detector:
         parameters.adaptiveThreshWinSizeStep = 4
         self.detector = cv2.aruco.ArucoDetector(dictionary, parameters)
         self.parts = {p.aruco_marker_id: name for name, p in recipe.parts.items()}
+        self.previous_signature = None
 
     def analyze(self, frame, frame_index, timestamp_ms, source_kind, source_hash, manual_points=None):
         started = time.perf_counter()
@@ -37,10 +38,22 @@ class Detector:
         digest = hashlib.sha256(encoded).hexdigest()
         fid = f"f{frame_index:06d}-{digest[:10]}"
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        signature=cv2.resize(cv2.GaussianBlur(gray,(5,5),0),(240,150),interpolation=cv2.INTER_AREA)
+        change_mean,change_fraction=None,None
+        if self.previous_signature is not None:
+            difference=cv2.absdiff(signature,self.previous_signature)
+            change_mean=float(difference.mean())
+            change_fraction=float(np.mean(difference>8))
         focus = float(cv2.Laplacian(gray, cv2.CV_64F).var())
         mean = float(gray.mean())
         saturation = float(np.mean(gray > 252))
         flags = []
+        # Dev MJPEG freeze clips changed decoded bytes without meaningful image
+        # variation. Compare to the last independent image, not the last copy.
+        if change_mean is not None and change_mean<.15 and change_fraction<.0003:
+            flags.append("NEAR_DUPLICATE_FRAME")
+        else:
+            self.previous_signature=signature
         if focus < self.recipe.minimum_focus_variance:
             flags.append("LOW_FOCUS")
         if mean < 45 or mean > 250:
@@ -102,11 +115,13 @@ class Detector:
             empty = []
         record = FrameObservation(frame_id=fid, frame_index=frame_index, captured_at_ms=timestamp_ms,
             source_kind=source_kind, source_sha256=source_hash, frame_sha256=digest,
-            width=w, height=h, cv_version=cv2.__version__, usable=not flags,
+            width=w, height=h, cv_version=cv2.__version__, usable=not [f for f in flags if f!="NEAR_DUPLICATE_FRAME"],
             quality_flags=sorted(set(flags)), calibration_id=cid, calibration_points=points,
             calibration_mode=mode, focus_variance=round(focus, 2), mean_luminance=round(mean, 2),
             saturated_fraction=round(saturation, 4), observations=observations,
             clear_empty_zones=empty, zones_pixels=zone_pixels, marker_ids=sorted(ids),
+            frame_change_mean=change_mean,frame_change_fraction=change_fraction,
+            independent_visual_support="NEAR_DUPLICATE_FRAME" not in flags,
             rejected_candidates=len(rejected), vision_ms=(time.perf_counter()-started)*1000)
         return record, encoded, self.overlay(frame, record)
 

@@ -41,4 +41,7 @@ class FrameObservation(BaseModel):
     zones_pixels: dict[str, list[list[float]]]
     marker_ids: list[int]
     rejected_candidates: int
+    frame_change_mean: float | None = None
+    frame_change_fraction: float | None = None
+    independent_visual_support: bool = True
     vision_ms: float = Field(ge=0)

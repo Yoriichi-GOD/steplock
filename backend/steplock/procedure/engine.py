@@ -29,6 +29,7 @@ class ProcedureEngine:
         self.seen = OrderedDict()
         self.frame = None
         self.last_ms = None
+        self.last_independent_ms = None
         self.quality_flags = ["AWAITING_SOURCE"]
         self.history_broken = False
         self.checkpointed = False
@@ -95,6 +96,13 @@ class ProcedureEngine:
     def consume(self, frame):
         self.frame = frame
         flags = list(frame.quality_flags)
+        near_repeat="NEAR_DUPLICATE_FRAME" in flags
+        # The naive ablation deliberately has no temporal duplicate guard.
+        # Every arm still receives the exact same decoded image and detections.
+        flags=[f for f in flags if f!="NEAR_DUPLICATE_FRAME"]
+        if self.arm!="single_frame" and self.last_independent_ms is not None and frame.captured_at_ms-self.last_independent_ms>self.recipe.maximum_observation_gap_ms:
+            flags.append("INDEPENDENT_SUPPORT_STALE")
+            self.history_broken=True
         if self.last_ms is not None and frame.captured_at_ms <= self.last_ms:
             flags.append("NONMONOTONIC_TIMESTAMP")
             self.history_broken = True
@@ -109,9 +117,16 @@ class ProcedureEngine:
             self.seen.popitem(last=False)
         if self.history_broken and self.arm == "steplock":
             flags.append("HISTORY_GAP_RESTART_REQUIRED")
-        if not frame.usable or flags:
+        usable=frame.usable or (self.arm=="single_frame" and set(frame.quality_flags)<={"NEAR_DUPLICATE_FRAME"})
+        if not usable or flags:
             self._quality(flags or ["UNUSABLE_FRAME"])
             return self.snapshot()
+        if near_repeat and self.arm!="single_frame":
+            # A near repeat cannot add or clear support. A recent valid observation
+            # remains available for its bounded freshness window; an isolated tiny
+            # image change does not erase a completed procedure's earlier evidence.
+            return self.snapshot()
+        self.last_independent_ms=frame.captured_at_ms
         pairs = {(ob.part_id, ob.zone_id or "OUTSIDE"): ob for ob in frame.observations}
         # Duplicate visible IDs are a perception quality error, never collapsed into proof.
         self.current_pairs = set(pairs)
@@ -234,6 +249,8 @@ class ProcedureEngine:
             explanations={"AWAITING_SOURCE":"Waiting for the first frame.",
                 "CONFIRMED_COMPONENT_NOT_CURRENTLY_VISIBLE":"A previously confirmed component tag is not visible in the current frame.",
                 "DUPLICATE_FRAME":"Repeated image bytes cannot support a new observation.",
+                "NEAR_DUPLICATE_FRAME":"The image has too little independent visual change; frozen or repeated video cannot support confirmation.",
+                "INDEPENDENT_SUPPORT_STALE":"No independent visual support arrived within the freshness window. Restart from an empty board.",
                 "CALIBRATION_REQUIRED":"Keep all four fixed board anchors visible, or select manual calibration points.",
                 "INVALID_CALIBRATION":"Board geometry is invalid; reposition the camera and anchors.",
                 "SOURCE_LOST":"The source is no longer delivering fresh frames. Start a new session.",

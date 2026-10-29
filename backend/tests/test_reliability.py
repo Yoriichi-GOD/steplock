@@ -33,6 +33,24 @@ def test_recorded_camera_requires_consent(tmp_path):
         assert client.post("/api/sessions",json={"source_kind":"REPLAY_TAGGED"}).status_code==400
 
 
+def test_mjpeg_repeated_picture_does_not_confirm_any_step():
+    from steplock.vision.aruco import Detector
+    from steplock.procedure.engine import ProcedureEngine
+    recipe=Recipe.load(ROOT/"recipes/tagged_four_part_v1.yaml")
+    detector,engine=Detector(recipe),ProcedureEngine(recipe)
+    for index,ts,image in video_frames(ROOT/"fixtures/synthetic/fx_07_00.avi"):
+        record,_,_=detector.analyze(image,index,ts,"SYNTHETIC_FIXTURE","a"*64)
+        engine.consume(record)
+    assert not engine.confirmed
+    assert engine.checkpoint()["decision"]["status"]!="PASS"
+    naive=ProcedureEngine(recipe,"single_frame")
+    detector=Detector(recipe)
+    for index,ts,image in video_frames(ROOT/"fixtures/synthetic/fx_07_00.avi"):
+        record,_,_=detector.analyze(image,index,ts,"SYNTHETIC_FIXTURE","a"*64)
+        naive.consume(record)
+    assert naive.checkpoint()["decision"]["status"]=="PASS"
+
+
 def test_manual_calibration_expires_without_anchors(tmp_path):
     recipe=Recipe.load(ROOT/"recipes/tagged_four_part_v1.yaml")
     session=Session(recipe,"SYNTHETIC_FIXTURE",False,directory=tmp_path/"session")

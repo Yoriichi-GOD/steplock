@@ -15,3 +15,25 @@ all temporal support rules, evidence labels and current-visibility requirements.
 Protocol v2 records these settings before held-out scoring. No held-out procedure
 results were inspected to choose them. First-run artifacts retain v1 configuration
 and source hashes. Runtime filenames/labels are never detector inputs.
+
+The encoded freeze cases also revealed that MJPEG changed the first few decoded
+copies (mean grayscale differences approximately 0.09–0.11 after smoothing and
+downsampling). Exact pixel hashes therefore allowed the base to confirm, although
+the final decision still held and three downstream steps remained unproven. The
+four expected checkpoint warnings were only three, reducing event recall.
+
+Protocol v3 adds a conservative near-duplicate gate, selected on those development
+clips: grayscale Gaussian 5×5, resize to 240×150, compare against the last accepted
+signature. HOLD when mean difference <0.15 AND the fraction of pixels changing by
+more than 8 levels is <0.0003. Development normal/recovery exposures showed larger
+changes. This remains a heuristic: very clean stationary camera frames may abstain,
+and edited or recompressed copies are not cryptographically proven independent.
+The exact encoded freeze clip is now a regression; no step may confirm from it.
+
+An initial implementation made every near repeat a hard quality failure. The
+existing raw-pixel recovery regression caught an unnecessary final HOLD from one
+very small camera movement. We separated spatial usability from independent
+temporal support: a near repeat cannot add/clear support; previously supported
+evidence remains valid within its existing 1800ms window. Repeated exact bytes
+still HOLD immediately. An independent-support gap over 1800ms requires restart.
+This prevents codec copies from confirming a step while preserving recent proof.
