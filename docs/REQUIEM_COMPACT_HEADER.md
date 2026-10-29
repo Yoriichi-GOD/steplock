@@ -7,13 +7,13 @@ used in the live interface. Earlier full-height screenshots are historical only.
 - Desktop masthead248px: pinned navigation110px, scrolling title area138px.
 - Only the logo/navigation/status bar stays in place. The title, crop and body
   move together in `.rq-page-scroll`; page changes reset that scroller.
-- The taskbar is translucent over the masthead and darkens after scrolling for
-  readable labels over white evidence. It has no outline border.
+- The taskbar is fully transparent, including after scrolling: no fill, shadow,
+  blur or outline border. Individual buttons retain their own functional styling.
 - Full Celestial artwork continues behind the lower workspace. Black panels stay
   opaque, and the source frame/annotations receive no artwork or filters.
-- Side windows now render at140x249px with the original941:1672 aspect ratio,
-  rather than tiny76px-wide images in full-height slots. They are hidden below
-  1550px to preserve working space. Floral rail corners remain separate.
+- Both decorative side windows and their layout columns are removed. The Studio
+  grid fills the workspace content width; the camera receives the reclaimed
+  space. Floral rail corners and the lower-page background remain.
 - Phone layouts retain a280px masthead to fit the scrolling navigation row,
   title and both real action buttons. All original tabs plus Assembly Explorer,
   Setup Guide, conditional HTML Report, engine state and advisory labels remain.
@@ -32,16 +32,23 @@ Actual browser checks used the built app at an auto-selected temporary port:
 |1280x720| Masthead248px; toolbar starts at248px; no horizontal overflow |
 |1024x768| Source-first tablet layout retained; breadcrumb clearance rechecked |
 |390x844 and320x760| Adaptive280px masthead; no horizontal page/scroller overflow |
-|Scroll| Page scroll355.33px; masthead top-355.33px; taskbar top0px; taskbar darkened |
-|Natural pane ratio| Both desktop windows140px wide,249px high; no stretching |
+|Scroll| Page scroll379.33px; masthead top-379.33px; taskbar top0px; background rgba(0,0,0,0) |
+|Expanded desktop grid| Content1591.98px; camera1013.98px; zero decorative side windows |
 |Normal example| Actual synthetic inspection reached PASS; watermark retained |
 |Navigation| Separate Assembly Explorer opens, returning to Studio resets scroll |
 
-Current untouched browser captures: `screenshots/requiem-compact/`. Asset source
+Current untouched browser captures: `screenshots/requiem-wide/`. Earlier captures
+in `screenshots/requiem-compact/` retain the superseded tint and window panes.
+Asset source
 and output hashes remain in `frontend/public/assets/steplock-header/manifest.json`.
 The current crop is121,648bytes; the existing full body background is308,896bytes.
 
-Changed source scope: `frontend/src/App.tsx`, `frontend/src/theme/requiem.css`,
-`frontend/src/theme/theme.test.mjs` and the header asset manifest's usage note.
-README, current/historical UI report links, progress notes and current screenshots
-are documentation only. The other agent's judging documents are excluded.
+Latest correction source scope: `frontend/src/App.tsx`,
+`frontend/src/pages/Studio.tsx` and `frontend/src/theme/requiem.css`. The only
+React changes remove the scroll tint state and the two decorative image nodes
+and their wrapper. All inspection callbacks are retained. No new backend tests
+were run for this visual-only correction. The other agent's judging documents
+are excluded from this UI checkpoint.
+
+The transparent pinned navigation can pass over light source evidence after
+scrolling. This is the user's explicit request; no darkening overlay is applied.

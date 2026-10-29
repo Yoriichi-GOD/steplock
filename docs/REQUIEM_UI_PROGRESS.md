@@ -101,3 +101,20 @@ No timestamps or history were rewritten and no force push was used.
 -20 frontend checks and build passed; browser proved248px desktop masthead,
   toolbar boundary, only-nav pinning, natural140x249 panes and normal PASS.
 - No core changes; other agent's judging docs excluded from the UI checkpoint.
+
+## Transparent taskbar and expanded Studio (29 October,15:22 IST onward)
+
+- User removed the remaining taskbar tint and both scenic side windows. The
+  compact248px desktop masthead, fixed navigation, scrolling scenery and lower
+  floral rail corners are retained.
+- Removed scroll-darkening state, decorative window nodes and their reserved
+  columns. The1691px browser view now measures a1591.98px content grid with a
+  1013.98px camera panel, reclaiming304px from the former window columns/gaps.
+- Actual browser verified transparent background with no shadow/blur at top
+  and after379.33px scrolling; navigation remains at y0 and masthead scrolls.
+- Normal synthetic inspection reached PASS with30 analyzed frames. Evidence
+  Explorer opened and return to Studio reset scroll. At1691,1280,390 and320px
+  widths there is no horizontal page/scroller overflow; zero side pane nodes.
+-20 frontend checks and production build passed. Current screenshots and
+  measurement report: `screenshots/requiem-wide/` and
+  `docs/REQUIEM_COMPACT_HEADER.md`. No core or judging-document changes.

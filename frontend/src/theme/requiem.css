@@ -26,8 +26,7 @@ a {color:var(--rq-blue)}
 h1,h2 {font-family:var(--rq-display);font-weight:400;letter-spacing:-.8px}
 /* The exact text-free 1691x248 crop paints the masthead once. */
 .rq-header-stage {position:relative;height:248px;min-height:248px;padding-top:110px;overflow:hidden;background:#030303 url('/assets/steplock-header/BACKGROUND_HEADER_READY_1691x248.webp') center / cover no-repeat}
-.app-header {position:absolute;z-index:20;top:0;left:0;right:0;height:110px;padding:0 clamp(22px,2.484vw,54px);display:grid;grid-template-columns:360px minmax(0,1fr) auto;grid-template-rows:110px;gap:26px;background:#030303a8;border:0}
-.app-header.scrolled {background:#030303f2}
+.app-header {position:absolute;z-index:20;top:0;left:0;right:0;height:110px;padding:0 clamp(22px,2.484vw,54px);display:grid;grid-template-columns:360px minmax(0,1fr) auto;grid-template-rows:110px;gap:26px;background:transparent;border:0}
 .brand {position:relative;display:block;width:250px;height:110px;align-self:center;justify-self:start;margin:0;z-index:1}
 .rq-brand-logo {display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .rq-brand-fallback {display:none}
@@ -62,8 +61,6 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .source-hint {font-size:9px;color:var(--muted);padding-block:9px 13px}
 .panel {background:#101010;border:0;border-radius:0;box-shadow:none}
 .panel-heading {background:#080808;border:0;color:var(--rq-blue);font-size:10px;letter-spacing:.7px}
-.rq-workbench {display:grid;grid-template-columns:140px minmax(0,1fr) 140px;gap:12px;align-items:stretch}
-.rq-window {display:block;width:140px;height:auto;aspect-ratio:941 / 1672;max-height:none;object-fit:contain;pointer-events:none;opacity:1;align-self:start;margin-top:44px}
 .studio-grid {position:relative;grid-template-columns:250px minmax(0,1fr) 300px;gap:14px;min-width:0;margin:0}
 .studio-grid::after {content:none}
 .recipe-rail {position:relative;isolation:isolate;background:#0b0b0b;padding-bottom:90px}
@@ -140,7 +137,6 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .app-header nav {gap:18px}.app-header nav button {font-size:11px}
  .header-status {flex-direction:column;gap:7px;align-items:flex-end}.advisory-tag {font-size:8px;padding:8px}
  .rq-title-art {width:480px}.studio-grid {grid-template-columns:220px minmax(0,1fr) 270px}
- .rq-workbench {display:block}.rq-window {display:none}
  .decision-status strong {font-size:37px}.under-grid {grid-template-columns:minmax(0,1fr) 270px}
  .recipe-picker select {max-width:315px}.source-actions>button,.source-actions select {font-size:11px}
 }
@@ -148,7 +144,6 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .app-header {grid-template-columns:240px minmax(0,1fr) auto;gap:16px}.brand {width:210px;height:105px}
  .app-header nav {gap:18px}.app-header nav button {font-size:11px}
  .rq-title-art {width:460px}.workspace-title {padding-bottom:10px}.workspace-title p {font-size:12px}
- .rq-workbench {display:block}.rq-window {display:none}
  .studio-grid {grid-template-columns:210px minmax(0,1fr) 265px}
  .source-toolbar {flex-direction:column;align-items:stretch}.source-actions {justify-content:space-between}
  .recipe-picker {justify-content:space-between}.recipe-picker select {max-width:80%}
