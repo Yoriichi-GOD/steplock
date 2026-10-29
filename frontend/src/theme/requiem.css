@@ -150,7 +150,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .source-toolbar {flex-direction:column;align-items:stretch}.source-actions {justify-content:space-between}
  .recipe-picker {justify-content:space-between}.recipe-picker select {max-width:80%}
 }
-@media(max-width:1023px) {
+@media(max-width:1100px) {
  .rq-header-stage {min-height:290px;grid-template-rows:110px minmax(0,1fr)}
  .app-header {grid-template-columns:minmax(0,1fr) auto;height:110px;padding-top:4px;gap:0 20px;grid-template-rows:64px 42px}
  .brand {width:180px;height:90px;margin-top:-8px;grid-row:1}

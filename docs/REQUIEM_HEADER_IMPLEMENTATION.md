@@ -88,6 +88,15 @@ fixed and remeasured. A later tab-switch check found inherited scroll position;
 the workspace now resets to top on page changes. These are browser-proven fixes,
 not assumptions from a successful compile.
 
+Final tablet handoff inspection also found an inherited breakpoint leaving an
+empty third column at1024px. Moved the source-first tablet layout threshold to
+1100px, retaining full-width camera evidence above the two working rails.
+The browser recheck measured the source at957.81px across the957.81px workspace
+content, with no horizontal overflow. `screenshots/requiem-header/tablet-1024.png`
+records the correction;1280x720 retained its435.99px header/toolbar boundary.
+The final original checkout also passed20 frontend checks,58 combined backend
+checks and its production build before this CSS-only breakpoint correction.
+
 Real screenshots are in `screenshots/requiem-header/`. They are untouched browser
 captures. The reference remains in the ignored/private source pack only.
 
