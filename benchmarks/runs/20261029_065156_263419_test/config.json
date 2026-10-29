@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "near_duplicate_gate": {
+    "signature": "gray gaussian5 resize240x150 vs last accepted image",
+    "mean_difference_below": 0.15,
+    "fraction_difference_gt8_below": 0.0003,
+    "both_conditions_required": true
+  },
+  "temporal_ablation": "single_frame bypasses temporal duplicate flags; stable_only and steplock enforce them; visual exposure, focus and calibration gates are shared",
+  "near_duplicate_semantics": "adds no support; does not clear prior evidence; prior support expires after 1800ms; exact repeated bytes HOLD immediately",
+  "detector_settings": {
+    "adaptiveThreshWinSizeMax": 45,
+    "adaptiveThreshWinSizeStep": 4,
+    "cornerRefinementMethod": "CORNER_REFINE_SUBPIX"
+  },
+  "tuning_source": "development split only; first run 20261029_055525_293456_dev retained",
+  "frozen_before_scored_run": true,
+  "source_kind": "SYNTHETIC_FIXTURE",
+  "real_staged_data": "NOT_PROVIDED",
+  "split": "test",
+  "split_unit": "complete clip and camera transform variant; dev variants 0-1; test variants 2-5",
+  "arms": [
+    "single_frame",
+    "stable_only",
+    "steplock"
+  ],
+  "same_decoded_frames_for_all_arms": true,
+  "minimum_supporting_frames": 2,
+  "minimum_support_gap_ms": 160,
+  "maximum_observation_gap_ms": 1800,
+  "minimum_focus_variance": 35,
+  "event_matching": "one-to-one same class, part and zone; alert at or after onset minus 200ms; no later than onset+2000ms; checkpoint events +/-200ms",
+  "timely_matching": "matched alert at or before preannotated boundary",
+  "precision_zero_denominator": null,
+  "recall_zero_denominator": null,
+  "f1_zero_denominator": null,
+  "failure_handling": "all clips and expected events remain in denominator after abort; error details retained",
+  "latency_clock": "source-time error-to-alert; vision processing wall-clock separately; capture-to-visible-alert NOT_MEASURED",
+  "limitations": "deterministic generated tagged boards; variants share a generator; not physical capture or independent industrial validation",
+  "git_commit": "0a00d9958bdc49d5e0874628205afff226f7d585",
+  "git_dirty": true,
+  "git_status_at_start": [
+    "M docs/DEVELOPMENT_LOG.md",
+    " M frontend/package-lock.json",
+    " M frontend/package.json",
+    " M frontend/src/pages/Studio.tsx",
+    "?? docs/ASSEMBLY_VIEWER.md",
+    "?? docs/UI_COORDINATION.md",
+    "?? frontend/src/components/assembly/",
+    "?? screenshots/"
+  ],
+  "prediction_source_clean": true,
+  "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+  "protocol_sha256": "e90f4e1e68c2a25b1b2fbf13c52ac2b057c11f1683682564f6f1d8904dff081d",
+  "manifest_sha256": "2884ec2526e4d91a505529037ac560b149c34dd0ec9afe4bedd8a078e0d29754",
+  "created_at": "2026-10-29T06:51:56.263419+00:00"
+}

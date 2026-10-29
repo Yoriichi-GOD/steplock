@@ -13,7 +13,9 @@ they do not establish physical-camera or industrial validation.
 | Privacy/local boundary | explicit real-input consent, local Host/origin checks, no camera auto-start |
 | Recipe persistence | new versions survive restart; old session recipe hash unchanged |
 | Temporal/correction | duplicates, codec copies, occlusion, backward time, midassembly, wrong-zone/OUTSIDE recovery |
-| First scored synthetic run | 32 clips / 864 frames; exact committed prediction source c14e7f0 |
+| First scored synthetic run | 32 clips / 864 frames; committed prediction source c14e7f0, retained unchanged |
+| Final scored verification | 32 clips / 864 frames; committed prediction source 0a00d99; 32/32 final statuses, TP/FP/FN 60/0/0, false PASS 0/24 |
+| 3D state adapter | 10/10 production-adapter regressions, independently rerun by engine owner |
 | Synthetic stress grid | 14/14 designed safety gates passed; separate from accuracy |
 | Staged-real / physical camera | NOT_PROVIDED / NOT_TESTED |
 | True capture-to-visible latency | NOT_MEASURED |
@@ -32,16 +34,29 @@ Browser checks before browser access was disabled in Work settings:
   390px reduced-motion layout without horizontal overflow. Exact evidence and
   boundaries are in `UI_COORDINATION.md` and `ASSEMBLY_VIEWER.md`.
 
-Pending final browser gates: refreshed frame-overlay wording, explicit 1280×720
-view, startup with WebGL entirely unavailable, and final canonical integrated
-build screenshot. Browser access became disabled in Work settings during testing;
+Fresh normal/wrong-component/correction API replays and direct final-frame image
+inspection verified the corrected overlay wording. A near-repeat frame says
+NO NEW TEMPORAL SUPPORT rather than issuing an independent HOLD. The UI adapter
+was also checked against these actual snapshots, including disconnected states.
+
+Pending browser gates: explicit 1280×720 view, startup with WebGL entirely unavailable,
+and a refreshed final canonical integrated browser screenshot. Browser access became
+disabled in Work settings during testing;
 do not describe these unperformed follow-ups as passing. Existing screenshots
 retain their original context; `assembly-corrected-inspection.jpg` records the
 old overlay contradiction and is not a final approval screenshot.
 
 ## Finalization
 
-The original test run and earlier development failures stay immutable. A final
-separate evaluation and repository audit will be linked here after completion.
+The original test run and earlier development failures stay immutable. The final
+separate evaluation is `benchmarks/runs/20261029_065156_263419_test/`: STEPLOCK
+precision/recall/F1 1/1/1, 16/16 timed mistakes, 4/4 corrections; vision p50/p95
+17.4/23.5ms; offline shared throughput 43.4fps. Marker recall 5208/5208 visible
+opportunities, zone localization 1752/1752; occluded opportunities remain separately
+reported. Generated cases do not establish physical generalization.
+
+Fresh setup from the canonical scratch checkout completed with pinned Python
+dependencies and `npm ci`, frontend build, loopback launch and a healthy API. The
+integrated 3D rebuild and final source audit are recorded below when complete.
 The latest receipt may be in the following commit because a Git commit cannot
 contain its own final hash without changing that hash.

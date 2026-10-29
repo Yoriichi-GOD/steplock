@@ -9,9 +9,9 @@ placement, prerequisites and correction; findings point to source-frame evidence
 **ADVISORY ONLY.** No machinery interlock, intrinsic part identity, fastening,
 torque, fatigue diagnosis, accident-prevention guarantee or safety certification.
 
-![Actual Studio with a watermarked synthetic replay](screenshots/studio-pass.png)
+![Actual Studio with a watermarked synthetic replay](screenshots/studio-pass.jpg)
 
-Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_061625_048928_test/summary.md)
+Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_065156_263419_test/summary.md)
 · [acceptance](docs/ACCEPTANCE.md) · [limitations](docs/TECHNICAL_LIMITATIONS.md)
 · [authentic push checkpoints](docs/DEVELOPMENT_LOG.md).
 
@@ -112,7 +112,7 @@ evidence stay out of Git. Public redistribution needs separate consent.
 
 ## Measured evaluation
 
-First scored run: **32 held-out synthetic clips / 864 decoded frames**, transform
+Final verification run: **32 held-out synthetic clips / 864 decoded frames**, transform
 groups 2–5. The 16 development clips and earlier failures remain available.
 
 | Method | Exact final status | Event precision / recall / F1 | False PASS | Timely mistakes |
@@ -121,8 +121,8 @@ groups 2–5. The 16 development clips and earlier failures remain available.
 | Temporal stable | 28/32 | 1.000 / 0.800 / 0.889 | 4/24 | 12/16 |
 | STEPLOCK constraints | 32/32 | 1.000 / 1.000 / 1.000 | 0/24 | 16/16 |
 
-Vision processing p50/p95 **16.6 / 23.9 ms**; offline shared vision + all three
-engines/logging **44.9 frames/s**. Capture-to-visible-alert latency and idle/active
+Vision processing p50/p95 **17.4 / 23.5 ms**; offline shared vision + all three
+engines/logging **43.4 frames/s**. Capture-to-visible-alert latency and idle/active
 CPU overhead were **NOT_MEASURED**. Generated cases share a renderer/recipe and do
 not establish industrial generalization. Event F1 covers four declared mistake
 classes; uncertainty is separate. The false-PASS denominator includes all 24
@@ -143,6 +143,12 @@ Each benchmark saves a new directory with config, environment, source hashes, ra
 observations/events, per-clip scores, latency and retained failures. Only eight
 small example AVIs are tracked; regenerate all 48 locally. Truth stays separate
 from inference. [Protocol](docs/EVALUATION_PROTOCOL.md) · [development tuning](docs/DEVELOPMENT_TUNING.md).
+
+The first scored run remains unchanged at `20261029_061625_048928_test`; the final
+run `20261029_065156_263419_test` uses committed prediction source `0a00d99`.
+The optional [assembly explorer](docs/ASSEMBLY_VIEWER.md) illustrates recipe roles
+with selectable parts and a 2D fallback. It cannot change an inspection verdict.
+
 
 ## Architecture and sources
 
