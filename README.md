@@ -13,9 +13,12 @@ torque, fatigue diagnosis, accident-prevention guarantee or safety certification
 
 The current REQUIEM theme uses the supplied celestial-arch assets, with the real
 inspection controls and unaltered source evidence. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
-The optional assembly explorer appears beneath the inspection workbench.
+The Assembly Explorer has its own tab beside Evidence Explorer. The full Celestial
+background stays fixed above a scrolling black workspace. [Current header and
+responsive verification](docs/REQUIEM_HEADER_IMPLEMENTATION.md).
 
 Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_065156_263419_test/summary.md)
+· [real physical-video experiment](docs/IMPACT_PHYSICAL_RESULTS.md)
 · [acceptance](docs/ACCEPTANCE.md) · [limitations](docs/TECHNICAL_LIMITATIONS.md)
 · [authentic push checkpoints](docs/DEVELOPMENT_LOG.md).
 
@@ -53,8 +56,17 @@ was imported. Team-member details were not supplied.
   actual three-arm benchmark and 14 synthetic degradation checks.
 
 **REAL_STAGED_DATA: NOT_PROVIDED. Physical webcam operation: NOT_TESTED.** Camera
-transport was exercised with generated JPEGs; scored data is generated video.
-These results establish software behavior under designed inputs, not factory validity.
+transport was exercised with generated JPEGs; procedurally scored data remains
+generated video. These scores do not establish factory validity.
+
+**Public physical recordings tested:** the official IMPACT sample was downloaded
+and checksum/CRC verified. The unchanged engine processed 2,700 real frames from
+15 videos across 45 bounded windows: zero decode failures, 45 calibration refusals,
+zero unsupported PASS. Native mistake accuracy is **NOT_SCORABLE** because these
+untagged assemblies do not supply STEPLOCK's fixture anchors/part observations.
+Offline real-video detector p95 was 27.44 ms; live capture-to-alert latency remains
+unmeasured. [Measured report, predictions and limits](docs/IMPACT_PHYSICAL_RESULTS.md)
+· [recording kit and reproducible commands](docs/PHYSICAL_VALIDATION.md).
 
 ## Run locally
 

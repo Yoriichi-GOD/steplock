@@ -87,3 +87,11 @@ def test_real_registration_cannot_escape_recording_folder(tmp_path):
     registered = [{"clip_id": "one", "consent_recorded": "True", "source_kind": "REPLAY_TAGGED", "relative_path": "../outside.avi"}]
     with pytest.raises(ValueError, match="fixtures/recorded"):
         validate_population(labels, registered, "b" * 64, root=tmp_path)
+
+
+def test_real_clip_id_cannot_escape_evidence_directory():
+    labels = {"population": "REAL_STAGED", "annotation_status": "FROZEN", "reviewed_before_inference": True,
+              "capture_provenance": "Actual physical object recording from an operator camera", "recipe_sha256": "b" * 64,
+              "clips": [{"clip_id": "../overwrite"}]}
+    with pytest.raises(ValueError, match="opaque"):
+        validate_population(labels, [], "b" * 64)

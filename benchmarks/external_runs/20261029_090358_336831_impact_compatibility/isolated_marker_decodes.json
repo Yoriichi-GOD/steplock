@@ -1,0 +1,137 @@
+[
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_front",
+    "window": 2,
+    "source_frame_index": 3806,
+    "marker_ids": [
+      37
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "b4c47b5605c8c5d44f1aabc14aa5ef8fc2b8e8d0c6b10b5212110e760739d8bd",
+    "original_png_sha256": "b4c47b5605c8c5d44f1aabc14aa5ef8fc2b8e8d0c6b10b5212110e760739d8bd",
+    "overlay_sha256": "d73e316eff60833961fdb80e29898e7a7fe7686c9c335113fca0000f1b312db7",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_front-3806-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_front-3806-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_front",
+    "window": 2,
+    "source_frame_index": 3890,
+    "marker_ids": [
+      17
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "178616abaa7168f6e788da58d9c35391d6bf90e8e49fd5ca05509c1f4b08a6a4",
+    "original_png_sha256": "178616abaa7168f6e788da58d9c35391d6bf90e8e49fd5ca05509c1f4b08a6a4",
+    "overlay_sha256": "165d137c6e98e5d6fba8104d1e4e486a283d9e258634162b7c45ca73e04c0be4",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_front-3890-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_front-3890-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_right",
+    "window": 0,
+    "source_frame_index": 144,
+    "marker_ids": [
+      34
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "2e1095d136028e18307b2d701512dc4662cc2ff3eff0117a7456ce336408a7fd",
+    "original_png_sha256": "2e1095d136028e18307b2d701512dc4662cc2ff3eff0117a7456ce336408a7fd",
+    "overlay_sha256": "191c8adb13b45787f387babcc91bea012f215cb17b0d4756de0d4b2d7e8c04f4",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-144-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-144-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_right",
+    "window": 0,
+    "source_frame_index": 318,
+    "marker_ids": [
+      34
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "4238b898e903230b14357dc9413fcb81c30a0358c6c1316be28bda6032d304c6",
+    "original_png_sha256": "4238b898e903230b14357dc9413fcb81c30a0358c6c1316be28bda6032d304c6",
+    "overlay_sha256": "283d2a5357a6f3dd33154c7a5ce92339a18e3c3e3c041be3dd7f89c6fe8c5c12",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-318-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-318-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_right",
+    "window": 0,
+    "source_frame_index": 324,
+    "marker_ids": [
+      34
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "4307825c4255444e63d6218580c3983afb82874304a17c516eec50deb18745b4",
+    "original_png_sha256": "4307825c4255444e63d6218580c3983afb82874304a17c516eec50deb18745b4",
+    "overlay_sha256": "d5b286dae547c1a7b2c48cf83a6458c435f62404007050b7a74acbd0b466d4c0",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-324-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_right-324-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_top",
+    "window": 0,
+    "source_frame_index": 156,
+    "marker_ids": [
+      17
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "fd17d69a54530abdd23305b5603f14d6b2bd628aabbad7d45249a9c652851905",
+    "original_png_sha256": "fd17d69a54530abdd23305b5603f14d6b2bd628aabbad7d45249a9c652851905",
+    "overlay_sha256": "52d5cbc3f920a87cdba07cd43c52dc7995b029d6b75c010da7647c720e2a7dc9",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_top-156-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_top-156-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_top",
+    "window": 1,
+    "source_frame_index": 1903,
+    "marker_ids": [
+      17
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "101402a6795fd7397d1a66cb317d3c85841d26365bc80bd9e954453af71f9c00",
+    "original_png_sha256": "101402a6795fd7397d1a66cb317d3c85841d26365bc80bd9e954453af71f9c00",
+    "overlay_sha256": "27a2e0ac80f6771b5bf3a45f4e080c49a07bba638a0c3b25ab1d198bbad99c39",
+    "original_name": "isolated-id-AL07EJ17_Disassembly_A_001_top-1903-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Disassembly_A_001_top-1903-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_top",
+    "window": 0,
+    "source_frame_index": 42,
+    "marker_ids": [
+      17
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "141597eb53af52d51c69ccd07a34ca96be4d9a8451e869ddadf527e79256cfe5",
+    "original_png_sha256": "141597eb53af52d51c69ccd07a34ca96be4d9a8451e869ddadf527e79256cfe5",
+    "overlay_sha256": "8b6b8ab97b1333fb1452cd12845879d9c9def8d8ea371cbc62d3f77aeddb69d6",
+    "original_name": "isolated-id-AL07EJ17_Reassembly_A_002_top-42-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Reassembly_A_002_top-42-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_top",
+    "window": 0,
+    "source_frame_index": 90,
+    "marker_ids": [
+      17
+    ],
+    "calibration_id": null,
+    "prediction_frame_sha256": "0a445c886e282b7b2ba0d7bf53f776d00dac37ecb07f987e506e8b30c59225f3",
+    "original_png_sha256": "0a445c886e282b7b2ba0d7bf53f776d00dac37ecb07f987e506e8b30c59225f3",
+    "overlay_sha256": "1c0e5ad6125760fb86384d419d3a3419538fe04b2488054402eb4da681301943",
+    "original_name": "isolated-id-AL07EJ17_Reassembly_A_002_top-90-original.png",
+    "overlay_name": "isolated-id-AL07EJ17_Reassembly_A_002_top-90-overlay.jpg",
+    "status": "ISOLATED_UNVERIFIED_ID_DECODE_NOT_FIXTURE_SUPPORT"
+  }
+]

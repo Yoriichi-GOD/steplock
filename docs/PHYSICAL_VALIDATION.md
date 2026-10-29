@@ -8,14 +8,14 @@ the existing 32/32 synthetic result is not a physical accuracy claim.
 
 | Requirement | Evidence required | Current state |
 |---|---|---|
-| Acquire official IMPACT three-execution sample | Pinned revision, published size and SHA-256, local acquisition receipt | Download in progress; do not claim acquired until verified |
-| Inspect RGB media and native annotations | Source hashes, codecs/FPS/dimensions, views, native annotation schemas | Evaluator implemented; awaiting verified extraction |
-| Run untouched inference on real pixels | Per-window observations, original/overlay gallery, append-only events, predictions | Implemented; execution pending acquisition |
-| Report compatibility honestly | Calibration/decoded tags, unsupported-input gate, explicit semantic scoring limits | Implemented; no fabricated observations or task mapping |
+| Acquire official IMPACT three-execution sample | Pinned revision, published size and SHA-256, local acquisition receipt | PASS: exact size/hash and official structure/CRC/checksum verifier |
+| Inspect RGB media and native annotations | Source hashes, codecs/FPS/dimensions, views, native annotation schemas | PASS: 15 RGB recordings, five views, native task/schema/label inventory |
+| Run untouched inference on real pixels | Per-window observations, original/overlay gallery, append-only events, predictions | PASS: 45 windows, 2,700 analyzed source frames, zero processing failures |
+| Report compatibility honestly | Calibration/decoded tags, unsupported-input gate, explicit semantic scoring limits | PASS: 45 calibration refusals; native mistake scores unscored; nine isolated-ID cases retained |
 | Prepare real staged recording workflow | 20-trial plan, printable board/tags, existing recording/registration commands | Kit generated locally; no camera opened |
 | Score consented tagged recordings | Frozen reviewed manual labels, original source hashes, separate REAL_STAGED run | Runner implemented; real staged recordings NOT_PROVIDED |
-| Verify regressions | Existing suite plus meaningful research-tool tests | 12 new tests pass; full suite being rerun |
-| Browser acceptance | 1280×720, fresh offline startup, stale PASS invalidation | Owned by concurrent UI workstream; require actual receipts |
+| Verify regressions | Existing suite plus meaningful research-tool tests | PASS: 58/58 backend tests (45 existing + 13 new), 19.36 s; one upstream deprecation warning |
+| Browser acceptance | 1280×720, fresh offline startup, stale PASS invalidation | PASS in coordinated UI workstream; actual screenshots and receipts in REQUIEM_HEADER_IMPLEMENTATION.md |
 
 ## Commands
 
@@ -24,6 +24,8 @@ From the repository root, using the existing environment:
 ```powershell
 .venv\Scripts\python.exe scripts/acquire_impact.py
 .venv\Scripts\python.exe scripts/inspect_external_video.py --seconds 12 --sample-hz 5
+.venv\Scripts\python.exe scripts/summarize_impact.py --run benchmarks/external_runs/20261029_090358_336831_impact_compatibility
+.venv\Scripts\python.exe scripts/smoke_external_upload.py --output data/external/impact_v1_1/api_smoke_new
 .venv\Scripts\python.exe scripts/prepare_physical_validation.py --output runtime/physical_kit
 .venv\Scripts\python.exe scripts/register_recording.py --help
 .venv\Scripts\python.exe scripts/run_physical_eval.py --annotations data/physical_labels.json
@@ -85,10 +87,34 @@ full collection download, paid inference or retraining is part of this workstrea
 ## Execution notes
 
 - Initial acquisition was interrupted by a Codex restart; the verified-source
-  resume began from 494,927,872 bytes. This is not an integrity-verified archive yet.
+  resume began from 494,927,872 bytes. Final archive integrity and selected files
+  subsequently verified; acquisition completed at 14:33:41 IST.
 - An unprivileged full backend test attempt stalled inside Python's loopback
   socket-pair setup for the async test client, before app test execution. The
   captured faulthandler stack identifies an environment/network restriction;
-  rerun with normal local networking rather than editing product code to mask it.
+  rerunning with normal local networking passed 57/57, then 58/58 after an
+  additional output-path/provenance regression. Product code was not changed.
 - Concurrent UI files are excluded from this workstream's commits. Shared Git
   index/commit/push operations are coordinated explicitly with the UI chat.
+- Checkpoint `c605b6ad6ec4cc7efc2a284086de6c36973c1837` committed at 14:33:13 IST;
+  push and exact remote main hash verified immediately afterward. It contains
+  only six validation-tool/test/protocol paths. The preceding shared main commit
+  was at 13:46:56 IST: the commit-time gap was 46m17s, exceeding the stricter
+  45-minute target during the restart/coordination window. It is retained honestly;
+  no timestamps were adjusted and no empty checkpoint was manufactured.
+- Real-video API integration PASS: 15 actual excerpt frames, calibration refusal,
+  verified original PNG hash, JSON/HTML exports 200, token-free exports, stop→SOURCE_LOST.
+- Results and native annotation compatibility analysis: [IMPACT_PHYSICAL_RESULTS.md](IMPACT_PHYSICAL_RESULTS.md).
+- Coordinated UI checkpoint `df9b28528b3df9fc90851c9f5028e7e6df3030f6`
+  committed at 14:49:02 IST and pushed. Its [browser receipts](REQUIEM_HEADER_IMPLEMENTATION.md)
+  cover exact 1280×720, actual temporary-backend loss after PASS, and a fresh
+  frontend-only startup without an API. PASS becomes SOURCE_LOST/stale with
+  checkpoint disabled; fresh offline startup shows PENDING/ENGINE OFFLINE and
+  disabled source/checkpoint actions. The UI workstream reports 20 frontend tests
+  and a production build passing. These checks use synthetic procedure evidence;
+  they do not establish physical recognition accuracy.
+- Verified raw data and local evidence were copied into the canonical scratch
+  checkout under ignored `data/external/impact_v1_1/`; the full archive SHA-256
+  was independently recomputed there. The 20-trial kit is present at
+  `runtime/physical_kit_20261029/`. No existing source media, raw UI pack or stash
+  was removed. Public report artifacts contain no video/image bytes or tokens.

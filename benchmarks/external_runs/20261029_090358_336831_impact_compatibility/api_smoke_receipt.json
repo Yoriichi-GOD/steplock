@@ -1,0 +1,18 @@
+{
+  "population": "EXTERNAL_PHYSICAL_UNTAGGED",
+  "test_transport": "isolated FastAPI TestClient; no live browser or physical camera",
+  "source_video_id": "AL07EJ17_Disassembly_A_001_front",
+  "original_dataset_video_sha256": "b75a0351883cb64868ea12401a375b0375ff7a918ec651c4e6f255ff967021ff",
+  "excerpt_sha256": "b295e122dda6bc4b279d43250e36a3c4f20849ce8317b4d90162e657e04faf47",
+  "derivation": "source60s..63s, actual frames at5Hz, resized640x360, MJPEG re-encoding; no generated scene/tags",
+  "frames_analyzed": 15,
+  "upload_http": 200,
+  "final_status": "CALIBRATION_REQUIRED",
+  "export_json_http": 200,
+  "export_html_http": 200,
+  "original_frame_hash_verified": true,
+  "tokens_absent_from_exports": true,
+  "stop_status": "SOURCE_LOST",
+  "camera_opened": false,
+  "local_artifact_directory": "C:\\Users\\nrgen\\OneDrive\\Documents\\ChatGPT\\ymca\\steplock\\data\\external\\impact_v1_1\\api_smoke_20261029"
+}

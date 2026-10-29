@@ -1,0 +1,92 @@
+[
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_ego",
+    "container": ".mp4",
+    "codec_fourcc": "FMP4",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_ego",
+    "container": ".mp4",
+    "codec_fourcc": "FMP4",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "ER07AD15_Disassembly_A_001_ego",
+    "container": ".mp4",
+    "codec_fourcc": "FMP4",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_front",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_front",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "ER07AD15_Disassembly_A_001_front",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_left",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_left",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "ER07AD15_Disassembly_A_001_left",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_right",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_right",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "ER07AD15_Disassembly_A_001_right",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Disassembly_A_001_top",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "AL07EJ17_Reassembly_A_002_top",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  },
+  {
+    "video_id": "ER07AD15_Disassembly_A_001_top",
+    "container": ".mp4",
+    "codec_fourcc": "h264",
+    "opencv_backend": "FFMPEG"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "dataset": "IMPACT v1.1 sample",
+  "rgb_videos": 15,
+  "camera_views": [
+    "ego",
+    "front",
+    "left",
+    "right",
+    "top"
+  ],
+  "native_video_fps": [
+    24.917,
+    30.0
+  ],
+  "native_rgb_dimensions": [
+    "1280x720",
+    "1920x1080"
+  ],
+  "duration_seconds_range": [
+    115.93333333333334,
+    174.1381386202191
+  ],
+  "ASR": [
+    {
+      "video_id": "AL07EJ17_Disassembly_A_001_front",
+      "fps": 30.0,
+      "frame_count": 3998,
+      "workflow": "disassemble",
+      "component_count": 17,
+      "state_sequence_entries": 15,
+      "timestamp_unit": "source frame index"
+    },
+    {
+      "video_id": "AL07EJ17_Reassembly_A_002_front",
+      "fps": 30.0,
+      "frame_count": 5214,
+      "workflow": "assemble",
+      "component_count": 17,
+      "state_sequence_entries": 15,
+      "timestamp_unit": "source frame index"
+    },
+    {
+      "video_id": "ER07AD15_Disassembly_A_001_front",
+      "fps": 30.0,
+      "frame_count": 3478,
+      "workflow": "disassemble",
+      "component_count": 17,
+      "state_sequence_entries": 15,
+      "timestamp_unit": "source frame index"
+    }
+  ],
+  "ATR_unique_segments": 142,
+  "ATR_label_occurrences_unique_segments": {
+    "error_temporal": 73,
+    "error_spatial": 62,
+    "error_handling": 16
+  },
+  "ATR_rows_across_split_files": 568,
+  "ATR_deduplication": "sample_id, preventing repeated split membership from inflating counts",
+  "ATR_timestamps": "start_frame/end_frame; native frame indices, not millisecond values",
+  "PPR_frame_labels_by_hand": {
+    "L": {
+      "NORMAL": 54591,
+      "ANOMALY": 6730
+    },
+    "R": {
+      "NORMAL": 57655,
+      "ANOMALY": 3666
+    }
+  },
+  "annotation_population_note": "Counts describe native labels, not independently predicted events. Views and split memberships are correlated.",
+  "compatibility": "No four-anchor fixture calibration or component-tag observation adapter; no native task accuracy scored."
+}

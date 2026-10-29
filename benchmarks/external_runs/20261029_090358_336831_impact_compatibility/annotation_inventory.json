@@ -1,0 +1,811 @@
+{
+  "json_files": 50,
+  "top_level_schemas": {
+    "action_labels | anomaly_types | meta_data | nouns | segments | verbs | video_id | view | view_end | view_start": 30,
+    "components | fps | frame_count | initial_state | initial_state_vector | meta_data | state_changes | state_sequence | task | version | video_id | view_end | view_start | workflow": 3,
+    "list": 2,
+    "labels | meta_data | segments | video_id | view | view_end | view_start": 15
+  },
+  "files": [
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/ego/AL07EJ17_Disassembly_A_001_ego.json",
+      "sha256": "ac42f328a86e13dcf9f3de4e2ce59679627d3a9516771f81efc7cd137940117a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/ego/AL07EJ17_Reassembly_A_002_ego.json",
+      "sha256": "4feeb89ee4239de91057de7e90bac6ff788a1ca6e9c82246940ec75ecdea027e",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/ego/ER07AD15_Disassembly_A_001_ego.json",
+      "sha256": "d660ba3ea5e982f6ca2287790ee9f0422bb502cb52e4b38d69f285fb015ccd88",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/front/AL07EJ17_Disassembly_A_001_front.json",
+      "sha256": "49078e5ddd33f47c96c04c27effe461277511f2f17098fcf6f1fb4f903f67ce3",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/front/AL07EJ17_Reassembly_A_002_front.json",
+      "sha256": "8bb43443e2e05347ad90ac508f32b9549d47b6ee8b3af1b607dde36e18766b74",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/front/ER07AD15_Disassembly_A_001_front.json",
+      "sha256": "00559d42d38f741a32fff2812f23cbdf1b63477748df09c0dbc1d8ce2b85642a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/left/AL07EJ17_Disassembly_A_001_left.json",
+      "sha256": "d4dd2343bc7617aa28311cd3c314c109555cca8b9986553d0f98ea1104f189ac",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/left/AL07EJ17_Reassembly_A_002_left.json",
+      "sha256": "e4f49fb05391ed4513c5787f591c3e7ddc7ba93d72986d2bc3329e7212f9f269",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/left/ER07AD15_Disassembly_A_001_left.json",
+      "sha256": "cfe6105a828e048597f2b11b5ee936abd8a72c6221fcf2a126237cd8925f882d",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/right/AL07EJ17_Disassembly_A_001_right.json",
+      "sha256": "b460b8cd440131d90c47a34811d4def388042911cf972c443e0c351e35846090",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/right/AL07EJ17_Reassembly_A_002_right.json",
+      "sha256": "b6a3d9a26972d7b533cfaa3c97f1d74fc22c93deb3595156df7fa06cf18e4e26",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/right/ER07AD15_Disassembly_A_001_right.json",
+      "sha256": "825771dd63025263d61a30c5339ac59a3283c4b61d8c361436525b05eda8af3a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/top/AL07EJ17_Disassembly_A_001_top.json",
+      "sha256": "8f1622d9886efdf95e4e2835d954235853c0e533451ef58e5db84c4653c61821",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/top/AL07EJ17_Reassembly_A_002_top.json",
+      "sha256": "8de7006927afbcf87658d5b1fe208af31b6cfa0e0335fabc4b70dfc78b0c2492",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/AF-S/annotations/top/ER07AD15_Disassembly_A_001_top.json",
+      "sha256": "4b1bcb72d92c6249b305238645a8dc9329a359c068dc714d0847c961cda2586d",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/ASR/annotations/AL07EJ17_Disassembly_A_001_front_asr.json",
+      "sha256": "ff3193ef71577d29b0fc69032dc73a8115f57f8cf9b1b818398c45d739c8d7c5",
+      "top_level_keys": [
+        "components",
+        "fps",
+        "frame_count",
+        "initial_state",
+        "initial_state_vector",
+        "meta_data",
+        "state_changes",
+        "state_sequence",
+        "task",
+        "version",
+        "video_id",
+        "view_end",
+        "view_start",
+        "workflow"
+      ],
+      "top_level_count": 14
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/ASR/annotations/AL07EJ17_Reassembly_A_002_front_asr.json",
+      "sha256": "3e662158d55e8fd53850ef61e80cfaf4d17bde0aa88ffda5857e47a8834de07d",
+      "top_level_keys": [
+        "components",
+        "fps",
+        "frame_count",
+        "initial_state",
+        "initial_state_vector",
+        "meta_data",
+        "state_changes",
+        "state_sequence",
+        "task",
+        "version",
+        "video_id",
+        "view_end",
+        "view_start",
+        "workflow"
+      ],
+      "top_level_count": 14
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/ASR/annotations/ER07AD15_Disassembly_A_001_front_asr.json",
+      "sha256": "19eb94b776c7a200579d4cd799e7cbc7a38aa6d5872c42caaaff5ed4feab36cc",
+      "top_level_keys": [
+        "components",
+        "fps",
+        "frame_count",
+        "initial_state",
+        "initial_state_vector",
+        "meta_data",
+        "state_changes",
+        "state_sequence",
+        "task",
+        "version",
+        "video_id",
+        "view_end",
+        "view_start",
+        "workflow"
+      ],
+      "top_level_count": 14
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/PSR/labels/component_names.json",
+      "sha256": "7e45ab20a585b3e02819299683c1ace60b4d1324cb379a923a6e59796a9dc509",
+      "top_level_keys": [
+        "list"
+      ],
+      "top_level_count": 17
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/PSR/labels/procedure_info_IMPACT.json",
+      "sha256": "b83c1e66e4e38bad78d4b3eaedcfb52886554a586a94e3c1dd9e47f385fc7de8",
+      "top_level_keys": [
+        "list"
+      ],
+      "top_level_count": 51
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/ego/AL07EJ17_Disassembly_A_001_ego.json",
+      "sha256": "ac42f328a86e13dcf9f3de4e2ce59679627d3a9516771f81efc7cd137940117a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/ego/AL07EJ17_Reassembly_A_002_ego.json",
+      "sha256": "4feeb89ee4239de91057de7e90bac6ff788a1ca6e9c82246940ec75ecdea027e",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/ego/ER07AD15_Disassembly_A_001_ego.json",
+      "sha256": "d660ba3ea5e982f6ca2287790ee9f0422bb502cb52e4b38d69f285fb015ccd88",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/front/AL07EJ17_Disassembly_A_001_front.json",
+      "sha256": "49078e5ddd33f47c96c04c27effe461277511f2f17098fcf6f1fb4f903f67ce3",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/front/AL07EJ17_Reassembly_A_002_front.json",
+      "sha256": "8bb43443e2e05347ad90ac508f32b9549d47b6ee8b3af1b607dde36e18766b74",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/front/ER07AD15_Disassembly_A_001_front.json",
+      "sha256": "00559d42d38f741a32fff2812f23cbdf1b63477748df09c0dbc1d8ce2b85642a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/left/AL07EJ17_Disassembly_A_001_left.json",
+      "sha256": "d4dd2343bc7617aa28311cd3c314c109555cca8b9986553d0f98ea1104f189ac",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/left/AL07EJ17_Reassembly_A_002_left.json",
+      "sha256": "e4f49fb05391ed4513c5787f591c3e7ddc7ba93d72986d2bc3329e7212f9f269",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/left/ER07AD15_Disassembly_A_001_left.json",
+      "sha256": "cfe6105a828e048597f2b11b5ee936abd8a72c6221fcf2a126237cd8925f882d",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/right/AL07EJ17_Disassembly_A_001_right.json",
+      "sha256": "b460b8cd440131d90c47a34811d4def388042911cf972c443e0c351e35846090",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/right/AL07EJ17_Reassembly_A_002_right.json",
+      "sha256": "b6a3d9a26972d7b533cfaa3c97f1d74fc22c93deb3595156df7fa06cf18e4e26",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/right/ER07AD15_Disassembly_A_001_right.json",
+      "sha256": "825771dd63025263d61a30c5339ac59a3283c4b61d8c361436525b05eda8af3a",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/top/AL07EJ17_Disassembly_A_001_top.json",
+      "sha256": "8f1622d9886efdf95e4e2835d954235853c0e533451ef58e5db84c4653c61821",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/top/AL07EJ17_Reassembly_A_002_top.json",
+      "sha256": "8de7006927afbcf87658d5b1fe208af31b6cfa0e0335fabc4b70dfc78b0c2492",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-B/top/ER07AD15_Disassembly_A_001_top.json",
+      "sha256": "4b1bcb72d92c6249b305238645a8dc9329a359c068dc714d0847c961cda2586d",
+      "top_level_keys": [
+        "action_labels",
+        "anomaly_types",
+        "meta_data",
+        "nouns",
+        "segments",
+        "verbs",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 10
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/ego/AL07EJ17_Disassembly_A_001_ego.json",
+      "sha256": "3028a792319fa24deba35a49cd1cd2dbe6d94a259c3592afd9e635ece2207eac",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/ego/AL07EJ17_Reassembly_A_002_ego.json",
+      "sha256": "af1a49f859f9c13f91f4588404e1693ddfdfb6a04824dc79c817545e22ec482a",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/ego/ER07AD15_Disassembly_A_001_ego.json",
+      "sha256": "aaf936ed98945161aaa37ff7e849b1bacf6e84c0173fe8905320028d144301e5",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/front/AL07EJ17_Disassembly_A_001_front.json",
+      "sha256": "b27c8cd05128aeb4670079dddea6e846c38fb9aa2ee735c7f337e1205f39f29e",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/front/AL07EJ17_Reassembly_A_002_front.json",
+      "sha256": "834ec46fbc6aa4d04db765ba73efdb8055335c023e271ed671da1a5cc699d22d",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/front/ER07AD15_Disassembly_A_001_front.json",
+      "sha256": "ab73e5702fdf4d3f849a5c7739d8bc426238636965ddb5e83dfe78080ee847b9",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/left/AL07EJ17_Disassembly_A_001_left.json",
+      "sha256": "4bb8b281a00d095daf52ecd9f3a7f73f879d6ed60cf1e2ebc3f30ae1e1465ac6",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/left/AL07EJ17_Reassembly_A_002_left.json",
+      "sha256": "4d6fac491b23bf4b96df0fbd8a10b14be395d1dd516806bc73524b5630fa7d6e",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/left/ER07AD15_Disassembly_A_001_left.json",
+      "sha256": "e523b2810e435f62c1258a7215942f2e6ba0c9de81383add4e01ec67e65c8bd6",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/right/AL07EJ17_Disassembly_A_001_right.json",
+      "sha256": "62457258d51c3ef77aa4347e870c8918e0d300f25c645d2436269593c7eb7f83",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/right/AL07EJ17_Reassembly_A_002_right.json",
+      "sha256": "e35e042f4024bca23fe44335ac34dfac8439f7a2bd8adab306cdf61cece28848",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/right/ER07AD15_Disassembly_A_001_right.json",
+      "sha256": "710dbe5c480d79581f26eafcc662ece4893ed66fd55665773639eaf3a9c03e3a",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/top/AL07EJ17_Disassembly_A_001_top.json",
+      "sha256": "10721eb1eaf8ce453e7154bc744e482bb47d5a74f21cc654eaa52b2feac5c6ed",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/top/AL07EJ17_Reassembly_A_002_top.json",
+      "sha256": "3bbf5c8d31fce4a51df05bedc37065828edcf3c3374a43ed6fba846aa09f9ee9",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    },
+    {
+      "path": "IMPACT-v1.1/sample/annotations/TAS-S/top/ER07AD15_Disassembly_A_001_top.json",
+      "sha256": "4a2e595c1302396f596a05d6b70ac5d366ebe1e9aa7ac5e38974a51b09d3de1d",
+      "top_level_keys": [
+        "labels",
+        "meta_data",
+        "segments",
+        "video_id",
+        "view",
+        "view_end",
+        "view_start"
+      ],
+      "top_level_count": 7
+    }
+  ],
+  "label_mapping": "NOT_DEFINED: native task/state/anomaly classes are not STEPLOCK part-marker/zone observations"
+}

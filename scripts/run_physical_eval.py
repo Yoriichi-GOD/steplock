@@ -12,6 +12,8 @@ import csv
 import datetime as dt
 import json
 from pathlib import Path
+import re
+import subprocess
 import time
 import cv2
 import numpy as np
@@ -36,6 +38,8 @@ def validate_population(labels, registered, recipe_hash, root=bootstrap.ROOT):
     validated = []
     for truth in clips:
         clip_id = truth["clip_id"]
+        if not isinstance(clip_id, str) or not re.fullmatch(r"[a-zA-Z0-9_-]{1,60}", clip_id):
+            raise ValueError("Clip IDs must be opaque letters, digits, _ or -")
         if clip_id in ids or clip_id not in registered:
             raise ValueError("Duplicate or unregistered clip ID")
         ids.add(clip_id)
@@ -78,7 +82,15 @@ def run(annotations, manifest):
     output = bootstrap.ROOT / "data/physical_runs" / stamp
     output.mkdir(parents=True, exist_ok=False)
     frozen_hash = hash_file(annotations)
+    manifest_hash = hash_file(manifest)
     (output / "frozen_labels.json").write_bytes(annotations.read_bytes())
+    (output / "frozen_manifest.csv").write_bytes(manifest.read_bytes())
+    dump(output / "config.json", {"git_commit": subprocess.check_output(["git", "-C", str(bootstrap.ROOT), "rev-parse", "HEAD"], text=True).strip(),
+                                 "manual_truth_sha256": frozen_hash, "registered_manifest_sha256": manifest_hash,
+                                 "recipe_sha256": recipe.sha256, "opencv": cv2.__version__,
+                                 "engine_sha256": hash_file(bootstrap.ROOT / "backend/steplock/procedure/engine.py"),
+                                 "detector_sha256": hash_file(bootstrap.ROOT / "backend/steplock/vision/aruco.py"),
+                                 "evaluator_sha256": hash_file(Path(__file__))})
     rows, all_events, timings = [], [], []
     visible_total = visible_tp = extra_tags = zone_total = zone_correct = 0
     with (output / "observations.jsonl").open("w", encoding="utf-8") as log:
@@ -124,8 +136,8 @@ def run(annotations, manifest):
             if first is not None:
                 cv2.imwrite(str(output / (row["clip_id"] + "-original.jpg")), first)
                 cv2.imwrite(str(output / (row["clip_id"] + "-last-overlay.jpg")), last)
-    if hash_file(annotations) != frozen_hash:
-        raise ValueError("Manual truth changed during inference; reject this run")
+    if hash_file(annotations) != frozen_hash or hash_file(manifest) != manifest_hash:
+        raise ValueError("Manual truth or registered manifest changed during inference; reject this run")
     scores = rates(sum(r["tp"] for r in rows), sum(r["fp"] for r in rows), sum(r["fn"] for r in rows))
     invalid = [r for r in rows if r["expected"] != "PASS"]
     confusion = [{"expected": e, "predicted": p, "count": sum(r["expected"] == e and r["predicted"] == p for r in rows)}
