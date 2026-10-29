@@ -23,9 +23,15 @@ placement, prerequisites and correction; findings point to source-frame evidence
 torque, fatigue diagnosis, accident-prevention guarantee or safety certification.
 
 <p align="center">
-  <a href="screenshots/requiem-glass/studio-1691.png"><img src="screenshots/requiem-glass/studio-1691.png" width="100%" alt="Current STEPLOCK Procedure Studio with the REQUIEM theme, frosted inspection panels and watermarked synthetic fixture evidence" /></a>
-  <br /><sub>Actual current application capture at commit <code>7352088</code>. The fixture is visibly watermarked synthetic test evidence; this is not a generated UI mockup.</sub>
+  <a href="screenshots/readme/studio-native.png"><img src="screenshots/readme/studio-native.png" width="100%" alt="Actual STEPLOCK Procedure Studio with the REQUIEM theme, frosted inspection panels and visibly labeled synthetic fixture evidence" /></a>
+  <br /><sub>Native lossless PNG of the working UI (<code>7352088</code>), showing an observed PASS on the synthetic fixture. <a href="screenshots/readme/studio-native.png">Open the 1920 × 1080 original</a> for full-size text. The fixture is generated test evidence, not physical camera validation.</sub>
 </p>
+
+<details>
+  <summary>Inspect the procedure, source watermark and advisory at full resolution</summary>
+  <p><a href="screenshots/readme/inspection-native.png"><img src="screenshots/readme/inspection-native.png" width="100%" alt="Browser-captured inspection detail showing four confirmed fixture steps, synthetic source watermark, PASS advisory, and the unchanged evidence controls" /></a></p>
+  <p><sub>Detail crop from the same actual session. No sharpening, upscaling or generated replacement pixels. <a href="docs/README_SCREENSHOT_PROVENANCE.md">Capture provenance</a>.</sub></p>
+</details>
 
 ## From pixels to proof
 

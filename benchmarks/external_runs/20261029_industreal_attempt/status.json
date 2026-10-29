@@ -1,0 +1,91 @@
+{
+  "status": "BLOCKED_BY_OS_APPLICATION_CONTROL",
+  "fresh_pixel_inference_executed": false,
+  "predictions": [],
+  "mistake_precision": null,
+  "mistake_recall": null,
+  "mistake_f1": null,
+  "false_pass": null,
+  "native_inference_latency_ms": null,
+  "marker_engine_pass": false,
+  "error_type": "OSError",
+  "error": "[WinError 4551] An Application Control policy has blocked this file. Error loading torch/lib/torch.dll or one of its dependencies.",
+  "original_application_environment_cv2": "4.14.0",
+  "original_application_environment_python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "video": {
+    "path": "data\\external\\industreal_candidate\\25_assy_0_1.mp4",
+    "sha256": "9771261256d8995ea9c1144deb6dab31c14fb6f457fb16eb744c9607090f34a1",
+    "bytes": 37472124,
+    "zip_crc32": "009522f6",
+    "source": "https://huggingface.co/datasets/Zzitang/IndustReal/resolve/c408f6e/IndustReal_videos.zip",
+    "mirror_provenance": "UNVERIFIED_AGAINST_OFFICIAL_ARCHIVE",
+    "recording_split": "UNKNOWN_NOT_HELD_OUT"
+  },
+  "model": {
+    "path": "data\\external\\industreal_candidate\\third_party_best.pt",
+    "sha256": "53739cf329e5e3fb08b8584957cf81caf79ce8073c892437cb155e15fee735ce",
+    "bytes": 6230378,
+    "source": "https://raw.githubusercontent.com/321thijs123/IndustReal-YOLO-VLM/5fac256e7d29de2626a2b08e973a449fe6ea98a9/yolo_weights/best.pt",
+    "publisher": "321thijs123 course project; NOT original IndustReal authors",
+    "redistribution_license": "NOT_FOUND_DO_NOT_REDISTRIBUTE"
+  },
+  "hf_revision": "c408f6effaa96512bd4eb5036c871bb7601ddc3e",
+  "author_reference_clip": "03_assy_0_1 unavailable in acquired mirror",
+  "official_model_acquired": false,
+  "official_4tu_access": "TIMEOUT",
+  "third_party_checkpoint_embedded_license": "AGPL-3.0 (https://ultralytics.com/license)",
+  "model_publisher_license_file": "not found",
+  "scope": "acquisition and compatibility probe; NOT a validated recognizer or STEPLOCK real PASS",
+  "video_metadata": {
+    "frames": 1798,
+    "fps": 10.0,
+    "width": 1280,
+    "height": 720,
+    "duration_seconds": 179.8,
+    "timestamp_method": "FPS_INDEX_FALLBACK_DECLARED"
+  },
+  "attempt_date": "2026-10-29",
+  "acquisition_receipt": {
+    "checked_at": "2026-10-29T10:53:47.708253+00:00",
+    "official_archive_access": "TIMEOUT_OBSERVED_2026_10_29",
+    "population": "EXTERNAL_PHYSICAL_MIRROR_UNVERIFIED",
+    "accuracy_claim": null,
+    "video": {
+      "path": "data/external/industreal_candidate/25_assy_0_1.mp4",
+      "sha256": "9771261256d8995ea9c1144deb6dab31c14fb6f457fb16eb744c9607090f34a1",
+      "bytes": 37472124,
+      "zip_crc32": "009522f6",
+      "source": "https://huggingface.co/datasets/Zzitang/IndustReal/resolve/c408f6effaa96512bd4eb5036c871bb7601ddc3e/IndustReal_videos.zip",
+      "mirror_provenance": "UNVERIFIED_AGAINST_OFFICIAL_ARCHIVE",
+      "recording_split": "UNKNOWN_NOT_HELD_OUT"
+    },
+    "model": {
+      "path": "data/external/industreal_candidate/third_party_best.pt",
+      "sha256": "53739cf329e5e3fb08b8584957cf81caf79ce8073c892437cb155e15fee735ce",
+      "bytes": 6230378,
+      "source": "https://raw.githubusercontent.com/321thijs123/IndustReal-YOLO-VLM/5fac256e7d29de2626a2b08e973a449fe6ea98a9/yolo_weights/best.pt",
+      "publisher": "321thijs123 course project; NOT original IndustReal authors",
+      "embedded_checkpoint_license": "AGPL-3.0 (https://ultralytics.com/license)",
+      "publisher_license_file": "NOT_FOUND; weights are not redistributed"
+    }
+  },
+  "regression_validation": {
+    "first_backend_run": {
+      "passed": 64,
+      "failed": 1,
+      "failure": "Assertion expected 60 analyzed frames; observed 58 under load. Existing queue intentionally drops stale frames."
+    },
+    "followup_backend_run": {
+      "passed": 68,
+      "failed": 0,
+      "seconds": 36.72
+    },
+    "frontend_tests": {
+      "passed": 20,
+      "failed": 0
+    },
+    "production_build": "PASS",
+    "application_behavior_changed": false,
+    "test_contract": "All source frames decoded; analyzed plus explicitly dropped equals source frames; final frame retained; no unsupported PASS"
+  }
+}

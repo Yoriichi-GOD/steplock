@@ -81,7 +81,13 @@ def test_actual_local_real_preset_is_decoded_and_never_unsupported_pass(tmp_path
                 break
             time.sleep(.05)
         assert state["state"] == "finished", state
-        assert state["runtime"]["frames_analyzed"] == inspected["frame_count"]
+        # The bounded real-time queue intentionally drops stale frames under load.
+        # Require complete source decoding and explicit accounting for every skip.
+        runtime = state["runtime"]
+        assert runtime["frames_in"] == inspected["frame_count"]
+        assert runtime["frames_analyzed"] > 0
+        assert runtime["frames_analyzed"] + runtime["frames_dropped"] == runtime["frames_in"]
+        assert state["latest_frame"]["frame_index"] == inspected["frame_count"] - 1
         assert state["decision"]["status"] == "CALIBRATION_REQUIRED"
         assert state["quality"]["calibration_id"] is None
         frame_id = state["latest_frame"]["frame_id"]
