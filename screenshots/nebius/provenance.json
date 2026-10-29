@@ -1,0 +1,31 @@
+{
+  "source": "Actual headless Chromium local application capture; synthetic fixture and real provider response",
+  "generated_ui_image": false,
+  "credentials_visible": false,
+  "captures": {
+    "agent-1280.png": {
+      "bytes": 296493,
+      "sha256": "cd2ff13944ddf0438175a1a6842c74354d3043d12a194763101c21157d3886fe"
+    },
+    "agent-1691.png": {
+      "bytes": 569126,
+      "sha256": "4682f4d3d2818312714db6ad1adfd0ca532721208ea2e3a94f40f497d13f19fb"
+    },
+    "agent-390.png": {
+      "bytes": 88601,
+      "sha256": "237ee3fc2e558d76481d91b6f722b0e1bf096554d06b233cce2e49035ed74bf2"
+    },
+    "clean-start-no-backend.png": {
+      "bytes": 606785,
+      "sha256": "d4d64fb731c4f2aa1f66ebcfdc067e88b95e991c27fc809adf12933b6f7b54d7"
+    },
+    "nemotron-live-1920.png": {
+      "bytes": 526250,
+      "sha256": "d8dd476974315ad443941fdb6da69dfb9d9ac0a81f2a43ace9dec6f2528a4fad"
+    },
+    "offline-after-pass.png": {
+      "bytes": 583787,
+      "sha256": "aa33980ba6d837ca00f63fe0d0566a79a0c33ffb255e377b1d949acf01e9c862"
+    }
+  }
+}

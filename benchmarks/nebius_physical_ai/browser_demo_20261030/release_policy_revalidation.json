@@ -1,0 +1,17 @@
+{
+  "new_model_calls": 0,
+  "cases": [
+    {
+      "run_id": "5ee66876e3104be9b93387343b857585",
+      "release_policy_accepts": true,
+      "reason": null,
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+    },
+    {
+      "run_id": "aeaf89f6267bbaf178511cd3d15fd352",
+      "release_policy_accepts": true,
+      "reason": null,
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+    }
+  ]
+}

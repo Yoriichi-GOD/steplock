@@ -19,6 +19,24 @@ A local inspection app for a controlled, tagged tabletop assembly. OpenCV reads
 actual marker pixels and board anchors. A temporal recipe engine checks visible
 placement, prerequisites and correction; findings point to source-frame evidence.
 
+**NVIDIA × Nebius extension:** an optional Nemotron evidence agent reads the
+retained recipe, event, frame metadata and correction links, then proposes
+operator guidance through real Nebius Token Factory calls. STEPLOCK keeps sole
+authority over the verdict. Generated wording is fallible and clearly separated
+from verified facts; unsupported output is refused.
+[Run the integration](docs/NVIDIA_NEBIUS_INTEGRATION.md) ·
+[Measured results and retained failures](docs/PHYSICAL_AI_EVAL.md) ·
+[Two-minute demo runbook](docs/PHYSICAL_AI_DEMO_RUNBOOK.md).
+
+The integration runs locally with optional cloud inference. STEPLOCK AWS is
+**NOT_DEPLOYED**; REFLEX's existing AWS service remains separate and unchanged.
+
+<details>
+  <summary>See the actual NVIDIA/Nebius evidence panel</summary>
+  <a href="screenshots/nebius/nemotron-live-1920.png"><img src="screenshots/nebius/nemotron-live-1920.png" alt="Actual local STEPLOCK application: synthetic wrong-component HOLD, authoritative tag facts and a real Nemotron response with model/tool trace" /></a>
+  <p>Actual browser capture from the 1080p rehearsal. Generated fixture pixels are labeled; model wording is advisory. No generated UI image or physical-camera claim.</p>
+</details>
+
 **ADVISORY ONLY.** No machinery interlock, intrinsic part identity, fastening,
 torque, fatigue diagnosis, accident-prevention guarantee or safety certification.
 

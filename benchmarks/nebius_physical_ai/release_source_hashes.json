@@ -1,0 +1,13 @@
+{
+  "verified_code_commit": "39a25b027fded8db72e4af2a1a8d9cbd0a8617a5",
+  "files": {
+    "backend/steplock/agent/evidence_tools.py": "6f5a3bd0043131ea133bdb10c47f9cedcc5964b55e034e776440ceeb9487722d",
+    "backend/steplock/agent/nebius_client.py": "b805c846bb2952400aafc4194544746d9fd407bdb71efb9e1ccc0a78b8ac4af6",
+    "backend/steplock/agent/orchestrator.py": "16416580fa3decf9597a59f015cde3f88862401f59b07144a4db2eedc4eb647e",
+    "backend/steplock/agent/safety_policy.py": "19165317fd78aa2e6e9344e2692df645cf7cc6c2edb83eb7c77c65d30747f88a",
+    "backend/steplock/agent/schemas.py": "f8141669d59343f946d8ebbf89a8e8f4d5bd3289e1561a39192969c39d8740a9",
+    "backend/steplock/agent/__init__.py": "9155d270d5067e03d6f5b65a4eb8279e5c3fecace66b262d3119e3662b6c2ff2",
+    "backend/app.py": "512b2f394049bf9425e7f9c98a5042527c50d17f9250ad426729f3f1f260fd3c",
+    "frontend/src/components/NemotronEvidenceAgent.tsx": "734edd294a6c8777dc6e6f45f5d82823423292520dcc2556cb53c00c4610206c"
+  }
+}

@@ -1,0 +1,17 @@
+flowchart LR
+  Source[Generated replay or consented tagged recording] --> CV[OpenCV 4 ArUco and homography]
+  CV --> Temporal[Independent timed support]
+  Temporal --> Engine[Authoritative recipe DAG]
+  Engine --> Verdict[PASS or HOLD or abstain]
+  Engine --> Evidence[(Append-only events and original frames)]
+  Verdict --> UI[Procedure Studio]
+  Evidence --> UI
+  UI -->|Explicit authenticated request| Agent[Bounded advisory orchestrator]
+  Agent --> Tools[Five scoped metadata reads]
+  Tools --> Evidence
+  Tools --> Packet[Typed facts and source links]
+  Packet -->|Structured text only| Nebius[NVIDIA Nemotron on Nebius Token Factory]
+  Nebius --> Validate[Schema, action and citation guards]
+  Validate --> Advice[Generated unverified wording or refusal]
+  Advice --> UI
+  Verdict -.cannot be overwritten by model.-> Advice

@@ -1,0 +1,12 @@
+{
+  "raw_duration_seconds": 120.88,
+  "leading_edge_trim_seconds": 0.8799999999999955,
+  "internal_edits": false,
+  "width": 1920,
+  "height": 1080,
+  "fps": 25.0,
+  "frames": 3000,
+  "measured_duration_seconds": 120.0,
+  "silent": true,
+  "source": "ACTUAL_APPLICATION_SYNTHETIC_FIXTURE_AND_REAL_PROVIDER_CALLS"
+}

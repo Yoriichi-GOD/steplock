@@ -1,0 +1,61 @@
+{
+  "phase": "LOCAL_RELEASE_VERIFIED_SUBMISSION_PENDING",
+  "updated_at": "2026-10-29T18:55:07.578000+00:00",
+  "verified_code_commit": "39a25b027fded8db72e4af2a1a8d9cbd0a8617a5",
+  "authorization": "Build and test; stop before paid AWS deployment",
+  "tests": {
+    "backend_passed": 113,
+    "backend_failed": 0,
+    "backend_seconds": 62.06,
+    "frontend_passed": 22,
+    "production_build": "PASS"
+  },
+  "vision": {
+    "run": "20261029_182255_717473_test",
+    "clips": 32,
+    "frames": 864,
+    "correct_final": 32,
+    "false_pass": 0,
+    "false_pass_denominator": 24
+  },
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "provider_http_success": {
+    "numerator": 4,
+    "denominator": 4
+  },
+  "release_policy_saved_output_acceptance": {
+    "numerator": 3,
+    "denominator": 4,
+    "type": "posthoc deterministic revalidation; no independent narrative accuracy"
+  },
+  "browser": {
+    "viewports": [
+      "1691x930",
+      "1280x720",
+      "390x844"
+    ],
+    "offline_loss": "PASS",
+    "clean_no_backend_static_origin": "PASS"
+  },
+  "video": {
+    "path": "runtime/demo_nebius/steplock-nebius-2min.webm",
+    "seconds": 120,
+    "width": 1920,
+    "height": 1080,
+    "silent": true,
+    "live_calls": 2
+  },
+  "paid_aws_deployment": "NOT_AUTHORIZED_NOT_DEPLOYED",
+  "docker_image": "NOT_BUILT_DAEMON_UNAVAILABLE",
+  "physical_tagged_trials": "NOT_PROVIDED",
+  "youtube": "NOT_UPLOADED",
+  "devpost": "NOT_SUBMITTED",
+  "deadline_ist": "2026-10-30T22:30:00+05:30",
+  "next_safe_command": "python scripts/resume_physical_ai.py --verify",
+  "operator_next_steps": [
+    "Record narration or use silent rehearsal with reviewed voiceover",
+    "Upload public YouTube demo and verify logged-out playback",
+    "Review Devpost copy/team fields and submit before cutoff",
+    "Obtain cost review and authorization before any paid AWS deployment"
+  ]
+}

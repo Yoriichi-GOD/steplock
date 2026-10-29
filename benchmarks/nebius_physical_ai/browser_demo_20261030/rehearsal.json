@@ -1,0 +1,63 @@
+{
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "silent": true,
+  "synthetic_source": true,
+  "real_provider_calls": 2,
+  "marks": [
+    {
+      "seconds": 0,
+      "action": "Header / actual application"
+    },
+    {
+      "seconds": 8.18,
+      "action": "Wrong Component / Run example"
+    },
+    {
+      "seconds": 20.13,
+      "action": "View wrong component source evidence"
+    },
+    {
+      "seconds": 30.02,
+      "action": "Procedure studio"
+    },
+    {
+      "seconds": 37.01,
+      "action": "Model ADVISED nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+    },
+    {
+      "seconds": 48.02,
+      "action": "Expand actual provider and five-tool trace"
+    },
+    {
+      "seconds": 62.05,
+      "action": "Correction / Run example"
+    },
+    {
+      "seconds": 76.15,
+      "action": "View CORRECTED source and original event link"
+    },
+    {
+      "seconds": 85.03,
+      "action": "Select corrected event"
+    },
+    {
+      "seconds": 89.95,
+      "action": "Model ADVISED nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+    },
+    {
+      "seconds": 101.03,
+      "action": "Normal / Run example"
+    },
+    {
+      "seconds": 111.03,
+      "action": "Authoritative normal PASS at checkpoint"
+    },
+    {
+      "seconds": 120,
+      "action": "End two-minute rehearsal"
+    }
+  ]
+}

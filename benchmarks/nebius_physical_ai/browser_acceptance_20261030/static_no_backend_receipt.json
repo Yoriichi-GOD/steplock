@@ -1,0 +1,9 @@
+{
+  "test": "STATIC_FRONTEND_ONLY_NO_FASTAPI_BACKEND",
+  "api_status": 404,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "pass": true
+}

@@ -1,0 +1,38 @@
+{
+  "review_type": "POSTHOC_RELEASE_POLICY_REVALIDATION_NOT_NEW_MODEL_CALLS",
+  "new_model_requests": 0,
+  "independent_human_quality": null,
+  "source_outputs_unchanged": true,
+  "accepted": 3,
+  "denominator": 4,
+  "cases": [
+    {
+      "case": "normal",
+      "provider_http_status": 200,
+      "original_state": "ADVISED",
+      "release_policy_accepts": false,
+      "reason": "PART_TAG_BINDING_CONTRADICTION"
+    },
+    {
+      "case": "wrong_component",
+      "provider_http_status": 200,
+      "original_state": "ADVISED",
+      "release_policy_accepts": true,
+      "reason": null
+    },
+    {
+      "case": "wrong_order",
+      "provider_http_status": 200,
+      "original_state": "ADVISED",
+      "release_policy_accepts": true,
+      "reason": null
+    },
+    {
+      "case": "correction",
+      "provider_http_status": 200,
+      "original_state": "ADVISED",
+      "release_policy_accepts": true,
+      "reason": null
+    }
+  ]
+}

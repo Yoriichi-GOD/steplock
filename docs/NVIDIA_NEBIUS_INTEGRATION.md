@@ -61,6 +61,9 @@ the evaluation report. This layer is advisory, not safety certification.
   per server lifetime; each request is capped at 1,100 completion tokens and a
   20-second provider timeout. These are in-process demo bounds, not distributed
   public-service quotas. Restarting resets counts.
+- For the pinned Nano model, request the documented reasoning-off template flag
+  so short JSON fits that cap. No token-cap increase or silent retry. The request
+  settings are retained; accepted settings do not independently prove internals.
 - Exactly one provider attempt. 401/403 never retry. 429/503 preserve Retry-After
   and defer to an explicit operator action; no automatic retry or credit burn.
 - Timeout/network error, invalid JSON, truncated output, incorrect model identity,
@@ -96,3 +99,5 @@ the user stopped before paid AWS deployment. REFLEX remains separate and healthy
 Local Docker CLI exists but its daemon is unavailable, so the Dockerfile is an
 untested container candidate, not a verified image. Native local operation is
 the tested delivery path.
+
+Reasoning-control source: [NVIDIA's model card](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16#use-it-with-vllm).

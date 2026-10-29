@@ -44,6 +44,26 @@ correct**. The release adds authoritative fact display and a categorical
 contradiction guard. Prior metrics describe prior checks; they are not silently
 rewritten. Final API acceptance is recorded separately after that change.
 
+API run `20261029_184010_316923_api_acceptance` added typed finding facts but
+completed useful guidance for only 2/4 cases: two replies exhausted the unchanged
+1,100-token allowance. Both failures remained unavailable; no text was repaired.
+
+The next API run, `20261029_184328_684012_api_acceptance`, requested NVIDIA's
+documented `chat_template_kwargs.enable_thinking=false` for the exact Nano model.
+All four provider calls completed; p50/p95 round trip 1,686/2,049 ms (n=4), total
+6,788 reported tokens including prompts. Billed cost is NOT_MEASURED. Requested
+thinking control is recorded; internal provider compliance is not independently
+observable. A later review found the normal reply mislabeled tag 12 as SPACER
+and contradicted confirmed engine state. The final release guards reject it.
+`release_policy_revalidation.json` rechecks the unchanged saved outputs without
+new model calls: **3/4 accepted, 1/4 refused**. This is a development, post-hoc
+policy revalidation, not an independent narrative-accuracy score.
+
+The silent screen rehearsal made two additional actual calls from the browser,
+for wrong component and correction, and both displayed advice. This is operational
+demonstration evidence, not an added benchmark denominator. Normal assembly
+still reaches engine-owned PASS if its optional model narrative is refused.
+
 No independent human scoring of explanation correctness or action usefulness was
 provided. Automated acceptance checks citations, policy and selected contradictions;
 it cannot prove arbitrary generated prose. No industrial effectiveness percentage
@@ -60,7 +80,9 @@ Mocks are explicitly unit-test transport fixtures, not live inference evidence.
 
 Full suite before the last categorical test: 109 backend passes; targeted final
 fact/policy checks: 31 passes; 22 frontend passes; production build passes.
-Final full-suite totals are in the release receipt/checkpoint.
+Final full suite: **113 backend tests passed** in 62.06 seconds; **22 frontend
+tests passed**, and the production build passed. Existing FastAPI/httpx and
+bundle-size advisories remain.
 
 Actual headless Chromium browser acceptance passed at 1691×930, 1280×720 and
 390×844 without horizontal document overflow. It invoked a real authenticated
@@ -68,6 +90,8 @@ model explanation, cleared it on session switch, hid stale PASS/advice after
 connection loss, and started with backend requests refused: disabled run action,
 PENDING and explicit offline banner. No uncaught browser errors. The in-app
 browser tool timed out; a separate isolated local runner supplied this evidence.
+An additional static-frontend origin with no FastAPI backend also passed the
+1280×720 clean-start test (API 404, disabled run action, PENDING, offline banner).
 
 ## Real input and infrastructure
 
