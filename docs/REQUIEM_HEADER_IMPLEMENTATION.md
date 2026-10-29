@@ -99,3 +99,35 @@ for verification; neither touched the teammate's live source or core state.
 
 Physical camera operation is outside this visual validation; no camera was opened.
 No physical-world accuracy is inferred from these synthetic inspection checks.
+
+## Exact implementation scope
+
+Implementation commit `df9b28528b3df9fc90851c9f5028e7e6df3030f6`, pushed to `main`.
+`git show --name-only df9b285` lists these19 intentional files:
+
+```text
+.gitattributes
+docs/REQUIEM_HEADER_IMPLEMENTATION.md
+docs/REQUIEM_UI_IMPLEMENTATION.md
+docs/REQUIEM_UI_PROGRESS.md
+frontend/public/assets/steplock-header/BACKGROUND_HEADER_READY_1691x248.webp
+frontend/public/assets/steplock-header/celestial-full.webp
+frontend/public/assets/steplock-header/manifest.json
+frontend/src/App.tsx
+frontend/src/pages/AssemblyExplorer.tsx
+frontend/src/pages/Studio.tsx
+frontend/src/theme/requiem.css
+frontend/src/theme/theme.test.mjs
+screenshots/requiem-header/body-scroll-1691.png
+screenshots/requiem-header/desktop-1280.png
+screenshots/requiem-header/desktop-1691.png
+screenshots/requiem-header/fresh-offline-1280.png
+screenshots/requiem-header/laptop-hold.png
+screenshots/requiem-header/mobile-390.png
+screenshots/requiem-header/source-lost-1691.png
+```
+
+The README's small UI usage update is coordinated with the core agent's separate
+physical-validation reviewer update, so it is included in that agent's checkpoint
+instead of sweeping their changes into this UI commit. Historical source ZIPs,
+raw UI assets, existing stashes and frozen evaluation runs are preserved.

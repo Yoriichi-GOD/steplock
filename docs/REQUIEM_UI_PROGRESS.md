@@ -84,4 +84,9 @@ No timestamps or history were rewritten and no force push was used.
   real stopped-backend SOURCE LOST and fresh frontend-only ENGINE OFFLINE.
 - Fixed three measured issues before publication: body grid overflow from an
   inherited auto margin, logo expanding the nav row, and tab scroll retention.
-- Exact implementation SHA and verified remote push receipt follow after commit.
+- 14:49:02 IST implementation commit:
+  `df9b28528b3df9fc90851c9f5028e7e6df3030f6`.
+- Push receipt: `c605b6a..df9b285 main -> main`; independently verified
+  `git ls-remote origin refs/heads/main` returned that exact SHA.
+- Only19 UI/source/art/doc/screenshot files were included. Teammate validation
+  scripts, reports, tests, datasets and the shared README were excluded.
