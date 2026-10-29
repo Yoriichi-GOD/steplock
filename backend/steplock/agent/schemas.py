@@ -28,6 +28,7 @@ class AgentConfig:
     model: str = "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
     base_url: str = "https://api.tokenfactory.nebius.com/v1"
     timeout_seconds: float = 20
+    disable_thinking: bool = True
     calls_per_session: int = 4
     calls_per_process: int = 40
 
@@ -36,6 +37,7 @@ class AgentConfig:
         return cls(enabled=os.getenv("ENABLE_NEBIUS_AGENT", "0").lower() in {"1", "true"},
                    api_key=os.getenv("NEBIUS_API_KEY", ""),
                    model=os.getenv("NEBIUS_NVIDIA_MODEL", cls.model),
+                   disable_thinking=os.getenv("NEBIUS_DISABLE_THINKING", "1").lower() in {"1", "true"},
                    base_url=os.getenv("NEBIUS_BASE_URL", cls.base_url).rstrip("/"))
 
     @property

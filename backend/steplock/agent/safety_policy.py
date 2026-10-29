@@ -46,6 +46,13 @@ def validate(content, packet):
     claimed_tags = re.findall(r"\b(?:part|marker|tag|tagged)(?:\s+(?:id|as))?\s*[#:=]?\s*(\d+)\b", text, re.I)
     if any(int(tag) not in known_tags for tag in claimed_tags):
         raise ValueError("UNSUPPORTED_TAG_NUMBER")
+    for part, expected_tag in packet["recipe"]["parts"].items():
+        forward = re.findall(r"\b" + re.escape(part) + r"\s*\(\s*(?:part|marker|tag)\s*(\d+)\s*\)", text, re.I)
+        reverse = re.findall(r"\b(?:part|marker|tag)(?:\s+(?:id|labeled|labelled))?\s*(\d+)\s*\(\s*" + re.escape(part) + r"\s*\)", text, re.I)
+        if any(int(tag) != expected_tag for tag in forward + reverse):
+            raise ValueError("PART_TAG_BINDING_CONTRADICTION")
+    if packet["snapshot"]["engine_decision"] == "PASS" and re.search(r"\b(?:not\s+(?:yet\s+)?confirmed|has\s+not\s+(?:yet\s+)?confirmed|missing|not\s+(?:yet\s+)?present)\b", text, re.I):
+        raise ValueError("NARRATIVE_CONTRADICTS_CONFIRMED_ENGINE_STATE")
     category = packet["event"]["kind"]
     if category == "CORRECTED":
         category = next((e["kind"] for e in packet["corrections"]["links"] if e["event_id"] == packet["event"]["resolves_event_id"]), category)

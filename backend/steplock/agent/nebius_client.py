@@ -19,12 +19,15 @@ class NebiusClient:
         if not self.config.configured:
             raise ProviderFailure("AGENT_NOT_CONFIGURED")
         started = time.perf_counter()
+        payload={"model": self.config.model, "messages": messages, "temperature": 0,
+                 "max_tokens": 1100, "response_format": {"type": "json_object"}}
+        controlled=self.config.disable_thinking and self.config.model=="nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+        if controlled:payload["chat_template_kwargs"]={"enable_thinking":False}
         try:
             with httpx.Client(transport=self.transport, timeout=httpx.Timeout(self.config.timeout_seconds, connect=5), follow_redirects=False) as client:
                 response = client.post(self.config.base_url + "/chat/completions", headers={
                     "Authorization": "Bearer " + self.config.api_key, "Content-Type": "application/json"},
-                    json={"model": self.config.model, "messages": messages, "temperature": 0,
-                          "max_tokens": 1100, "response_format": {"type": "json_object"}})
+                    json=payload)
             if response.status_code != 200:
                 retry = response.headers.get("retry-after")
                 # Defer rather than silently spend credits or ignore Retry-After.
@@ -44,6 +47,7 @@ class NebiusClient:
             return {"content": content, "served_model": data["model"], "completion_id": data.get("id"),
                     "provider_request_id": response.headers.get("x-request-id"), "usage": data.get("usage"),
                     "round_trip_ms": round((time.perf_counter() - started) * 1000, 3), "http_status": 200,
+                    "generation_settings": {"max_tokens":1100,"thinking_control":"REQUESTED_OFF" if controlled else "PROVIDER_DEFAULT"},
                     "attempts": 1, "retry_count": 0}
         except ProviderFailure:
             raise

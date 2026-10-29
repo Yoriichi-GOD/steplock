@@ -91,3 +91,10 @@ def test_wrong_component_does_not_become_a_wrong_zone_claim(session):
     assert facts["finding_kind"]=="WRONG_COMPONENT"
     assert facts["expected_placements"][0]["required_tag"]==13
     assert 14 in facts["observed_frame_tags"]
+
+
+@pytest.mark.parametrize("summary",["Confirm tag labeled 12 (SPACER) before continuing.","The engine has not yet confirmed the fastener placement."])
+def test_observed_normal_case_semantic_errors_are_refused(tmp_path,summary):
+    session=prepared_session(tmp_path,"normal");packet,_,_=gather(session,None,"next_safe_step")
+    data=candidate(packet);data["summary"]=summary
+    with pytest.raises(ValueError):validate(json.dumps(data),packet)

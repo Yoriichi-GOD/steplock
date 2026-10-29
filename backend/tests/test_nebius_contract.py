@@ -27,6 +27,7 @@ def test_real_contract_checks_served_model_and_records_actual_usage():
     def response(request):
         body=json.loads(request.content)
         assert body["model"]==cfg.model and body["max_tokens"]==1100
+        assert body["chat_template_kwargs"]=={"enable_thinking":False}
         assert request.headers["authorization"]=="Bearer "+cfg.api_key
         return httpx.Response(200,headers={"x-request-id":"mock-id"},json={"model":cfg.model,"id":"mock-completion","choices":[{"finish_reason":"stop","message":{"content":"{}"}}],"usage":{"total_tokens":20}})
     result=NebiusClient(cfg,httpx.MockTransport(response)).complete([])
