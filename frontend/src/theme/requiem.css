@@ -1,221 +1,208 @@
-/* REQUIEM / Celestial atelier. Decorative art never touches source pixels. */
+/* REQUIEM: fixed, uncropped Celestial master; opaque black working surfaces. */
 :root {
-  --rq-bg:#080d12; --rq-night:#0c151e; --rq-panel:#101d25; --rq-raised:#14232d;
-  --rq-line:#405566; --rq-ivory:#e8e1d0; --rq-parchment:#decba6;
-  --rq-blue:#83b8d3; --rq-teal:#3d7b86; --rq-gold:#c8ad7c;
-  --rq-good:#9bd5b6; --rq-warning:#e7bc7e; --rq-danger:#e47f80; --rq-muted:#99aab5;
-  --rq-display:"Cormorant Garamond",Georgia,serif;
-  --bg:var(--rq-bg); --panel:var(--rq-panel); --line:#40556680;
-  --text:var(--rq-ivory); --subtle:#b4c7d2; --muted:var(--rq-muted);
-  --lime:var(--rq-blue); --green:var(--rq-good); --amber:var(--rq-warning); --red:var(--rq-danger);
-  font-family:Inter,"Segoe UI",system-ui,sans-serif; color:var(--text); background:var(--bg);
+ --rq-bg:#030303;--rq-night:#080808;--rq-panel:#101010;--rq-raised:#171717;
+ --rq-line:#454545;--rq-ivory:#e8e1d0;--rq-parchment:#decba6;--rq-blue:#83b8d3;
+ --rq-teal:#3d7b86;--rq-gold:#c8ad7c;--rq-good:#9bd5b6;--rq-warning:#e7bc7e;--rq-danger:#e47f80;--rq-muted:#a7aaa9;
+ --rq-display:"Cormorant Garamond",Georgia,serif;
+ --bg:var(--rq-bg);--panel:var(--rq-panel);--line:#333;--text:var(--rq-ivory);--subtle:#c0c4c4;--muted:var(--rq-muted);
+ --lime:var(--rq-blue);--green:var(--rq-good);--amber:var(--rq-warning);--red:var(--rq-danger);
+ font-family:Inter,"Segoe UI",system-ui,sans-serif;color:var(--text);background:var(--bg);
 }
+html,body,#root {height:100%;overflow:hidden}
 body {background:var(--bg)}
+.app-shell {height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden;background:var(--rq-bg)}
 code,.mono,.hash,.eyebrow,.breadcrumb,.panel-heading {font-family:"IBM Plex Mono",Consolas,monospace}
-button,.button {background:var(--rq-night);border-color:var(--rq-line);border-radius:5px;color:var(--text);font-weight:500}
-button:hover,.button:hover {background:#1c303d;border-color:var(--rq-blue)}
-button.primary,.decision-actions .primary {background:var(--rq-parchment);border-color:var(--rq-parchment);color:#101923}
-button.primary:hover,.decision-actions .primary:hover {background:#efe0bf;border-color:#efe0bf;color:#101923}
-button.primary:disabled {background:#decba6;color:#101923}
-button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible {outline:2px solid var(--rq-blue);outline-offset:4px}
-select,input[type=number],.recipe-editor textarea {background:var(--rq-night);border-color:var(--rq-line);color:var(--text)}
-select option {background:var(--rq-night);color:var(--text)}
+button,.button {background:#101010;border-color:#454545;border-radius:4px;color:var(--text);font-weight:500}
+button:hover,.button:hover {background:#202020;border-color:var(--rq-blue)}
+button.primary,.decision-actions .primary {background:var(--rq-parchment);border-color:var(--rq-parchment);color:#101010}
+button.primary:hover,.decision-actions .primary:hover {background:#efe0bf;border-color:#efe0bf;color:#101010}
+button.primary:disabled {background:var(--rq-parchment);color:#101010}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible {outline:2px solid var(--rq-blue);outline-offset:3px}
+select,input[type=number],.recipe-editor textarea {background:#080808;border-color:#454545;color:var(--text)}
+select option {background:#080808;color:var(--text)}
 a {color:var(--rq-blue)}
 h1,h2 {font-family:var(--rq-display);font-weight:400;letter-spacing:-.8px}
-.app-header {height:90px;padding:0 32px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:28px;background:var(--rq-bg);border-color:var(--line)}
-.brand {gap:10px;font-family:var(--rq-display);font-size:31px;font-weight:400;letter-spacing:1px}
-.brand-mark {width:52px;height:58px;background:transparent;border-radius:0}
-.brand-mark img {width:100%;height:100%;object-fit:contain;pointer-events:none}
-.brand small {font-family:Inter,"Segoe UI",sans-serif;font-size:7px;letter-spacing:1.7px;color:var(--muted)}
-.app-header nav {justify-content:center;gap:23px;min-width:0}
-.app-header nav button {font-size:11px;color:var(--text)}
-.app-header nav button.active {color:var(--rq-blue);border-color:var(--rq-blue)}
-.header-status {display:flex;margin:0;gap:12px}
-.connection {font-size:8px;letter-spacing:.7px}
-.advisory-tag {display:flex!important;background:transparent;color:var(--text);border-color:var(--rq-line);font-family:Consolas,monospace;letter-spacing:.8px;padding:8px}
-.workspace {max-width:1800px;padding:0 32px}
-.workspace-title {position:relative;isolation:isolate;min-height:174px;padding:23px 8px 24px;margin:0 -8px 18px;overflow:hidden;align-items:flex-end}
-.workspace-title::before {content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('/assets/requiem/celestial-arches.webp') right 40% / auto 470px no-repeat;mask-image:linear-gradient(to right,transparent 25%,#000 70%);opacity:.86}
-.workspace-title>div:first-child {max-width:70%;min-width:0}
-.workspace-title h1 {font-size:clamp(38px,4vw,64px);line-height:1.1}
-.workspace-title p {font-size:13px;letter-spacing:.25px;color:var(--subtle);line-height:1.6}
-.breadcrumb {color:var(--muted);font-size:8px;letter-spacing:1.5px;margin-bottom:7px}
+/* The chosen master is shown in full at its exact aspect ratio, never cover-cropped. */
+.rq-header-stage {position:relative;isolation:isolate;height:calc(100vw * 732 / 2149);min-height:300px;max-height:none;overflow:hidden;background:#030303 url('/assets/steplock-header/celestial-full.webp') center bottom / 100% auto no-repeat;display:grid;grid-template-rows:110px minmax(0,1fr)}
+.app-header {position:relative;z-index:1;height:110px;padding:0 clamp(22px,2.484vw,54px);display:grid;grid-template-columns:360px minmax(0,1fr) auto;grid-template-rows:110px;gap:26px;background:transparent;border:0}
+.brand {position:relative;display:block;width:360px;height:180px;align-self:start;margin-top:0;z-index:1}
+.rq-brand-logo {display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.rq-brand-fallback {display:none}
+.rq-brand-logo[hidden] {display:none}
+.brand:has(.rq-brand-logo[hidden]) .rq-brand-fallback {display:block;font:36px var(--rq-display);padding-top:32px}
+.brand small {font:8px Inter,"Segoe UI",sans-serif;letter-spacing:1.5px;color:var(--muted)}
+.app-header nav {align-self:stretch;justify-content:flex-start;gap:22px;min-width:0;overflow-x:auto;scrollbar-width:thin;align-items:center}
+.app-header nav button {height:70px;flex-shrink:0;border:0;border-bottom:2px solid transparent;background:transparent;font-size:12px;color:var(--text);padding:0;white-space:nowrap}
+.app-header nav button.active {color:var(--rq-blue);border-bottom-color:var(--rq-blue)}
+.header-status {display:flex;margin:0;gap:14px;align-items:center;align-self:center;justify-self:end}
+.connection {font:9px Consolas,monospace;letter-spacing:.7px}
+.advisory-tag {display:flex!important;background:#030303a6;color:var(--text);border-color:#8b9295;font:9px Consolas,monospace;letter-spacing:.6px;padding:10px}
+.workspace-title {position:relative;isolation:isolate;min-height:0;height:100%;padding:0 clamp(22px,2.484vw,54px) 30px;margin:0;overflow:visible;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;background:transparent}
+.workspace-title::before {content:none}
+.workspace-title>div:first-child {max-width:65%;min-width:0}
+.workspace-title h1 {font-size:clamp(44px,5vw,82px);line-height:1.1}
+.workspace-title p {font-size:14px;color:var(--text);line-height:1.6;letter-spacing:.2px;text-shadow:0 1px 3px #000}
+.breadcrumb {color:var(--muted);font-size:9px;letter-spacing:1.6px;margin-bottom:5px;gap:20px}
 .breadcrumb span {color:var(--muted)}
 .title-period {color:var(--rq-blue)}
-.rq-title-art {display:block;width:500px;max-width:100%;height:100px;object-fit:contain;object-position:left center;pointer-events:none}
+.rq-title-art {display:block;width:680px;max-width:100%;height:auto;object-fit:contain;object-position:left center;pointer-events:none}
 .rq-title-art[hidden] {display:none}
 h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.title-actions {position:relative;flex-shrink:0}
-.title-actions button {background:#080d12eb;border-color:#8a9ba9;color:var(--text);padding:11px 14px}
-.source-toolbar {background:#0c151ef5;border-color:#607582;border-radius:5px;padding:10px 14px}
+.title-actions {flex-shrink:0;align-self:flex-end;display:flex;gap:10px;margin-bottom:0}
+.title-actions button {background:#030303bb;border-color:#9b9b94;color:var(--text);font-size:12px;padding:12px 17px;min-height:40px}
+/* This is the only page scroller. Header art and controls never travel with it. */
+.workspace {width:100%;height:100%;margin:0;max-width:none;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;padding:0 clamp(22px,2.484vw,54px) 20px;background:#030303}
+.workspace:focus {outline:none}
+.source-toolbar {background:#090909;border:0;border-radius:0;padding:10px 12px;gap:16px}
 .recipe-picker select {color:var(--text);font-size:12px;max-width:390px}
-.source-actions>button,.source-actions select {font-size:12px;padding:10px 12px}
-.source-hint {font-size:9px;color:var(--muted)}
-.panel {background:var(--rq-panel);border-color:#60758280;border-radius:6px}
-.panel-heading {font-size:10px;color:var(--rq-blue);letter-spacing:.7px;background:var(--rq-night)}
-.studio-grid {position:relative;grid-template-columns:260px minmax(0,1fr) 300px;gap:14px}
-.recipe-rail {position:relative;isolation:isolate;background:var(--rq-night)}
-.recipe-rail::before {content:"";position:absolute;inset:auto 0 0;height:100px;z-index:-1;pointer-events:none;background:url('/assets/requiem/corner-florals.webp') left bottom / 100% auto no-repeat;opacity:.1}
+.source-actions>button,.source-actions select {font-size:12px;padding:10px 12px;min-height:40px}
+.source-hint {font-size:9px;color:var(--muted);padding-block:9px 13px}
+.panel {background:#101010;border:0;border-radius:0;box-shadow:none}
+.panel-heading {background:#080808;border:0;color:var(--rq-blue);font-size:10px;letter-spacing:.7px}
+.rq-workbench {display:grid;grid-template-columns:76px minmax(0,1fr) 76px;gap:12px;align-items:stretch}
+.rq-window {display:block;width:76px;height:100%;max-height:560px;object-fit:contain;object-position:center bottom;pointer-events:none;opacity:1;align-self:end}
+.studio-grid {position:relative;grid-template-columns:250px minmax(0,1fr) 300px;gap:14px;min-width:0;margin:0}
+.studio-grid::after {content:none}
+.recipe-rail {position:relative;isolation:isolate;background:#0b0b0b;padding-bottom:90px}
+.recipe-rail::before {content:"";position:absolute;bottom:0;left:0;right:0;height:100px;z-index:-1;pointer-events:none;background:url('/assets/requiem/corner-florals.webp') left bottom / 100% auto no-repeat;opacity:1}
 .recipe-description {font-size:13px;color:var(--text);padding:18px 18px 15px}
 .recipe-description>span {font-size:10px;color:var(--subtle)}
 .step-list {padding:4px 18px 0}
 .step-list li {padding-bottom:27px}
 .step-list button {min-height:47px;gap:12px}
-.step-node {width:34px;height:34px;background:#14232d;border-color:#607582;color:var(--text);font-size:12px}
-.step-list li:not(:last-child):after {left:16px;top:37px;background:#405566}
-.step-list .allowed .step-node {background:#204650;border-color:var(--rq-blue);color:var(--text)}
-.step-list .complete .step-node {background:#234a4f;border-color:#689d99;color:var(--rq-good)}
-.step-list li.complete:not(:last-child):after {background:#689d99}
+.step-node {width:34px;height:34px;background:#181818;border-color:#606060;color:var(--text);font-size:12px}
+.step-list li:not(:last-child):after {left:16px;top:37px;background:#484848}
+.step-list .allowed .step-node {background:#14262b;border-color:var(--rq-blue);color:var(--text)}
+.step-list .complete .step-node {background:#18382c;border-color:#689d7e;color:var(--rq-good)}
+.step-list li.complete:not(:last-child):after {background:#689d7e}
 .step-content strong {font-size:14px;color:var(--text)}
 .step-content small,.step-content small span,.step-content em,.dependency,.rail-note {color:var(--muted)}
 .step-content small,.step-content em {font-size:10px}
 .step-list .complete em {color:var(--rq-good)}
 .dependency {left:46px;bottom:7px}
-.rail-note {font-size:10px;line-height:1.7;margin:0 18px 18px}
+.rail-note {font-size:10px;line-height:1.7;margin:0 18px 0;padding-top:12px;border:0}
 .rail-note svg {color:var(--rq-blue)}
-.camera-panel .panel-heading {background:var(--rq-night)}
-.video-controls,.capture-readout {background:var(--rq-night)}
-.video-controls .toggle.active {background:#182d38;border-color:var(--rq-blue);color:var(--rq-blue)}
+.camera-panel .panel-heading,.video-controls,.capture-readout {background:#080808;border:0}
+.video-controls .toggle.active {background:#11222c;border-color:var(--rq-blue);color:var(--rq-blue)}
 .capture-readout {font-size:10px;color:var(--subtle)}
 .capture-readout>span:first-child svg {color:var(--rq-blue)}
-.video-top-badges span {color:var(--rq-blue);background:#080d12ed;border-color:#607582}
-.analyzing {background:#080d12ed;color:var(--rq-blue)}
-.scrubber input {accent-color:var(--rq-parchment)}
-.frame-empty {background:var(--rq-bg);color:var(--muted)}
-.frame-empty>span {color:var(--text);font-size:17px}
-.frame-empty>svg {color:var(--rq-blue)}
+.video-top-badges span {color:var(--rq-blue);background:#030303ed;border-color:#585858}
+.analyzing {background:#030303ed;color:var(--rq-blue)}
+.scrubber {border:0}.scrubber input {accent-color:var(--rq-parchment)}
+.frame-empty {background:#050505;color:var(--muted)}
+.frame-empty>span {color:var(--text);font-size:17px}.frame-empty>svg {color:var(--rq-blue)}
 .frame-empty small {color:var(--muted);max-width:90%;text-align:center;line-height:1.6}
 .rq-awaiting-source {gap:9px;padding:26px 12px 22px}
 .rq-flower {display:block;width:min(330px,80%);height:180px;object-fit:contain;pointer-events:none}
 .rq-flower[hidden] {display:none}
+.decision-panel {position:relative;padding-bottom:90px;background:#0b0b0b}
+.decision-panel::after {content:"";position:absolute;bottom:0;left:0;right:0;height:90px;pointer-events:none;background:url('/assets/requiem/corner-florals.webp') right bottom / 100% auto no-repeat}
 .decision-content {padding:20px 18px 16px}
-.decision-eyebrow {font-family:Consolas,monospace;font-size:10px;color:var(--rq-blue)}
-.decision-status strong {font-family:var(--rq-display);font-size:46px;font-weight:400;letter-spacing:-1px;overflow-wrap:normal}
+.decision-eyebrow {font:10px Consolas,monospace;color:var(--rq-blue);letter-spacing:1.2px}
+.decision-status strong {font-family:var(--rq-display);font-size:43px;font-weight:400;letter-spacing:-1px;overflow-wrap:normal}
 .decision-panel.pending .decision-status svg {color:var(--rq-blue)}
-.decision-panel.hold .decision-status {color:var(--rq-warning)}
-.decision-panel.pass .decision-status {color:var(--rq-good)}
+.decision-panel.hold .decision-status {color:var(--rq-warning)}.decision-panel.pass .decision-status {color:var(--rq-good)}
 .decision-reason {font-size:12px;color:var(--subtle);line-height:1.65}
-.decision-facts dt,.decision-facts dd span,.advisory-note {color:var(--muted)}
-.decision-facts dt {font-size:11px}
-.decision-actions button {font-size:11px;min-height:38px}
-.advisory-note {font-size:9px}
-.status-rule {font-family:Consolas,monospace;color:var(--rq-blue);font-size:9px}
-.reason-tags span {color:var(--rq-warning);background:#2a241c;border-color:#806c4a}
-.under-grid {grid-template-columns:minmax(0,1fr) 300px}
-.progress-panel,.runtime-panel {background:var(--rq-night)}
-.progress-track span.done {background:var(--rq-parchment);border-color:var(--rq-parchment);color:#101923}
+.decision-facts {border:0}.decision-facts dt,.decision-facts dd span,.advisory-note {color:var(--muted)}
+.decision-facts dt {font-size:11px}.decision-actions button {font-size:11px;min-height:40px}
+.advisory-note {font-size:9px}.status-rule {font:9px Consolas,monospace;color:var(--rq-blue)}
+.reason-tags span {color:var(--rq-warning);background:#29231c;border-color:#806c4a}
+.under-grid {grid-template-columns:minmax(0,1fr) 300px;margin-top:14px}
+.progress-panel,.runtime-panel {background:#0b0b0b}
+.progress-track span.done {background:var(--rq-parchment);border-color:var(--rq-parchment);color:#101010}
 .progress-panel>svg {color:var(--text)}
 .error-banner {background:#301a21;border-color:#9a535c;color:#ffd5d8}
 .notice-banner {background:#172e26;border-color:#537e67;color:#d6f2e2}
 .error-banner>span,.notice-banner>span {min-width:0;overflow-wrap:anywhere}
-.source-notice {background:#252218;color:var(--text);border-color:#806c4a}
-.source-notice strong {color:var(--rq-warning)}
+.source-notice {background:#252218;color:var(--text);border-color:#806c4a}.source-notice strong {color:var(--rq-warning)}
 .evidence-row.selected {background:#83b8d315;border-left-color:var(--rq-blue)}
-.timeline-event.issue strong {color:var(--rq-danger)}
-.timeline-empty button {color:var(--rq-blue)}
-.recipe-preview>svg g rect {fill:#83b8d30a;stroke:var(--rq-blue)}
-.recipe-preview>svg g text {fill:var(--text)}
-.assembly-panel {margin-top:20px;background:var(--rq-night)}
+.timeline-event.issue strong {color:var(--rq-danger)}.timeline-empty button {color:var(--rq-blue)}
+.recipe-preview>svg g rect {fill:#83b8d30a;stroke:var(--rq-blue)}.recipe-preview>svg g text {fill:var(--text)}
+.assembly-panel {margin:0 0 18px;background:#0b0b0b}
+.assembly-heading,.assembly-visual,.assembly-components,.assembly-component,.assembly-footer,.assembly-guidance,.assembly-motion {border:0}
 .assembly-heading h2>span {color:var(--rq-blue)}
-.assembly-illustration-tag {background:transparent;color:var(--text);border-color:var(--rq-line)}
-.assembly-part-icon {background:#18303b;color:var(--rq-blue);border-color:var(--rq-line)}
-.assembly-component.selected {background:#18303b;box-shadow:inset 0 2px var(--rq-blue)}
-.assembly-distance input {accent-color:var(--rq-parchment)}
-.assembly-motion {background:var(--rq-night)}
-.kit-intro {gap:30px;padding-block:12px 28px}
-.kit-crest {padding:0;flex:0 1 360px}
+.assembly-visual {background:radial-gradient(ellipse at 50% 47%,#242424,#101010 76%)}
+.assembly-inspector {background:#101010}.assembly-component {background:#0b0b0b}
+.assembly-illustration-tag {background:#080808;color:var(--text);border-color:#454545}
+.assembly-part-icon {background:#171717;color:var(--rq-blue);border-color:#454545}
+.assembly-component.selected {background:#152126;box-shadow:inset 0 2px var(--rq-blue)}
+.assembly-distance input {accent-color:var(--rq-parchment)}.assembly-motion {background:#080808}
+.kit-intro {gap:30px;padding-block:20px 28px}.kit-crest {padding:0;flex:0 1 360px}
 .kit-crest img {display:block;width:100%;max-width:360px;height:auto;object-fit:contain;pointer-events:none}
-.workspace-footer {position:relative;border-top:1px solid var(--rq-line);margin-top:25px;padding-block:22px;color:var(--muted)}
-.workspace-footer::before {content:"";position:absolute;top:-4px;left:50%;width:7px;height:7px;border:1px solid var(--rq-gold);border-radius:50%;background:var(--rq-bg);pointer-events:none}
-.workspace-footer>span:first-child {color:var(--muted)}
-.footer-mark {border-color:var(--rq-gold);color:var(--rq-gold)}
-@media(min-width:1800px) {
-  .studio-grid {margin-right:92px}
-  .studio-grid::after {content:"";position:absolute;top:20px;bottom:0;right:-92px;width:78px;pointer-events:none;background:url('/assets/requiem/right-arch-landscape.webp') center bottom / contain no-repeat;opacity:.75}
+.workspace-footer {position:relative;border:0;margin-top:25px;padding-block:22px;color:var(--muted)}
+.workspace-footer::before {content:"";position:absolute;top:0;left:40%;right:40%;height:1px;background:#807052;pointer-events:none}
+.workspace-footer>span:first-child {color:var(--muted)}.footer-mark {border-color:var(--rq-gold);color:var(--rq-gold)}
+@media(max-width:1550px) {
+ .app-header {grid-template-columns:290px minmax(0,1fr) auto;gap:20px}.brand {width:290px;height:145px}
+ .app-header nav {gap:18px}.app-header nav button {font-size:11px}
+ .header-status {flex-direction:column;gap:7px;align-items:flex-end}.advisory-tag {font-size:8px;padding:8px}
+ .rq-title-art {width:590px}.studio-grid {grid-template-columns:220px minmax(0,1fr) 270px}
+ .rq-workbench {grid-template-columns:54px minmax(0,1fr) 54px;gap:10px}.rq-window {width:54px}
+ .decision-status strong {font-size:37px}.under-grid {grid-template-columns:minmax(0,1fr) 270px}
+ .recipe-picker select {max-width:315px}.source-actions>button,.source-actions select {font-size:11px}
 }
-@media(max-width:1399px) {
-  .app-header {gap:20px;padding-inline:24px;height:84px}
-  .brand {font-size:25px}.brand-mark {width:44px;height:50px}
-  .app-header nav {gap:16px}.app-header nav button {font-size:10px}
-  .header-status {flex-direction:column;gap:5px;align-items:flex-end}
-  .connection {font-size:8px}.advisory-tag {font-size:7px;padding:5px}
-  .workspace {padding-inline:24px}
-  .studio-grid {grid-template-columns:230px minmax(0,1fr) 280px}
-  .under-grid {grid-template-columns:minmax(0,1fr) 280px}
-  .decision-status strong {font-size:40px}
-  .workspace-title {min-height:160px}.workspace-title::before {background-size:auto 420px}
-  .rq-title-art {width:450px;height:93px}
-  .recipe-picker select {max-width:320px;font-size:11px}
-  .source-actions>button,.source-actions select {font-size:11px}
+@media(max-width:1200px) {
+ .app-header {grid-template-columns:240px minmax(0,1fr) auto;gap:16px}.brand {width:240px;height:120px}
+ .app-header nav {gap:18px}.app-header nav button {font-size:11px}
+ .rq-title-art {width:520px}.workspace-title {padding-bottom:22px}.workspace-title p {font-size:12px}
+ .rq-workbench {display:block}.rq-window {display:none}
+ .studio-grid {grid-template-columns:210px minmax(0,1fr) 265px}
+ .source-toolbar {flex-direction:column;align-items:stretch}.source-actions {justify-content:space-between}
+ .recipe-picker {justify-content:space-between}.recipe-picker select {max-width:80%}
 }
-@media(max-width:1100px) {
-  .app-header {height:auto;grid-template-columns:minmax(0,1fr) auto;padding:12px 20px 0;gap:0 15px}
-  .app-header nav {grid-row:2;grid-column:1/-1;justify-content:flex-start;overflow-x:auto;min-height:46px;margin-top:10px;gap:28px}
-  .app-header nav button {flex-shrink:0;font-size:12px}
-  .header-status {display:flex;flex-direction:row;align-items:center}
-  .rq-title-art {display:none}
-  h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:static;width:auto;height:auto;clip-path:none;white-space:normal}
-  .workspace-title {min-height:150px}.workspace-title::before {opacity:.65}
-  .workspace-title h1 {font-size:44px}
-  .studio-grid {grid-template-columns:minmax(0,1fr) minmax(260px,.8fr)}
-  .camera-panel {grid-column:1/-1;grid-row:1}
-  .recipe-rail {grid-column:1;grid-row:2}.decision-panel {grid-column:2;grid-row:2}
-  .decision-content {display:flex;gap:0;height:calc(100% - 43px)}
-  .decision-actions {display:grid;margin-top:auto}
-  .decision-facts {display:grid;margin:4px 0 16px}
-  .decision-reason {min-height:0}
-  .advisory-note {margin-top:10px}
-  .source-toolbar {flex-direction:column;align-items:stretch}
-  .recipe-picker select {max-width:80%;font-size:12px}
-  .source-actions>button,.source-actions select {font-size:12px;min-height:42px}
-  .video-stage {max-height:430px}
+@media(max-width:1023px) {
+ .rq-header-stage {min-height:290px;grid-template-rows:110px minmax(0,1fr)}
+ .app-header {grid-template-columns:minmax(0,1fr) auto;height:110px;padding-top:4px;gap:0 20px;grid-template-rows:64px 42px}
+ .brand {width:180px;height:90px;margin-top:-8px;grid-row:1}
+ .header-status {grid-row:1;grid-column:2;flex-direction:row;gap:10px}
+ .app-header nav {grid-column:1/-1;grid-row:2;margin:0;min-height:42px;align-items:stretch;overflow-x:auto;gap:25px}
+ .app-header nav button {height:42px;font-size:11px}
+ .workspace-title {padding-bottom:18px}.workspace-title>div:first-child {max-width:65%}
+ .rq-title-art {width:420px}.workspace-title h1 {font-size:44px}
+ .title-actions button {padding:10px;font-size:10px}
+ .studio-grid {grid-template-columns:minmax(0,1fr) minmax(260px,.8fr)}
+ .camera-panel {grid-column:1/-1;grid-row:1}.recipe-rail {grid-column:1;grid-row:2}.decision-panel {grid-column:2;grid-row:2}
+ .decision-content {display:flex;gap:0;height:calc(100% - 43px)}.decision-actions {display:grid;margin-top:auto}
+ .decision-facts {display:grid;margin:4px 0 16px}.decision-reason {min-height:0}.advisory-note {margin-top:10px}
+ .video-stage {max-height:430px}.under-grid {grid-template-columns:1fr}
 }
 @media(max-width:767px) {
-  .app-header {padding:12px 14px 0}.brand {font-size:22px;gap:7px}
-  .brand-mark {width:38px;height:44px}.brand small {font-size:5.7px;letter-spacing:1px}
-  .header-status {flex-direction:column;align-items:flex-end;gap:5px}
-  .app-header nav {gap:23px}.app-header nav button {font-size:11px;min-height:44px}
-  .workspace {padding:0 14px}
-  .workspace-title {min-height:156px;padding-block:20px;align-items:flex-start;gap:7px}
-  .workspace-title>div:first-child {max-width:100%}
-  .workspace-title::before {background-size:auto 320px;opacity:.26;mask-image:linear-gradient(to right,transparent,#000)}
-  .workspace-title h1 {font-size:36px;line-height:1.15;max-width:270px}
-  .workspace-title p {font-size:12px;max-width:260px}
-  .title-actions {align-self:flex-end}.title-actions button {font-size:0;min-width:44px;min-height:44px;padding:10px}
-  .breadcrumb {font-size:7px;letter-spacing:.9px}
-  .source-toolbar {padding:12px;gap:10px}
-  .recipe-picker {gap:8px}.recipe-picker select {font-size:11px;max-width:82%;white-space:normal;min-height:30px}
-  .source-actions {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
-  .source-actions select {width:100%;min-width:0;max-width:100%}
-  .source-actions>button {min-height:44px;font-size:12px}
-  .toolbar-divider {display:none}
-  .studio-grid {grid-template-columns:minmax(0,1fr);gap:14px}
-  .camera-panel {grid-column:1;grid-row:1}.decision-panel {grid-column:1;grid-row:2}.recipe-rail {grid-column:1;grid-row:3}
-  .panel-heading {font-size:9px;padding-inline:12px}
-  .video-stage {max-height:none;min-height:220px}
-  .frame-empty>span {font-size:16px;text-align:center}.rq-flower {height:145px}
-  .frame-empty small {font-size:10px;max-width:260px}
-  .decision-status strong {font-size:44px}
-  .decision-facts {display:grid;gap:12px;margin:8px 0 17px}
-  .decision-facts>div {display:flex}.decision-facts dt {font-size:12px;margin:0}
-  .decision-actions {grid-template-columns:1fr}.decision-actions button {min-height:44px;font-size:12px}
-  .step-list {gap:12px 14px}.step-list button {gap:9px;min-height:52px}.step-content strong {font-size:13px}
-  .step-content small,.step-content em {font-size:9px}.dependency {left:43px;font-size:8px}
-  .under-grid {grid-template-columns:1fr}.progress-panel {flex-wrap:wrap}.progress-track {margin-left:0}
-  .toggle,.icon-button {min-height:36px}.runtime-panel button {min-height:44px}
-  .kit-intro {flex-direction:column;align-items:flex-start}.kit-crest {flex:auto;align-self:center;width:85%;max-width:340px}
-  .kit-intro h2 {font-size:30px}.kit-intro p {font-size:12px}
-  .workspace-footer {gap:14px}.workspace-footer>span {line-height:1.7}
-  .modal-backdrop {overflow:auto}.modal {margin:auto;max-height:calc(100dvh - 32px);overflow:auto}
-  .modal button,.button {min-height:44px}
+ .rq-header-stage {height:300px;min-height:300px;grid-template-rows:110px 190px;background-position:center bottom;background-size:100% auto}
+ .app-header {padding-inline:14px}.brand {width:154px;height:77px;margin-top:-4px}
+ .header-status {flex-direction:column;gap:5px;align-items:flex-end}.connection {font-size:8px}.advisory-tag {font-size:7px;padding:5px}
+ .app-header nav {gap:23px;scrollbar-width:none}.app-header nav button {font-size:11px;min-height:42px}
+ .workspace-title {padding:4px 14px 14px;align-items:flex-start;flex-direction:column;justify-content:flex-end;gap:5px}
+ .workspace-title>div:first-child {max-width:100%}.workspace-title h1 {font-size:36px;max-width:none}
+ .rq-title-art {display:block;width:330px;max-width:100%;height:88px;object-fit:contain;object-position:left center}
+ .workspace-title p {font-size:11px;max-width:100%;line-height:1.4}
+ .title-actions {align-self:flex-end;flex-direction:row;gap:8px}.title-actions button {font-size:10px;padding:7px 9px;min-height:34px;min-width:0}
+ .title-actions button svg {width:13px}.breadcrumb {font-size:7px;letter-spacing:.8px;margin:0}.breadcrumb span {display:none}
+ .workspace {padding:0 14px 18px;scrollbar-gutter:auto}.source-toolbar {padding:12px;gap:10px}
+ .recipe-picker {gap:8px}.recipe-picker select {font-size:11px;max-width:82%;min-height:30px}
+ .source-actions {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+ .source-actions select {width:100%;min-width:0;max-width:100%}.source-actions>button {min-height:44px;font-size:12px}
+ .toolbar-divider {display:none}.source-hint {font-size:8px}
+ .studio-grid {grid-template-columns:minmax(0,1fr);gap:14px}
+ .camera-panel {grid-column:1;grid-row:1}.decision-panel {grid-column:1;grid-row:2}.recipe-rail {grid-column:1;grid-row:3}
+ .panel-heading {font-size:9px;padding-inline:12px}.video-stage {max-height:none;min-height:220px}
+ .frame-empty>span {font-size:16px;text-align:center}.rq-flower {height:145px}.frame-empty small {font-size:10px;max-width:260px}
+ .decision-status strong {font-size:44px}.decision-facts {display:grid;gap:12px;margin:8px 0 17px}
+ .decision-facts>div {display:flex}.decision-facts dt {font-size:12px;margin:0}
+ .decision-actions {grid-template-columns:1fr}.decision-actions button {min-height:44px;font-size:12px}
+ .step-list {gap:12px 14px}.step-list button {gap:9px;min-height:52px}.step-content strong {font-size:13px}
+ .step-content small,.step-content em {font-size:9px}.dependency {left:43px;font-size:8px}
+ .progress-panel {flex-wrap:wrap}.progress-track {margin-left:0}.toggle,.icon-button {min-height:36px}.runtime-panel button {min-height:44px}
+ .kit-intro {flex-direction:column;align-items:flex-start}.kit-crest {flex:auto;align-self:center;width:85%;max-width:340px}
+ .kit-intro h2 {font-size:30px}.kit-intro p {font-size:12px}.workspace-footer {gap:14px}.workspace-footer>span {line-height:1.7}
+ .modal-backdrop {overflow:auto}.modal {margin:auto;max-height:calc(100dvh - 32px);overflow:auto}.modal button,.button {min-height:44px}
+ .assembly-component,.assembly-inspector {border:0}
 }
 @media(max-width:360px) {
-  .app-header {padding-inline:10px;gap:0 7px}.brand {font-size:19px}.brand-mark {width:32px;height:38px}
-  .brand small {font-size:5px;letter-spacing:.7px}.connection {font-size:7px}.advisory-tag {font-size:6px}
-  .workspace {padding-inline:10px}.workspace-title h1 {font-size:32px}.workspace-title p {max-width:205px}
-  .step-list {grid-template-columns:1fr}.step-list li {padding-bottom:18px}.dependency {bottom:0}
-  .source-hint {font-size:8px}.source-actions>button {font-size:11px}.recipe-picker select {font-size:10px}
+ .app-header {padding-inline:10px}.brand {width:140px;height:70px}.connection {font-size:7px}.advisory-tag {font-size:6px}
+ .workspace {padding-inline:10px}.workspace-title {padding-inline:10px}.rq-title-art {width:290px}
+ .workspace-title h1 {font-size:32px}.step-list {grid-template-columns:1fr}.step-list li {padding-bottom:18px}.dependency {bottom:0}
+ .source-actions>button {font-size:11px}.recipe-picker select {font-size:10px}
 }
 @media(prefers-reduced-motion:reduce) {
-  .app-shell *,.app-shell *::before,.app-shell *::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .app-shell *,.app-shell *::before,.app-shell *::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }

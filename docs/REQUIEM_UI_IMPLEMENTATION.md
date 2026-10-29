@@ -1,5 +1,9 @@
 # REQUIEM UI implementation
 
+> Updated header, black surfaces and separate Assembly Explorer:
+> [current header implementation](REQUIEM_HEADER_IMPLEMENTATION.md). The receipts
+> below describe the first REQUIEM integration and remain historical evidence.
+
 The rejected sakura/vermilion theme has been removed from the running frontend.
 The existing React application now uses the supplied celestial-arch artwork,
 ivory serif headings, cyan navigation, parchment actions and neutral inspection

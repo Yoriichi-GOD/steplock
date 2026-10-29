@@ -64,3 +64,24 @@ No timestamps or history were rewritten and no force push was used.
 - Verified push receipt: `4c0385d..99cbb68 main -> main`.
 - `git ls-remote origin refs/heads/main` returned that exact SHA after the push.
   The following documentation-only receipt commit does not change runtime code.
+
+## Full Celestial header revision (29 October, 14:13 IST onward)
+
+- User asked for black opaque surfaces, borderless panels/transparent header,
+  full logo, a larger Procedure Studio title, visible side ornaments, fixed art
+  and body-only scrolling, with Assembly Explorer as its own real navigation tab.
+- The user explicitly chose the full uncropped Celestial master in a taller
+  proportional header, superseding the earlier 248px crop. Full provenance and
+  breakpoint measurements: `docs/REQUIEM_HEADER_IMPLEMENTATION.md`.
+- Work paused for a user-requested Codex restart when browser access reported
+  disabled. Resumed14:24; real screenshots and interaction checks completed.
+- Frontend20/20, build passed; original backend45/45 passed. Core teammate's
+  independent validation tooling checkpoint `c605b6a` was preserved and excluded
+  from the UI allowlist.
+- Browser verified1691x930,1440x900,1280x720,1024x768,390x844,320x760; all six
+  tabs on mobile, no horizontal overflow, toolbar flush with header, actual
+  PASS/HOLD, original/overlay/scrub/checkpoint, HTML report, consent gates,
+  real stopped-backend SOURCE LOST and fresh frontend-only ENGINE OFFLINE.
+- Fixed three measured issues before publication: body grid overflow from an
+  inherited auto margin, logo expanding the nav row, and tab scroll retention.
+- Exact implementation SHA and verified remote push receipt follow after commit.

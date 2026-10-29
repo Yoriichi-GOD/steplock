@@ -1,0 +1,28 @@
+{
+  "zip_sha256": "c36786c33a5018d49bb1b2501dc16de335c41da32683163eebdf27cc5ef1218d",
+  "decision": "User selected full uncropped master with proportional taller header. Ready crop retained unused as alternate. Reference screenshot never deployed.",
+  "files": [
+    {
+      "path": "celestial-full.webp",
+      "source": "Celestial Ruins Beneath a Starlit Sky.png",
+      "source_sha256": "92365e3dff54e471efbe5b5fb36937d2fca16a2c301ac8d53613fc3a7165b4ae",
+      "sha256": "5f276a3dee975959968877eb2b388ac7a31f74772f5e3ab6530e9dee7a450c14",
+      "bytes": 308896,
+      "size_px": [
+        2149,
+        732
+      ]
+    },
+    {
+      "path": "BACKGROUND_HEADER_READY_1691x248.webp",
+      "source": "04_BACKGROUND_HEADER_READY_1691x248.webp",
+      "source_sha256": "d7e8a14e8e2ff4b173d4afab173f16478ceeae213036b98dd4684270fb742716",
+      "sha256": "d7e8a14e8e2ff4b173d4afab173f16478ceeae213036b98dd4684270fb742716",
+      "bytes": 121648,
+      "size_px": [
+        1691,
+        248
+      ]
+    }
+  ]
+}

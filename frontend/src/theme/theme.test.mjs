@@ -75,9 +75,9 @@ test('real app HTML retains truthful offline alert, disabled run action and all 
   assert.match(html, /role="alert"/);
   assert.match(html, /Local engine unavailable/);
   assert.match(html, /<button class="primary" disabled=""><[^>]+>[\s\S]*?Run example<\/button>/);
-  for (const label of ['Procedure studio', 'Evidence explorer', 'Evaluation lab', 'Recipe designer', 'Demo kit']) assert.ok(html.includes(label), label);
+  for (const label of ['Procedure studio', 'Evidence explorer', 'Assembly explorer', 'Evaluation lab', 'Recipe designer', 'Demo kit']) assert.ok(html.includes(label), label);
   assert.match(html, /aria-label="STEPLOCK — Procedure studio"/);
-  assert.match(html, /steplock-crest-compact\.webp" alt="" aria-hidden="true"/);
+  assert.match(html, /steplock-ornate-logo\.webp" alt="STEPLOCK — Visual procedure assurance"/);
 });
 
 test('stale PASS input renders SOURCE LOST and review status in the actual Studio', async () => {
@@ -89,7 +89,7 @@ test('stale PASS input renders SOURCE LOST and review status in the actual Studi
   assert.match(html, /data-testid="decision-status">SOURCE LOST/);
   assert.match(html, /STALE EVIDENCE/);
   assert.doesNotMatch(html, /data-testid="decision-status">PASS/);
-  assert.match(html, /data-status="uncertain"/);
+  assert.doesNotMatch(html, /aria-label="Assembly illustration"/);
   assert.match(html, /SYNTHETIC SOFTWARE TEST/);
   assert.match(html, /Human acknowledgement does not override/);
 });
@@ -110,4 +110,27 @@ test('missing benchmark data never becomes invented metrics', async () => {
   const html = renderToStaticMarkup(React.createElement(Benchmarks, {data:null}));
   assert.match(html, /No completed benchmark run is available yet/);
   assert.doesNotMatch(html, /100\.0%|metric-grid/);
+});
+
+test('assembly is a separate page and conservatively reflects stale sessions', async () => {
+ const {AssemblyExplorer}=await server.ssrLoadModule('/src/pages/AssemblyExplorer.tsx');
+ const noop=()=>{};
+ const step={id:'S1',part:'BASE',zone:'BASE_SLOT',requires:[],state:'CONFIRMED',allowed:true};
+ const session={session_id:'stale',step_states:[step],source_kind:'SYNTHETIC_FIXTURE',decision:{status:'PASS',reason_codes:[]},quality:{usable:true,flags:[],calibration_id:'old'},events:[],unresolved_event_ids:[],part_markers:{BASE:10}};
+ const html=renderToStaticMarkup(React.createElement(AssemblyExplorer,{session,connected:false,onEvent:noop}));
+ assert.match(html,/aria-label="Assembly illustration"/);
+ assert.match(html,/data-status="uncertain"/);
+});
+
+test('header uses the uncropped text-free master and independent foreground branding', async () => {
+ const headerArt=new URL('public/assets/steplock-header/',root);
+ const record=JSON.parse(await readFile(new URL('manifest.json',headerArt),'utf8'));
+ for(const item of record.files){
+  assert.equal(createHash('sha256').update(await readFile(new URL(item.path,headerArt))).digest('hex'),item.sha256);
+ }
+ assert.match(css,/celestial-full\.webp/);
+ assert.match(css,/100vw \* 732 \/ 2149/);
+ assert.doesNotMatch(css,/BACKGROUND_HEADER_READY|02_REFERENCE|REFERENCE_FULL_UI/);
+ assert.match(css,/grid-template-rows:auto minmax\(0,1fr\)/);
+ assert.match(css,/\.workspace \{[^}]*overflow-y:auto/);
 });
