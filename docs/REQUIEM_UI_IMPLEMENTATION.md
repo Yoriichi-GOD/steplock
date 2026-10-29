@@ -11,6 +11,7 @@ part of this integration.
 Use the normal launcher in the [README](../README.md#run-locally). It prints an
 available loopback URL; no fixed port is required. The current UI verification
 used `http://127.0.0.1:55520`, selected by that launcher on 29 October 2026.
+The final handoff runs from the original checkout at `http://127.0.0.1:61795`.
 
 All five existing tabs and their callbacks remain. The inspection workbench now
 precedes the existing optional assembly explorer, so the real source and advisory
@@ -74,18 +75,23 @@ come directly from the browser. Source images shown there are visibly synthetic.
 | Camera controls | Consent gate disabled capture initially; injected `getUserMedia` permission rejection showed the upload recovery message; injection removed by reload |
 | Physical camera / OS permission prompt | NOT_TESTED; no physical camera opened and no new camera access granted |
 | Disconnected after PASS | Browser network interruption produced ENGINE OFFLINE + SOURCE LOST, disabled checkpoint, no flower or stale PASS |
+| Fresh offline startup | API requests blocked in a separate fresh tab: ENGINE OFFLINE, alert, disabled run and PENDING; no false PASS. A narrow-laptop verdict wrap found here was corrected and rechecked |
 | Failed evidence request | Blocked frame request produced explicit evidence-unavailable fallback; request blocking then removed |
 | Missing art | All REQUIEM image URLs blocked: real title/name, source controls and evidence remained usable; blocking removed |
 | Five tabs | Studio, Evidence Explorer, Evaluation Lab, Recipe Designer and Demo Kit opened with real state |
 | Recipe UI | Selected existing v2 then restored v1; invalid JSON disabled save; restored draft without persisting a new recipe |
 | Evaluation | Existing 32-clip synthetic results and denominator text preserved; missing data also covered by component regression |
-| Responsive | 1600x1000, 1280x900, 820x1180, 390x844 and 320x760 inspected; no page-wide overflow in checked Studio views |
+| Responsive | 1920x1080, 1600x1000, 1280x900, 820x1180, 390x844 and 320x760 inspected; no page-wide overflow in checked Studio views or any of the five tabs at 390px |
 | Reduced motion / explorer | Reduced-motion disabled sequence playback; 2D switch, separation to 100%, reassembly and collapse worked |
+| Original checkout | Its 18 frontend tests and production build passed; all seven served assets matched the manifest; startup, no-source state and Stop source checked in browser |
+| Subpath assets | Separate `/steplock/` build passed; CSS backgrounds, favicon and client asset base contain the required prefix |
 
 The first restricted backend test process stalled at local API access and was
 stopped. Rerunning with permitted local connections produced the 45/45 receipt.
 The first restored preview had the same local socket restriction; the successful
 preview used the normal launcher with local connection permission.
+The existing Three.js explorer also emits a `THREE.Clock` deprecation warning;
+this predates the theme. No new dependency or renderer was introduced.
 
 ## Intentional differences from the reference
 
@@ -109,3 +115,5 @@ mobile stack the source before the decision and procedure sections.
 Git publication and exact checkpoint receipts are in
 [`REQUIEM_UI_PROGRESS.md`](REQUIEM_UI_PROGRESS.md). Historical theme reports are
 retained and explicitly marked superseded.
+The exact source, asset, screenshot and removed-file inventory is in
+[`REQUIEM_CHANGED_FILES.txt`](REQUIEM_CHANGED_FILES.txt).

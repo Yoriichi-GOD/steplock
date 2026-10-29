@@ -90,7 +90,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .rq-flower[hidden] {display:none}
 .decision-content {padding:20px 18px 16px}
 .decision-eyebrow {font-family:Consolas,monospace;font-size:10px;color:var(--rq-blue)}
-.decision-status strong {font-family:var(--rq-display);font-size:46px;font-weight:400;letter-spacing:-1px;overflow-wrap:anywhere}
+.decision-status strong {font-family:var(--rq-display);font-size:46px;font-weight:400;letter-spacing:-1px;overflow-wrap:normal}
 .decision-panel.pending .decision-status svg {color:var(--rq-blue)}
 .decision-panel.hold .decision-status {color:var(--rq-warning)}
 .decision-panel.pass .decision-status {color:var(--rq-good)}
@@ -142,6 +142,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
   .workspace {padding-inline:24px}
   .studio-grid {grid-template-columns:230px minmax(0,1fr) 280px}
   .under-grid {grid-template-columns:minmax(0,1fr) 280px}
+  .decision-status strong {font-size:40px}
   .workspace-title {min-height:160px}.workspace-title::before {background-size:auto 420px}
   .rq-title-art {width:450px;height:93px}
   .recipe-picker select {max-width:320px;font-size:11px}
