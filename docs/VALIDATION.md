@@ -58,5 +58,21 @@ reported. Generated cases do not establish physical generalization.
 Fresh setup from the canonical scratch checkout completed with pinned Python
 dependencies and `npm ci`, frontend build, loopback launch and a healthy API. The
 integrated 3D rebuild and final source audit are recorded below when complete.
+
+Final canonical integration, 29 October 2026: pinned Python environment, clean
+`npm ci`, integrated TypeScript/Vite build, 45 Python tests and 10 frontend tests
+passed from `C:/Users/nrgen/.codex/scratch/steplock`. The actual local app returned
+HTTP 200 and health `ok`. An actual HTTP correction replay analyzed 42 generated
+frames, ended PASS with 4/4 placements and exactly one CORRECTED event; authenticated
+JSON and HTML exports succeeded. Camera remained inactive. The printable HTML
+summary selects at most six boundary/finding events and directs readers to the
+complete JSON ledger; physical print pagination was not visually verified.
+
+The canonical checkout has a separately supplied, untracked `ui/` asset pack and
+brief added during finalization. These files are preserved and excluded from this
+core release. The user's separately requested appearance update remains owned by
+the UI chat. No raw reference pack or full private specification was published.
+Tracked release files are synchronized; no claim of a completely empty worktree
+is made while that user-supplied material is present.
 The latest receipt may be in the following commit because a Git commit cannot
 contain its own final hash without changing that hash.
