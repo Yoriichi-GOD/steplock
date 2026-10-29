@@ -15,9 +15,10 @@ before this capture were documentation only.
 - `screenshots/readme/studio-native.png`:1920x1080 viewport capture, default
   1280x720 CSS viewport at device pixel ratio1.5. No viewport enlargement or image
   upscaling was used to manufacture resolution.
-- `screenshots/readme/inspection-native.png`:native browser crop of the actual
-  three-column inspection grid after ordinary scrolling. It retains the source's
-  synthetic watermark and all four step states, advisory and evidence controls.
+- `screenshots/readme/inspection-native.png`:1920x1080 native viewport capture
+  after ordinary scrolling. It retains the source's synthetic watermark and all
+  four step states, advisory and evidence controls. The transparent pinned
+  navigation visibly passes over the toolbar, reflecting the actual interface.
 
 Both images show the same actual `normal` synthetic fixture session, with PASS,
 four confirmed placements and zero open findings. Under concurrent local work,

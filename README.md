@@ -30,7 +30,7 @@ torque, fatigue diagnosis, accident-prevention guarantee or safety certification
 <details>
   <summary>Inspect the procedure, source watermark and advisory at full resolution</summary>
   <p><a href="screenshots/readme/inspection-native.png"><img src="screenshots/readme/inspection-native.png" width="100%" alt="Browser-captured inspection detail showing four confirmed fixture steps, synthetic source watermark, PASS advisory, and the unchanged evidence controls" /></a></p>
-  <p><sub>Detail crop from the same actual session. No sharpening, upscaling or generated replacement pixels. <a href="docs/README_SCREENSHOT_PROVENANCE.md">Capture provenance</a>.</sub></p>
+  <p><sub>Inspection view after scrolling in the same actual session. No sharpening, upscaling or generated replacement pixels. <a href="docs/README_SCREENSHOT_PROVENANCE.md">Capture provenance</a>.</sub></p>
 </details>
 
 ## From pixels to proof
