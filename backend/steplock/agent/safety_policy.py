@@ -51,7 +51,9 @@ def validate(content, packet):
         reverse = re.findall(r"\b(?:part|marker|tag)(?:\s+(?:id|labeled|labelled))?\s*(\d+)\s*\(\s*" + re.escape(part) + r"\s*\)", text, re.I)
         if any(int(tag) != expected_tag for tag in forward + reverse):
             raise ValueError("PART_TAG_BINDING_CONTRADICTION")
-    if packet["snapshot"]["engine_decision"] == "PASS" and re.search(r"\b(?:not\s+(?:yet\s+)?confirmed|has\s+not\s+(?:yet\s+)?confirmed|missing|not\s+(?:yet\s+)?present)\b", text, re.I):
+    # The summary asserts observed state; a proposed conditional check such as
+    # "recapture if a tag is missing" does not assert a current absence.
+    if packet["snapshot"]["engine_decision"] == "PASS" and re.search(r"\b(?:not\s+(?:yet\s+)?confirmed|has\s+not\s+(?:yet\s+)?confirmed|missing|not\s+(?:yet\s+)?present)\b", advice.summary, re.I):
         raise ValueError("NARRATIVE_CONTRADICTS_CONFIRMED_ENGINE_STATE")
     category = packet["event"]["kind"]
     if category == "CORRECTED":

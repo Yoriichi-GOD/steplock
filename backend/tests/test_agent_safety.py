@@ -98,3 +98,9 @@ def test_observed_normal_case_semantic_errors_are_refused(tmp_path,summary):
     session=prepared_session(tmp_path,"normal");packet,_,_=gather(session,None,"next_safe_step")
     data=candidate(packet);data["summary"]=summary
     with pytest.raises(ValueError):validate(json.dumps(data),packet)
+
+
+def test_conditional_recapture_check_is_not_a_current_absence_claim(tmp_path):
+    session=prepared_session(tmp_path,"correction");packet,_,_=gather(session,None,"summarize_correction")
+    data=candidate(packet);data["action"]="RECAPTURE";data["steps"]=["Recapture the frame if a tag is missing or incorrect."]
+    assert validate(json.dumps(data),packet).action=="RECAPTURE"
