@@ -1,0 +1,271 @@
+{
+  "clip_id": "fx_02_05",
+  "source_kind": "SYNTHETIC_FIXTURE",
+  "family": "wrong_zone",
+  "expected_final_status": "HOLD_FOR_REVIEW",
+  "events": [
+    {
+      "kind": "WRONG_ZONE",
+      "part_id": "SPACER",
+      "zone_id": "COVER_SLOT",
+      "onset_ms": 2400,
+      "boundary_ms": 3200
+    },
+    {
+      "kind": "MISSING_AT_CHECKPOINT",
+      "part_id": "SPACER",
+      "zone_id": "SPACER_SLOT",
+      "onset_ms": 3400.0,
+      "boundary_ms": null
+    },
+    {
+      "kind": "MISSING_AT_CHECKPOINT",
+      "part_id": "COVER",
+      "zone_id": "COVER_SLOT",
+      "onset_ms": 3400.0,
+      "boundary_ms": null
+    },
+    {
+      "kind": "MISSING_AT_CHECKPOINT",
+      "part_id": "FASTENER",
+      "zone_id": "FASTENER_SLOT",
+      "onset_ms": 3400.0,
+      "boundary_ms": null
+    }
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "source_time_ms": 0.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 1,
+      "source_time_ms": 200.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 2,
+      "source_time_ms": 400.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 3,
+      "source_time_ms": 600.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 4,
+      "source_time_ms": 800.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 5,
+      "source_time_ms": 1000.0,
+      "markers": [],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 6,
+      "source_time_ms": 1200.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 7,
+      "source_time_ms": 1400.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 8,
+      "source_time_ms": 1600.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 9,
+      "source_time_ms": 1800.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 10,
+      "source_time_ms": 2000.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 11,
+      "source_time_ms": 2200.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 12,
+      "source_time_ms": 2400.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 13,
+      "source_time_ms": 2600.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 14,
+      "source_time_ms": 2800.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 15,
+      "source_time_ms": 3000.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 16,
+      "source_time_ms": 3200.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    },
+    {
+      "frame_index": 17,
+      "source_time_ms": 3400.0,
+      "markers": [
+        {
+          "marker_id": 10,
+          "zone_id": "BASE_SLOT",
+          "visible": true
+        },
+        {
+          "marker_id": 11,
+          "zone_id": "COVER_SLOT",
+          "visible": true
+        }
+      ],
+      "anchors_visible": true,
+      "occluded_zone": null
+    }
+  ],
+  "correction_expected": false,
+  "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+  "seed": 7626,
+  "variant": 5,
+  "label_created_before_evaluation": true
+}

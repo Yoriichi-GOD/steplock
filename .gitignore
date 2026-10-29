@@ -15,3 +15,5 @@ fixtures/recorded/*
 *.log
 .DS_Store
 *.tsbuildinfo
+fixtures/synthetic/*.avi
+!fixtures/synthetic/*_00.avi

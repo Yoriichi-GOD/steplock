@@ -66,7 +66,7 @@ def scenario_stages(family):
         "normal": normal,
         "wrong_component": normal[:-1]+[[b,s,c,w]],
         "wrong_zone": [[],[b],[b,(11,"COVER_SLOT")]],
-        "wrong_order": [[],[b],[b,c]],
+        "wrong_order": [[],[b],[b,c],[b,s,c],[b,s,c,f]],
         "missing_fastener": normal[:-1],
         "correction": normal[:-1]+[[b,s,c,w],[b,s,c],[b,s,c,f]],
         "occlusion": normal+normal[-1:],

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "normal",
+    "title": "Normal",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_00_00.avi",
+    "source_sha256": "530c6e9adc3b175a0e4fbf711bb1f7fc280f855c35c404599451456a935d54ef",
+    "duration_ms": 6000
+  },
+  {
+    "id": "wrong_component",
+    "title": "Wrong Component",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_01_00.avi",
+    "source_sha256": "1867fe05fb236c6ce4451e9303bf683b94a90773a5aa3861be3de0d40734e64b",
+    "duration_ms": 6000
+  },
+  {
+    "id": "wrong_zone",
+    "title": "Wrong Zone",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_02_00.avi",
+    "source_sha256": "c772a41fc302a459207810d1c6fc06ad263fb4f3be4d0088f9738864541cf5cb",
+    "duration_ms": 3600
+  },
+  {
+    "id": "wrong_order",
+    "title": "Wrong Order",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_03_00.avi",
+    "source_sha256": "0e4ae30b44033e4c934816e6663e325bb39756868bc80c7e6108919cef8e7ea8",
+    "duration_ms": 6000
+  },
+  {
+    "id": "missing_fastener",
+    "title": "Missing Fastener",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_04_00.avi",
+    "source_sha256": "da393a78d86142c4438c8bf7c23da69f1b33d03ef3c0e19ed3172879f394c19b",
+    "duration_ms": 4800
+  },
+  {
+    "id": "correction",
+    "title": "Correction",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_05_00.avi",
+    "source_sha256": "70a043ae1a1b7e46e1631aa887e6525d2ab09bcf534b32fff793bd049ba3a9f1",
+    "duration_ms": 8400
+  },
+  {
+    "id": "occlusion",
+    "title": "Occlusion",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_06_00.avi",
+    "source_sha256": "04193462f3a763b4742520577acd81aaa6b1604defe48a1a1d207cbed6e778e3",
+    "duration_ms": 7200
+  },
+  {
+    "id": "frozen_capture",
+    "title": "Frozen Capture",
+    "source_kind": "SYNTHETIC_FIXTURE",
+    "relative_path": "fixtures/synthetic/fx_07_00.avi",
+    "source_sha256": "0011674dfa74ac9fb34b85040c15a99287f66c5bd184f301d94fbd776674e439",
+    "duration_ms": 1200
+  }
+]
