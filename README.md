@@ -13,9 +13,9 @@ torque, fatigue diagnosis, accident-prevention guarantee or safety certification
 
 The current REQUIEM theme uses the supplied celestial-arch assets, with the real
 inspection controls and unaltered source evidence. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
-The Assembly Explorer has its own tab beside Evidence Explorer. The full Celestial
-background stays fixed above a scrolling black workspace. [Current header and
-responsive verification](docs/REQUIEM_HEADER_IMPLEMENTATION.md).
+The Assembly Explorer has its own tab beside Evidence Explorer. The compact
+Celestial masthead and scenic workspace scroll beneath the pinned logo/navigation
+bar. [Current header and responsive verification](docs/REQUIEM_COMPACT_HEADER.md).
 
 Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_065156_263419_test/summary.md)
 · [real physical-video experiment](docs/IMPACT_PHYSICAL_RESULTS.md)

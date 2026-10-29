@@ -1,7 +1,7 @@
 # REQUIEM UI implementation
 
 > Updated header, black surfaces and separate Assembly Explorer:
-> [current header implementation](REQUIEM_HEADER_IMPLEMENTATION.md). The receipts
+> [current compact header](REQUIEM_COMPACT_HEADER.md). The receipts
 > below describe the first REQUIEM integration and remain historical evidence.
 
 The rejected sakura/vermilion theme has been removed from the running frontend.

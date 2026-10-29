@@ -1,6 +1,6 @@
 {
   "zip_sha256": "c36786c33a5018d49bb1b2501dc16de335c41da32683163eebdf27cc5ef1218d",
-  "decision": "User selected full uncropped master with proportional taller header. Ready crop retained unused as alternate. Reference screenshot never deployed.",
+  "decision": "Current: 1691x248 header-ready crop in a scrolling masthead. Only logo/navigation stays pinned. Full Celestial master is the lower workspace backdrop.",
   "files": [
     {
       "path": "celestial-full.webp",

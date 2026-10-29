@@ -1,5 +1,8 @@
 # Fixed Celestial header and separate Assembly Explorer
 
+> Superseded for current layout by [Compact REQUIEM header](REQUIEM_COMPACT_HEADER.md).
+> This document retains the prior full-height implementation and its receipts.
+
 This revision follows the user's 29 October clarification: **show the entire
 uncropped Celestial image in a taller proportional header**, keep the header and
 background fixed, and scroll only the workspace. That direct choice supersedes

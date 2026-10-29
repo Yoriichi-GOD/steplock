@@ -90,3 +90,14 @@ No timestamps or history were rewritten and no force push was used.
   `git ls-remote origin refs/heads/main` returned that exact SHA.
 - Only19 UI/source/art/doc/screenshot files were included. Teammate validation
   scripts, reports, tests, datasets and the shared README were excluded.
+
+## Compact masthead correction (29 October,14:59 IST onward)
+
+- User explicitly switched back to the1691x248 ZIP crop and clarified that only
+  the taskbar should stay fixed; title/art should scroll. Lower-page scenery and
+  natural pane proportions replace the empty margins/tiny windows.
+- Current source/measurements/screenshots: `docs/REQUIEM_COMPACT_HEADER.md` and
+  `screenshots/requiem-compact/`. Older full-height screenshots are historical.
+-20 frontend checks and build passed; browser proved248px desktop masthead,
+  toolbar boundary, only-nav pinning, natural140x249 panes and normal PASS.
+- No core changes; other agent's judging docs excluded from the UI checkpoint.

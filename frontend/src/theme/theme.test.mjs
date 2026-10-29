@@ -122,15 +122,17 @@ test('assembly is a separate page and conservatively reflects stale sessions', a
  assert.match(html,/data-status="uncertain"/);
 });
 
-test('header uses the uncropped text-free master and independent foreground branding', async () => {
+test('header uses the exact crop while only navigation remains fixed', async () => {
  const headerArt=new URL('public/assets/steplock-header/',root);
  const record=JSON.parse(await readFile(new URL('manifest.json',headerArt),'utf8'));
  for(const item of record.files){
   assert.equal(createHash('sha256').update(await readFile(new URL(item.path,headerArt))).digest('hex'),item.sha256);
  }
  assert.match(css,/celestial-full\.webp/);
- assert.match(css,/100vw \* 732 \/ 2149/);
- assert.doesNotMatch(css,/BACKGROUND_HEADER_READY|02_REFERENCE|REFERENCE_FULL_UI/);
- assert.match(css,/grid-template-rows:auto minmax\(0,1fr\)/);
- assert.match(css,/\.workspace \{[^}]*overflow-y:auto/);
+ assert.match(css,/BACKGROUND_HEADER_READY_1691x248\.webp/);
+ assert.match(css,/\.rq-header-stage \{[^}]*height:248px/);
+ assert.doesNotMatch(css,/02_REFERENCE|REFERENCE_FULL_UI/);
+ assert.match(css,/\.app-header \{[^}]*position:absolute/);
+ assert.match(css,/\.rq-page-scroll \{[^}]*overflow-y:auto/);
+ assert.match(css,/\.workspace \{[^}]*celestial-full\.webp/);
 });
