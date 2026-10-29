@@ -1,0 +1,113 @@
+{
+  "source_pack": "STEPLOCK_REQUIEM_UI_ASSETS_AND_CODEX.zip",
+  "source_pack_sha256": "078739888fb88fb44bd14b83de415f6157c14e3b8cd67b6206ee06c636edcbaf",
+  "provenance": "User-supplied generated decorative art. Never inspection evidence.",
+  "conversion": "Pillow, LANCZOS thumbnail, WebP quality=85 method=6 exact=True",
+  "files": [
+    {
+      "path": "celestial-arches.webp",
+      "bytes": 277916,
+      "sha256": "31da63ea30126fc4b084c33fb9fb454ab376818ba54fb470c51486dd128d0b33",
+      "size_px": [
+        1691,
+        930
+      ],
+      "source": "backgrounds/celestial-arches-master.png",
+      "source_sha256": "d990856d5e2be9a4c000113d011fa1d9cf2cce598f929a6f9e03cff1ac19230f",
+      "source_size_px": [
+        1691,
+        930
+      ]
+    },
+    {
+      "path": "steplock-ornate-logo.webp",
+      "bytes": 169866,
+      "sha256": "005c38dab06a54d6c8ff743e2bd83126a6dac5ec3ce4fe1e4e28074ee16a30fa",
+      "size_px": [
+        900,
+        450
+      ],
+      "source": "branding/steplock-ornate-logo-master.png",
+      "source_sha256": "7e7100f667e409b0bf599d9fdea9a6f300a246d4adbc3e30ad398b2cd17a3b71",
+      "source_size_px": [
+        1774,
+        887
+      ]
+    },
+    {
+      "path": "steplock-crest-compact.webp",
+      "bytes": 15448,
+      "sha256": "f8a9492e5c1ac098938db33322988dda78c7374b36639b4554927d66ad019477",
+      "size_px": [
+        128,
+        144
+      ],
+      "source": "branding/steplock-crest-compact.png",
+      "source_sha256": "38d9679ebdd71a02077e200919e4ce66e5b2ed8816868261b7a3f02b9d9913e8",
+      "source_size_px": [
+        755,
+        850
+      ]
+    },
+    {
+      "path": "procedure-studio-ornate-title.webp",
+      "bytes": 131660,
+      "sha256": "5282617763ee53b84622072d23ac9f94df4d0b8c978da347158eaabc7de30118",
+      "size_px": [
+        1100,
+        367
+      ],
+      "source": "branding/procedure-studio-ornate-title-master.png",
+      "source_sha256": "903b44078fda7fb4ae9d94d645fea3f68655726cf68240cf512124cc4c6b1f6b",
+      "source_size_px": [
+        2172,
+        724
+      ]
+    },
+    {
+      "path": "right-arch-landscape.webp",
+      "bytes": 50526,
+      "sha256": "e7ce9f826173363b7271cfc1fc40983f1cea9bfc7591a55517c5cceed87c37f6",
+      "size_px": [
+        300,
+        533
+      ],
+      "source": "ornaments/right-arch-landscape-master.png",
+      "source_sha256": "f85150c2f468e7d31a285352da5913619ba7feeaa2eb9ad0ff7237fe958279c7",
+      "source_size_px": [
+        941,
+        1672
+      ]
+    },
+    {
+      "path": "floating-flower.webp",
+      "bytes": 82032,
+      "sha256": "5bb4f02c3c8b42ad3c820d7cdcb311333b6802068fa7a99006e82705c77dce5a",
+      "size_px": [
+        600,
+        400
+      ],
+      "source": "empty-state/floating-flower-master.png",
+      "source_sha256": "85c522053fbb4dba181a426518266b015ad62a439755279af13d00ec6e8f52ba",
+      "source_size_px": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "corner-florals.webp",
+      "bytes": 68850,
+      "sha256": "c3f5b338d5c9fffb0b6d26bc11b86cad9a18c1ff8d37e1f4b3b16eb0a820cfe0",
+      "size_px": [
+        600,
+        400
+      ],
+      "source": "ornaments/corner-florals-master.png",
+      "source_sha256": "bb6884d9489e99ebb1f39d45cd9c1218ff9b49ae08e5a54df0f79c09f6672918",
+      "source_size_px": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

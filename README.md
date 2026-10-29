@@ -9,7 +9,11 @@ placement, prerequisites and correction; findings point to source-frame evidence
 **ADVISORY ONLY.** No machinery interlock, intrinsic part identity, fastening,
 torque, fatigue diagnosis, accident-prevention guarantee or safety certification.
 
-![Actual Studio with a watermarked synthetic replay](screenshots/studio-pass.jpg)
+![REQUIEM Studio with actual watermarked synthetic evidence](screenshots/requiem/studio-wide.png)
+
+The current REQUIEM theme uses the supplied celestial-arch assets, with the real
+inspection controls and unaltered source evidence. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
+The optional assembly explorer appears beneath the inspection workbench.
 
 Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_065156_263419_test/summary.md)
 · [acceptance](docs/ACCEPTANCE.md) · [limitations](docs/TECHNICAL_LIMITATIONS.md)

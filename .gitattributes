@@ -1,2 +1,2 @@
-# Keep supplied artwork and its provenance hashes byte-identical on Windows.
-frontend/public/steplock-theme/** -text
+# Preserve production artwork and provenance hashes byte-for-byte.
+frontend/public/assets/requiem/** -text

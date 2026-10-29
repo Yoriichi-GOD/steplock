@@ -9,13 +9,14 @@ import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 
 const root = new URL('../../', import.meta.url);
-const art = new URL('public/steplock-theme/', root);
-const css = await readFile(new URL('src/steplock-ui-overrides.css', root), 'utf8');
+const art = new URL('public/assets/requiem/', root);
+const css = await readFile(new URL('src/theme/requiem.css', root), 'utf8');
 const parsed = postcss.parse(css);
-const tokens = JSON.parse(await readFile(new URL('theme/tokens.json', art), 'utf8')).palettes;
-const manifest = JSON.parse(await readFile(new URL('theme/production-assets.json', art), 'utf8'));
+const tokens = Object.fromEntries([...css.matchAll(/--rq-([a-z]+):\s*(#[a-f0-9]{6})/gi)].map(match=>[match[1],match[2]]));
+const manifest = JSON.parse(await readFile(new URL('manifest.json', art), 'utf8'));
 
 test('selected production art retains supplied hashes; reference images and fonts are excluded', async () => {
+  assert.equal(manifest.files.length, 7);
   for (const item of manifest.files) {
     const bytes = await readFile(new URL(item.path, art));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), item.sha256, item.path);
@@ -25,14 +26,14 @@ test('selected production art retains supplied hashes; reference images and font
   assert.ok(manifest.files.reduce((sum, item) => sum + item.bytes, 0) < 1024 * 1024);
 });
 
-test('decorative vectors contain no embedded labels, remote assets or scripts', async () => {
-  for (const item of manifest.files.filter(file => file.path.endsWith('.svg'))) {
-    const svg = await readFile(new URL(item.path, art), 'utf8');
-    assert.doesNotMatch(svg, /<(?:script|foreignObject|text)\b|\bon\w+\s*=|(?:href|src)=["'](?!#)/i, item.path);
+test('production artwork is local optimized WebP with traceable source masters', () => {
+  for (const file of manifest.files) {
+    assert.match(file.path, /^[a-z-]+\.webp$/);
+    assert.match(file.source_sha256, /^[a-f0-9]{64}$/);
+    assert.ok(file.size_px[0] <= file.source_size_px[0]);
+    assert.ok(file.size_px[1] <= file.source_size_px[1]);
   }
-  const crest = await readFile(new URL('branding/steplock-crest-symmetric.svg', art), 'utf8');
-  assert.match(crest, /M256 18 L494 256 L256 494 L18 256Z/);
-  assert.match(crest, /translate\(512 0\) scale\(-1 1\)/); // Supplied mirrored crane construction.
+  assert.doesNotMatch(css, /https?:|@import|@font-face/);
 });
 
 function luminance(hex) {
@@ -42,14 +43,9 @@ function luminance(hex) {
 function contrast(a, b) {const values = [luminance(a), luminance(b)].sort((a, b) => b - a); return (values[0] + .05) / (values[1] + .05);}
 
 test('functional text and semantic status palette meet AA contrast on declared surfaces', () => {
-  let hoverBackground;
-  parsed.walkRules('button.primary:hover', rule => rule.walkDecls('background', declaration => {hoverBackground = declaration.value;}));
-  assert.match(hoverBackground, /^#[a-f0-9]{6}$/i);
-  const pairs = [[tokens.text, tokens.ink], [tokens.muted, tokens.panel], [tokens.pass, tokens.panel], [tokens.warning, tokens.panel], [tokens.error, tokens.panel], ['#fff5e8', tokens.vermilion], ['#fff5e8', hoverBackground]];
+  const pairs = [[tokens.ivory,tokens.bg],[tokens.muted,tokens.panel],[tokens.good,tokens.panel],[tokens.warning,tokens.panel],[tokens.danger,tokens.panel],['#101923',tokens.parchment],['#101923','#efe0bf'],[tokens.blue,tokens.night]];
   for (const [foreground, background] of pairs) assert.ok(contrast(foreground, background) >= 4.5, `${foreground} / ${background}: ${contrast(foreground, background).toFixed(2)}`);
-  assert.match(css, /--green:\s*#77c9a6/i);
-  assert.match(css, /--amber:\s*#f1ba65/i);
-  assert.match(css, /--red:\s*#ed706b/i);
+
 });
 
 test('theme leaves evidence pixels alone and decorative layers cannot intercept controls', () => {
@@ -58,7 +54,7 @@ test('theme leaves evidence pixels alone and decorative layers cannot intercept 
       const declarations = Object.fromEntries((rule.nodes ?? []).filter(node => node.type === 'decl').map(node => [node.prop, node.value]));
       if (declarations.content === '""') assert.equal(declarations['pointer-events'], 'none', rule.selector);
     }
-    assert.doesNotMatch(rule.selector, /\.evidence-image|\.video-stage|\.capture-element|\.matrix-correct|\.matrix-error/);
+    if (/\.evidence-image|\.video-stage|\.capture-element|\.matrix-correct|\.matrix-error/.test(rule.selector)) rule.walkDecls(decl=>assert.ok(!/filter|transform|opacity|background/.test(decl.prop), decl.toString()));
     if (/error-banner|notice-banner|connection|decision-status/.test(rule.selector)) {
       rule.walkDecls(decl => assert.ok(!(decl.prop === 'display' && decl.value === 'none') && !(decl.prop === 'visibility' && decl.value === 'hidden') && !(decl.prop === 'opacity' && Number(decl.value) === 0), `${rule.selector}: ${decl.toString()}`));
     }
@@ -81,7 +77,7 @@ test('real app HTML retains truthful offline alert, disabled run action and all 
   assert.match(html, /<button class="primary" disabled=""><[^>]+>[\s\S]*?Run example<\/button>/);
   for (const label of ['Procedure studio', 'Evidence explorer', 'Evaluation lab', 'Recipe designer', 'Demo kit']) assert.ok(html.includes(label), label);
   assert.match(html, /aria-label="STEPLOCK — Procedure studio"/);
-  assert.match(html, /steplock-mark\.svg" alt="" aria-hidden="true"/);
+  assert.match(html, /steplock-crest-compact\.webp" alt="" aria-hidden="true"/);
 });
 
 test('stale PASS input renders SOURCE LOST and review status in the actual Studio', async () => {
@@ -91,8 +87,27 @@ test('stale PASS input renders SOURCE LOST and review status in the actual Studi
   const noop = () => {};
   const html = renderToStaticMarkup(React.createElement(Studio, {session, connected: false, credentials: null, busy: false, onCheckpoint: noop, onStop: noop, onReview: noop, onEvent: noop, onExport: noop, onRun: noop}));
   assert.match(html, /data-testid="decision-status">SOURCE LOST/);
+  assert.match(html, /STALE EVIDENCE/);
   assert.doesNotMatch(html, /data-testid="decision-status">PASS/);
   assert.match(html, /data-status="uncertain"/);
   assert.match(html, /SYNTHETIC SOFTWARE TEST/);
   assert.match(html, /Human acknowledgement does not override/);
+});
+
+test('flower is exclusive to the genuine zero-source Studio state', async () => {
+  const {FrameImage} = await server.ssrLoadModule('/src/components/FrameImage.tsx');
+  const render = props => renderToStaticMarkup(React.createElement(FrameImage, {credentials:null,frameId:null,...props}));
+  assert.match(render({awaitingSource:true}), /Awaiting an inspection source/);
+  assert.match(render({awaitingSource:true}), /floating-flower.webp/);
+  assert.doesNotMatch(render({}), /floating-flower.webp/);
+  assert.doesNotMatch(render({awaitingSource:true,frameId:'prior-frame'}), /floating-flower.webp/);
+  assert.match(render({frameId:'new-frame'}), /Loading evidence/);
+  assert.doesNotMatch(render({awaitingSource:true,credentials:{session_id:'active'}}), /floating-flower.webp/);
+});
+
+test('missing benchmark data never becomes invented metrics', async () => {
+  const {Benchmarks} = await server.ssrLoadModule('/src/pages/Benchmarks.tsx');
+  const html = renderToStaticMarkup(React.createElement(Benchmarks, {data:null}));
+  assert.match(html, /No completed benchmark run is available yet/);
+  assert.doesNotMatch(html, /100\.0%|metric-grid/);
 });

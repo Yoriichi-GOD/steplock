@@ -1,3 +1,5 @@
+> Historical checkpoints for the previous theme. Current work: [REQUIEM progress](REQUIEM_UI_PROGRESS.md).
+
 # Theme checkpoints
 
 Audit captured: **2026-10-29 12:30:53 IST (+05:30)**.

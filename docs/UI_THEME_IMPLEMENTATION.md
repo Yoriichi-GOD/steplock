@@ -1,3 +1,5 @@
+> Superseded by the user-requested REQUIEM integration. See [current theme](REQUIEM_UI_IMPLEMENTATION.md). The following records the rejected previous theme and its original validation limits.
+
 # Supplied artwork integration
 
 This changes the existing React/Vite frontend's appearance. All five views,
