@@ -136,3 +136,14 @@ No timestamps or history were rewritten and no force push was used.
   tests passed. Browser desktop/phone scroll and overflow checks passed.
 - Scope and limits: `docs/LOCAL_PREVIEW_AND_REAL_REPLAY.md`. The teammate's judging
   documents and frozen benchmark evidence remain excluded from the checkpoint.
+
+## Neutral frosted panels (29 October,15:56 onward)
+
+- User requested curved body windows and transparent, blurry glass without a
+  colored tint. Added18px panel/toolbar corners, neutral rgba(10,10,10,.48) and
+  20px backdrop blur. Foreground text and source imagery remain unfiltered.
+- Browser checked1691/1280/390 layouts, source toggle, Evidence navigation and
+  actual30-frame normal PASS. No horizontal overflow; header remains transparent.
+- 20 frontend checks/build passed. CSS fallback exists for unsupported blur.
+- Current report and synthetic-only captures: `docs/REQUIEM_GLASS_PANELS.md` and
+  `screenshots/requiem-glass/`. No engine changes or new backend test claims.

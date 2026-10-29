@@ -11,8 +11,9 @@ used in the live interface. Earlier full-height screenshots are historical only.
   row scrolls away.
 - The taskbar is fully transparent, including after scrolling: no fill, shadow,
   blur or outline border. Individual buttons retain their own functional styling.
-- Full Celestial artwork continues behind the lower workspace. Black panels stay
-  opaque, and the source frame/annotations receive no artwork or filters.
+- Full Celestial artwork continues behind the lower workspace. Body panels now
+  use the neutral rounded glass treatment in `docs/REQUIEM_GLASS_PANELS.md`;
+  source frames/annotations receive no artwork or filters.
 - Both decorative side windows and their layout columns are removed. The Studio
   grid fills the workspace content width; the camera receives the reclaimed
   space. Floral rail corners and the lower-page background remain.

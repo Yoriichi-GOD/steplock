@@ -4,6 +4,7 @@
  --rq-line:#454545;--rq-ivory:#e8e1d0;--rq-parchment:#decba6;--rq-blue:#83b8d3;
  --rq-teal:#3d7b86;--rq-gold:#c8ad7c;--rq-good:#9bd5b6;--rq-warning:#e7bc7e;--rq-danger:#e47f80;--rq-muted:#a7aaa9;
  --rq-display:"Cormorant Garamond",Georgia,serif;
+ --rq-glass:rgba(10,10,10,.48);
  --bg:var(--rq-bg);--panel:var(--rq-panel);--line:#333;--text:var(--rq-ivory);--subtle:#c0c4c4;--muted:var(--rq-muted);
  --lime:var(--rq-blue);--green:var(--rq-good);--amber:var(--rq-warning);--red:var(--rq-danger);
  font-family:Inter,"Segoe UI",system-ui,sans-serif;color:var(--text);background:var(--bg);
@@ -53,18 +54,19 @@ h1,h2 {font-family:var(--rq-display);font-weight:400;letter-spacing:-.8px}
 h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .title-actions {flex-shrink:0;align-self:flex-end;display:flex;gap:10px;margin-bottom:0}
 .title-actions button {background:#030303bb;border-color:#9b9b94;color:var(--text);font-size:12px;padding:12px 17px;min-height:40px}
-/* The title and scene move with the page; only the nav is outside this scroller. */
+/* The title and scene move with the page; navigation sticks inside the scroller. */
 .workspace {width:100%;height:auto;margin:0;max-width:none;min-height:calc(100dvh - 248px);overflow:visible;padding:0 clamp(22px,2.484vw,54px) 20px;background:linear-gradient(#03030370,#030303a8),url('/assets/steplock-header/celestial-full.webp') center top / cover no-repeat}
 .workspace:focus {outline:none}
-.source-toolbar {background:#090909;border:0;border-radius:0;padding:10px 12px;gap:16px}
+.source-toolbar {padding:10px 12px;gap:16px}
 .recipe-picker select {color:var(--text);font-size:12px;max-width:390px}
 .source-actions>button,.source-actions select {font-size:12px;padding:10px 12px;min-height:40px}
 .source-hint {font-size:9px;color:var(--muted);padding-block:9px 13px}
-.panel {background:#101010;border:0;border-radius:0;box-shadow:none}
-.panel-heading {background:#080808;border:0;color:var(--rq-blue);font-size:10px;letter-spacing:.7px}
+/* Blur only the scenery behind each shell. Evidence and text stay unfiltered. */
+.panel,.source-toolbar {--muted:#c0c3c2;background:var(--rq-glass);border:0;border-radius:18px;box-shadow:0 14px 36px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.10);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.panel-heading {background:rgba(0,0,0,.18);border:0;color:var(--rq-blue);font-size:10px;letter-spacing:.7px}
 .studio-grid {position:relative;grid-template-columns:250px minmax(0,1fr) 300px;gap:14px;min-width:0;margin:0}
 .studio-grid::after {content:none}
-.recipe-rail {position:relative;isolation:isolate;background:#0b0b0b;padding-bottom:90px}
+.recipe-rail {position:relative;isolation:isolate;background:var(--rq-glass);padding-bottom:90px}
 .recipe-rail::before {content:"";position:absolute;bottom:0;left:0;right:0;height:100px;z-index:-1;pointer-events:none;background:url('/assets/requiem/corner-florals.webp') left bottom / 100% auto no-repeat;opacity:1}
 .recipe-description {font-size:13px;color:var(--text);padding:18px 18px 15px}
 .recipe-description>span {font-size:10px;color:var(--subtle)}
@@ -83,20 +85,22 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .dependency {left:46px;bottom:7px}
 .rail-note {font-size:10px;line-height:1.7;margin:0 18px 0;padding-top:12px;border:0}
 .rail-note svg {color:var(--rq-blue)}
-.camera-panel .panel-heading,.video-controls,.capture-readout {background:#080808;border:0}
+.camera-panel .panel-heading,.video-controls,.capture-readout {background:rgba(0,0,0,.18);border:0}
+.video-stage {background:transparent}
+.video-stage:fullscreen {background:#050505}
 .video-controls .toggle.active {background:#11222c;border-color:var(--rq-blue);color:var(--rq-blue)}
 .capture-readout {font-size:10px;color:var(--subtle)}
 .capture-readout>span:first-child svg {color:var(--rq-blue)}
 .video-top-badges span {color:var(--rq-blue);background:#030303ed;border-color:#585858}
 .analyzing {background:#030303ed;color:var(--rq-blue)}
 .scrubber {border:0}.scrubber input {accent-color:var(--rq-parchment)}
-.frame-empty {background:#050505;color:var(--muted)}
+.frame-empty {background:transparent;color:var(--muted)}
 .frame-empty>span {color:var(--text);font-size:17px}.frame-empty>svg {color:var(--rq-blue)}
 .frame-empty small {color:var(--muted);max-width:90%;text-align:center;line-height:1.6}
 .rq-awaiting-source {gap:9px;padding:26px 12px 22px}
 .rq-flower {display:block;width:min(330px,80%);height:180px;object-fit:contain;pointer-events:none}
 .rq-flower[hidden] {display:none}
-.decision-panel {position:relative;padding-bottom:90px;background:#0b0b0b}
+.decision-panel {position:relative;padding-bottom:90px;background:var(--rq-glass)}
 .decision-panel::after {content:"";position:absolute;bottom:0;left:0;right:0;height:90px;pointer-events:none;background:url('/assets/requiem/corner-florals.webp') right bottom / 100% auto no-repeat}
 .decision-content {padding:20px 18px 16px}
 .decision-eyebrow {font:10px Consolas,monospace;color:var(--rq-blue);letter-spacing:1.2px}
@@ -109,7 +113,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .advisory-note {font-size:9px}.status-rule {font:9px Consolas,monospace;color:var(--rq-blue)}
 .reason-tags span {color:var(--rq-warning);background:#29231c;border-color:#806c4a}
 .under-grid {grid-template-columns:minmax(0,1fr) 300px;margin-top:14px}
-.progress-panel,.runtime-panel {background:#0b0b0b}
+.progress-panel,.runtime-panel {background:var(--rq-glass)}
 .progress-track span.done {background:var(--rq-parchment);border-color:var(--rq-parchment);color:#101010}
 .progress-panel>svg {color:var(--text)}
 .error-banner {background:#301a21;border-color:#9a535c;color:#ffd5d8}
@@ -119,11 +123,11 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .evidence-row.selected {background:#83b8d315;border-left-color:var(--rq-blue)}
 .timeline-event.issue strong {color:var(--rq-danger)}.timeline-empty button {color:var(--rq-blue)}
 .recipe-preview>svg g rect {fill:#83b8d30a;stroke:var(--rq-blue)}.recipe-preview>svg g text {fill:var(--text)}
-.assembly-panel {margin:0 0 18px;background:#0b0b0b}
+.assembly-panel {margin:0 0 18px;background:var(--rq-glass)}
 .assembly-heading,.assembly-visual,.assembly-components,.assembly-component,.assembly-footer,.assembly-guidance,.assembly-motion {border:0}
 .assembly-heading h2>span {color:var(--rq-blue)}
-.assembly-visual {background:radial-gradient(ellipse at 50% 47%,#242424,#101010 76%)}
-.assembly-inspector {background:#101010}.assembly-component {background:#0b0b0b}
+.assembly-visual {background:radial-gradient(ellipse at 50% 47%,rgba(36,36,36,.25),rgba(10,10,10,.32) 76%)}
+.assembly-inspector {background:rgba(10,10,10,.18)}.assembly-component {background:rgba(10,10,10,.32);border-radius:12px}
 .assembly-illustration-tag {background:#080808;color:var(--text);border-color:#454545}
 .assembly-part-icon {background:#171717;color:var(--rq-blue);border-color:#454545}
 .assembly-component.selected {background:#152126;box-shadow:inset 0 2px var(--rq-blue)}
@@ -133,6 +137,9 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .workspace-footer {position:relative;border:0;margin-top:25px;padding-block:22px;color:var(--muted)}
 .workspace-footer::before {content:"";position:absolute;top:0;left:40%;right:40%;height:1px;background:#807052;pointer-events:none}
 .workspace-footer>span:first-child {color:var(--muted)}.footer-mark {border-color:var(--rq-gold);color:var(--rq-gold)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+ .panel,.source-toolbar {background:rgba(12,12,12,.90)}
+}
 @media(max-width:1550px) {
  .app-header {grid-template-columns:290px minmax(0,1fr) 150px;gap:20px}.brand {width:220px;height:110px}
  .app-header nav {gap:18px}.app-header nav button {font-size:11px}

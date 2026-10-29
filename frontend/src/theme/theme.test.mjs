@@ -42,7 +42,7 @@ function luminance(hex) {
 }
 function contrast(a, b) {const values = [luminance(a), luminance(b)].sort((a, b) => b - a); return (values[0] + .05) / (values[1] + .05);}
 
-test('functional text and semantic status palette meet AA contrast on declared surfaces', () => {
+test('semantic palette meets AA contrast against solid reference colors', () => {
   const pairs = [[tokens.ivory,tokens.bg],[tokens.muted,tokens.panel],[tokens.good,tokens.panel],[tokens.warning,tokens.panel],[tokens.danger,tokens.panel],['#101923',tokens.parchment],['#101923','#efe0bf'],[tokens.blue,tokens.night]];
   for (const [foreground, background] of pairs) assert.ok(contrast(foreground, background) >= 4.5, `${foreground} / ${background}: ${contrast(foreground, background).toFixed(2)}`);
 
@@ -54,7 +54,9 @@ test('theme leaves evidence pixels alone and decorative layers cannot intercept 
       const declarations = Object.fromEntries((rule.nodes ?? []).filter(node => node.type === 'decl').map(node => [node.prop, node.value]));
       if (declarations.content === '""') assert.equal(declarations['pointer-events'], 'none', rule.selector);
     }
-    if (/\.evidence-image|\.video-stage|\.capture-element|\.matrix-correct|\.matrix-error/.test(rule.selector)) rule.walkDecls(decl=>assert.ok(!/filter|transform|opacity|background/.test(decl.prop), decl.toString()));
+    if (/\.evidence-image|\.capture-element|\.matrix-correct|\.matrix-error/.test(rule.selector)) rule.walkDecls(decl=>assert.ok(!/filter|transform|opacity|background/.test(decl.prop), decl.toString()));
+    // A transparent letterbox is allowed; source pixels must never be filtered.
+    if (/\.video-stage/.test(rule.selector)) rule.walkDecls(decl=>assert.ok(!/filter|transform|opacity|background-image/.test(decl.prop) && !/url\(/.test(decl.value), decl.toString()));
     if (/error-banner|notice-banner|connection|decision-status/.test(rule.selector)) {
       rule.walkDecls(decl => assert.ok(!(decl.prop === 'display' && decl.value === 'none') && !(decl.prop === 'visibility' && decl.value === 'hidden') && !(decl.prop === 'opacity' && Number(decl.value) === 0), `${rule.selector}: ${decl.toString()}`));
     }
