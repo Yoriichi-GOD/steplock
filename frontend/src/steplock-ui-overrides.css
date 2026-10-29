@@ -1,0 +1,213 @@
+/* Adapted from the supplied STEPLOCK asset pack. Original artwork is unchanged.
+   This layer changes presentation only; source frames and engine data are untouched. */
+:root {
+  --step-ink: #081220;
+  --step-deep: #070d16;
+  --step-panel: #111b28;
+  --step-panel-alt: #1a2433;
+  --step-paper: #eedfb7;
+  --step-gold: #c9a968;
+  --step-vermilion: #b83a2e;
+  --step-teal: #3e7b8c;
+  --step-sakura: #e8a0a7;
+  --step-heading: #f6f1e8;
+  --step-muted: #a3adbc;
+  --bg: var(--step-ink);
+  --panel: var(--step-panel);
+  --line: #3a4150;
+  --text: var(--step-heading);
+  --subtle: #b2b9c8;
+  --muted: var(--step-muted);
+  --lime: var(--step-gold); /* compatibility with existing brand-accent selectors */
+  --red: #ed706b;
+  --amber: #f1ba65;
+  --green: #77c9a6;
+  font-family: Inter, "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body { background: var(--bg); color: var(--text); }
+.app-shell { min-height: 100vh; position: relative; isolation: isolate; }
+.app-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/steplock-theme/backgrounds/ink-grain-tile.png') repeat;
+  opacity: .025;
+}
+
+/* Independent header artwork. Local navigation and health remain in the foreground. */
+.app-header {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(18px, 2.2vw, 34px);
+  min-height: 80px;
+  height: auto;
+  background: var(--step-deep);
+  border-bottom-color: #c9a96855;
+  overflow: hidden;
+}
+.app-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/steplock-theme/overlays/header-sakura-overlay.svg') right top / auto 110px no-repeat;
+  opacity: .22;
+}
+.brand { gap: 10px; color: var(--text); font-size: 22px; letter-spacing: .4px; }
+.brand-wordmark { font-family: "Reggae One", "Yuji Boku", Georgia, serif; font-weight: 600; }
+.brand-wordmark small { font-family: Inter, "Segoe UI", system-ui, sans-serif; letter-spacing: 1.55px; color: #c1b5a2; }
+.brand-mark { width: 42px; height: 42px; background: transparent; border-radius: 0; overflow: visible; }
+.brand-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.app-header nav { min-width: 0; gap: clamp(12px, 1.4vw, 24px); justify-content: center; }
+.app-header nav button { color: #b9beca; font-size: 11px; position: relative; }
+.app-header nav button.active { color: var(--step-paper); border-bottom-color: var(--step-vermilion); }
+.app-header nav button:hover { color: var(--text); }
+.header-status { display: flex; margin-left: 0; gap: 10px; }
+.header-status .advisory-tag { display: inline-flex; color: var(--step-paper); border-color: #c9a96866; background: #201e19; }
+.connection.good { color: var(--muted); }
+.connection.good i { background: var(--green); }
+.connection.offline { color: var(--red); }
+.connection.offline i { background: var(--red); }
+
+/* Art is confined to the title region, away from live evidence and controls. */
+.workspace-title { position: relative; isolation: isolate; padding: 18px 18px 20px; margin-inline: -18px; overflow: hidden; min-height: 126px; }
+.workspace-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #081220 0%, #081220ed 33%, #08122066 72%, #08122038), url('/steplock-theme/backgrounds/header-landscape-no-text.webp') right 52% / auto 100% no-repeat;
+  opacity: .82;
+  animation: steplock-title-reveal 350ms ease-out both;
+}
+@keyframes steplock-title-reveal { from { opacity: 0; transform: translateY(4px); } to { opacity: .82; transform: translateY(0); } }
+.workspace-title h1 { font-family: Inter, "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif; font-weight: 650; }
+.workspace-title p { color: #c6c0b6; }
+.breadcrumb span { color: var(--step-gold); }
+.title-period { color: var(--step-vermilion); }
+.title-actions button { background: #0b1420e8; color: var(--step-paper); border-color: #c9a96866; }
+
+.panel, .source-toolbar { background: var(--panel); border-color: #c9a96842; }
+.panel-heading { color: #dbd1bd; background: #0c1723; border-bottom-color: #c9a96830; }
+button, .button { border-color: #c9a96859; }
+button:hover, .button:hover { border-color: #c9a96899; background: #242d3a; }
+button.primary { background: var(--step-vermilion); border-color: #d34d42; color: #fff5e8; }
+button.primary:hover { background: #bd4035; border-color: #ed706b; }
+button.primary:disabled { background: #754039; color: #fff5e8; }
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--step-gold); outline-offset: 3px; }
+a { color: #e0bf7b; }
+select, input[type=number], .recipe-editor textarea { border-color: #c9a96859; }
+.recipe-picker select { color: var(--text); }
+.source-hint { color: var(--muted); }
+.source-notice { background: #242219; color: var(--step-paper); border-color: #c9a96866; }
+.source-notice strong { color: var(--step-paper); }
+
+/* Status semantics remain explicit: brand red is never the PASS indicator. */
+.decision-panel.pass .decision-status, .good-text { color: var(--green); }
+.decision-panel.hold .decision-status { color: var(--amber); }
+.decision-panel.pending .decision-status svg { color: var(--step-gold); }
+.error-banner { background: #2e151b; border-color: #9d4855; color: #ffe3e6; }
+.notice-banner { background: #18372d; border-color: #417b64; color: #ddf8e8; }
+.step-node { background: #542722; border-color: #b83a2e; color: var(--step-paper); }
+.step-list .allowed .step-node { background: #542722; border-color: var(--step-gold); color: var(--step-paper); }
+.step-list .complete .step-node { background: #18372d; border-color: var(--green); color: var(--green); }
+.step-list .complete em { color: var(--green); }
+.step-list .blocked .step-node, .step-list .blocked em { color: var(--red); border-color: var(--red); }
+.step-list li.complete:not(:last-child)::after { background: #417b64; }
+.step-content small, .step-content em, .dependency, .rail-note { color: var(--muted); }
+.progress-track span.done { color: var(--green); border-color: #417b64; background: #18372d; }
+.progress-panel > svg { color: var(--step-gold); }
+.scrubber input { accent-color: var(--step-vermilion); }
+.video-controls .toggle.active { color: var(--step-paper); border-color: #c9a96877; background: #292a22; }
+.error-banner, .notice-banner { overflow-wrap: anywhere; }
+.error-banner > span, .notice-banner > span { min-width: 0; }
+
+/* Evidence images, calibration coordinates and numerical plots receive no art layers. */
+.evidence-row.selected { border-left-color: var(--step-gold); background: #c9a96812; }
+.recipe-preview > svg g rect { fill: #c9a68110; stroke: var(--step-gold); }
+.recipe-preview > svg g text { fill: var(--step-paper); }
+
+/* Preserve the existing optional 3D viewer; theme only its surrounding controls. */
+.assembly-panel { background: var(--panel); }
+.assembly-heading { border-bottom-color: #c9a96830; }
+.assembly-heading h2 > span { color: var(--step-vermilion); }
+.assembly-illustration-tag { color: var(--step-paper); border-color: #c9a96855; background: #25261f; }
+.assembly-part-icon { color: var(--step-gold); border-color: #c9a96855; background: #29271f; }
+.assembly-component.selected { background: #252d31; box-shadow: inset 0 2px var(--step-gold); }
+.assembly-component.confirmed i, .assembly-footer i.confirmed { background: var(--green); }
+.assembly-component.issue i, .assembly-footer i.issue { background: var(--red); }
+.assembly-component.uncertain i, .assembly-footer i.uncertain { background: var(--amber); }
+.assembly-distance input { accent-color: var(--step-gold); }
+.assembly-motion { background: #111b28; border-top-color: #c9a96830; }
+.assembly-motion-buttons > button.primary { color: #fff5e8; }
+
+/* One full crest, in Demo Kit. The wordmark and all instructions remain real text. */
+.kit-intro { position: relative; gap: 24px; padding-bottom: 30px; }
+.kit-intro::after { content: ""; position: absolute; bottom: 10px; left: 0; width: min(580px, 100%); height: 10px; pointer-events: none; background: url('/steplock-theme/ornaments/precision-divider.svg') left center / 100% auto no-repeat; opacity: .6; }
+.kit-crest { padding: 0 16px; flex-shrink: 0; }
+.kit-crest img { display: block; width: 144px; height: 144px; object-fit: contain; }
+
+/* Separate footer asset, never a cropped duplicate of the title artwork. */
+.workspace-footer { position: relative; isolation: isolate; overflow: hidden; min-height: 90px; border-top-color: #c9a96844; background: var(--step-deep); padding-inline: 16px; }
+.workspace-footer::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url('/steplock-theme/overlays/footer-sakura-wave-overlay.svg') right bottom / auto 100% no-repeat; opacity: .4; }
+.workspace-footer > span { color: var(--muted); position: relative; }
+.footer-mark { color: var(--step-paper); border-color: #c9a96877; }
+
+@media (max-width: 1100px) {
+  .app-header { grid-template-columns: minmax(0, 1fr) auto; gap: 0 16px; padding: 16px 20px 0; }
+  .app-header nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; overflow-x: auto; gap: 24px; min-height: 43px; margin-top: 13px; scrollbar-width: thin; }
+  .app-header nav button { flex-shrink: 0; }
+  .app-header::before { opacity: .14; }
+  .header-status { display: flex; justify-self: end; }
+  .workspace-title::before { opacity: .55; animation: none; }
+}
+@media (max-width: 720px) {
+  .app-header { display: grid; min-height: 110px; padding: 14px 14px 0; }
+  .brand { font-size: 19px; gap: 8px; }
+  .brand-mark { width: 35px; height: 35px; }
+  .brand-wordmark small { font-size: 6.6px; letter-spacing: 1.2px; }
+  .header-status { flex-direction: column; align-items: flex-end; gap: 6px; }
+  .connection { font-size: 8px; letter-spacing: .3px; }
+  .header-status .advisory-tag { font-size: 7px; padding: 4px 5px; }
+  .app-header nav { flex-basis: auto; margin-top: 12px; gap: 21px; min-height: 40px; }
+  .app-header nav button { font-size: 10px; }
+  .app-header::before { background-image: none; }
+  .workspace-title { padding: 14px 8px 18px; margin-inline: -8px; min-height: 116px; }
+  .workspace-title::before { opacity: .28; }
+  .workspace-title h1 { font-size: 29px; }
+  .workspace-title p { max-width: 245px; }
+  .title-actions { flex-shrink: 0; }
+  .title-actions button { min-width: 32px; }
+  .kit-intro { gap: 12px; }
+  .kit-crest { padding: 0; }
+  .kit-crest img { width: 78px; height: 78px; }
+  .kit-intro .eyebrow { font-size: 7px; letter-spacing: .6px; }
+  .kit-intro h2 { font-size: 25px; }
+  .workspace-footer { min-height: 105px; padding: 19px 12px; }
+  .workspace-footer::before { opacity: .18; }
+  .workspace-footer > span:first-child { display: flex; align-items: center; line-height: 1.8; font-size: 6px; }
+  .workspace-footer > span:last-child { font-size: 8px; line-height: 1.7; }
+}
+@media (max-width: 360px) {
+  .app-header { gap: 0 8px; padding-inline: 12px; }
+  .brand { font-size: 17px; gap: 6px; }
+  .brand-mark { width: 30px; height: 30px; }
+  .brand-wordmark small { font-size: 5.7px; letter-spacing: 1px; }
+  .connection { font-size: 7px; }
+  .header-status .advisory-tag { font-size: 6px; }
+  .workspace-title h1 { font-size: 26px; }
+  .kit-crest img { width: 60px; height: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell::before, .workspace-title::before { animation: none; transform: none; }
+  .app-shell *, .app-shell *::before, .app-shell *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,2 @@
+# Keep supplied artwork and its provenance hashes byte-identical on Windows.
+frontend/public/steplock-theme/** -text
