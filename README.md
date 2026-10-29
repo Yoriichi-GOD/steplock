@@ -34,17 +34,17 @@ torque, fatigue diagnosis, accident-prevention guarantee or safety certification
     <td align="center" width="33%">
       <img src="frontend/public/assets/requiem/right-arch-landscape.webp" height="145" alt="" /><br />
       <strong>01 · Observe</strong><br />
-      Read tagged parts and board anchors from actual pixels.
+      Read pixels and anchors.
     </td>
     <td align="center" width="34%">
       <img src="frontend/public/assets/requiem/floating-flower.webp" height="145" alt="" /><br />
       <strong>02 · Verify</strong><br />
-      Check placement, prerequisites and correction over time.
+      Check placement and order.
     </td>
     <td align="center" width="33%">
       <img src="frontend/public/assets/requiem/corner-florals.webp" height="145" alt="" /><br />
       <strong>03 · Preserve</strong><br />
-      Keep source frames, hashes, findings and exportable evidence.
+      Keep frames and hashes.
     </td>
   </tr>
 </table>
