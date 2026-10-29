@@ -49,6 +49,7 @@ class Session:
         self.stats={"frames_in":0,"frames_analyzed":0,"frames_dropped":0,"mode":"CPU","queue_capacity":2}
         self.human_reviews=[]
         self.manual_points=None
+        self.manual_calibrated_at_ms=None
         self.store=None
         self.directory=directory or RUNTIME/"sessions"/self.id
 
@@ -62,7 +63,8 @@ class Session:
     def process(self,index,timestamp,image):
         with self.lock:
             self.initialize_store()
-            record,png,overlay=self.detector.analyze(image,index,timestamp,self.source_kind,self.source_hash,self.manual_points)
+            manual=self.manual_points if self.manual_calibrated_at_ms is not None and 0<=timestamp-self.manual_calibrated_at_ms<=self.recipe.maximum_observation_gap_ms else None
+            record,png,overlay=self.detector.analyze(image,index,timestamp,self.source_kind,self.source_hash,manual)
             self.store.record_frame(record,png,overlay)
             self.engine.consume(record)
             self.store.append_events(self.engine.events)
@@ -171,6 +173,7 @@ class Session:
             times=list(self.vision_times)
             return {**snapshot,"session_id":self.id,"recipe_id":self.recipe.recipe_id,
                 "recipe_sha256":self.recipe.sha256,"recipe_version":self.recipe.version,
+                "part_markers":{name:part.aruco_marker_id for name,part in self.recipe.parts.items()},
                 "source_kind":self.source_kind,"source_sha256":self.source_hash,"source_hash_kind":self.source_hash_kind,
                 "source_metadata":self.source_metadata,"consent_recorded":self.consent,
                 "state":self.state,"error":self.error,"created_at":self.created_at,"last_updated_at":now(),

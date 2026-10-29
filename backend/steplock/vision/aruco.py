@@ -19,6 +19,10 @@ class Detector:
         dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
         parameters = cv2.aruco.DetectorParameters()
         parameters.cornerRefinementMethod = cv2.aruco.CORNER_REFINE_SUBPIX
+        # Chosen on the development split only: narrow default threshold windows
+        # missed tag 11 after small resampling changes. Preserve the failed first run.
+        parameters.adaptiveThreshWinSizeMax = 45
+        parameters.adaptiveThreshWinSizeStep = 4
         self.detector = cv2.aruco.ArucoDetector(dictionary, parameters)
         self.parts = {p.aruco_marker_id: name for name, p in recipe.parts.items()}
 

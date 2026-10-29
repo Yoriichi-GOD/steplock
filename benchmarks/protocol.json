@@ -1,5 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
+  "detector_settings": {"adaptiveThreshWinSizeMax":45,"adaptiveThreshWinSizeStep":4,"cornerRefinementMethod":"CORNER_REFINE_SUBPIX"},
+  "tuning_source": "development split only; first run 20261029_055525_293456_dev retained",
   "frozen_before_scored_run": true,
   "source_kind": "SYNTHETIC_FIXTURE",
   "real_staged_data": "NOT_PROVIDED",

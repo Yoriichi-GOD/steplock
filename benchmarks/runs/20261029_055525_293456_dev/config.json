@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "frozen_before_scored_run": true,
+  "source_kind": "SYNTHETIC_FIXTURE",
+  "real_staged_data": "NOT_PROVIDED",
+  "split": "dev",
+  "split_unit": "complete clip and camera transform variant; dev variants 0-1; test variants 2-5",
+  "arms": [
+    "single_frame",
+    "stable_only",
+    "steplock"
+  ],
+  "same_decoded_frames_for_all_arms": true,
+  "minimum_supporting_frames": 2,
+  "minimum_support_gap_ms": 160,
+  "maximum_observation_gap_ms": 1800,
+  "minimum_focus_variance": 35,
+  "event_matching": "one-to-one same class, part and zone; alert at or after onset minus 200ms; no later than onset+2000ms; checkpoint events +/-200ms",
+  "timely_matching": "matched alert at or before preannotated boundary",
+  "precision_zero_denominator": null,
+  "recall_zero_denominator": null,
+  "f1_zero_denominator": null,
+  "failure_handling": "all clips and expected events remain in denominator after abort; error details retained",
+  "latency_clock": "source-time error-to-alert; vision processing wall-clock separately; capture-to-visible-alert NOT_MEASURED",
+  "limitations": "deterministic generated tagged boards; variants share a generator; not physical capture or independent industrial validation",
+  "git_commit": "3af5a9bc4c543cee054ac4272766502c7d9b41f5",
+  "git_dirty": true,
+  "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+  "protocol_sha256": "868d12049dc89f992839cfaf5c5b873b7c1fc3695d1d11c445d3bd63e8085974",
+  "manifest_sha256": "2884ec2526e4d91a505529037ac560b149c34dd0ec9afe4bedd8a078e0d29754",
+  "created_at": "2026-10-29T05:55:25.293456+00:00"
+}

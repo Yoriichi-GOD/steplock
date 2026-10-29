@@ -15,8 +15,8 @@ from scripts.fixture_lib import render_board
 
 
 @pytest.fixture
-def client():
-    with TestClient(create_app()) as client:
+def client(tmp_path):
+    with TestClient(create_app(runtime_root=tmp_path)) as client:
         yield client
 
 
@@ -46,7 +46,7 @@ def test_isolation_tokens_and_empty_checkpoint(client):
 
 
 def test_bad_upload_content_mime_and_paths_are_not_persisted(client):
-    sid,auth=new_session(client,source_kind="REPLAY_TAGGED")
+    sid,auth=new_session(client,source_kind="REPLAY_TAGGED",consent_recorded=True)
     for name,content,mime,status in [("file.txt",b"bad","text/plain",415),("bad.mp4",b"not video","video/mp4",422),("../../outside.avi",b"bad","video/avi",400)]:
         response=client.post(f"/api/sessions/{sid}/upload",headers=auth,files={"file":(name,content,mime)})
         assert response.status_code==status,response.text

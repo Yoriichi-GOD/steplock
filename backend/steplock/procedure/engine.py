@@ -231,7 +231,19 @@ class ProcedureEngine:
         all_proven = len(self.confirmed) == len(self.recipe.steps)
         if self.quality_flags:
             status = "SOURCE_LOST" if "SOURCE_LOST" in self.quality_flags else "CALIBRATION_REQUIRED" if any("CALIBRATION" in f for f in self.quality_flags) else "HOLD_FOR_REVIEW"
-            reason = "Capture needs review: " + ", ".join(self.quality_flags)
+            explanations={"AWAITING_SOURCE":"Waiting for the first frame.",
+                "CONFIRMED_COMPONENT_NOT_CURRENTLY_VISIBLE":"A previously confirmed component tag is not visible in the current frame.",
+                "DUPLICATE_FRAME":"Repeated image bytes cannot support a new observation.",
+                "CALIBRATION_REQUIRED":"Keep all four fixed board anchors visible, or select manual calibration points.",
+                "INVALID_CALIBRATION":"Board geometry is invalid; reposition the camera and anchors.",
+                "SOURCE_LOST":"The source is no longer delivering fresh frames. Start a new session.",
+                "LOW_FOCUS":"The image is too blurred to support a decision.",
+                "HISTORY_GAP_RESTART_REQUIRED":"The source history has a gap. Restart from an empty board.",
+                "NONMONOTONIC_TIMESTAMP":"Source timestamps moved backwards.",
+                "SOURCE_GAP":"The gap between observations exceeded the allowed window."}
+            capture_reason=" ".join(explanations.get(f,f.replace('_',' ').capitalize()+'.') for f in self.quality_flags)
+            reason = (next(iter(self.active_faults.values()))["reason"]+" Current capture also needs review."
+                      if self.active_faults and status=="HOLD_FOR_REVIEW" else capture_reason)
         elif self.active_faults:
             status, reason = "HOLD_FOR_REVIEW", next(iter(self.active_faults.values()))["reason"]
         elif self.checkpointed and all_proven:

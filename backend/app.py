@@ -56,12 +56,16 @@ def latest_run():
     return candidates[-1] if candidates else None
 
 
-def create_app():
+def create_app(runtime_root=None):
+    runtime=Path(runtime_root) if runtime_root is not None else RUNTIME
     manager=SessionManager()
     recipes={}
     for path in (ROOT/"recipes").glob("*.yaml"):
         recipe=Recipe.load(path)
         recipes[recipe.recipe_id]=recipe
+    for path in (runtime/"recipes").glob("*.json"):
+        recipe=Recipe.model_validate_json(path.read_text(encoding="utf-8"))
+        recipes[f"{recipe.recipe_id}:v{recipe.version}"]=recipe
 
     @asynccontextmanager
     async def lifespan(app):
@@ -110,7 +114,7 @@ def create_app():
         if versions and recipe.version<=max(versions): raise HTTPException(409,"Increment the recipe version; existing sessions are immutable")
         key=f"{recipe.recipe_id}:v{recipe.version}"
         recipes[key]=recipe
-        directory=RUNTIME/"recipes"
+        directory=runtime/"recipes"
         directory.mkdir(parents=True,exist_ok=True)
         path=directory/f"{recipe.sha256}.json"
         if not path.exists():
@@ -125,7 +129,7 @@ def create_app():
     @app.post("/api/sessions",status_code=201)
     def create_session(data: CreateSession):
         if data.recipe_id not in recipes: raise HTTPException(404,"Unknown recipe")
-        if data.source_kind=="LIVE_TAGGED" and not data.consent_recorded: raise HTTPException(400,"Confirm camera consent before starting")
+        if data.source_kind in {"LIVE_TAGGED","REPLAY_TAGGED"} and not data.consent_recorded: raise HTTPException(400,"Confirm consent for camera footage before starting")
         if len(manager.sessions)>=64: raise HTTPException(429,"Session limit reached. Restart the local server to begin a new group.")
         metadata={}
         source=None
@@ -137,6 +141,7 @@ def create_app():
             if not path.is_relative_to(ROOT/"fixtures/synthetic") or not path.is_file(): raise HTTPException(404,"Example media is unavailable")
             metadata=inspect_video(path)
         session=Session(recipes[data.recipe_id],data.source_kind,data.consent_recorded,metadata)
+        session.directory=runtime/"sessions"/session.id
         if source: session.path=path
         session.camera_index=data.camera_index
         session.capture_mode=data.camera_mode if data.source_kind=="LIVE_TAGGED" else "backend"
@@ -221,7 +226,8 @@ def create_app():
             try: calibrate(data.points,(session.latest.height,session.latest.width,3))
             except ValueError as exc: raise HTTPException(422,str(exc)) from exc
             session.manual_points=data.points
-            return {"calibration_mode":"MANUAL_FOUR_POINT","notice":"Fixed camera only. Recalibrate after movement. Automatic anchors take precedence."}
+            session.manual_calibrated_at_ms=session.latest.captured_at_ms
+            return {"calibration_mode":"MANUAL_FOUR_POINT","valid_for_ms":session.recipe.maximum_observation_gap_ms,"notice":"Brief fixed-camera fallback. Manual calibration expires without visible anchors; automatic anchors take precedence."}
 
     @app.post("/api/sessions/{sid}/frame")
     async def browser_frame(sid: str,request: Request,captured_at_ms: float):
@@ -241,6 +247,12 @@ def create_app():
 
     @app.get("/api/sessions/{sid}/events")
     def events(sid: str,request: Request): return {"events":get_session(sid,request).snapshot()["events"]}
+
+    @app.get("/api/sessions/{sid}/frames")
+    def frame_index(sid: str,request: Request):
+        session=get_session(sid,request)
+        with session.lock:
+            return {"frames":[{"frame_id":f["frame_id"],"source_time_ms":f["captured_at_ms"],"frame_index":f["frame_index"]} for f in session.store.frame_records.values()] if session.store else []}
 
     @app.get("/api/sessions/{sid}/frames/{frame_id}")
     def frame_image(sid: str,frame_id: str,request: Request,annotated: bool=True):

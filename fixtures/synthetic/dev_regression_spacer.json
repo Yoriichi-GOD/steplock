@@ -1,0 +1,7 @@
+{
+  "split": "dev",
+  "source_sha256": "8df2766e2a11b3f5bb0814349af557f82d1951620c5aa63ccb90a8a1292d947c",
+  "frame_index": 41,
+  "png_sha256": "e88934f363a8dc6cff4a513ca0c6af4b7d0ece993d5815adb498af0f37b91065",
+  "purpose": "Frozen regression for tag 11 missed by default threshold windows"
+}
