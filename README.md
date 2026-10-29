@@ -1,6 +1,19 @@
-# STEPLOCK
+<p align="center">
+  <img src="frontend/public/assets/requiem/steplock-ornate-logo.webp" width="760" alt="STEPLOCK — Visual procedure assurance" />
+</p>
 
-**Visual procedure assurance. Catch the wrong move before the next step.**
+<p align="center">
+  <strong>Catch the wrong move before the next step.</strong><br />
+  <sub>Visual procedure assurance · Local evidence engine · Advisory only</sub>
+</p>
+
+<p align="center">
+  <a href="#run-locally"><strong>Run locally</strong></a> ·
+  <a href="#measured-evaluation">Measured evidence</a> ·
+  <a href="docs/DEMO_SCRIPT.md">90-second demo</a> ·
+  <a href="docs/ARCHITECTURE.md">Architecture</a> ·
+  <a href="docs/TECHNICAL_LIMITATIONS.md">Limits</a>
+</p>
 
 A local inspection app for a controlled, tagged tabletop assembly. OpenCV reads
 actual marker pixels and board anchors. A temporal recipe engine checks visible
@@ -9,10 +22,38 @@ placement, prerequisites and correction; findings point to source-frame evidence
 **ADVISORY ONLY.** No machinery interlock, intrinsic part identity, fastening,
 torque, fatigue diagnosis, accident-prevention guarantee or safety certification.
 
-![REQUIEM Studio with actual watermarked synthetic evidence](screenshots/requiem/studio-wide.png)
+<p align="center">
+  <a href="screenshots/requiem-glass/studio-1691.png"><img src="screenshots/requiem-glass/studio-1691.png" width="100%" alt="Current STEPLOCK Procedure Studio with the REQUIEM theme, frosted inspection panels and watermarked synthetic fixture evidence" /></a>
+  <br /><sub>Actual current application capture at commit <code>7352088</code>. The fixture is visibly watermarked synthetic test evidence; this is not a generated UI mockup.</sub>
+</p>
+
+## From pixels to proof
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="frontend/public/assets/requiem/right-arch-landscape.webp" height="145" alt="" /><br />
+      <strong>01 · Observe</strong><br />
+      Read tagged parts and board anchors from actual pixels.
+    </td>
+    <td align="center" width="34%">
+      <img src="frontend/public/assets/requiem/floating-flower.webp" height="145" alt="" /><br />
+      <strong>02 · Verify</strong><br />
+      Check placement, prerequisites and correction over time.
+    </td>
+    <td align="center" width="33%">
+      <img src="frontend/public/assets/requiem/corner-florals.webp" height="145" alt="" /><br />
+      <strong>03 · Preserve</strong><br />
+      Keep source frames, hashes, findings and exportable evidence.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The window, flower and foliage are existing REQUIEM interface artwork. The large capture above is the working product.</sub></p>
 
 The current REQUIEM theme uses the supplied celestial-arch assets, with the real
-inspection controls and unaltered source evidence. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
+inspection controls and unaltered source evidence. The current frosted-panel pass
+keeps those controls readable without hiding the inspection workspace. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
 The Assembly Explorer has its own tab beside Evidence Explorer. The compact
 Celestial masthead, logo and scenic workspace scroll beneath the pinned navigation.
 [Current header and responsive verification](docs/REQUIEM_COMPACT_HEADER.md).
