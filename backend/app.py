@@ -16,6 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel, ConfigDict, Field
 from steplock.config import ROOT, RUNTIME, MAX_UPLOAD, MAX_SECONDS
+from steplock.demo_recording import PINNED_ID, RECORDING_PATH, pinned_recording
 from steplock.evidence.report import html_report
 from steplock.procedure.recipe import Recipe
 from steplock.schemas import SourceKind
@@ -137,6 +138,7 @@ def create_app(runtime_root=None):
     @app.get("/api/demo/scenarios")
     def scenarios():
         return {"scenarios":[{k:v for k,v in row.items() if k!="relative_path"} for row in catalog()],
+                "pinned_recording":pinned_recording(),
                 "real_staged_data":"NOT_PROVIDED","notice":"Examples are generated software tests, not camera footage."}
 
     @app.post("/api/sessions",status_code=201)
@@ -147,12 +149,19 @@ def create_app(runtime_root=None):
         metadata={}
         source=None
         if data.example_id:
-            if data.source_kind!="SYNTHETIC_FIXTURE": raise HTTPException(400,"Generated examples must be labeled SYNTHETIC_FIXTURE")
-            source=next((row for row in catalog() if row["id"]==data.example_id),None)
-            if source is None: raise HTTPException(404,"Unknown example. Generate fixtures first.")
-            path=(ROOT/source["relative_path"]).resolve()
-            if not path.is_relative_to(ROOT/"fixtures/synthetic") or not path.is_file(): raise HTTPException(404,"Example media is unavailable")
-            metadata=inspect_video(path)
+            if data.example_id==PINNED_ID:
+                if data.source_kind!="REPLAY_TAGGED": raise HTTPException(400,"The real recording must use the replay source type")
+                source=pinned_recording()
+                if source is None: raise HTTPException(404,"The pinned real recording is unavailable locally. Upload a recording or select a synthetic example.")
+                path=RECORDING_PATH
+                metadata={**source,**inspect_video(path),"provenance":"LOCAL_LICENSED_DATASET_EXCERPT"}
+            else:
+                if data.source_kind!="SYNTHETIC_FIXTURE": raise HTTPException(400,"Generated examples must be labeled SYNTHETIC_FIXTURE")
+                source=next((row for row in catalog() if row["id"]==data.example_id),None)
+                if source is None: raise HTTPException(404,"Unknown example. Generate fixtures first.")
+                path=(ROOT/source["relative_path"]).resolve()
+                if not path.is_relative_to(ROOT/"fixtures/synthetic") or not path.is_file(): raise HTTPException(404,"Example media is unavailable")
+                metadata=inspect_video(path)
         session=Session(recipes[data.recipe_id],data.source_kind,data.consent_recorded,metadata)
         session.directory=runtime/"sessions"/session.id
         if source: session.path=path

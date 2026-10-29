@@ -68,7 +68,7 @@ globalThis.window = {matchMedia: () => ({matches: false})};
 const server = await createServer({root: fileURLToPath(root), configFile: false, server: {middlewareMode: true, watch: null}, appType: 'custom', logLevel: 'error'});
 after(async () => {await server.close(); if (originalWindow === undefined) delete globalThis.window; else globalThis.window = originalWindow;});
 
-test('real app HTML retains truthful offline alert, disabled run action and all five tabs', async () => {
+test('real app HTML retains truthful offline alert, disabled run action and all six tabs', async () => {
   const {default: App} = await server.ssrLoadModule('/src/App.tsx');
   const html = renderToStaticMarkup(React.createElement(App));
   assert.match(html, /ENGINE OFFLINE/);
@@ -132,7 +132,7 @@ test('header uses the exact crop while only navigation remains fixed', async () 
  assert.match(css,/BACKGROUND_HEADER_READY_1691x248\.webp/);
  assert.match(css,/\.rq-header-stage \{[^}]*height:248px/);
  assert.doesNotMatch(css,/02_REFERENCE|REFERENCE_FULL_UI/);
- assert.match(css,/\.app-header \{[^}]*position:absolute/);
+ assert.match(css,/\.app-header \{[^}]*position:sticky/);
  assert.match(css,/\.rq-page-scroll \{[^}]*overflow-y:auto/);
  assert.match(css,/\.workspace \{[^}]*celestial-full\.webp/);
 });

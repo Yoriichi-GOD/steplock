@@ -118,3 +118,21 @@ No timestamps or history were rewritten and no force push was used.
 -20 frontend checks and production build passed. Current screenshots and
   measurement report: `screenshots/requiem-wide/` and
   `docs/REQUIEM_COMPACT_HEADER.md`. No core or judging-document changes.
+
+## Stable address, scrolling logo and real-video preset (29 October,15:37 onward)
+
+- User asked for a stable address/easier startup, a pinned real replay, and only
+  navigation remaining fixed while logo and body scroll.
+- Launcher defaults to62327, reuses a recognized running server and fails clearly
+  on an unrelated occupied port. Windows starter opens the same address.
+- Logo and status indicators now scroll with the masthead; transparent navigation
+  sticks within the page scroller. Fixed a measured phone min-height inheritance.
+- Adjacent Real video button uses a local12-second IMPACT reassembly excerpt with
+  hash verification, attribution/license/untagged provenance; no raw video or real
+  frame screenshots are published. No auto camera/replay or real auto checkpoint.
+- Browser real replay:60 analyzed frames, CALIBRATION_REQUIRED, one QUALITY_HOLD,
+  matching source/export hash. Normal synthetic after real:30 frames, PASS.
+- Frontend20/20, backend65/65, build passed; fixed-address repeat launch and conflict
+  tests passed. Browser desktop/phone scroll and overflow checks passed.
+- Scope and limits: `docs/LOCAL_PREVIEW_AND_REAL_REPLAY.md`. The teammate's judging
+  documents and frozen benchmark evidence remain excluded from the checkpoint.

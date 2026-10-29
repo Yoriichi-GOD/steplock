@@ -5,8 +5,10 @@ The latest user correction replaces the tall576px fixed scene with the supplied
 used in the live interface. Earlier full-height screenshots are historical only.
 
 - Desktop masthead248px: pinned navigation110px, scrolling title area138px.
-- Only the logo/navigation/status bar stays in place. The title, crop and body
-  move together in `.rq-page-scroll`; page changes reset that scroller.
+- Only navigation stays in place. The logo, status indicators, title, crop and
+  body move together in `.rq-page-scroll`; page changes reset that scroller.
+  Phone navigation begins below the logo row and sticks at the top once that
+  row scrolls away.
 - The taskbar is fully transparent, including after scrolling: no fill, shadow,
   blur or outline border. Individual buttons retain their own functional styling.
 - Full Celestial artwork continues behind the lower workspace. Black panels stay
@@ -37,13 +39,17 @@ Actual browser checks used the built app at an auto-selected temporary port:
 |Normal example| Actual synthetic inspection reached PASS; watermark retained |
 |Navigation| Separate Assembly Explorer opens, returning to Studio resets scroll |
 
-Current untouched browser captures: `screenshots/requiem-wide/`. Earlier captures
+The latest fixed-address/scrollable-logo/real-video follow-up is documented in
+`docs/LOCAL_PREVIEW_AND_REAL_REPLAY.md`. The measurements below were captured at
+the preceding2553348 checkpoint before the logo was moved into the scroller.
+
+Previous untouched browser captures: `screenshots/requiem-wide/`. Earlier captures
 in `screenshots/requiem-compact/` retain the superseded tint and window panes.
 Asset source
 and output hashes remain in `frontend/public/assets/steplock-header/manifest.json`.
 The current crop is121,648bytes; the existing full body background is308,896bytes.
 
-Latest correction source scope: `frontend/src/App.tsx`,
+The preceding width/transparency correction source scope: `frontend/src/App.tsx`,
 `frontend/src/pages/Studio.tsx` and `frontend/src/theme/requiem.css`. The only
 React changes remove the scroll tint state and the two decorative image nodes
 and their wrapper. All inspection callbacks are retained. No new backend tests

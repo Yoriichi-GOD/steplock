@@ -14,8 +14,8 @@ torque, fatigue diagnosis, accident-prevention guarantee or safety certification
 The current REQUIEM theme uses the supplied celestial-arch assets, with the real
 inspection controls and unaltered source evidence. [Implementation and validation](docs/REQUIEM_UI_IMPLEMENTATION.md) · [current Git checkpoints](docs/REQUIEM_UI_PROGRESS.md).
 The Assembly Explorer has its own tab beside Evidence Explorer. The compact
-Celestial masthead and scenic workspace scroll beneath the pinned logo/navigation
-bar. [Current header and responsive verification](docs/REQUIEM_COMPACT_HEADER.md).
+Celestial masthead, logo and scenic workspace scroll beneath the pinned navigation.
+[Current header and responsive verification](docs/REQUIEM_COMPACT_HEADER.md).
 
 Reviewer path: [quick start](#run-locally) · [measured results](benchmarks/runs/20261029_065156_263419_test/summary.md)
 · [real physical-video experiment](docs/IMPACT_PHYSICAL_RESULTS.md)
@@ -81,9 +81,12 @@ cd steplock
 python scripts/dev.py --setup
 ```
 
-Open the **actual URL printed by the launcher**. It reserves a free loopback port;
-no fixed port is assumed and no unrelated process is stopped. No camera starts
-automatically. Subsequent offline launch: `python scripts/dev.py`.
+Open **http://127.0.0.1:62327/**. The launcher now uses this fixed address and
+reuses an existing STEPLOCK server on repeat launch. An unrelated app occupying
+the port produces a clear error; STEPLOCK never silently switches to a random
+address. No camera starts automatically. Subsequent offline launch:
+`python scripts/dev.py`. On Windows, double-click **Start STEPLOCK.cmd** to start
+the app and open its address. Keep its server terminal open while using the app.
 
 Headless fallback with actual evidence saved locally:
 
@@ -91,13 +94,27 @@ Headless fallback with actual evidence saved locally:
 .\.venv\Scripts\python.exe scripts/run_demo.py --replay fixtures/synthetic/fx_00_00.avi
 ```
 
-Use `.venv/bin/python` on Linux/macOS (not tested here). `--port <available-port>`
-is optional. The launcher reads environment variables, not an automatic dotenv
+Use `.venv/bin/python` on Linux/macOS (not tested here). An explicit `--port`
+override is available for isolated tests; `--port 0` deliberately requests a
+temporary test address. The launcher reads environment variables, not an automatic dotenv
 file; see `.env.example`. Built frontend and API share one origin. For separate
 Vite development, set `STEPLOCK_API_ORIGIN` to the printed backend URL and explicitly
 configure its actual browser origin in `STEPLOCK_ALLOWED_ORIGINS` before launching.
 
 ## Demo and physical setup
+
+When the locally acquired IMPACT excerpt is installed, **Real video** is pinned
+beside **Run example**. It replays 12 seconds of actual reassembly footage through
+the existing inspection pipeline. Its visible label is **REAL VIDEO · UNTAGGED**;
+without the fixture anchors it correctly reports **CALIBRATION REQUIRED**, and
+does not request a procedure checkpoint automatically. Synthetic examples remain
+in the separate selector. No replay or camera starts on page load.
+
+The optional clip stays in ignored `data/external/impact_v1_1/presentation_excerpt/`;
+its source/hash/derivation receipt is local. It is not distributed with this MIT
+code. The UI retains IMPACT attribution and **CC BY-NC-SA 4.0** context. Missing or
+changed clip bytes hide the real-video button and return an explicit API error
+if requested; they are never replaced with generated video.
 
 1. **Run example → Normal.** Actual pixels produce tag/zone overlays and confirmed
    graph steps. The included replay requests a final checkpoint at its end.

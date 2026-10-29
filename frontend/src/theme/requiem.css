@@ -11,7 +11,7 @@
 html,body,#root {height:100%;overflow:hidden}
 body {background:var(--bg)}
 .app-shell {height:100dvh;position:relative;overflow:hidden;background:var(--rq-bg)}
-.rq-page-scroll {height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scroll-padding-top:110px;background:#030303}
+.rq-page-scroll {position:relative;height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scroll-padding-top:110px;background:#030303}
 .rq-page-scroll:focus {outline:none}
 code,.mono,.hash,.eyebrow,.breadcrumb,.panel-heading {font-family:"IBM Plex Mono",Consolas,monospace}
 button,.button {background:#101010;border-color:#454545;border-radius:4px;color:var(--text);font-weight:500}
@@ -25,21 +25,22 @@ select option {background:#080808;color:var(--text)}
 a {color:var(--rq-blue)}
 h1,h2 {font-family:var(--rq-display);font-weight:400;letter-spacing:-.8px}
 /* The exact text-free 1691x248 crop paints the masthead once. */
-.rq-header-stage {position:relative;height:248px;min-height:248px;padding-top:110px;overflow:hidden;background:#030303 url('/assets/steplock-header/BACKGROUND_HEADER_READY_1691x248.webp') center / cover no-repeat}
-.app-header {position:absolute;z-index:20;top:0;left:0;right:0;height:110px;padding:0 clamp(22px,2.484vw,54px);display:grid;grid-template-columns:360px minmax(0,1fr) auto;grid-template-rows:110px;gap:26px;background:transparent;border:0}
+.rq-header-stage {position:absolute;top:0;left:0;right:0;height:248px;min-height:248px;overflow:hidden;background:#030303 url('/assets/steplock-header/BACKGROUND_HEADER_READY_1691x248.webp') center / cover no-repeat;pointer-events:none}
+.rq-masthead-brand {position:absolute;top:0;left:0;right:0;height:110px;padding:0 clamp(22px,2.484vw,54px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.app-header {position:sticky;z-index:20;top:0;height:110px;padding:0 clamp(22px,2.484vw,54px);display:grid;grid-template-columns:360px minmax(0,1fr) 240px;grid-template-rows:110px;gap:26px;background:transparent;border:0;pointer-events:none}
 .brand {position:relative;display:block;width:250px;height:110px;align-self:center;justify-self:start;margin:0;z-index:1}
 .rq-brand-logo {display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .rq-brand-fallback {display:none}
 .rq-brand-logo[hidden] {display:none}
 .brand:has(.rq-brand-logo[hidden]) .rq-brand-fallback {display:block;font:36px var(--rq-display);padding-top:32px}
 .brand small {font:8px Inter,"Segoe UI",sans-serif;letter-spacing:1.5px;color:var(--muted)}
-.app-header nav {align-self:stretch;justify-content:flex-start;gap:22px;min-width:0;overflow-x:auto;scrollbar-width:thin;align-items:center}
+.app-header nav {grid-column:2;align-self:stretch;justify-content:flex-start;gap:22px;min-width:0;overflow-x:auto;scrollbar-width:thin;align-items:center;pointer-events:auto}
 .app-header nav button {height:70px;flex-shrink:0;border:0;border-bottom:2px solid transparent;background:transparent;font-size:12px;color:var(--text);padding:0;white-space:nowrap}
 .app-header nav button.active {color:var(--rq-blue);border-bottom-color:var(--rq-blue)}
 .header-status {display:flex;margin:0;gap:14px;align-items:center;align-self:center;justify-self:end}
 .connection {font:9px Consolas,monospace;letter-spacing:.7px}
 .advisory-tag {display:flex!important;background:#030303a6;color:var(--text);border-color:#8b9295;font:9px Consolas,monospace;letter-spacing:.6px;padding:10px}
-.workspace-title {position:relative;isolation:isolate;min-height:0;height:100%;padding:4px clamp(22px,2.484vw,54px) 10px;margin:0;overflow:visible;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;background:transparent}
+.workspace-title {position:relative;isolation:isolate;min-height:0;height:138px;padding:4px clamp(22px,2.484vw,54px) 10px;margin:0;overflow:visible;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;background:transparent}
 .workspace-title::before {content:none}
 .workspace-title>div:first-child {max-width:65%;min-width:0}
 .workspace-title h1 {font-size:clamp(44px,5vw,82px);line-height:1.1}
@@ -133,7 +134,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 .workspace-footer::before {content:"";position:absolute;top:0;left:40%;right:40%;height:1px;background:#807052;pointer-events:none}
 .workspace-footer>span:first-child {color:var(--muted)}.footer-mark {border-color:var(--rq-gold);color:var(--rq-gold)}
 @media(max-width:1550px) {
- .app-header {grid-template-columns:290px minmax(0,1fr) auto;gap:20px}.brand {width:220px;height:110px}
+ .app-header {grid-template-columns:290px minmax(0,1fr) 150px;gap:20px}.brand {width:220px;height:110px}
  .app-header nav {gap:18px}.app-header nav button {font-size:11px}
  .header-status {flex-direction:column;gap:7px;align-items:flex-end}.advisory-tag {font-size:8px;padding:8px}
  .rq-title-art {width:480px}.studio-grid {grid-template-columns:220px minmax(0,1fr) 270px}
@@ -141,7 +142,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .recipe-picker select {max-width:315px}.source-actions>button,.source-actions select {font-size:11px}
 }
 @media(max-width:1200px) {
- .app-header {grid-template-columns:240px minmax(0,1fr) auto;gap:16px}.brand {width:210px;height:105px}
+ .app-header {grid-template-columns:240px minmax(0,1fr) 140px;gap:16px}.brand {width:210px;height:105px}
  .app-header nav {gap:18px}.app-header nav button {font-size:11px}
  .rq-title-art {width:460px}.workspace-title {padding-bottom:10px}.workspace-title p {font-size:12px}
  .studio-grid {grid-template-columns:210px minmax(0,1fr) 265px}
@@ -150,10 +151,11 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 }
 @media(max-width:1100px) {
  .rq-header-stage {height:248px;min-height:248px}
- .app-header {grid-template-columns:minmax(0,1fr) auto;height:110px;padding-top:4px;gap:0 20px;grid-template-rows:64px 42px}
+ .rq-masthead-brand {height:64px}.rq-page-scroll {scroll-padding-top:46px}
+ .app-header {grid-template-columns:minmax(0,1fr);height:46px;min-height:46px;margin-top:64px;padding-top:0;gap:0;grid-template-rows:46px}
  .brand {width:180px;height:90px;margin-top:-8px;grid-row:1}
  .header-status {grid-row:1;grid-column:2;flex-direction:row;gap:10px}
- .app-header nav {grid-column:1/-1;grid-row:2;margin:0;min-height:42px;align-items:stretch;overflow-x:auto;gap:25px}
+ .app-header nav {grid-column:1;grid-row:1;margin:0;min-height:42px;align-items:stretch;overflow-x:auto;gap:25px}
  .app-header nav button {height:42px;font-size:11px}
  .workspace-title {padding-bottom:10px}.workspace-title>div:first-child {max-width:65%}
  .rq-title-art {width:420px}.workspace-title h1 {font-size:44px}
@@ -165,11 +167,11 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .video-stage {max-height:430px}.under-grid {grid-template-columns:1fr}
 }
 @media(max-width:767px) {
- .rq-header-stage {height:280px;min-height:280px;padding-top:110px;background-position:65% center;background-size:auto 100%}
- .app-header {padding-inline:14px}.brand {width:154px;height:77px;margin-top:-4px}
+ .rq-header-stage {height:280px;min-height:280px;background-position:65% center;background-size:auto 100%}
+ .app-header,.rq-masthead-brand {padding-inline:14px}.brand {width:154px;height:77px;margin-top:-4px}
  .header-status {flex-direction:column;gap:5px;align-items:flex-end}.connection {font-size:8px}.advisory-tag {font-size:7px;padding:5px}
  .app-header nav {gap:23px;scrollbar-width:none}.app-header nav button {font-size:11px;min-height:42px}
- .workspace-title {padding:4px 14px 14px;align-items:flex-start;flex-direction:column;justify-content:flex-end;gap:5px}
+ .workspace-title {height:170px;padding:4px 14px 14px;align-items:flex-start;flex-direction:column;justify-content:flex-end;gap:5px}
  .workspace-title>div:first-child {max-width:100%}.workspace-title h1 {font-size:36px;max-width:none}
  .rq-title-art {display:block;width:330px;max-width:100%;height:72px;object-fit:contain;object-position:left center}
  .workspace-title p {font-size:11px;max-width:100%;line-height:1.4}
@@ -196,7 +198,7 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
  .assembly-component,.assembly-inspector {border:0}
 }
 @media(max-width:360px) {
- .app-header {padding-inline:10px}.brand {width:140px;height:70px}.connection {font-size:7px}.advisory-tag {font-size:6px}
+ .app-header,.rq-masthead-brand {padding-inline:10px}.brand {width:140px;height:70px}.connection {font-size:7px}.advisory-tag {font-size:6px}
  .workspace {padding-inline:10px}.workspace-title {padding-inline:10px}.rq-title-art {width:290px}
  .workspace-title h1 {font-size:32px}.step-list {grid-template-columns:1fr}.step-list li {padding-bottom:18px}.dependency {bottom:0}
  .source-actions>button {font-size:11px}.recipe-picker select {font-size:10px}
