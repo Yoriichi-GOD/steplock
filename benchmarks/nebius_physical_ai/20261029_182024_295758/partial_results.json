@@ -1,0 +1,1075 @@
+[
+  {
+    "case": "normal",
+    "clip_id": "fx_00_02",
+    "arm": "deterministic_template",
+    "state": "ADVISED",
+    "advice": {
+      "action": "EXPLAIN",
+      "summary": "Review the retained tag evidence and the applicable recipe prerequisites.",
+      "steps": [
+        "Inspect the linked source frame before requesting another checkpoint."
+      ],
+      "evidence_event_ids": [
+        "evt-00010"
+      ],
+      "rule_ids": [
+        "S1"
+      ]
+    },
+    "model_calls": 0,
+    "human_quality_score": null
+  },
+  {
+    "case": "normal",
+    "clip_id": "fx_00_02",
+    "arm": "nemotron_direct",
+    "state": "ADVISED",
+    "advice": {
+      "action": "EXPLAIN",
+      "summary": "The checkpoint passed all synthetic fixture steps with no unresolved issues.",
+      "steps": [
+        "Confirm that all four steps (S1\u2011S4) are marked CONFIRMED.",
+        "Verify that unresolved_event_ids is empty.",
+        "Check that quality.usable is true and no quality flags are present."
+      ],
+      "evidence_event_ids": [
+        "evt-00010"
+      ],
+      "rule_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    "model_calls": 1,
+    "tool_reads_in_model_context": 2,
+    "human_quality_score": null,
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-7bb7e2a2-23a5-4f25-b440-d3087e37a2a7",
+      "provider_request_id": "b201d34b7d030b1fc26a4753dd18c2f5",
+      "usage": {
+        "completion_tokens": 765,
+        "prompt_tokens": 650,
+        "total_tokens": 1415,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 10340.463,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "raw_model_content": "{\n  \"action\": \"EXPLAIN\",\n  \"summary\": \"The checkpoint passed all synthetic fixture steps with no unresolved issues.\",\n  \"steps\": [\n    \"Confirm that all four steps (S1\u2011S4) are marked CONFIRMED.\",\n    \"Verify that unresolved_event_ids is empty.\",\n    \"Check that quality.usable is true and no quality flags are present.\"\n  ],\n  \"evidence_event_ids\": [\n    \"evt-00010\"\n  ],\n  \"rule_ids\": [\n    \"S1\",\n    \"S2\",\n    \"S3\",\n    \"S4\"\n  ]\n}"
+  },
+  {
+    "case": "normal",
+    "clip_id": "fx_00_02",
+    "arm": "nemotron_with_evidence_tools",
+    "model_calls": 1,
+    "tool_reads_in_model_context": 5,
+    "human_quality_score": null,
+    "run_id": "bbb7d84364f36c803c47892bfa591310",
+    "session_id": "0b11977568e2f67308fe745f0e99650c",
+    "created_at": "2026-10-29T18:20:35.404143+00:00",
+    "state": "ADVISED",
+    "purpose": "next_safe_step",
+    "model_provider": "Nebius Token Factory",
+    "nvidia_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "engine_decision": "PASS",
+    "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+    "source_population": "SYNTHETIC_FIXTURE",
+    "selected_event_id": "evt-00010",
+    "frame_id": "f000029-6c831d22b6",
+    "frame_sha256": "6c831d22b6610f87f6a82ed65f07a7f0980cb53604f07562b6300f82195fa5e6",
+    "evidence_fingerprint": "6347e487970adb1bf7020234edf151361536286c407f66415d8a16c2dcde46af",
+    "input_sha256": "e14f834b772fe4783c1f0cd6786e4ef3e03caf12cfa6073908345cf2ddaa9bed",
+    "tool_trace": [
+      {
+        "tool": "read_recipe",
+        "argument": null,
+        "output_sha256": "379f7c31fed230de8cafc2b6c0fc94ec809d7c4123a230498d358b9f67133fc4",
+        "elapsed_ms": 0.067,
+        "result": {
+          "recipe_id": "tagged_four_part_v1",
+          "version": 1,
+          "sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+          "parts": {
+            "BASE": 10,
+            "SPACER": 11,
+            "COVER": 12,
+            "FASTENER": 13,
+            "WRONG_FASTENER": 14
+          },
+          "steps": [
+            {
+              "id": "S1",
+              "part": "BASE",
+              "zone": "BASE_SLOT",
+              "requires": []
+            },
+            {
+              "id": "S2",
+              "part": "SPACER",
+              "zone": "SPACER_SLOT",
+              "requires": [
+                "S1"
+              ]
+            },
+            {
+              "id": "S3",
+              "part": "COVER",
+              "zone": "COVER_SLOT",
+              "requires": [
+                "S2"
+              ]
+            },
+            {
+              "id": "S4",
+              "part": "FASTENER",
+              "zone": "FASTENER_SLOT",
+              "requires": [
+                "S3"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_session_snapshot",
+        "argument": null,
+        "output_sha256": "b5665c25213982c77eda8dd8826dff2b73c6e690ded15455e2e0dfa148ce6865",
+        "elapsed_ms": 0.216,
+        "result": {
+          "session_id": "0b11977568e2f67308fe745f0e99650c",
+          "engine_decision": "PASS",
+          "state": "finished",
+          "source_kind": "SYNTHETIC_FIXTURE",
+          "population": "SYNTHETIC_FIXTURE",
+          "quality": {
+            "usable": true,
+            "flags": []
+          },
+          "unresolved_event_ids": [],
+          "next_allowed_steps": [],
+          "steps": [
+            {
+              "id": "S1",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S2",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S3",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S4",
+              "state": "CONFIRMED"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_event",
+        "argument": "evt-00010",
+        "output_sha256": "f15e850732472ade49788a1cbc80a70b4deb9ab4f54eda4dcbab8de9b241e439",
+        "elapsed_ms": 0.012,
+        "result": {
+          "event_id": "evt-00010",
+          "kind": "CHECKPOINT",
+          "source_time_ms": 5800.0,
+          "frame_id": "f000029-6c831d22b6",
+          "frame_sha256": "6c831d22b6610f87f6a82ed65f07a7f0980cb53604f07562b6300f82195fa5e6",
+          "source_sha256": "ec0e9dbffa868a8a3b5276a3532c93798a798f63b23d75f22a8a9a2d7c1d86f2",
+          "resolves_event_id": null,
+          "part_id": null,
+          "zone_id": null
+        }
+      },
+      {
+        "tool": "read_evidence_frame_metadata",
+        "argument": "f000029-6c831d22b6",
+        "output_sha256": "e28d895987f1ea9ea112ce5760b2c2d4b12920c4ee35ab63285c076f4ea850df",
+        "elapsed_ms": 0.014,
+        "result": {
+          "frame_id": "f000029-6c831d22b6",
+          "captured_at_ms": 5800.0,
+          "frame_sha256": "6c831d22b6610f87f6a82ed65f07a7f0980cb53604f07562b6300f82195fa5e6",
+          "source_sha256": "ec0e9dbffa868a8a3b5276a3532c93798a798f63b23d75f22a8a9a2d7c1d86f2",
+          "width": 960,
+          "height": 600,
+          "marker_ids": [
+            10,
+            11,
+            12,
+            13,
+            40,
+            41,
+            42,
+            43
+          ],
+          "usable": true,
+          "quality_flags": [],
+          "calibration_id": "cal-b031db31c2da2090"
+        }
+      },
+      {
+        "tool": "read_correction_links",
+        "argument": "evt-00010",
+        "output_sha256": "12a92b3856a15adc94306e0b0229b0bbc1b7ed347868ef8b2fd4e4c0a9972d60",
+        "elapsed_ms": 0.01,
+        "result": {
+          "links": [
+            {
+              "event_id": "evt-00010",
+              "kind": "CHECKPOINT",
+              "resolves_event_id": null,
+              "frame_id": "f000029-6c831d22b6",
+              "frame_sha256": "6c831d22b6610f87f6a82ed65f07a7f0980cb53604f07562b6300f82195fa5e6"
+            }
+          ]
+        }
+      }
+    ],
+    "advice": {
+      "action": "EXPLAIN",
+      "summary": "All required parts are present and correctly sequenced; no missing or out\u2011of\u2011order components.",
+      "steps": [
+        "1. Confirm detection of BASE (part 10) in BASE_SLOT.",
+        "2. Confirm detection of SPACER (part 11) in SPACER_SLOT after BASE.",
+        "3. Confirm detection of COVER (part 12) in COVER_SLOT and FASTENER (part 14) placement (if required)."
+      ],
+      "evidence_event_ids": [
+        "evt-00010"
+      ],
+      "rule_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-31f1a7e2-3f61-4f68-98e8-82990c4801c3",
+      "provider_request_id": "53a1e15f367c2a7ed6bc08d695a4b7ea",
+      "usage": {
+        "completion_tokens": 791,
+        "prompt_tokens": 1284,
+        "total_tokens": 2075,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 10402.242,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "limitations": [
+      "Tag identity is not intrinsic part identity or fastening proof.",
+      "Generated wording requires operator review; citation validation is not semantic certification.",
+      "Guidance cannot change the authoritative engine decision."
+    ],
+    "verification_status": "EVIDENCE_LINKED_ADVISORY",
+    "narrative_status": "GENERATED_UNVERIFIED_TEXT"
+  },
+  {
+    "case": "wrong_component",
+    "clip_id": "fx_01_02",
+    "arm": "deterministic_template",
+    "state": "ADVISED",
+    "advice": {
+      "action": "CHECK_TAG",
+      "summary": "Review the retained tag evidence and the applicable recipe prerequisites.",
+      "steps": [
+        "Inspect the linked source frame before requesting another checkpoint."
+      ],
+      "evidence_event_ids": [
+        "evt-00009"
+      ],
+      "rule_ids": [
+        "S4"
+      ]
+    },
+    "model_calls": 0,
+    "human_quality_score": null
+  },
+  {
+    "case": "wrong_component",
+    "clip_id": "fx_01_02",
+    "arm": "nemotron_direct",
+    "state": "ADVISED",
+    "advice": {
+      "action": "REMOVE_AND_REPLACE",
+      "summary": "The fastener in slot FASTENER_SLOT is the wrong component; it must be removed and replaced with the correct one.",
+      "steps": [
+        "Confirm the part ID of the removed fastener matches WRONG_FASTENER.",
+        "Select the correct fastener that matches the required specifications.",
+        "Install the correct fastener into FASTENER_SLOT and verify proper seating."
+      ],
+      "evidence_event_ids": [
+        "evt-00009"
+      ],
+      "rule_ids": [
+        "S4"
+      ]
+    },
+    "model_calls": 1,
+    "tool_reads_in_model_context": 2,
+    "human_quality_score": null,
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-524cb97b-7df7-41d7-a36b-7fac7b460478",
+      "provider_request_id": "0016911f1376ef707058cdab56e2834e",
+      "usage": {
+        "completion_tokens": 779,
+        "prompt_tokens": 659,
+        "total_tokens": 1438,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 9029.8,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "raw_model_content": "{\n  \"action\": \"REMOVE_AND_REPLACE\",\n  \"summary\": \"The fastener in slot FASTENER_SLOT is the wrong component; it must be removed and replaced with the correct one.\",\n  \"steps\": [\n    \"Confirm the part ID of the removed fastener matches WRONG_FASTENER.\",\n    \"Select the correct fastener that matches the required specifications.\",\n    \"Install the correct fastener into FASTENER_SLOT and verify proper seating.\"\n  ],\n  \"evidence_event_ids\": [\n    \"evt-00009\"\n  ],\n  \"rule_ids\": [\n    \"S4\"\n  ]\n}"
+  },
+  {
+    "case": "wrong_component",
+    "clip_id": "fx_01_02",
+    "arm": "nemotron_with_evidence_tools",
+    "model_calls": 1,
+    "tool_reads_in_model_context": 5,
+    "human_quality_score": null,
+    "run_id": "c60b03b8d857e76e647ac019302039b1",
+    "session_id": "d3569a2793510bcd46d37f79f1af6a65",
+    "created_at": "2026-10-29T18:20:55.534219+00:00",
+    "state": "ADVISED",
+    "purpose": "explain_violation",
+    "model_provider": "Nebius Token Factory",
+    "nvidia_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "engine_decision": "HOLD_FOR_REVIEW",
+    "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+    "source_population": "SYNTHETIC_FIXTURE",
+    "selected_event_id": "evt-00009",
+    "frame_id": "f000025-3f64ef6c22",
+    "frame_sha256": "3f64ef6c22065152fffadba333779d562c374467f3e2675537461952bf0474aa",
+    "evidence_fingerprint": "c418dc7424010f6abfec47f5054eddaa6302d703b877a093324e273fa6fe971b",
+    "input_sha256": "f12e7b961a841556062787c098fcfab2dc4220a7c5bbe87cdc086f707e4311b8",
+    "tool_trace": [
+      {
+        "tool": "read_recipe",
+        "argument": null,
+        "output_sha256": "379f7c31fed230de8cafc2b6c0fc94ec809d7c4123a230498d358b9f67133fc4",
+        "elapsed_ms": 0.071,
+        "result": {
+          "recipe_id": "tagged_four_part_v1",
+          "version": 1,
+          "sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+          "parts": {
+            "BASE": 10,
+            "SPACER": 11,
+            "COVER": 12,
+            "FASTENER": 13,
+            "WRONG_FASTENER": 14
+          },
+          "steps": [
+            {
+              "id": "S1",
+              "part": "BASE",
+              "zone": "BASE_SLOT",
+              "requires": []
+            },
+            {
+              "id": "S2",
+              "part": "SPACER",
+              "zone": "SPACER_SLOT",
+              "requires": [
+                "S1"
+              ]
+            },
+            {
+              "id": "S3",
+              "part": "COVER",
+              "zone": "COVER_SLOT",
+              "requires": [
+                "S2"
+              ]
+            },
+            {
+              "id": "S4",
+              "part": "FASTENER",
+              "zone": "FASTENER_SLOT",
+              "requires": [
+                "S3"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_session_snapshot",
+        "argument": null,
+        "output_sha256": "8d55401ed99c0e4e33d0fc20745d5d16723fea3ce8ae8d2d30acc7a90183b934",
+        "elapsed_ms": 0.233,
+        "result": {
+          "session_id": "d3569a2793510bcd46d37f79f1af6a65",
+          "engine_decision": "HOLD_FOR_REVIEW",
+          "state": "finished",
+          "source_kind": "SYNTHETIC_FIXTURE",
+          "population": "SYNTHETIC_FIXTURE",
+          "quality": {
+            "usable": true,
+            "flags": []
+          },
+          "unresolved_event_ids": [
+            "evt-00009",
+            "evt-00011"
+          ],
+          "next_allowed_steps": [
+            "S4"
+          ],
+          "steps": [
+            {
+              "id": "S1",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S2",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S3",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S4",
+              "state": "BLOCKED"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_event",
+        "argument": "evt-00009",
+        "output_sha256": "67001e274102d0307350acc8244e2897b8fc4f555009b13f4d54c1b4628e424b",
+        "elapsed_ms": 0.014,
+        "result": {
+          "event_id": "evt-00009",
+          "kind": "WRONG_COMPONENT",
+          "source_time_ms": 5000.0,
+          "frame_id": "f000025-3f64ef6c22",
+          "frame_sha256": "3f64ef6c22065152fffadba333779d562c374467f3e2675537461952bf0474aa",
+          "source_sha256": "595fbad71b573410b6ce25ad70dca55be6c9062af06ea446a8c70f0842f2f61b",
+          "resolves_event_id": null,
+          "part_id": "WRONG_FASTENER",
+          "zone_id": "FASTENER_SLOT"
+        }
+      },
+      {
+        "tool": "read_evidence_frame_metadata",
+        "argument": "f000025-3f64ef6c22",
+        "output_sha256": "26e992ec3dc045e6f4db40215effa879fbba7e073b30a361128972b3f88383db",
+        "elapsed_ms": 0.013,
+        "result": {
+          "frame_id": "f000025-3f64ef6c22",
+          "captured_at_ms": 5000.0,
+          "frame_sha256": "3f64ef6c22065152fffadba333779d562c374467f3e2675537461952bf0474aa",
+          "source_sha256": "595fbad71b573410b6ce25ad70dca55be6c9062af06ea446a8c70f0842f2f61b",
+          "width": 960,
+          "height": 600,
+          "marker_ids": [
+            10,
+            11,
+            12,
+            14,
+            40,
+            41,
+            42,
+            43
+          ],
+          "usable": true,
+          "quality_flags": [],
+          "calibration_id": "cal-36b09a87c98cec98"
+        }
+      },
+      {
+        "tool": "read_correction_links",
+        "argument": "evt-00009",
+        "output_sha256": "7670d26745ef6d601794d885937eb2914d5aa38ebe884237ba7978796be56009",
+        "elapsed_ms": 0.009,
+        "result": {
+          "links": [
+            {
+              "event_id": "evt-00009",
+              "kind": "WRONG_COMPONENT",
+              "resolves_event_id": null,
+              "frame_id": "f000025-3f64ef6c22",
+              "frame_sha256": "3f64ef6c22065152fffadba333779d562c374467f3e2675537461952bf0474aa"
+            }
+          ]
+        }
+      }
+    ],
+    "advice": {
+      "action": "REMOVE_AND_REPLACE",
+      "summary": "Remove the incorrectly placed fastener and install the correct fastener for step S4.",
+      "steps": [
+        "Inspect the fastener in FASTENER_SLOT to confirm it is tagged as WRONG_FASTENER.",
+        "Remove the identified wrong fastener from the slot.",
+        "Install the correct fastener and verify proper placement."
+      ],
+      "evidence_event_ids": [
+        "evt-00009"
+      ],
+      "rule_ids": [
+        "S4"
+      ]
+    },
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-bfdce947-71f5-41ec-b9e5-cc77664063fe",
+      "provider_request_id": "43e06f179058e47b49636336797b57ef",
+      "usage": {
+        "completion_tokens": 784,
+        "prompt_tokens": 1291,
+        "total_tokens": 2075,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 9624.741,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "limitations": [
+      "Tag identity is not intrinsic part identity or fastening proof.",
+      "Generated wording requires operator review; citation validation is not semantic certification.",
+      "Guidance cannot change the authoritative engine decision."
+    ],
+    "verification_status": "EVIDENCE_LINKED_ADVISORY",
+    "narrative_status": "GENERATED_UNVERIFIED_TEXT"
+  },
+  {
+    "case": "wrong_order",
+    "clip_id": "fx_03_02",
+    "arm": "deterministic_template",
+    "state": "ADVISED",
+    "advice": {
+      "action": "REPOSITION",
+      "summary": "Review the retained tag evidence and the applicable recipe prerequisites.",
+      "steps": [
+        "Inspect the linked source frame before requesting another checkpoint."
+      ],
+      "evidence_event_ids": [
+        "evt-00005"
+      ],
+      "rule_ids": [
+        "S3"
+      ]
+    },
+    "model_calls": 0,
+    "human_quality_score": null
+  },
+  {
+    "case": "wrong_order",
+    "clip_id": "fx_03_02",
+    "arm": "nemotron_direct",
+    "state": "REJECTED",
+    "advice": null,
+    "model_calls": 1,
+    "tool_reads_in_model_context": 2,
+    "human_quality_score": null,
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-0602d81c-d68f-4242-9f65-66ea4252e748",
+      "provider_request_id": "d08bd3cc3cc3170044f04f06bc5ab98a",
+      "usage": {
+        "completion_tokens": 626,
+        "prompt_tokens": 667,
+        "total_tokens": 1293,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 7790.817,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "raw_model_content": "{\n  \"action\": \"EXPLAIN\",\n  \"summary\": \"The cover part is missing or incorrectly placed in slot COVER_SLOT, triggering an ORDER_VIOLATION.\",\n  \"steps\": [\n    \"Verify that the cover part is physically present in COVER_SLOT.\",\n    \"Check the part tag for correct identification.\",\n    \"If missing, reposition or replace the cover and recapture.\"\n  ],\n  \"evidence_event_ids\": [\n    \"evt-00005\"\n  ],\n  \"rule_ids\": [\n    \"S3\"\n  ]\n}",
+    "reason": "SCHEMA_OR_POLICY_OR_CITATION"
+  },
+  {
+    "case": "wrong_order",
+    "clip_id": "fx_03_02",
+    "arm": "nemotron_with_evidence_tools",
+    "model_calls": 1,
+    "tool_reads_in_model_context": 5,
+    "human_quality_score": null,
+    "run_id": "2a5da6b4e29c40d20dd08fb89d412adc",
+    "session_id": "8331f13ae343561da8179434a0ef05d6",
+    "created_at": "2026-10-29T18:21:13.660243+00:00",
+    "state": "ADVISED",
+    "purpose": "explain_violation",
+    "model_provider": "Nebius Token Factory",
+    "nvidia_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "engine_decision": "HOLD_FOR_REVIEW",
+    "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+    "source_population": "SYNTHETIC_FIXTURE",
+    "selected_event_id": "evt-00005",
+    "frame_id": "f000013-1b9a96a1ae",
+    "frame_sha256": "1b9a96a1ae46bc09273c027cf46020bc2b7927c2738abb91785ea52ab6de993e",
+    "evidence_fingerprint": "aadf7fffead3164f8c3b1e4e9c936ae2887d4306f481ac191dda69d8e5dc5eda",
+    "input_sha256": "c75dd57d103de478f8d21965a024f98d0f2506992a84c9c35558179d13899b28",
+    "tool_trace": [
+      {
+        "tool": "read_recipe",
+        "argument": null,
+        "output_sha256": "379f7c31fed230de8cafc2b6c0fc94ec809d7c4123a230498d358b9f67133fc4",
+        "elapsed_ms": 0.095,
+        "result": {
+          "recipe_id": "tagged_four_part_v1",
+          "version": 1,
+          "sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+          "parts": {
+            "BASE": 10,
+            "SPACER": 11,
+            "COVER": 12,
+            "FASTENER": 13,
+            "WRONG_FASTENER": 14
+          },
+          "steps": [
+            {
+              "id": "S1",
+              "part": "BASE",
+              "zone": "BASE_SLOT",
+              "requires": []
+            },
+            {
+              "id": "S2",
+              "part": "SPACER",
+              "zone": "SPACER_SLOT",
+              "requires": [
+                "S1"
+              ]
+            },
+            {
+              "id": "S3",
+              "part": "COVER",
+              "zone": "COVER_SLOT",
+              "requires": [
+                "S2"
+              ]
+            },
+            {
+              "id": "S4",
+              "part": "FASTENER",
+              "zone": "FASTENER_SLOT",
+              "requires": [
+                "S3"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_session_snapshot",
+        "argument": null,
+        "output_sha256": "54bec89b0f6b70fc08d69efe562b22e0bfd1da86ae6814dc3f3c2672ce2c1d30",
+        "elapsed_ms": 0.384,
+        "result": {
+          "session_id": "8331f13ae343561da8179434a0ef05d6",
+          "engine_decision": "HOLD_FOR_REVIEW",
+          "state": "finished",
+          "source_kind": "SYNTHETIC_FIXTURE",
+          "population": "SYNTHETIC_FIXTURE",
+          "quality": {
+            "usable": true,
+            "flags": []
+          },
+          "unresolved_event_ids": [
+            "evt-00005",
+            "evt-00009",
+            "evt-00011",
+            "evt-00012"
+          ],
+          "next_allowed_steps": [
+            "S3"
+          ],
+          "steps": [
+            {
+              "id": "S1",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S2",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S3",
+              "state": "BLOCKED"
+            },
+            {
+              "id": "S4",
+              "state": "BLOCKED"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_event",
+        "argument": "evt-00005",
+        "output_sha256": "fce20b86d359cb2a53f6ceb2bf6cc3c728613ea98330c4edd0ed4870c653394b",
+        "elapsed_ms": 0.027,
+        "result": {
+          "event_id": "evt-00005",
+          "kind": "ORDER_VIOLATION",
+          "source_time_ms": 2600.0,
+          "frame_id": "f000013-1b9a96a1ae",
+          "frame_sha256": "1b9a96a1ae46bc09273c027cf46020bc2b7927c2738abb91785ea52ab6de993e",
+          "source_sha256": "26baeeaeee6adca3df6ee850751a7d5428d7289eff42342f727b0f33bc30f471",
+          "resolves_event_id": null,
+          "part_id": "COVER",
+          "zone_id": "COVER_SLOT"
+        }
+      },
+      {
+        "tool": "read_evidence_frame_metadata",
+        "argument": "f000013-1b9a96a1ae",
+        "output_sha256": "23b98919e47f8cff35fa03e1a7ecbd8d65116e093ffc51095d94a595477123ae",
+        "elapsed_ms": 0.023,
+        "result": {
+          "frame_id": "f000013-1b9a96a1ae",
+          "captured_at_ms": 2600.0,
+          "frame_sha256": "1b9a96a1ae46bc09273c027cf46020bc2b7927c2738abb91785ea52ab6de993e",
+          "source_sha256": "26baeeaeee6adca3df6ee850751a7d5428d7289eff42342f727b0f33bc30f471",
+          "width": 960,
+          "height": 600,
+          "marker_ids": [
+            10,
+            12,
+            40,
+            41,
+            42,
+            43
+          ],
+          "usable": true,
+          "quality_flags": [],
+          "calibration_id": "cal-8e9d8d1182b0d6f2"
+        }
+      },
+      {
+        "tool": "read_correction_links",
+        "argument": "evt-00005",
+        "output_sha256": "61182ea564fe44696dc1adc44a04e80f3966588c8f7d7071a89d260eefbc198d",
+        "elapsed_ms": 0.017,
+        "result": {
+          "links": [
+            {
+              "event_id": "evt-00005",
+              "kind": "ORDER_VIOLATION",
+              "resolves_event_id": null,
+              "frame_id": "f000013-1b9a96a1ae",
+              "frame_sha256": "1b9a96a1ae46bc09273c027cf46020bc2b7927c2738abb91785ea52ab6de993e"
+            }
+          ]
+        }
+      }
+    ],
+    "advice": {
+      "action": "RECAPTURE",
+      "summary": "Cover placed out of order; recapture required to verify correct placement in COVER_SLOT.",
+      "steps": [
+        "Confirm cover is correctly seated in COVER_SLOT per step S3 before continuing.",
+        "Re-capture the frame after adjustment to obtain a usable image.",
+        "Validate that the new frame resolves the ORDER_VIOLATION."
+      ],
+      "evidence_event_ids": [
+        "evt-00005"
+      ],
+      "rule_ids": [
+        "S3"
+      ]
+    },
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-800427b0-6951-48e4-ae0f-d635e28804ca",
+      "provider_request_id": "cc8bc88d778601afaf9eaca906c9b64d",
+      "usage": {
+        "completion_tokens": 633,
+        "prompt_tokens": 1285,
+        "total_tokens": 1918,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 7247.092,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "limitations": [
+      "Tag identity is not intrinsic part identity or fastening proof.",
+      "Generated wording requires operator review; citation validation is not semantic certification.",
+      "Guidance cannot change the authoritative engine decision."
+    ],
+    "verification_status": "EVIDENCE_LINKED_ADVISORY",
+    "narrative_status": "GENERATED_UNVERIFIED_TEXT"
+  },
+  {
+    "case": "correction",
+    "clip_id": "fx_05_02",
+    "arm": "deterministic_template",
+    "state": "ADVISED",
+    "advice": {
+      "action": "EXPLAIN",
+      "summary": "Review the retained tag evidence and the applicable recipe prerequisites.",
+      "steps": [
+        "Inspect the linked source frame before requesting another checkpoint."
+      ],
+      "evidence_event_ids": [
+        "evt-00010",
+        "evt-00009"
+      ],
+      "rule_ids": [
+        "S4"
+      ]
+    },
+    "model_calls": 0,
+    "human_quality_score": null
+  },
+  {
+    "case": "correction",
+    "clip_id": "fx_05_02",
+    "arm": "nemotron_direct",
+    "state": "UNAVAILABLE",
+    "advice": null,
+    "model_calls": 1,
+    "tool_reads_in_model_context": 2,
+    "human_quality_score": null,
+    "reason": "PROVIDER_OUTPUT_INCOMPLETE"
+  },
+  {
+    "case": "correction",
+    "clip_id": "fx_05_02",
+    "arm": "nemotron_with_evidence_tools",
+    "model_calls": 1,
+    "tool_reads_in_model_context": 5,
+    "human_quality_score": null,
+    "run_id": "29435d7f73a761bcb93d621b118b1e1f",
+    "session_id": "e844f82dc95dbdceedea7cc4d4162fa3",
+    "created_at": "2026-10-29T18:21:35.677603+00:00",
+    "state": "ADVISED",
+    "purpose": "summarize_correction",
+    "model_provider": "Nebius Token Factory",
+    "nvidia_model_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+    "engine_decision": "PASS",
+    "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+    "source_population": "SYNTHETIC_FIXTURE",
+    "selected_event_id": "evt-00010",
+    "frame_id": "f000031-1fa37f5372",
+    "frame_sha256": "1fa37f5372c808afb811d7b98ee410d4a868bf4cc2aa2f438cd0fd4ed96d016d",
+    "evidence_fingerprint": "9f552c8b2078d071b6b870fe1bc9408c2390cafa8d5b26c2cffb6322d41be7b7",
+    "input_sha256": "686755d72304ac4251d26fb14c541a92c1c386700b2b3a634250c3d91977e3e6",
+    "tool_trace": [
+      {
+        "tool": "read_recipe",
+        "argument": null,
+        "output_sha256": "379f7c31fed230de8cafc2b6c0fc94ec809d7c4123a230498d358b9f67133fc4",
+        "elapsed_ms": 0.064,
+        "result": {
+          "recipe_id": "tagged_four_part_v1",
+          "version": 1,
+          "sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+          "parts": {
+            "BASE": 10,
+            "SPACER": 11,
+            "COVER": 12,
+            "FASTENER": 13,
+            "WRONG_FASTENER": 14
+          },
+          "steps": [
+            {
+              "id": "S1",
+              "part": "BASE",
+              "zone": "BASE_SLOT",
+              "requires": []
+            },
+            {
+              "id": "S2",
+              "part": "SPACER",
+              "zone": "SPACER_SLOT",
+              "requires": [
+                "S1"
+              ]
+            },
+            {
+              "id": "S3",
+              "part": "COVER",
+              "zone": "COVER_SLOT",
+              "requires": [
+                "S2"
+              ]
+            },
+            {
+              "id": "S4",
+              "part": "FASTENER",
+              "zone": "FASTENER_SLOT",
+              "requires": [
+                "S3"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_session_snapshot",
+        "argument": null,
+        "output_sha256": "23c07a1a99910e659163edad48f07d97c76ebb75b9998edafccc6b7865cf5b9d",
+        "elapsed_ms": 0.212,
+        "result": {
+          "session_id": "e844f82dc95dbdceedea7cc4d4162fa3",
+          "engine_decision": "PASS",
+          "state": "finished",
+          "source_kind": "SYNTHETIC_FIXTURE",
+          "population": "SYNTHETIC_FIXTURE",
+          "quality": {
+            "usable": true,
+            "flags": []
+          },
+          "unresolved_event_ids": [],
+          "next_allowed_steps": [],
+          "steps": [
+            {
+              "id": "S1",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S2",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S3",
+              "state": "CONFIRMED"
+            },
+            {
+              "id": "S4",
+              "state": "CONFIRMED"
+            }
+          ]
+        }
+      },
+      {
+        "tool": "read_event",
+        "argument": "evt-00010",
+        "output_sha256": "dd16032c254887d1a0e40e6a6b267f86e3ab8adc29b064773565c551543bea22",
+        "elapsed_ms": 0.012,
+        "result": {
+          "event_id": "evt-00010",
+          "kind": "CORRECTED",
+          "source_time_ms": 6200.0,
+          "frame_id": "f000031-1fa37f5372",
+          "frame_sha256": "1fa37f5372c808afb811d7b98ee410d4a868bf4cc2aa2f438cd0fd4ed96d016d",
+          "source_sha256": "44f0c81fbf0c913aec9c6903eb19bc221cff16d394d75ce19adb7122a09b7eca",
+          "resolves_event_id": "evt-00009",
+          "part_id": "WRONG_FASTENER",
+          "zone_id": "FASTENER_SLOT"
+        }
+      },
+      {
+        "tool": "read_evidence_frame_metadata",
+        "argument": "f000031-1fa37f5372",
+        "output_sha256": "3aabbf9731e2f2c5d849390e30ee890324b22a1663d1f714f944137a156ba32e",
+        "elapsed_ms": 0.013,
+        "result": {
+          "frame_id": "f000031-1fa37f5372",
+          "captured_at_ms": 6200.0,
+          "frame_sha256": "1fa37f5372c808afb811d7b98ee410d4a868bf4cc2aa2f438cd0fd4ed96d016d",
+          "source_sha256": "44f0c81fbf0c913aec9c6903eb19bc221cff16d394d75ce19adb7122a09b7eca",
+          "width": 960,
+          "height": 600,
+          "marker_ids": [
+            10,
+            11,
+            12,
+            40,
+            41,
+            42,
+            43
+          ],
+          "usable": true,
+          "quality_flags": [],
+          "calibration_id": "cal-faa6d1e19ffae99d"
+        }
+      },
+      {
+        "tool": "read_correction_links",
+        "argument": "evt-00010",
+        "output_sha256": "2d0eadba08c390a9d966cc6cf752b432a5a0960fe37d8ee7acfead25b2607f84",
+        "elapsed_ms": 0.012,
+        "result": {
+          "links": [
+            {
+              "event_id": "evt-00009",
+              "kind": "WRONG_COMPONENT",
+              "resolves_event_id": null,
+              "frame_id": "f000025-3f64ef6c22",
+              "frame_sha256": "3f64ef6c22065152fffadba333779d562c374467f3e2675537461952bf0474aa"
+            },
+            {
+              "event_id": "evt-00010",
+              "kind": "CORRECTED",
+              "resolves_event_id": "evt-00009",
+              "frame_id": "f000031-1fa37f5372",
+              "frame_sha256": "1fa37f5372c808afb811d7b98ee410d4a868bf4cc2aa2f438cd0fd4ed96d016d"
+            }
+          ]
+        }
+      }
+    ],
+    "advice": {
+      "action": "EXPLAIN",
+      "summary": "The fastener was initially recorded as the wrong component (evt-00009) but the corrected frame (evt-00010) now shows the proper FASTENER part in the FASTENER_SLOT, satisfying step S4 of the recipe.",
+      "steps": [
+        "Confirm the part_id is FASTENER and matches the recipe step S4.",
+        "Check that the zone is FASTENER_SLOT and the fastener type aligns with the recipe.",
+        "Verify that the correction resolves the earlier WRONG_COMPONENT event (evt-00009)."
+      ],
+      "evidence_event_ids": [
+        "evt-00009",
+        "evt-00010"
+      ],
+      "rule_ids": [
+        "S4"
+      ]
+    },
+    "provider": {
+      "served_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "completion_id": "chatcmpl-16776585-8b09-49a8-8467-16a1e1949d5e",
+      "provider_request_id": "409d66e2c997b60184e8309a94d65cfd",
+      "usage": {
+        "completion_tokens": 912,
+        "prompt_tokens": 1372,
+        "total_tokens": 2284,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "round_trip_ms": 11159.424,
+      "http_status": 200,
+      "attempts": 1,
+      "retry_count": 0
+    },
+    "limitations": [
+      "Tag identity is not intrinsic part identity or fastening proof.",
+      "Generated wording requires operator review; citation validation is not semantic certification.",
+      "Guidance cannot change the authoritative engine decision."
+    ],
+    "verification_status": "EVIDENCE_LINKED_ADVISORY",
+    "narrative_status": "GENERATED_UNVERIFIED_TEXT"
+  }
+]

@@ -23,6 +23,9 @@ from steplock.schemas import SourceKind
 from steplock.service import Session, SessionManager
 from steplock.sources.replay import inspect_video
 from steplock.vision.calibration import calibrate
+from steplock.agent.schemas import AgentConfig, ExplainRequest
+from steplock.agent.orchestrator import AgentService
+from steplock.agent.nebius_client import ProviderFailure
 
 
 class CreateSession(BaseModel):
@@ -58,9 +61,10 @@ def latest_run():
     return candidates[-1] if candidates else None
 
 
-def create_app(runtime_root=None):
+def create_app(runtime_root=None, agent_config=None, agent_client=None):
     runtime=Path(runtime_root) if runtime_root is not None else RUNTIME
     manager=SessionManager()
+    agent=AgentService(agent_config or AgentConfig.from_env(), agent_client)
     recipes={}
     for path in (ROOT/"recipes").glob("*.yaml"):
         recipe=Recipe.load(path)
@@ -77,6 +81,7 @@ def create_app(runtime_root=None):
     app=FastAPI(title="STEPLOCK",version="1.0.0",lifespan=lifespan)
     app.state.manager=manager
     app.state.recipes=recipes
+    app.state.agent=agent
     app.add_middleware(TrustedHostMiddleware,allowed_hosts=["127.0.0.1","localhost"])
     allowed=[origin for origin in os.environ.get("STEPLOCK_ALLOWED_ORIGINS","").split(",") if origin]
     app.add_middleware(CORSMiddleware,allow_origins=allowed,allow_credentials=False,
@@ -87,6 +92,9 @@ def create_app(runtime_root=None):
         origin=request.headers.get("origin")
         if origin and origin.rstrip("/")!=str(request.base_url).rstrip("/") and origin not in allowed:
             return JSONResponse({"detail":"This local application accepts only its configured browser origin."},status_code=403)
+        if request.method=="POST" and request.url.path.endswith("/agent/explain"):
+            if len(await request.body())>2048:
+                return JSONResponse({"detail":"Agent request exceeds 2 KiB"},status_code=413)
         if request.method=="POST" and request.url.path=="/api/recipes":
             raw=await request.body()
             if len(raw)>65536: return JSONResponse({"detail":"Recipe exceeds the 64 KiB limit"},status_code=413)
@@ -117,6 +125,27 @@ def create_app(runtime_root=None):
         return {"status":"ok","cv_version":cv2.__version__,"aruco_available":hasattr(cv2.aruco,"ArucoDetector"),
                 "camera_active":bool(active and active.source_kind=="LIVE_TAGGED" and active.state=="running"),
                 "active_session_id":manager.active_id,"advisory_only":True,"real_staged_data":"NOT_PROVIDED"}
+
+    @app.get("/api/agent/health")
+    def agent_health():
+        return agent.health()
+
+    @app.post("/api/sessions/{sid}/agent/explain")
+    def explain_finding(sid: str,data: ExplainRequest,request: Request):
+        session=get_session(sid,request)
+        try: return agent.explain(session,data)
+        except ProviderFailure as exc:
+            headers={"Retry-After":exc.retry_after or "5"} if exc.deferred else None
+            raise HTTPException(429 if exc.deferred else 503,exc.code,headers=headers) from exc
+        except KeyError as exc: raise HTTPException(404,"Evidence event is not in this session") from exc
+        except ValueError as exc: raise HTTPException(409,str(exc)) from exc
+        except OSError as exc: raise HTTPException(503,"Agent audit storage unavailable; verdict unchanged") from exc
+
+    @app.get("/api/sessions/{sid}/agent/runs/{run_id}")
+    def agent_run(sid: str,run_id: str,request: Request):
+        session=get_session(sid,request)
+        try: return agent.get(session,run_id)
+        except KeyError as exc: raise HTTPException(404,"Agent run is not in this session") from exc
 
     @app.get("/api/recipes")
     def list_recipes():

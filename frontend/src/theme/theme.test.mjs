@@ -114,6 +114,24 @@ test('missing benchmark data never becomes invented metrics', async () => {
   assert.doesNotMatch(html, /100\.0%|metric-grid/);
 });
 
+test('Nemotron guidance fails closed for offline, changed, foreign or stopped evidence', async () => {
+  const {guidanceIsCurrent}=await server.ssrLoadModule('/src/components/NemotronEvidenceAgent.tsx');
+  const session={session_id:'one',recipe_sha256:'recipe',revision:3,state:'finished',latest_frame:{frame_id:'frame'},decision:{status:'HOLD_FOR_REVIEW'}};
+  const run={session_id:'one',recipe_sha256:'recipe',evidence_revision:3,evidence_latest_frame_id:'frame',engine_decision:'HOLD_FOR_REVIEW',state:'ADVISED',advice:{action:'CHECK_TAG'}};
+  assert.equal(guidanceIsCurrent(run,session,true),true);
+  assert.equal(guidanceIsCurrent(run,session,false),false);
+  for(const changed of [{session_id:'two'},{recipe_sha256:'changed'},{revision:4},{state:'stopped'},{latest_frame:{frame_id:'new'}},{decision:{status:'SOURCE_LOST'}}]) assert.equal(guidanceIsCurrent(run,{...session,...changed},true),false);
+  assert.equal(guidanceIsCurrent({...run,state:'REJECTED'},session,true),false);
+});
+
+test('actual agent panel exposes no pretend connected model before configuration', async () => {
+  const {NemotronEvidenceAgent}=await server.ssrLoadModule('/src/components/NemotronEvidenceAgent.tsx');
+  const html=renderToStaticMarkup(React.createElement(NemotronEvidenceAgent,{session:null,credentials:null,connected:false,onEvent:()=>{}}));
+  assert.match(html,/NVIDIA NEMOTRON/);assert.match(html,/NEBIUS TOKEN FACTORY/);
+  assert.match(html,/Agent unavailable/);assert.match(html,/disabled=""/);
+  assert.doesNotMatch(html,/NVIDIA_CONNECTION_OK|EVIDENCE_LINKED_ADVISORY/);
+});
+
 test('assembly is a separate page and conservatively reflects stale sessions', async () => {
  const {AssemblyExplorer}=await server.ssrLoadModule('/src/pages/AssemblyExplorer.tsx');
  const noop=()=>{};

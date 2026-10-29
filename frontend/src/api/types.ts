@@ -6,6 +6,7 @@ export interface FrameRecord {frame_id:string; frame_index:number; captured_at_m
 export interface Session {session_id:string; recipe_id:string; recipe_sha256:string; recipe_version:number; source_kind:SourceKind; source_sha256:string; source_hash_kind:string; state:string; error:string|null; decision:{status:string;reason:string;reason_codes:string[];advisory_only:boolean}; quality:{usable:boolean;flags:string[];calibration_id:string|null}; latest_frame:FrameRecord|null; step_states:Step[]; events:EventRecord[]; unresolved_event_ids:string[]; next_allowed_steps:string[]; checkpoint_requested:boolean; runtime:{frames_in:number;frames_analyzed:number;frames_dropped:number;vision_p50_ms:number|null;vision_p95_ms:number|null;cv_version:string;queue_capacity:number}; human_reviews:{event_id:string;note:string}[]}
 export interface Credentials {session_id:string;access_token:string}
 export interface Session {part_markers:Record<string,number>}
+export interface Session {revision:number}
 export interface Session {source_metadata?:{population?:string;notice?:string}}
 export interface Scenario {id:string;title:string;source_kind:SourceKind;source_sha256:string;duration_ms:number}
 export interface PinnedRecording extends Scenario {population:string;notice:string;attribution:string;source_url:string;license:string;license_url:string}

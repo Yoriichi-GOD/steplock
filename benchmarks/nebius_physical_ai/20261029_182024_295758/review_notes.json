@@ -1,0 +1,11 @@
+{
+  "reviewer": "Codex; not an independent human scorer",
+  "run_role": "DEVELOPMENT_PILOT_BEFORE_SEMANTIC_GUARD_FIX",
+  "source_state": "Uncommitted; evidence-revision binding fields added while this process was running. Do not treat as the final release source snapshot.",
+  "findings": [
+    {"case": "normal", "arm": "nemotron_with_evidence_tools", "finding": "Suggested FASTENER part 14 although the required tag is 13. Structural/citation checks accepted this wording. This is an observed semantic hallucination.", "followup": "Exclude non-required recipe parts from prompt; reject unsupported numeric tag claims."},
+    {"case": "wrong_order", "arm": "nemotron_with_evidence_tools", "finding": "Named the order violation but did not explain the actual S2/SPACER prerequisite.", "followup": "Require the actual prerequisite ID or part in order explanations; preserve refusal otherwise."},
+    {"case": "correction", "arm": "nemotron_direct", "finding": "Provider output exhausted the 1100-token cap. No guidance displayed; error recorded. This pilot did not retain latency/usage metadata for that failed call.", "followup": "Retain safe failure metadata in future runs; do not silently increase token cap or retry."}
+  ],
+  "claim": "4/4 tools-arm structural acceptances in this pilot do not establish 4/4 factually correct explanations. Narrative accuracy remains unscored independently."
+}

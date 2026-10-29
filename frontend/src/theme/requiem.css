@@ -213,3 +213,22 @@ h1:has(.rq-title-art:not([hidden])) .rq-heading-label {position:absolute;width:1
 @media(prefers-reduced-motion:reduce) {
  .app-shell *,.app-shell *::before,.app-shell *::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+/* Optional guidance stays below the source/evidence controls. */
+.nemotron-panel { margin-top: 20px; min-width: 0; }
+.nemotron-controls { display: flex; align-items: center; gap: 16px; padding: 20px; flex-wrap: wrap; }
+.nemotron-controls > div { flex: 1 1 320px; }
+.nemotron-controls p,.nemotron-status { color: var(--rq-muted); font-size: 13px; line-height: 1.6; }
+.nemotron-controls p { margin: 6px 0 0; }
+.nemotron-controls select { max-width: 300px; }
+.nemotron-status { padding: 0 20px 16px; margin: 0; }
+.nemotron-advice { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); gap: 24px; padding: 0 20px 24px; }
+.nemotron-advice p,.nemotron-advice li { font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.nemotron-advice details { color: var(--rq-muted); font-size: 12px; }
+.nemotron-advice summary { cursor: pointer; color: var(--rq-blue); }
+.nemotron-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 12px; color: var(--rq-blue); }
+@media (max-width: 700px) {
+  .nemotron-advice { grid-template-columns: minmax(0,1fr); }
+  .nemotron-controls select { width: 100%; max-width: none; }
+  .nemotron-controls button { width: 100%; }
+  .nemotron-panel .panel-heading { flex-wrap: wrap; gap: 10px; }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "population": "SYNTHETIC_EXISTING_TEST_SPLIT_NOT_PHYSICAL",
+  "cases": [
+    {
+      "clip_id": "fx_00_02",
+      "name": "normal",
+      "purpose": "next_safe_step"
+    },
+    {
+      "clip_id": "fx_01_02",
+      "name": "wrong_component",
+      "purpose": "explain_violation"
+    },
+    {
+      "clip_id": "fx_03_02",
+      "name": "wrong_order",
+      "purpose": "explain_violation"
+    },
+    {
+      "clip_id": "fx_05_02",
+      "name": "correction",
+      "purpose": "summarize_correction"
+    }
+  ],
+  "arms": [
+    "deterministic_template",
+    "nemotron_direct",
+    "nemotron_with_evidence_tools"
+  ],
+  "maximum_model_requests": 8,
+  "maximum_completion_tokens_per_request": 1100,
+  "independent_human_narrative_scoring": "NOT_PROVIDED",
+  "automated_scoring": [
+    "schema and action-policy acceptance",
+    "valid same-session citations",
+    "no engine or source history mutation",
+    "provider failure and round-trip latency"
+  ],
+  "caveats": [
+    "The generated test split predates this feature but is not a new independent physical corpus.",
+    "Template validity is guaranteed by construction; it is not a quality baseline for fluent explanation.",
+    "The tools arm receives more recipe/frame/correction metadata than the direct arm. This is an information intervention.",
+    "Automated policy acceptance does not prove natural-language factual accuracy or physical safety."
+  ]
+}
