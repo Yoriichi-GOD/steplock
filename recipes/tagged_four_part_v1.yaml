@@ -1,0 +1,26 @@
+recipe_id: tagged_four_part_v1
+name: Bench Fixture — Four-Part Visual Assembly
+version: 1
+advisory_only: true
+dictionary: DICT_4X4_50
+minimum_supporting_frames: 2
+minimum_support_gap_ms: 160
+maximum_observation_gap_ms: 1800
+minimum_focus_variance: 35
+zone_inset: 0.012
+parts:
+  BASE: {aruco_marker_id: 10}
+  SPACER: {aruco_marker_id: 11}
+  COVER: {aruco_marker_id: 12}
+  FASTENER: {aruco_marker_id: 13}
+  WRONG_FASTENER: {aruco_marker_id: 14}
+zones:
+  BASE_SLOT: [0.08, 0.16, 0.40, 0.78]
+  SPACER_SLOT: [0.40, 0.16, 0.62, 0.78]
+  COVER_SLOT: [0.62, 0.16, 0.83, 0.78]
+  FASTENER_SLOT: [0.83, 0.16, 0.96, 0.78]
+steps:
+  - {id: S1, part: BASE, zone: BASE_SLOT, requires: []}
+  - {id: S2, part: SPACER, zone: SPACER_SLOT, requires: [S1]}
+  - {id: S3, part: COVER, zone: COVER_SLOT, requires: [S2]}
+  - {id: S4, part: FASTENER, zone: FASTENER_SLOT, requires: [S3]}
