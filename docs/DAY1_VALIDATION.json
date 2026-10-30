@@ -1,0 +1,28 @@
+{
+  "checkpoint_date_ist": "2026-10-30",
+  "authorization": "Submitter explicitly confirmed this is the Day 1 checkpoint and requested day1-final now",
+  "source_baseline_commit": "2ef83d46f570767274f03262e637409ee7acdf99",
+  "command": ".venv/Scripts/python.exe scripts/resume_physical_ai.py --verify",
+  "command_exit_code": 0,
+  "backend": {
+    "passed": 113,
+    "failed": 0,
+    "seconds": 67.27,
+    "warnings": ["Existing Starlette/httpx test-client deprecation warning"]
+  },
+  "frontend": {
+    "passed": 22,
+    "failed": 0,
+    "production_build": "PASS",
+    "build_seconds": 6.02,
+    "warnings": ["Existing minified chunk over 500 kB advisory"]
+  },
+  "new_cloud_calls": 0,
+  "new_cloud_resources": 0,
+  "new_browser_acceptance_run": false,
+  "new_physical_camera_trial": false,
+  "new_vision_benchmark": false,
+  "application_source_changed_by_checkpoint": false,
+  "historical_evaluation_results_changed": false,
+  "result": "PASS"
+}
