@@ -1,0 +1,84 @@
+{
+  "result": "PASS",
+  "commit": "e773bef24db4c8aefa8df6b7f2338a090f85ee65",
+  "desktop": [
+    {
+      "width": 1691,
+      "scrollWidth": 1691,
+      "clientWidth": 1691,
+      "nav": {
+        "left": 414.625,
+        "right": 848.6875,
+        "top": 43.09375,
+        "bottom": 66.890625
+      },
+      "logo": {
+        "left": 1141.53125,
+        "right": 1421.53125,
+        "top": -15,
+        "bottom": 125
+      },
+      "cta": {
+        "left": 1445.53125,
+        "right": 1614.90625,
+        "top": 31.796875,
+        "bottom": 78.1875
+      },
+      "mode": "3D"
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "nav": {
+        "left": 243.953125,
+        "right": 634.59375,
+        "top": 43.953125,
+        "bottom": 66.046875
+      },
+      "logo": {
+        "left": 789.03125,
+        "right": 1029.03125,
+        "top": -5,
+        "bottom": 115
+      },
+      "cta": {
+        "left": 1053.03125,
+        "right": 1222.40625,
+        "top": 31.796875,
+        "bottom": 78.1875
+      },
+      "mode": "3D"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "nav": {
+        "left": 139.25,
+        "right": 492.484375,
+        "top": 44.796875,
+        "bottom": 65.1875
+      },
+      "logo": {
+        "left": 579.546875,
+        "right": 784.546875,
+        "top": 3.75,
+        "bottom": 106.25
+      },
+      "cta": {
+        "left": 808.546875,
+        "right": 977.921875,
+        "top": 31.796875,
+        "bottom": 78.1875
+      },
+      "mode": "3D"
+    }
+  ],
+  "noWebgl": {
+    "webglAvailable": false,
+    "mode": "2D",
+    "controlsUsable": true,
+    "notice": "3D unavailable. ILLUSTRATIVE SCENE · NOT FACTORY FOOTAGE OR DETECTOR OUTPUT"
+  }
+}

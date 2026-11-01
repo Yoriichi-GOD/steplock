@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-02",
+  "reviewed_commit": "e773bef24db4c8aefa8df6b7f2338a090f85ee65",
+  "source": "Independent architecture-owner review; exact unedited copies from runtime/qa/phone-flow-review",
+  "files": [
+    {
+      "file": "review.json",
+      "bytes": 6002,
+      "sha256": "ab45cecd100f3939910505f73bf0a0da8ad4a6f1d1f4ddb56a6252b32ca367a6"
+    },
+    {
+      "file": "desktop-startup.json",
+      "bytes": 1771,
+      "sha256": "2e85240af21d9fb493b1ec9efd472d8269a0010134fb157877e84e118d2faceb"
+    },
+    {
+      "file": "startup-without-webgl.png",
+      "bytes": 155827,
+      "sha256": "119a2722cd6f65fbf1b6123e94c614bc64cc4788025759a97d9ce76edc241bf4",
+      "format": "PNG",
+      "raster_width": 390,
+      "raster_height": 844
+    },
+    {
+      "file": "desktop-native-1280.png",
+      "bytes": 974038,
+      "sha256": "188669dcb9b1435da845d34a713b8ed87202722887a390f50e00295887c11738",
+      "format": "PNG",
+      "raster_width": 1280,
+      "raster_height": 720
+    }
+  ]
+}

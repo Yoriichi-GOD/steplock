@@ -1,0 +1,294 @@
+{
+  "result": "PASS",
+  "commit": "e773bef24db4c8aefa8df6b7f2338a090f85ee65",
+  "phones": [
+    {
+      "width": 390,
+      "height": 844,
+      "reduced": false,
+      "geometry": [
+        {
+          "selector": "#factory",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#knowledge-gap",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#late-feedback",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#product",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        }
+      ],
+      "gaps": [
+        60,
+        104,
+        60,
+        60
+      ],
+      "afterStoryBottom": -99.734375,
+      "caption": {
+        "graphics": 0,
+        "font": "\"Instrument Serif\", serif",
+        "style": "italic"
+      }
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "reduced": false,
+      "geometry": [
+        {
+          "selector": "#factory",
+          "overflow": false,
+          "visual": {
+            "top": 370,
+            "bottom": 740
+          },
+          "bar": {
+            "top": 318,
+            "bottom": 370
+          },
+          "border": "0px",
+          "parts": {
+            "top": 674,
+            "bottom": 718
+          }
+        },
+        {
+          "selector": "#knowledge-gap",
+          "overflow": false,
+          "visual": {
+            "top": 370,
+            "bottom": 740
+          },
+          "bar": {
+            "top": 318,
+            "bottom": 370
+          },
+          "border": "0px",
+          "parts": {
+            "top": 674,
+            "bottom": 718
+          }
+        },
+        {
+          "selector": "#late-feedback",
+          "overflow": false,
+          "visual": {
+            "top": 370,
+            "bottom": 740
+          },
+          "bar": {
+            "top": 318,
+            "bottom": 370
+          },
+          "border": "0px",
+          "parts": {
+            "top": 674,
+            "bottom": 718
+          }
+        },
+        {
+          "selector": "#product",
+          "overflow": false,
+          "visual": {
+            "top": 370,
+            "bottom": 740
+          },
+          "bar": {
+            "top": 318,
+            "bottom": 370
+          },
+          "border": "0px",
+          "parts": {
+            "top": 674,
+            "bottom": 718
+          }
+        }
+      ],
+      "gaps": [
+        60,
+        104,
+        60,
+        60
+      ],
+      "afterStoryBottom": -100.375,
+      "caption": {
+        "graphics": 0,
+        "font": "\"Instrument Serif\", serif",
+        "style": "italic"
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "reduced": true,
+      "geometry": [
+        {
+          "selector": "#factory",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#knowledge-gap",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#late-feedback",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        },
+        {
+          "selector": "#product",
+          "overflow": false,
+          "visual": {
+            "top": 422,
+            "bottom": 844
+          },
+          "bar": {
+            "top": 370,
+            "bottom": 422
+          },
+          "border": "0px",
+          "parts": {
+            "top": 778,
+            "bottom": 822
+          }
+        }
+      ],
+      "gaps": [
+        60,
+        104,
+        60,
+        60
+      ],
+      "afterStoryBottom": -99.734375,
+      "caption": {
+        "graphics": 0,
+        "font": "\"Instrument Serif\", serif",
+        "style": "italic"
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Why STEPLOCK",
+      "id": "factory",
+      "hash": "#factory",
+      "top": 100
+    },
+    {
+      "label": "Enter the Studio",
+      "id": "prototype",
+      "hash": "#prototype",
+      "top": 100.328125
+    },
+    {
+      "label": "The Record",
+      "id": "how-it-works",
+      "hash": "#how-it-works",
+      "top": 99.578125
+    },
+    {
+      "label": "Get involved",
+      "id": "early-access",
+      "hash": "#early-access",
+      "top": 100.375
+    }
+  ],
+  "errors": []
+}
