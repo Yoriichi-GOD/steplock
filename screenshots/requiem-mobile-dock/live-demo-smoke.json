@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "population": "SYNTHETIC_FIXTURE",
+  "provider_calls": 0,
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "decision": "PASS",
+      "finding": "CHECKPOINT"
+    },
+    {
+      "scenario": "wrong_component",
+      "decision": "HOLD_FOR_REVIEW",
+      "finding": "WRONG_COMPONENT"
+    },
+    {
+      "scenario": "wrong_order",
+      "decision": "HOLD_FOR_REVIEW",
+      "finding": "ORDER_VIOLATION"
+    },
+    {
+      "scenario": "correction",
+      "decision": "PASS",
+      "finding": "CORRECTED"
+    }
+  ]
+}

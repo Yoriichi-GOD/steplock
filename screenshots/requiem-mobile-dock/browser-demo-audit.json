@@ -1,0 +1,8 @@
+{
+  "decision": "DETERMINISTIC FINDINGPASSAll required visible placements, order and current evidence satisfy this recipe. Advisory only.Baseline inspection uses local computer vision and procedure rules. No external AI call is required.",
+  "decisionTop": 1266.072998046875,
+  "imageFilter": "none",
+  "ledger": "EVIDENCE LEDGER / 10 EVENTSREPLAY COMPLETE",
+  "runtime": "Analyzed frames30Vision p9515.5 ms",
+  "reset": "DETERMINISTIC FINDING\nPENDING\n\nNo inspection has run. Select a prepared example.\n\nBaseline inspection uses local computer vision and procedure rules. No external AI call is required."
+}

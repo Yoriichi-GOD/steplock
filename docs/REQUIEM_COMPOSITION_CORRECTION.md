@@ -1,5 +1,7 @@
 # REQUIEM composition correction
 
+Follow-up: [Phone illustration dock and fixed local startup](REQUIEM_MOBILE_DOCK_AND_LOCAL_STARTUP.md) implements the user's later phone-layout request and replaces the temporary Windows preview launch setting with a launcher default.
+
 Implemented and browser-reviewed on 2026-11-01. Preview remains http://127.0.0.1:62401/; working generated-example demo: `/demo`. This follows the user's marked screenshots and supersedes the previous fragment placements and black-only closing composition.
 
 ## Finished changes

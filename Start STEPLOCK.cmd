@@ -6,5 +6,5 @@ set "STEPLOCK_SETUP="
 if exist ".venv\Scripts\python.exe" set "STEPLOCK_PYTHON=.venv\Scripts\python.exe"
 if not exist ".venv\Scripts\python.exe" set "STEPLOCK_SETUP=--setup"
 if not exist "frontend\dist\index.html" set "STEPLOCK_SETUP=--setup"
-"%STEPLOCK_PYTHON%" scripts\dev.py %STEPLOCK_SETUP% --open
+"%STEPLOCK_PYTHON%" scripts\dev.py %STEPLOCK_SETUP% --port 62401 --open
 if errorlevel 1 pause

@@ -2,6 +2,7 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
+import runpy
 import subprocess
 import sys
 import threading
@@ -31,9 +32,12 @@ def local_server(payload):
         worker.join(timeout=2)
 
 
-def launch(port):
-    return subprocess.run([sys.executable,str(ROOT/"scripts/dev.py"),"--inside-env","--port",str(port)],
-                          cwd=ROOT,capture_output=True,text=True,timeout=10,env={**os.environ,"HTTP_PROXY":"http://127.0.0.1:1"})
+def launch(port=None, env=None):
+    args=[sys.executable,str(ROOT/"scripts/dev.py"),"--inside-env"]
+    if port is not None:
+        args.extend(["--port",str(port)])
+    return subprocess.run(args,cwd=ROOT,capture_output=True,text=True,timeout=10,
+                          env={**os.environ,"HTTP_PROXY":"http://127.0.0.1:1",**(env or {})})
 
 
 def test_repeat_launch_reuses_recognized_server_without_proxy_or_new_port():
@@ -58,3 +62,45 @@ def test_repeat_launch_recognizes_restricted_public_health_without_private_field
         result=launch(port)
     assert result.returncode==0,result.stderr
     assert f"already running: http://127.0.0.1:{port}" in result.stdout
+
+
+def test_environment_port_override_reuses_the_requested_server():
+    with local_server({"status":"ok","advisory_only":True,"public_demo":True,"cv_version":"test"}) as port:
+        result=launch(env={"STEPLOCK_PORT":str(port)})
+    assert result.returncode==0,result.stderr
+    assert f"already running: http://127.0.0.1:{port}" in result.stdout
+
+
+def test_windows_default_runtime_is_local_app_data_not_the_checkout(tmp_path):
+    launcher=runpy.run_path(str(ROOT/"scripts/dev.py"))
+    local_data=tmp_path/"local-app-data"
+    runtime=launcher["runtime_directory"]({"LOCALAPPDATA":str(local_data)},"nt")
+    assert runtime==(local_data/"STEPLOCK"/"runtime").resolve()
+    assert not runtime.is_relative_to(ROOT)
+
+
+def test_explicit_runtime_override_is_preserved(tmp_path):
+    launcher=runpy.run_path(str(ROOT/"scripts/dev.py"))
+    selected=tmp_path/"retained-evidence"
+    for platform in ("nt","posix"):
+        assert launcher["runtime_directory"]({"STEPLOCK_RUNTIME":str(selected)},platform)==selected.resolve()
+    assert launcher["runtime_directory"]({},"posix")==ROOT/"runtime"
+
+
+def test_new_runtime_uses_post_creation_canonical_path(tmp_path,monkeypatch):
+    launcher=runpy.run_path(str(ROOT/"scripts/dev.py"))
+    requested=tmp_path/"new-app-data-runtime"
+    physical=tmp_path/"redirected-runtime"
+    physical.mkdir()
+    path_type=type(requested)
+    original_resolve=path_type.resolve
+
+    def redirected_resolve(path,*args,**kwargs):
+        if path==requested:
+            # Reproduce packaged Windows: the mapping appears after mkdir.
+            return physical if path.is_dir() else requested
+        return original_resolve(path,*args,**kwargs)
+
+    monkeypatch.setattr(path_type,"resolve",redirected_resolve)
+    assert launcher["prepare_runtime"](requested)==physical
+    assert requested.is_dir()

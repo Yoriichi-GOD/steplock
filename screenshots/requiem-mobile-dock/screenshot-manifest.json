@@ -1,0 +1,100 @@
+[
+  {
+    "file": "after-story-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 49228,
+    "sha256": "bde1cf04efb380c4efff104db6acdd1ec2689f6e1c561c881e9151212f1780cf"
+  },
+  {
+    "file": "demo-pass-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 29043,
+    "sha256": "2a7a602a3f6e416b67dbbdbd2f8a2a0024ce5bbe2ae0829cb6ec97b4511fea63"
+  },
+  {
+    "file": "desktop-1024.jpg",
+    "width": 1004,
+    "height": 753,
+    "bytes": 119608,
+    "sha256": "97a2cbd7fd6bdf50a98e618353d727cd0af35c862406776c85beaff09d531bdf"
+  },
+  {
+    "file": "desktop-1280.jpg",
+    "width": 1253,
+    "height": 705,
+    "bytes": 147084,
+    "sha256": "475616d27c30b0a90762639b164e94ed358d615c848f7f87688395ae8219cd24"
+  },
+  {
+    "file": "desktop-1691.jpg",
+    "width": 1676,
+    "height": 922,
+    "bytes": 217113,
+    "sha256": "8a1b33298d4889c9f6c561db319a52453683479465bd6784119e6fe93a704c83"
+  },
+  {
+    "file": "entrance-320.jpg",
+    "width": 305,
+    "height": 705,
+    "bytes": 31843,
+    "sha256": "6aa9f8af13341389e49580e11c5824fbf3668cd9c7454db253736205987b8e28"
+  },
+  {
+    "file": "entrance-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 45005,
+    "sha256": "0ebe981eaf235148801269d8785927f79f939c18c4717b7694e2ed12e2066d12"
+  },
+  {
+    "file": "exit-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 28644,
+    "sha256": "edd333f4060bd243f070a7970a25746453366547d88d0cbc3311b2fe1d3f036a"
+  },
+  {
+    "file": "knowledge-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 31952,
+    "sha256": "26c64bca00a6b8327d2cc1a15eb247202622de6cd72935d4622238310d6bba4e"
+  },
+  {
+    "file": "late-feedback-320.jpg",
+    "width": 305,
+    "height": 705,
+    "bytes": 28003,
+    "sha256": "132cf952460c84f09ea8fcccc22c12dea72dd0e438a1b6916cafdfd0e0f1dc5c"
+  },
+  {
+    "file": "late-feedback-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 35747,
+    "sha256": "cc146c7cebbc1c781a45bab780e98ac53ac96dbd03b2642e2747d4ebc62d082b"
+  },
+  {
+    "file": "product-3d-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 39434,
+    "sha256": "f76fae67df93dea7ef5be2971777fa18ea235ed013601490354d2ed05139048e"
+  },
+  {
+    "file": "reduced-motion-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 41172,
+    "sha256": "23aa8947b832d5ec29eebf0457b7304d7db65d98296e104a21d36f8e0bd952c9"
+  },
+  {
+    "file": "scrolling-390.jpg",
+    "width": 375,
+    "height": 812,
+    "bytes": 29991,
+    "sha256": "44c8c02e0bd9a5f78c0c4013594bd3ce5cef99c16afa2790a315428d00207ec7"
+  }
+]

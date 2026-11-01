@@ -164,12 +164,19 @@ cd steplock
 python scripts/dev.py --setup
 ```
 
-Open **http://127.0.0.1:62327/**. The launcher now uses this fixed address and
+Open **http://127.0.0.1:62401/**. The launcher uses this fixed address and
 reuses an existing STEPLOCK server on repeat launch. An unrelated app occupying
 the port produces a clear error; STEPLOCK never silently switches to a random
 address. No camera starts automatically. Subsequent offline launch:
 `python scripts/dev.py`. On Windows, double-click **Start STEPLOCK.cmd** to start
 the app and open its address. Keep its server terminal open while using the app.
+
+On Windows, launcher runtime data defaults to `%LOCALAPPDATA%\STEPLOCK\runtime`,
+outside synced checkouts. The launcher prints the selected directory. Existing
+repository runtime files remain untouched; set `STEPLOCK_RUNTIME` explicitly to
+use a different evidence directory. This avoids the verified Windows cleanup
+failure in the OneDrive checkout. The production backend's storage configuration
+is unchanged.
 
 Headless fallback with actual evidence saved locally:
 
@@ -181,7 +188,9 @@ Use `.venv/bin/python` on Linux/macOS (not tested here). An explicit `--port`
 override is available for isolated tests; `--port 0` deliberately requests a
 temporary test address. The launcher reads environment variables, not an automatic dotenv
 file; see `.env.example`. Built frontend and API share one origin. For separate
-Vite development, set `STEPLOCK_API_ORIGIN` to the printed backend URL and explicitly
+Vite development, the frontend also defaults to 62401 and refuses a busy port.
+Stop the combined server first, set `STEPLOCK_API_ORIGIN` to a separately started
+backend URL, and explicitly
 configure its actual browser origin in `STEPLOCK_ALLOWED_ORIGINS` before launching.
 
 ## Demo and physical setup

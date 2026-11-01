@@ -1,0 +1,125 @@
+[
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "height": 930,
+    "items": [
+      {
+        "right": 784.0208435058594,
+        "text": "Why STEPLOCKEnter the StudioThe RecordGet involved",
+        "x": 349.9375
+      },
+      {
+        "right": 1407.875,
+        "text": "",
+        "x": 1127.875
+      },
+      {
+        "right": 1600.5833435058594,
+        "text": "Try the prototype↗",
+        "x": 1431.875
+      }
+    ],
+    "links": [
+      {
+        "href": "/#factory",
+        "label": "Why STEPLOCK"
+      },
+      {
+        "href": "/#prototype",
+        "label": "Enter the Studio"
+      },
+      {
+        "href": "/#how-it-works",
+        "label": "The Record"
+      },
+      {
+        "href": "/#early-access",
+        "label": "Get involved"
+      }
+    ],
+    "overflow": 0,
+    "width": 1691
+  },
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "height": 720,
+    "items": [
+      {
+        "right": 585.6354370117188,
+        "text": "Why STEPLOCKEnter the StudioThe RecordGet involved",
+        "x": 195
+      },
+      {
+        "right": 1015.0521240234376,
+        "text": "",
+        "x": 775.0521240234375
+      },
+      {
+        "right": 1207.7604675292969,
+        "text": "Try the prototype↗",
+        "x": 1039.0521240234375
+      }
+    ],
+    "links": [
+      {
+        "href": "/#factory",
+        "label": "Why STEPLOCK"
+      },
+      {
+        "href": "/#prototype",
+        "label": "Enter the Studio"
+      },
+      {
+        "href": "/#how-it-works",
+        "label": "The Record"
+      },
+      {
+        "href": "/#early-access",
+        "label": "Get involved"
+      }
+    ],
+    "overflow": 0,
+    "width": 1280
+  },
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "height": 768,
+    "items": [
+      {
+        "right": 435.3020935058594,
+        "text": "Why STEPLOCKEnter the StudioThe RecordGet involved",
+        "x": 82.09375
+      },
+      {
+        "right": 770.5729370117188,
+        "text": "",
+        "x": 565.5729370117188
+      },
+      {
+        "right": 963.281280517578,
+        "text": "Try the prototype↗",
+        "x": 794.5729370117188
+      }
+    ],
+    "links": [
+      {
+        "href": "/#factory",
+        "label": "Why STEPLOCK"
+      },
+      {
+        "href": "/#prototype",
+        "label": "Enter the Studio"
+      },
+      {
+        "href": "/#how-it-works",
+        "label": "The Record"
+      },
+      {
+        "href": "/#early-access",
+        "label": "Get involved"
+      }
+    ],
+    "overflow": 0,
+    "width": 1024
+  }
+]

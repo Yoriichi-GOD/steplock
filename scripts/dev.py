@@ -11,7 +11,25 @@ from urllib.request import ProxyHandler, build_opener
 import webbrowser
 
 ROOT=Path(__file__).resolve().parents[1]
-DEFAULT_PORT=62327
+DEFAULT_PORT=62401
+
+
+def runtime_directory(environ=None, platform=None):
+    """Keep mutable Windows sessions outside synced checkouts; honor explicit storage."""
+    environ=os.environ if environ is None else environ
+    platform=os.name if platform is None else platform
+    if environ.get("STEPLOCK_RUNTIME"):
+        return Path(environ["STEPLOCK_RUNTIME"]).expanduser().resolve()
+    if platform=="nt":
+        base=Path(environ.get("LOCALAPPDATA") or Path.home()/"AppData"/"Local")
+        return (base/"STEPLOCK"/"runtime").resolve()
+    return ROOT/"runtime"
+
+
+def prepare_runtime(directory):
+    """Resolve after creation because Windows may redirect new AppData folders."""
+    directory.mkdir(parents=True,exist_ok=True)
+    return directory.resolve()
 
 
 def existing_studio(url):
@@ -34,6 +52,8 @@ def main():
     args=parser.parse_args()
     if args.host not in {"127.0.0.1","localhost"}: parser.error("This demonstration launcher binds only to loopback")
     if not 0<=args.port<=65535: parser.error("Port must be 0 (auto) or 1–65535")
+    runtime=runtime_directory()
+    os.environ["STEPLOCK_RUNTIME"]=str(runtime)
     os.chdir(ROOT)
     executable=ROOT/".venv"/("Scripts/python.exe" if os.name=="nt" else "bin/python")
     if not executable.exists():
@@ -65,7 +85,11 @@ def main():
             parser.exit(1,f"Cannot start STEPLOCK at {url}: {exc}\nThe address stays fixed; no random replacement port was selected. Close the conflicting app, then launch again.\n")
         listener.listen(128)
         actual=listener.getsockname()[1]
-        print(f"\nSTEPLOCK Studio: http://127.0.0.1:{actual}\nAPI health: http://127.0.0.1:{actual}/api/health\nLoopback only. No camera starts automatically. Ctrl+C stops this server.\n",flush=True)
+        # Packaged Windows apps can redirect a newly created AppData directory.
+        # Publish its physical path only after creation, before importing the API.
+        runtime=prepare_runtime(runtime)
+        os.environ["STEPLOCK_RUNTIME"]=str(runtime)
+        print(f"\nSTEPLOCK Studio: http://127.0.0.1:{actual}\nAPI health: http://127.0.0.1:{actual}/api/health\nRuntime data: {runtime}\nLoopback only. No camera starts automatically. Ctrl+C stops this server.\n",flush=True)
         sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/"backend"))
         import uvicorn
         from backend.app import app

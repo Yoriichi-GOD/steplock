@@ -1,0 +1,13 @@
+{
+  "port": 62401,
+  "runtime": "C:\\Users\\nrgen\\AppData\\Local\\STEPLOCK\\runtime",
+  "port_override": null,
+  "runtime_override": null,
+  "default_launch_succeeded": true,
+  "repeat_launch_reused_server": true,
+  "vite_dev_occupied_port_exit": 1,
+  "vite_preview_occupied_port_exit": 1,
+  "random_port_fallback": false,
+  "expired_orphan_removed": false,
+  "cleanup_seconds": 12.03
+}

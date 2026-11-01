@@ -1,0 +1,17 @@
+{
+  "port": 62401,
+  "logical_runtime": "C:\\Users\\nrgen\\AppData\\Local\\STEPLOCK\\runtime",
+  "canonical_runtime": "C:\\Users\\nrgen\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\STEPLOCK\\runtime",
+  "port_override": null,
+  "runtime_override": null,
+  "directory_created_before_canonicalization": true,
+  "default_launch_succeeded": true,
+  "repeat_launch_reused_server": true,
+  "vite_dev_occupied_port_exit": 1,
+  "vite_preview_occupied_port_exit": 1,
+  "random_port_fallback": false,
+  "four_scenario_smoke": "PASS, including all DELETE resets",
+  "expired_orphan_removed": true,
+  "cleanup_seconds": 4.21,
+  "old_failed_probe_now_removed": true
+}
