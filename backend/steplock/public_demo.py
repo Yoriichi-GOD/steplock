@@ -13,7 +13,7 @@ import threading
 import time
 
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import Response, JSONResponse
 from pydantic import BaseModel, ConfigDict
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
@@ -288,23 +288,28 @@ class PublicDemo:
 
         @router.get("/api/public/demo/sessions/{sid}")
         def snapshot(sid: str, request: Request):
-            return self.snapshot(self.get(sid, request))
+            with self.lock:
+                return self.snapshot(self.get(sid, request))
 
         @router.delete("/api/public/demo/sessions/{sid}")
         def remove(sid: str, request: Request):
-            self.get(sid, request)
             with self.lock:
+                self.get(sid, request)
                 self.remove(sid)
             return {"removed": True}
 
         @router.get("/api/public/demo/sessions/{sid}/frames/{frame_id}")
         def frame(sid: str, frame_id: str, request: Request, annotated: bool = True):
-            session = self.get(sid, request)
-            with session.lock:
-                try:
-                    path = session.store.frame_path(frame_id, annotated) if session.store else None
-                except KeyError:
-                    path = None
-                if path is None:
-                    raise HTTPException(404, "Evidence frame unavailable")
-                return FileResponse(path, headers={"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"})
+            # Copy one bounded evidence frame while cleanup is excluded. A deferred
+            # FileResponse could otherwise open a file after its TTL cleanup.
+            with self.lock:
+                session = self.get(sid, request)
+                with session.lock:
+                    try:
+                        path = session.store.frame_path(frame_id, annotated) if session.store else None
+                        content = path.read_bytes() if path else None
+                    except (KeyError, FileNotFoundError):
+                        content = None
+                    if content is None:
+                        raise HTTPException(404, "Evidence frame unavailable")
+                    return Response(content, media_type="image/jpeg" if annotated else "image/png", headers={"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"})

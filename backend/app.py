@@ -13,7 +13,6 @@ from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from starlette.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel, ConfigDict, Field
 from steplock.config import ROOT, RUNTIME, MAX_UPLOAD, MAX_SECONDS
 from steplock.demo_recording import PINNED_ID, RECORDING_PATH, pinned_recording
@@ -127,6 +126,9 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         response.headers["Referrer-Policy"]="no-referrer"
         response.headers["Permissions-Policy"]="camera=(), microphone=()" if public_mode else "microphone=()"
         response.headers["X-Frame-Options"]="DENY"
+        if public_mode:
+            response.headers["Content-Security-Policy"]="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:"
+            if request.url.scheme=="https": response.headers["Strict-Transport-Security"]="max-age=86400"
         if request.url.path.startswith(("/api/public/", "/api/owner/")): response.headers["Cache-Control"]="no-store"
         if request.url.path.startswith("/api/sessions"): response.headers["Cache-Control"]="no-store"
         return response

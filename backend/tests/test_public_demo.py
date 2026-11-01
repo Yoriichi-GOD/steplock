@@ -1,4 +1,5 @@
 import json
+import os
 import time
 import pytest
 from fastapi.testclient import TestClient
@@ -75,6 +76,7 @@ def test_real_public_replays_and_retained_correction(public):
         for annotated in ("true", "false"):
             response = public.get(f"/api/public/demo/sessions/{sid}/frames/{frame}?annotated={annotated}", headers=headers)
             assert response.status_code == 200 and len(response.content) > 100
+            assert response.headers["content-type"] == ("image/jpeg" if annotated == "true" else "image/png")
             assert response.headers["cache-control"] == "no-store"
         directory = public.app.state.public_demo.manager.sessions[sid].directory
         assert public.delete(f"/api/public/demo/sessions/{sid}", headers=headers).status_code == 200
@@ -111,3 +113,37 @@ def test_missing_contact_is_honest_and_tokens_do_not_appear_in_config(public, mo
     response = public.get("/api/public/config")
     assert response.json()["contact_email"] is None
     assert "owner-key-for-tests" not in response.text
+
+
+def test_health_target_host_exception_is_narrow_and_tls_cookie_is_secure(public):
+    assert public.get("/api/health", headers={"Host": "10.20.30.40:8000"}).status_code == 200
+    assert public.post("/api/health", headers={"Host": "10.20.30.40:8000"}).status_code == 400
+    assert public.get("/api/public/config", headers={"Host": "foreign.example"}).status_code == 400
+    with TestClient(public.app, base_url="https://localhost") as secure:
+        response = secure.post("/api/owner/login", json={"key": "owner-key-for-tests-" * 3})
+        cookie = response.headers["set-cookie"].lower()
+        assert "secure" in cookie and "httponly" in cookie and "samesite=strict" in cookie
+        assert response.headers["strict-transport-security"] == "max-age=86400"
+        assert "frame-ancestors 'none'" in response.headers["content-security-policy"]
+        assert secure.get("/api/recipes").status_code == 200
+
+
+def test_retention_capacity_and_restart_orphan_cleanup(public):
+    demo = public.app.state.public_demo
+    demo.maximum_sessions = 1
+    sid, headers = start(public)
+    state = finish(public, sid, headers)
+    assert public.post("/api/public/demo/sessions", json={"scenario_id": "normal"}).status_code == 429
+    frame = state["latest_frame"]["frame_id"]
+    demo.created[sid] -= demo.ttl_seconds + 1
+    assert public.get(f"/api/public/demo/sessions/{sid}/frames/{frame}", headers=headers).status_code == 404
+    assert not (demo.root / "sessions" / sid).exists()
+    orphan = demo.root / "sessions" / ("a" * 32)
+    orphan.mkdir()
+    (orphan / "evidence.txt").write_text("expired public evidence")
+    os.utime(orphan, (time.time() - 700, time.time() - 700))
+    unrelated = demo.root / "sessions" / "keep-me"
+    unrelated.mkdir()
+    demo.cleanup()
+    assert not orphan.exists()
+    assert unrelated.is_dir()
