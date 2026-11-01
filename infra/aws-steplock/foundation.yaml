@@ -1,0 +1,189 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Dedicated STEPLOCK trial network, registry and verified image builder. No REFLEX resources are referenced.
+Parameters:
+  SourceCommit:
+    Type: String
+    AllowedPattern: '[a-f0-9]{40}'
+Resources:
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.241.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags: [{Key: Project, Value: STEPLOCK}, {Key: Name, Value: !Sub '${AWS::StackName}-vpc'}]
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  GatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref Vpc
+      InternetGatewayId: !Ref InternetGateway
+  SubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref Vpc
+      AvailabilityZone: !Select [0, !GetAZs '']
+      CidrBlock: 10.241.10.0/24
+      MapPublicIpOnLaunch: false
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  SubnetB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref Vpc
+      AvailabilityZone: !Select [1, !GetAZs '']
+      CidrBlock: 10.241.20.0/24
+      MapPublicIpOnLaunch: false
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref Vpc
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  InternetRoute:
+    Type: AWS::EC2::Route
+    DependsOn: GatewayAttachment
+    Properties:
+      RouteTableId: !Ref RouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+  RouteA:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties: {SubnetId: !Ref SubnetA, RouteTableId: !Ref RouteTable}
+  RouteB:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties: {SubnetId: !Ref SubnetB, RouteTableId: !Ref RouteTable}
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Ref AWS::StackName
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  ImageRepository:
+    Type: AWS::ECR::Repository
+    DeletionPolicy: Delete
+    UpdateReplacePolicy: Retain
+    Properties:
+      RepositoryName: !Sub '${AWS::StackName}/inspection'
+      ImageTagMutability: IMMUTABLE
+      ImageScanningConfiguration: {ScanOnPush: true}
+      EncryptionConfiguration: {EncryptionType: AES256}
+      EmptyOnDelete: true
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  AppLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/ecs/${AWS::StackName}'
+      RetentionInDays: 7
+  BuildLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/codebuild/${AWS::StackName}'
+      RetentionInDays: 7
+  ExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${AWS::StackName}-task-execution'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Service: ecs-tasks.amazonaws.com}
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals: {aws:SourceAccount: !Ref AWS::AccountId}
+              ArnLike: {aws:SourceArn: !Sub 'arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:*'}
+      ManagedPolicyArns: [!Sub 'arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy']
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  InfrastructureRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${AWS::StackName}-express-infrastructure'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Service: ecs.amazonaws.com}
+            Action: sts:AssumeRole
+      ManagedPolicyArns: [!Sub 'arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonECSInfrastructureRoleforExpressGatewayServices']
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  BuildRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${AWS::StackName}-image-builder'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: {Service: codebuild.amazonaws.com}
+            Action: sts:AssumeRole
+            Condition:
+              StringEquals: {aws:SourceAccount: !Ref AWS::AccountId}
+              ArnEquals: {aws:SourceArn: !Sub 'arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:project/${AWS::StackName}-image-builder'}
+      Policies:
+        - PolicyName: PublishOnlySteplockImage
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: ecr:GetAuthorizationToken
+                Resource: '*'
+              - Effect: Allow
+                Action: [ecr:BatchCheckLayerAvailability, ecr:GetDownloadUrlForLayer, ecr:BatchGetImage, ecr:PutImage, ecr:InitiateLayerUpload, ecr:UploadLayerPart, ecr:CompleteLayerUpload]
+                Resource: !GetAtt ImageRepository.Arn
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !GetAtt BuildLogs.Arn
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  ImageBuilder:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Name: !Sub '${AWS::StackName}-image-builder'
+      ServiceRole: !GetAtt BuildRole.Arn
+      TimeoutInMinutes: 20
+      QueuedTimeoutInMinutes: 10
+      ConcurrentBuildLimit: 1
+      Artifacts: {Type: NO_ARTIFACTS}
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_MEDIUM
+        Image: aws/codebuild/standard:7.0
+        PrivilegedMode: true
+      LogsConfig:
+        CloudWatchLogs: {Status: ENABLED, GroupName: !Ref BuildLogs}
+      Source:
+        Type: NO_SOURCE
+        BuildSpec: !Sub |
+          version: 0.2
+          phases:
+            pre_build:
+              commands:
+                - set -eu
+                - git clone --filter=blob:none --no-checkout https://github.com/Yoriichi-GOD/steplock.git source
+                - cd source
+                - git checkout --detach ${SourceCommit}
+                - test "$(git rev-parse HEAD)" = '${SourceCommit}'
+                - export STEPLOCK_IMAGE_URI='${ImageRepository.RepositoryUri}:${SourceCommit}'
+                - aws ecr get-login-password --region ${AWS::Region} | docker login --username AWS --password-stdin ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com
+            build:
+              commands:
+                - docker build --pull --label org.opencontainers.image.revision=${SourceCommit} -t "$STEPLOCK_IMAGE_URI" .
+                - docker run -d --name steplock-image-check -p 127.0.0.1:8000:8000 "$STEPLOCK_IMAGE_URI"
+                - python3 scripts/smoke_public_demo.py
+                - docker rm -f steplock-image-check
+            post_build:
+              commands:
+                - test "$CODEBUILD_BUILD_SUCCEEDING" = 1
+                - docker push "$STEPLOCK_IMAGE_URI"
+      Tags: [{Key: Project, Value: STEPLOCK}]
+Outputs:
+  ClusterArn: {Value: !GetAtt Cluster.Arn}
+  SubnetA: {Value: !Ref SubnetA}
+  SubnetB: {Value: !Ref SubnetB}
+  ImageRepositoryName: {Value: !Ref ImageRepository}
+  ImageRepositoryUri: {Value: !GetAtt ImageRepository.RepositoryUri}
+  ExecutionRoleArn: {Value: !GetAtt ExecutionRole.Arn}
+  InfrastructureRoleArn: {Value: !GetAtt InfrastructureRole.Arn}
+  ImageBuildProject: {Value: !Ref ImageBuilder}
+  LogGroupName: {Value: !Ref AppLogs}

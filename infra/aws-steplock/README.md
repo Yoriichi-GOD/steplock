@@ -1,5 +1,8 @@
 # Independent STEPLOCK deployment preparation
 
+The section below preserves the 1 November preparation snapshot. Actual deployment
+work authorized on 2 November is recorded in [the deployment receipt](../../docs/AWS_DEPLOYMENT_20261102.md).
+
 **NOT_DEPLOYED.** Prepared 2026-11-01 for a short, separately approved AWS trial.
 No AWS account API, resource creation, existing-resource update, image publication,
 domain change or paid inference was performed in this pre-launch implementation.

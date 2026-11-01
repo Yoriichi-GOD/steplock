@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Disposable empty log group used to verify the STEPLOCK scheduled deletion path.
+Resources:
+  Probe:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Delete
+    Properties:
+      LogGroupName: !Sub '/aws/steplock/${AWS::StackName}'
+      RetentionInDays: 1

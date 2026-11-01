@@ -1,0 +1,109 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: STEPLOCK single-task public demo, initially restricted behind WAF until hosted acceptance passes.
+Parameters:
+  ClusterArn: {Type: String}
+  SubnetA: {Type: 'AWS::EC2::Subnet::Id'}
+  SubnetB: {Type: 'AWS::EC2::Subnet::Id'}
+  ExecutionRoleArn: {Type: String}
+  InfrastructureRoleArn: {Type: String}
+  ImageUri:
+    Type: String
+    AllowedPattern: '.+@sha256:[a-f0-9]{64}'
+  LogGroupName: {Type: String}
+  TrustedHosts:
+    Type: String
+    Default: 127.0.0.1,localhost
+    AllowedPattern: '[a-zA-Z0-9.,-]+'
+  TestIpv4:
+    Type: String
+    AllowedPattern: '[0-9.]+/32'
+  Access:
+    Type: String
+    Default: restricted
+    AllowedValues: [restricted, public]
+Conditions:
+  PublicAccess: !Equals [!Ref Access, public]
+Resources:
+  Service:
+    Type: AWS::ECS::ExpressGatewayService
+    Properties:
+      ServiceName: steplock-prelaunch
+      Cluster: !Ref ClusterArn
+      ExecutionRoleArn: !Ref ExecutionRoleArn
+      InfrastructureRoleArn: !Ref InfrastructureRoleArn
+      Cpu: '1024'
+      Memory: '2048'
+      HealthCheckPath: /api/health
+      NetworkConfiguration:
+        Subnets: [!Ref SubnetA, !Ref SubnetB]
+      PrimaryContainer:
+        Image: !Ref ImageUri
+        ContainerPort: 8000
+        AwsLogsConfiguration: {LogGroup: !Ref LogGroupName, LogStreamPrefix: inspection}
+        Environment:
+          - {Name: STEPLOCK_PUBLIC_MODE, Value: '1'}
+          - {Name: STEPLOCK_TRUSTED_HOSTS, Value: !Ref TrustedHosts}
+          - {Name: STEPLOCK_PUBLIC_CONTACT, Value: ''}
+          - {Name: ENABLE_NEBIUS_AGENT, Value: '0'}
+          - {Name: FORWARDED_ALLOW_IPS, Value: '10.241.10.0/24,10.241.20.0/24'}
+      ScalingTarget: {MinTaskCount: 1, MaxTaskCount: 1}
+      Tags: [{Key: Project, Value: STEPLOCK}, {Key: Environment, Value: prelaunch}]
+  TestIps:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Scope: REGIONAL
+      IPAddressVersion: IPV4
+      Addresses: [!Ref TestIpv4]
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  WebAcl:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      Scope: REGIONAL
+      DefaultAction: !If [PublicAccess, {Allow: {}}, {Block: {}}]
+      VisibilityConfig: {SampledRequestsEnabled: false, CloudWatchMetricsEnabled: true, MetricName: steplock-prelaunch}
+      Rules:
+        - Name: inspection-start-rate
+          Priority: 0
+          Action: {Block: {}}
+          Statement:
+            RateBasedStatement:
+              Limit: 20
+              EvaluationWindowSec: 300
+              AggregateKeyType: IP
+              ScopeDownStatement:
+                AndStatement:
+                  Statements:
+                    - ByteMatchStatement:
+                        SearchString: /api/public/demo/sessions
+                        FieldToMatch: {UriPath: {}}
+                        TextTransformations: [{Priority: 0, Type: NONE}]
+                        PositionalConstraint: EXACTLY
+                    - ByteMatchStatement:
+                        SearchString: POST
+                        FieldToMatch: {Method: {}}
+                        TextTransformations: [{Priority: 0, Type: NONE}]
+                        PositionalConstraint: EXACTLY
+          VisibilityConfig: {SampledRequestsEnabled: false, CloudWatchMetricsEnabled: true, MetricName: steplock-inspection-start-rate}
+        - Name: all-requests-rate
+          Priority: 1
+          Action: {Block: {}}
+          Statement:
+            RateBasedStatement: {Limit: 2000, EvaluationWindowSec: 300, AggregateKeyType: IP}
+          VisibilityConfig: {SampledRequestsEnabled: false, CloudWatchMetricsEnabled: true, MetricName: steplock-request-rate}
+        - Name: approved-test-ip
+          Priority: 10
+          Action: {Allow: {}}
+          Statement: {IPSetReferenceStatement: {Arn: !GetAtt TestIps.Arn}}
+          VisibilityConfig: {SampledRequestsEnabled: false, CloudWatchMetricsEnabled: true, MetricName: steplock-test-access}
+      Tags: [{Key: Project, Value: STEPLOCK}]
+  WafAssociation:
+    Type: AWS::WAFv2::WebACLAssociation
+    Properties:
+      ResourceArn: !GetAtt Service.ECSManagedResourceArns.IngressPath.LoadBalancerArn
+      WebACLArn: !GetAtt WebAcl.Arn
+Outputs:
+  Endpoint: {Value: !GetAtt Service.Endpoint}
+  ServiceArn: {Value: !GetAtt Service.ServiceArn}
+  LoadBalancerArn: {Value: !GetAtt Service.ECSManagedResourceArns.IngressPath.LoadBalancerArn}
+  WebAclArn: {Value: !GetAtt WebAcl.Arn}
+  TestIpsArn: {Value: !GetAtt TestIps.Arn}
