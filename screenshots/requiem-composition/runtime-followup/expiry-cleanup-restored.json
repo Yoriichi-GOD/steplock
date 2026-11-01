@@ -1,0 +1,8 @@
+{
+  "runtime_root": "C:\\Users\\nrgen\\AppData\\Local\\Temp\\steplock-public-preview-62401",
+  "probe": "new disposable orphan aged beyond 600-second TTL",
+  "orphan_path": "C:\\Users\\nrgen\\AppData\\Local\\Temp\\steplock-public-preview-62401\\public_demo\\sessions\\0b3aefc0a118db524c79003bb3721b7d",
+  "removed_by_running_server": true,
+  "observed_seconds": 4.41,
+  "old_onedrive_runtime_preserved": true
+}

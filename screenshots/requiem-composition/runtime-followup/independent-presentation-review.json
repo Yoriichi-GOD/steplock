@@ -1,0 +1,113 @@
+{
+  "result": "PASS",
+  "commit": "2dd421ba1af6b3e0f436cb26d8c448d0cead350b",
+  "scope": "Presentation and normal-motion traveler only",
+  "checks": [
+    {
+      "width": 1691,
+      "overflow": false,
+      "nav": "rgba(0, 0, 0, 0)",
+      "logoBeforeCTA": true,
+      "logoLeft": 1141.53125,
+      "removedFragments": 0,
+      "divider": 1320,
+      "roadmapArt": 430,
+      "stations": [
+        2741.75,
+        2829.25,
+        2916.75
+      ],
+      "phoneBacking": "rgba(0, 0, 0, 0)",
+      "scenery": true
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "nav": "rgba(0, 0, 0, 0)",
+      "logoBeforeCTA": true,
+      "logoLeft": 789.03125,
+      "removedFragments": 0,
+      "divider": 1071.625,
+      "roadmapArt": 430,
+      "stations": [
+        2712.65625,
+        2800.15625,
+        2887.65625
+      ],
+      "phoneBacking": "rgba(0, 0, 0, 0)",
+      "scenery": true
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "nav": "rgba(0, 0, 0, 0)",
+      "logoBeforeCTA": true,
+      "logoLeft": 579.546875,
+      "removedFragments": 0,
+      "divider": 857.28125,
+      "roadmapArt": 298.1875,
+      "stations": [
+        2700.875,
+        2788.375,
+        2875.875
+      ],
+      "phoneBacking": "rgba(0, 0, 0, 0)",
+      "scenery": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "nav": "rgba(0, 0, 0, 0)",
+      "logoBeforeCTA": true,
+      "logoLeft": 60.796875,
+      "removedFragments": 0,
+      "divider": 343.21875,
+      "roadmapArt": 102.953125,
+      "stations": [
+        2715.171875,
+        2792.671875,
+        2870.171875
+      ],
+      "phoneBacking": "rgb(7, 7, 7)",
+      "scenery": true
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "nav": "rgba(0, 0, 0, 0)",
+      "logoBeforeCTA": true,
+      "logoLeft": 27,
+      "removedFragments": 0,
+      "divider": 281.625,
+      "roadmapArt": 84.484375,
+      "stations": [
+        2782.9375,
+        2860.4375,
+        2937.9375
+      ],
+      "phoneBacking": "rgb(7, 7, 7)",
+      "scenery": true
+    }
+  ],
+  "traveler": [
+    {
+      "target": 0,
+      "fraction": 5.500000417455072e-7,
+      "xError": 0,
+      "path": "M20 20V220"
+    },
+    {
+      "target": 0.5,
+      "fraction": 0.499487762451172,
+      "xError": 0,
+      "path": "M20 20V220"
+    },
+    {
+      "target": 1,
+      "fraction": 0.9825646972656249,
+      "xError": 0,
+      "path": "M20 20V220"
+    }
+  ],
+  "errors": []
+}

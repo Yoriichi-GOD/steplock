@@ -1,0 +1,19 @@
+{
+  "status": "PENDING",
+  "error": [
+    "Inspection connection unavailable. Internal Server ErrorReload demo ↗"
+  ],
+  "runtime": [
+    "Analyzed frames0Vision p95Awaiting run"
+  ],
+  "evidence": [
+    "EVIDENCE LEDGER / 0 EVENTSAWAITING INSPECTION"
+  ],
+  "responses": [
+    {
+      "path": "/api/public/demo/sessions",
+      "status": 500,
+      "body": "Internal Server Error"
+    }
+  ]
+}

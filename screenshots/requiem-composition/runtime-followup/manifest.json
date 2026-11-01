@@ -1,0 +1,27 @@
+[
+  {
+    "file": "before-runtime-error.json",
+    "bytes": 395,
+    "sha256": "4d73c6c27a7cf2534a7de40a1801fc1c6b7e8ccbc924d0c2a1eb24b5eff9843a"
+  },
+  {
+    "file": "expiry-cleanup-restored.json",
+    "bytes": 419,
+    "sha256": "5d423ee37a3c7c6738b98a84cc785a91c1d9cc7cc9da48606170cb0639379658"
+  },
+  {
+    "file": "independent-presentation-review.json",
+    "bytes": 2442,
+    "sha256": "05b1fd0ab32f0b18f87c811e720ead6a48f27e5d204cddf3d7a00731e3368c76"
+  },
+  {
+    "file": "restored-demo-pass.png",
+    "bytes": 474913,
+    "sha256": "9b5abcc6b94b5929ac1352ddbd2e4838e9562638e90cd1bc81d74c0461d7b3c5"
+  },
+  {
+    "file": "restored-preview.json",
+    "bytes": 453,
+    "sha256": "932b25b93f3a5b31ef5697e0f4b26971d43c26074bf2dca21edfa9b47389f9c0"
+  }
+]

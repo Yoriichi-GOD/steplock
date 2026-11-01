@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "commit": "2dd421ba1af6b3e0f436cb26d8c448d0cead350b",
+  "initial": "PENDING",
+  "normal": "PASS",
+  "reset": "PENDING",
+  "runtime": "Analyzed frames\n30\nVision p95\n17.0 ms",
+  "ledger": "EVIDENCE LEDGER / 10 EVENTS\nREPLAY COMPLETE",
+  "evidence": {
+    "filter": "none",
+    "opacity": "1"
+  },
+  "failures": [],
+  "errors": [],
+  "fix": "Preview uses existing STEPLOCK_RUNTIME setting outside OneDrive; no source changes."
+}
