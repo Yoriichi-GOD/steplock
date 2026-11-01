@@ -1,0 +1,97 @@
+{
+  "retrieved_at": "2026-11-01T10:02:54.501017+00:00",
+  "region": "ap-south-1",
+  "currency": "USD",
+  "rates": [
+    {
+      "service": "AmazonECS",
+      "usage": "APS3-Fargate-vCPU-Hours:perCPU",
+      "operation": "",
+      "unit": "hours",
+      "price_per_unit": "0.0425600000",
+      "description": "AWS Fargate - vCPU  - Asia Pacific (Mumbai)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/ap-south-1/index.json"
+    },
+    {
+      "service": "AmazonECS",
+      "usage": "APS3-Fargate-GB-Hours",
+      "operation": "",
+      "unit": "hours",
+      "price_per_unit": "0.0046550000",
+      "description": "AWS Fargate - Memory  - Asia Pacific (Mumbai)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/ap-south-1/index.json"
+    },
+    {
+      "service": "AWSELB",
+      "usage": "APS3-LoadBalancerUsage",
+      "operation": "LoadBalancing:Application",
+      "unit": "Hrs",
+      "price_per_unit": "0.0239000000",
+      "description": "$0.0239 per Application LoadBalancer-hour (or partial hour)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-south-1/index.json"
+    },
+    {
+      "service": "AWSELB",
+      "usage": "APS3-TS-LoadBalancerUsage",
+      "operation": "LoadBalancing:Application",
+      "unit": "Hrs",
+      "price_per_unit": "0.0053000000",
+      "description": "$0.0053 per associated Application load balancer Trust Store unit-hour ",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-south-1/index.json"
+    },
+    {
+      "service": "AWSELB",
+      "usage": "APS3-Outposts-LoadBalancerUsage",
+      "operation": "LoadBalancing:Application",
+      "unit": "Hrs",
+      "price_per_unit": "0.0239000000",
+      "description": "$0.0239 per Hrs for Outposts-LoadBalancerUsage:LoadBalancing:Application in Asia Pacific (Mumbai)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-south-1/index.json"
+    },
+    {
+      "service": "AWSELB",
+      "usage": "APS3-LCUUsage",
+      "operation": "LoadBalancing:Application",
+      "unit": "LCU-Hrs",
+      "price_per_unit": "0.0080000000",
+      "description": "$0.008 per used Application load balancer capacity unit-hour (or partial hour)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-south-1/index.json"
+    }
+  ],
+  "errors": [],
+  "estimate": {
+    "configuration": "1 Linux x86 vCPU / 2 GB, one ALB, assumed 3 public IPv4 addresses, single task",
+    "public_ipv4_hourly_each_usd": "0.005",
+    "public_ipv4_source": "https://aws.amazon.com/vpc/pricing/",
+    "estimated_fixed_hourly_usd": "0.0907700000",
+    "fixed_subtotals_usd": {
+      "24h": "2.18",
+      "48h": "4.36",
+      "168h": "15.25",
+      "730h": "66.26"
+    },
+    "excluded": "ALB capacity units, WAF, requests, ECR, builds, logs, secrets, data transfer, tax, domain and Nebius. No credits assumed. Actual resource counts/bills unverified."
+  },
+  "planning_allowance": {
+    "not_a_quote_or_spend_cap": true,
+    "24h_usd_range": [
+      5,
+      10
+    ],
+    "48h_usd_range": [
+      10,
+      20
+    ],
+    "assumptions": "Small invite-only trial, one task and ALB, no NAT Gateway, no paid model calls. Includes planning headroom for WAF, modest logs, image storage and data. Traffic and rollout overlap can exceed this allowance. User must approve actual resources and expiry; no credits assumed."
+  },
+  "waf_reference": {
+    "source": "https://aws.amazon.com/waf/pricing/",
+    "published_example_usd": {
+      "web_acl_per_month": 5,
+      "rule_per_month": 1,
+      "per_million_requests": 0.6
+    },
+    "configuration_rules": 3,
+    "notice": "Published pricing example, not an account-specific Mumbai bill. Monthly ACL/rule fees are prorated hourly; verify regional calculator before approval."
+  }
+}

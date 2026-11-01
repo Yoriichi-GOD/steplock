@@ -1,4 +1,6 @@
 import json
+import hashlib
+import hmac
 import os
 import time
 import pytest
@@ -102,6 +104,9 @@ def test_owner_login_and_expiry(public):
     assert public.get("/api/public/config").json()["owner_authenticated"] is True
     public.post("/api/owner/logout")
     assert public.get("/api/recipes").status_code == 403
+    expired = str(int(time.time() - 1))
+    signature = hmac.new(("owner-key-for-tests-" * 3).encode(), expired.encode(), hashlib.sha256).hexdigest()
+    assert public.get("/api/recipes", headers={"Cookie": f"steplock_owner={expired}.{signature}"}).status_code == 403
     sid, headers = start(public)
     demo = public.app.state.public_demo
     demo.created[sid] -= demo.ttl_seconds + 1

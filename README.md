@@ -25,6 +25,11 @@ Public mode enforces API restrictions server-side and disables anonymous camera,
 upload, recipe and cloud-model operations. [Product architecture](docs/PRELAUNCH_PRODUCT.md)
 · [public-demo boundary](docs/PUBLIC_DEMO.md). This branch is not a deployed AWS service.
 
+[Open the verified pre-launch captures](screenshots/prelaunch/desktop-hero.png) ·
+[verification receipt](docs/PRELAUNCH_TEST_RECEIPT.md) ·
+[hosting, costs and domain setup](docs/DEPLOYMENT_READINESS.md).
+For the preserved full workbench after local startup, open `/app`.
+
 **NVIDIA × Nebius extension:** an optional Nemotron evidence agent reads the
 retained recipe, event, frame metadata and correction links, then proposes
 operator guidance through real Nebius Token Factory calls. STEPLOCK keeps sole

@@ -19,7 +19,7 @@ def existing_studio(url):
     try:
         with build_opener(ProxyHandler({})).open(f"{url}/api/health",timeout=2) as response:
             data=json.load(response)
-        return isinstance(data,dict) and data.get("status")=="ok" and data.get("advisory_only") is True and "aruco_available" in data and "cv_version" in data
+        return isinstance(data,dict) and data.get("status")=="ok" and data.get("advisory_only") is True and ("aruco_available" in data or data.get("public_demo") is True) and "cv_version" in data
     except (OSError,ValueError):
         return False
 

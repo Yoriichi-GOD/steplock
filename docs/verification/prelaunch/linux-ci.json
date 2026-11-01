@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-01T10:12:08Z",
+  "result": "PASS",
+  "implementation_commit": "f2f16a7b5962db1d92281e74ed36f9fe9e32600d",
+  "run_url": "https://github.com/Yoriichi-GOD/steplock/actions/runs/41296194824",
+  "job_id": 124817442945,
+  "runner": "Ubuntu 24.04.5; Python 3.14.9; Node 24.22.1",
+  "backend": {
+    "passed": 118,
+    "skipped": 3,
+    "seconds": 82.08,
+    "skips": [
+      "Optional IndustReal directory receipt absent",
+      "External IndustReal research assets absent",
+      "Licensed local IMPACT excerpt absent"
+    ]
+  },
+  "frontend": {
+    "passed": 24,
+    "failed": 0,
+    "production_build": "PASS"
+  },
+  "container": {
+    "build": "PASS",
+    "image_id": "sha256:1738e48e116071e6233dbccfa3da15cf6136fcbd6f158f84e2f94d64360bf292",
+    "image_id_notice": "Local Linux Docker image ID, not an ECR registry digest.",
+    "http_smoke": {
+      "result": "PASS",
+      "population": "SYNTHETIC_FIXTURE",
+      "provider_calls": 0,
+      "scenarios": [
+        {
+          "scenario": "normal",
+          "decision": "PASS",
+          "finding": "CHECKPOINT"
+        },
+        {
+          "scenario": "wrong_component",
+          "decision": "HOLD_FOR_REVIEW",
+          "finding": "WRONG_COMPONENT"
+        },
+        {
+          "scenario": "wrong_order",
+          "decision": "HOLD_FOR_REVIEW",
+          "finding": "ORDER_VIOLATION"
+        },
+        {
+          "scenario": "correction",
+          "decision": "PASS",
+          "finding": "CORRECTED"
+        }
+      ]
+    }
+  },
+  "artifact": {
+    "id": 13079695448,
+    "name": "steplock-linux-container-proof",
+    "sha256": "1015baecd606af4b4e14d5036423012dd3bf62191634b074f449513c280d72d9"
+  },
+  "aws_deployed": false
+}

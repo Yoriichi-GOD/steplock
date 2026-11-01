@@ -1,0 +1,307 @@
+{
+  "at": "2026-11-01T10:10:39.854Z",
+  "origin": "http://127.0.0.1:62401",
+  "browser": "156.0.8078.4",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "desktop_initial",
+      "viewport": 1440,
+      "document_width": 1440,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "webgl_context_loss_fallback",
+      "pass": true
+    },
+    {
+      "check": "landing_viewport",
+      "viewport": 360,
+      "document_width": 360,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "landing_viewport",
+      "viewport": 390,
+      "document_width": 390,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "landing_viewport",
+      "viewport": 768,
+      "document_width": 768,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "landing_viewport",
+      "viewport": 1280,
+      "document_width": 1280,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "landing_viewport",
+      "viewport": 1920,
+      "document_width": 1920,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 124
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 113.29999995231628,
+          "load_ms": 113.29999995231628
+        }
+      ]
+    },
+    {
+      "check": "private_workspace_gate",
+      "pass": true
+    },
+    {
+      "check": "actual_replay",
+      "scenario": "Normal",
+      "verdict": "PASS",
+      "source_frame_loaded": true,
+      "foreign_session_denied": true
+    },
+    {
+      "check": "actual_replay",
+      "scenario": "Wrong Component",
+      "verdict": "HOLD_FOR_REVIEW",
+      "source_frame_loaded": true,
+      "foreign_session_denied": true
+    },
+    {
+      "check": "actual_replay",
+      "scenario": "Wrong Order",
+      "verdict": "HOLD_FOR_REVIEW",
+      "source_frame_loaded": true,
+      "foreign_session_denied": true
+    },
+    {
+      "check": "actual_replay",
+      "scenario": "Correction",
+      "verdict": "PASS",
+      "source_frame_loaded": true,
+      "foreign_session_denied": true
+    },
+    {
+      "check": "demo_viewport",
+      "viewport": 360,
+      "document_width": 360,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 20
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 20
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 9.799999952316284,
+          "load_ms": 10
+        }
+      ]
+    },
+    {
+      "check": "demo_viewport",
+      "viewport": 390,
+      "document_width": 390,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 20
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 20
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 9.799999952316284,
+          "load_ms": 10
+        }
+      ]
+    },
+    {
+      "check": "demo_viewport",
+      "viewport": 768,
+      "document_width": 768,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 20
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 20
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 9.799999952316284,
+          "load_ms": 10
+        }
+      ]
+    },
+    {
+      "check": "demo_viewport",
+      "viewport": 1280,
+      "document_width": 1280,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 20
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 20
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 9.799999952316284,
+          "load_ms": 10
+        }
+      ]
+    },
+    {
+      "check": "demo_viewport",
+      "viewport": 1920,
+      "document_width": 1920,
+      "broken_images": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "start_ms": 20
+        },
+        {
+          "name": "first-contentful-paint",
+          "start_ms": 20
+        }
+      ],
+      "navigation": [
+        {
+          "dom_content_loaded_ms": 9.799999952316284,
+          "load_ms": 10
+        }
+      ]
+    },
+    {
+      "check": "source_loss_suppresses_stale_pass_and_green",
+      "pass": true
+    },
+    {
+      "check": "refresh_is_neutral",
+      "pass": true
+    },
+    {
+      "check": "clean_start_no_backend",
+      "pass": true
+    },
+    {
+      "check": "reduced_motion_2d",
+      "pass": true
+    },
+    {
+      "check": "uncaught_errors_and_external_visual_requests",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-01T10:17:50.225716+00:00",
+  "tool": "aws-cli/2.38.5 Python/3.14.8 Windows/11",
+  "mode": "OFFLINE_REQUEST_PREPARATION",
+  "aws_account_api_calls": 0,
+  "cloud_resources_created": 0,
+  "ecs_cli_schema": {
+    "result": "PASS",
+    "command": "aws ecs create-express-gateway-service --cli-input-json file://infra/aws-steplock/express-service.request.json --generate-cli-skeleton output --region ap-south-1 --no-sign-request --endpoint-url http://127.0.0.1:1",
+    "notice": "Generated output is a local CLI example, not an AWS response or resource inventory. Placeholders have not been resolved."
+  },
+  "waf_cli_schema": {
+    "result": "BLOCKED_LOCAL_OUTPUT_SKELETON",
+    "exit_code": 252,
+    "error": "Invalid length for parameter Summary.ARN, value: 3, valid min length: 20",
+    "notice": "CLI output stub failed. Do not count this as passing WAF runtime/account validation. JSON and properties were reviewed; service validation, check-capacity and association remain deployment gates."
+  },
+  "account_validation": "NOT_RUN",
+  "hosted_tls_and_waf_acceptance": "NOT_RUN",
+  "inputs": [
+    {
+      "file": "express-service.request.json",
+      "sha256": "101578e6ce99b9686aeaa9cf856850407c461a163531e547c4977c30549696b9"
+    },
+    {
+      "file": "waf-web-acl.request.json",
+      "sha256": "de5f7dca82bb934366e356d862c66dd83d562746fc6906ef27dae708dcebe7bb"
+    }
+  ]
+}

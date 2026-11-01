@@ -1,0 +1,96 @@
+{
+  "capture_kind": "ACTUAL_LOCAL_CHROMIUM",
+  "implementation_commit": "f2f16a7b5962db1d92281e74ed36f9fe9e32600d",
+  "public_origin": "http://127.0.0.1:62401",
+  "private_test_origin": "http://127.0.0.1:62402",
+  "demo_population": "SYNTHETIC_FIXTURE",
+  "notice": "Unaltered browser captures. The mechanical hero is illustrative. Inspection pixels are generated tests, not physical validation. No cloud deployment is implied.",
+  "files": [
+    {
+      "file": "desktop-hero.png",
+      "bytes": 562418,
+      "sha256": "d3540155a3bbf19204a082ff6a53f924cae30856dbc20ead36eeef15a1d627d0"
+    },
+    {
+      "file": "mobile-hero.png",
+      "bytes": 175280,
+      "sha256": "6eb698cfc6e5828c947cf3ba463d075ad191e47bae9ec832bbe190955ed5bca0"
+    },
+    {
+      "file": "full-landing.png",
+      "bytes": 1050305,
+      "sha256": "b3c9cf460cfa0f6027c7bd3fb4eb8b66b764bd0a3a3a8a0fe1480efdde990eff"
+    },
+    {
+      "file": "interactive-3d.png",
+      "bytes": 545117,
+      "sha256": "4da1ae564ecce29b6bdfc7c036956d5baf7e6400321738334203c1237c2ec055"
+    },
+    {
+      "file": "technical-2d.png",
+      "bytes": 499199,
+      "sha256": "14c1987a3c79cb47702959e19ac3b4e9ba76ea12eabd5279d3d5d5362bb84be4"
+    },
+    {
+      "file": "demo-normal.png",
+      "bytes": 131143,
+      "sha256": "84d2935942a18d51174bdea6fe6d9cfb6e96895515c21393669cb5c15384ace8"
+    },
+    {
+      "file": "demo-wrong-component.png",
+      "bytes": 100530,
+      "sha256": "73a04d3e87b1d89eed568b90a917f9975a127669ab85077f5a7ccb68ad76113b"
+    },
+    {
+      "file": "demo-wrong-order.png",
+      "bytes": 101130,
+      "sha256": "f6399b935c342064ca691072cba404cc650fed1b1238ae96096892e6ee00638c"
+    },
+    {
+      "file": "demo-correction.png",
+      "bytes": 91018,
+      "sha256": "9de424807e6e28c9af4c3306945b3cd8793c03bb6715240515ef8d933f12c6ca"
+    },
+    {
+      "file": "source-evidence.png",
+      "bytes": 80363,
+      "sha256": "dde208b93f4f33aecdc3f87f2d0e69da2e5c62d15412f61e2b372c2e736c4e44"
+    },
+    {
+      "file": "connection-loss.png",
+      "bytes": 48370,
+      "sha256": "5df7db473fe276c4f213cf5f059ed02fa7fede71df386bf016828d42786a27a6"
+    },
+    {
+      "file": "startup-no-backend.png",
+      "bytes": 32478,
+      "sha256": "0bc30e25acfc226a519c4fa676ba8172fabfc0392f2f1ed043c43d39fb6bbbfd"
+    },
+    {
+      "file": "mobile-demo.png",
+      "bytes": 39256,
+      "sha256": "3ec46cc80bf73ab8aadff314138078a154d490f6c03a19b2f1d67740a76f28dc"
+    },
+    {
+      "file": "workbench-normal.png",
+      "bytes": 577864,
+      "sha256": "6de6de42fe566826a2c9e628e2f9b7829a74fed5d97320a52ef3998c85c51d6f"
+    },
+    {
+      "file": "workbench-wrong_component.png",
+      "bytes": 558499,
+      "sha256": "9f9cfde2f955a65983b6a412c25d428b3c2084509ec3bcaccb31f209a5c42fe5"
+    },
+    {
+      "file": "workbench-source-loss.png",
+      "bytes": 583171,
+      "sha256": "0db30e936524f747f86aff5648f4fbb4b1b86d2d076c7f4fccb52cb9d94d8a71"
+    },
+    {
+      "file": "startup-frontend-only.png",
+      "bytes": 55180,
+      "sha256": "7aeb309e37197be29f4f659ae7f311d845df0724e7ba72045b40a91d0fac28c7"
+    }
+  ],
+  "frontend_only_origin": "http://127.0.0.1:62403"
+}

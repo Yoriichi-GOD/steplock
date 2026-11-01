@@ -1,0 +1,43 @@
+{
+  "Name": "steplock-prelaunch",
+  "Scope": "REGIONAL",
+  "Description": "STEPLOCK staging: starts closed; restrict to approved test IPs before hosted acceptance.",
+  "DefaultAction": {"Block": {}},
+  "VisibilityConfig": {"SampledRequestsEnabled": false, "CloudWatchMetricsEnabled": true, "MetricName": "steplock-prelaunch"},
+  "Rules": [
+    {
+      "Name": "steplock-inspection-start-rate",
+      "Priority": 0,
+      "Action": {"Block": {}},
+      "Statement": {
+        "RateBasedStatement": {
+          "Limit": 20,
+          "EvaluationWindowSec": 300,
+          "AggregateKeyType": "IP",
+          "ScopeDownStatement": {
+            "AndStatement": {"Statements": [
+              {"ByteMatchStatement": {"SearchString": "/api/public/demo/sessions", "FieldToMatch": {"UriPath": {}}, "TextTransformations": [{"Priority": 0, "Type": "NONE"}], "PositionalConstraint": "EXACTLY"}},
+              {"ByteMatchStatement": {"SearchString": "POST", "FieldToMatch": {"Method": {}}, "TextTransformations": [{"Priority": 0, "Type": "NONE"}], "PositionalConstraint": "EXACTLY"}}
+            ]}
+          }
+        }
+      },
+      "VisibilityConfig": {"SampledRequestsEnabled": false, "CloudWatchMetricsEnabled": true, "MetricName": "steplock-start-rate"}
+    },
+    {
+      "Name": "steplock-all-requests-rate",
+      "Priority": 1,
+      "Action": {"Block": {}},
+      "Statement": {"RateBasedStatement": {"Limit": 2000, "EvaluationWindowSec": 300, "AggregateKeyType": "IP"}},
+      "VisibilityConfig": {"SampledRequestsEnabled": false, "CloudWatchMetricsEnabled": true, "MetricName": "steplock-request-rate"}
+    },
+    {
+      "Name": "steplock-approved-test-ips",
+      "Priority": 10,
+      "Action": {"Allow": {}},
+      "Statement": {"IPSetReferenceStatement": {"ARN": "${NEW_STEPLOCK_TEST_IPV4_IPSET_ARN}"}},
+      "VisibilityConfig": {"SampledRequestsEnabled": false, "CloudWatchMetricsEnabled": true, "MetricName": "steplock-test-access"}
+    }
+  ],
+  "Tags": [{"Key": "Project", "Value": "STEPLOCK"}]
+}

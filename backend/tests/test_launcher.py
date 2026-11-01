@@ -51,3 +51,10 @@ def test_unrelated_server_is_not_reused_or_replaced_with_random_port():
     assert f"Cannot start STEPLOCK at http://127.0.0.1:{port}" in result.stderr
     assert "no random replacement port" in result.stderr
     assert "STEPLOCK Studio:" not in result.stdout
+
+
+def test_repeat_launch_recognizes_restricted_public_health_without_private_fields():
+    with local_server({"status":"ok","advisory_only":True,"public_demo":True,"cv_version":"test"}) as port:
+        result=launch(port)
+    assert result.returncode==0,result.stderr
+    assert f"already running: http://127.0.0.1:{port}" in result.stdout
