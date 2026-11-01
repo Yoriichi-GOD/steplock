@@ -6,6 +6,8 @@ import {fileURLToPath} from 'node:url';
 import {createServer} from 'vite';
 import postcss from 'postcss';
 import React from 'react';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
 import {renderToStaticMarkup} from 'react-dom/server';
 
 const root = new URL('../../', import.meta.url);
@@ -67,8 +69,28 @@ test('theme leaves evidence pixels alone and decorative layers cannot intercept 
 // not CSS layout, clicking, camera capture or screenshots.
 const originalWindow = globalThis.window;
 globalThis.window = {matchMedia: () => ({matches: false})};
-const server = await createServer({root: fileURLToPath(root), configFile: false, server: {middlewareMode: true, watch: null}, appType: 'custom', logLevel: 'error'});
+const server = await createServer({root: fileURLToPath(root), cacheDir:join(tmpdir(),'steplock-vite-test-'+process.pid), optimizeDeps:{noDiscovery:true}, configFile: false, server: {middlewareMode: true, watch: null}, appType: 'custom', logLevel: 'error'});
 after(async () => {await server.close(); if (originalWindow === undefined) delete globalThis.window; else globalThis.window = originalWindow;});
+
+test('public demo cannot retain PASS without a current connection and session', async()=>{
+  const {demoStatus}=await server.ssrLoadModule('/src/pages/PublicDemo.tsx');
+  assert.equal(demoStatus(null,true),'PENDING');
+  const session={decision:{status:'PASS'},state:'finished',error:null};
+  assert.equal(demoStatus(session,true),'PASS');assert.equal(demoStatus(session,false),'SOURCE LOST');
+  assert.equal(demoStatus({...session,error:'failure'},true),'UNAVAILABLE');
+  const {default:Demo}=await server.ssrLoadModule('/src/pages/PublicDemo.tsx');
+  const html=renderToStaticMarkup(React.createElement(Demo));
+  assert.match(html,/PENDING/);assert.match(html,/Run inspection/);assert.doesNotMatch(html,/public-verdict pass/);
+});
+
+test('landing contact remains unavailable until configured, and evidence is labeled',async()=>{
+  const {EarlyAccess}=await server.ssrLoadModule('/src/components/marketing/PublicChrome.tsx');
+  const html=renderToStaticMarkup(React.createElement(EarlyAccess));
+  assert.match(html,/disabled/);assert.doesNotMatch(html,/mailto:/);
+  const source=await readFile(new URL('src/pages/LandingPage.tsx',root),'utf8');
+  assert.match(source,/Generated fixture evidence/);assert.match(source,/EXPERIMENTAL \/ LIMITED/);
+  assert.doesNotMatch(source,/â†|â€™|Ã/);
+});
 
 test('real app HTML retains truthful offline alert, disabled run action and all six tabs', async () => {
   const {default: App} = await server.ssrLoadModule('/src/App.tsx');

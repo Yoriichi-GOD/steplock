@@ -19,6 +19,12 @@ A local inspection app for a controlled, tagged tabletop assembly. OpenCV reads
 actual marker pixels and board anchors. A temporal recipe engine checks visible
 placement, prerequisites and correction; findings point to source-frame evidence.
 
+**Pre-launch development:** the new landing page is at `/`, the restricted
+generated-example demo at `/demo`, and the preserved full workspace at `/app`.
+Public mode enforces API restrictions server-side and disables anonymous camera,
+upload, recipe and cloud-model operations. [Product architecture](docs/PRELAUNCH_PRODUCT.md)
+· [public-demo boundary](docs/PUBLIC_DEMO.md). This branch is not a deployed AWS service.
+
 **NVIDIA × Nebius extension:** an optional Nemotron evidence agent reads the
 retained recipe, event, frame metadata and correction links, then proposes
 operator guidance through real Nebius Token Factory calls. STEPLOCK keeps sole

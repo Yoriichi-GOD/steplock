@@ -1,4 +1,6 @@
 import {useCallback,useEffect,useRef,useState} from 'react';
+import './styles.css';
+import './theme/requiem.css';
 import {Activity,ArrowRight,BookOpen,Camera,Check,ChevronDown,FileJson,FlaskConical,GitBranch,HelpCircle,Layers,Loader2,Play,ScanLine,ShieldCheck,Upload,X} from 'lucide-react';
 import {api,authHeaders,BASE,download} from './api/client';
 import type {Benchmark,Credentials,EventRecord,Recipe,Scenario,PinnedRecording,Session,SourceKind} from './api/types';

@@ -26,6 +26,7 @@ from steplock.vision.calibration import calibrate
 from steplock.agent.schemas import AgentConfig, ExplainRequest
 from steplock.agent.orchestrator import AgentService
 from steplock.agent.nebius_client import ProviderFailure
+from steplock.public_demo import PublicDemo, PublicBodyLimit, PublicTrustedHosts
 
 
 class CreateSession(BaseModel):
@@ -73,16 +74,26 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         recipe=Recipe.model_validate_json(path.read_text(encoding="utf-8"))
         recipes[f"{recipe.recipe_id}:v{recipe.version}"]=recipe
 
+    public_mode=os.environ.get("STEPLOCK_PUBLIC_MODE", "0")=="1"
+    demo=PublicDemo(runtime, recipes["tagged_four_part_v1"], public_mode)
+
     @asynccontextmanager
     async def lifespan(app):
+        demo.start_cleanup()
         yield
+        demo.close()
         manager.stop_all()
 
     app=FastAPI(title="STEPLOCK",version="1.0.0",lifespan=lifespan)
     app.state.manager=manager
     app.state.recipes=recipes
     app.state.agent=agent
-    app.add_middleware(TrustedHostMiddleware,allowed_hosts=["127.0.0.1","localhost"])
+    app.state.public_demo=demo
+    hosts=[h.strip() for h in os.environ.get("STEPLOCK_TRUSTED_HOSTS","127.0.0.1,localhost").split(",") if h.strip()]
+    if not hosts or "*" in hosts: raise ValueError("Configure explicit trusted hosts")
+    app.add_middleware(PublicTrustedHosts,allowed_hosts=hosts,health_passthrough=public_mode)
+    app.add_middleware(PublicBodyLimit)
+    app.include_router(demo.router)
     allowed=[origin for origin in os.environ.get("STEPLOCK_ALLOWED_ORIGINS","").split(",") if origin]
     app.add_middleware(CORSMiddleware,allow_origins=allowed,allow_credentials=False,
                        allow_methods=["GET","POST","PUT","DELETE"],allow_headers=["Authorization","Content-Type"])
@@ -92,6 +103,11 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         origin=request.headers.get("origin")
         if origin and origin.rstrip("/")!=str(request.base_url).rstrip("/") and origin not in allowed:
             return JSONResponse({"detail":"This local application accepts only its configured browser origin."},status_code=403)
+        if public_mode:
+            path=request.url.path
+            permitted=path in {"/api/health", "/api/owner/login", "/api/owner/logout", "/api/public/config", "/api/public/demo/scenarios"} or path.startswith("/api/public/demo/sessions")
+            if (path.startswith("/api/") and not permitted or path in {"/docs", "/redoc", "/openapi.json"}) and not demo.owner_authorized(request):
+                return JSONResponse({"detail":"This operation is restricted to the private workspace."},status_code=403)
         if request.method=="POST" and request.url.path.endswith("/agent/explain"):
             if len(await request.body())>2048:
                 return JSONResponse({"detail":"Agent request exceeds 2 KiB"},status_code=413)
@@ -109,6 +125,9 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         response=await call_next(request)
         response.headers["X-Content-Type-Options"]="nosniff"
         response.headers["Referrer-Policy"]="no-referrer"
+        response.headers["Permissions-Policy"]="camera=(), microphone=()" if public_mode else "microphone=()"
+        response.headers["X-Frame-Options"]="DENY"
+        if request.url.path.startswith(("/api/public/", "/api/owner/")): response.headers["Cache-Control"]="no-store"
         if request.url.path.startswith("/api/sessions"): response.headers["Cache-Control"]="no-store"
         return response
 
@@ -120,8 +139,9 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         return session
 
     @app.get("/api/health")
-    def health():
+    def health(request: Request):
         active=manager.sessions.get(manager.active_id)
+        if public_mode: return {"status":"ok", "cv_version":cv2.__version__, "public_demo":True, "advisory_only":True}
         return {"status":"ok","cv_version":cv2.__version__,"aruco_available":hasattr(cv2.aruco,"ArucoDetector"),
                 "camera_active":bool(active and active.source_kind=="LIVE_TAGGED" and active.state=="running"),
                 "active_session_id":manager.active_id,"advisory_only":True,"real_staged_data":"NOT_PROVIDED"}
@@ -344,7 +364,11 @@ def create_app(runtime_root=None, agent_config=None, agent_client=None):
         return FileResponse(directory/filename,filename=filename)
 
     app.mount("/api/demo-kit",StaticFiles(directory=ROOT/"demo_kit"),name="demo-kit")
-    if (ROOT/"frontend/dist").is_dir(): app.mount("/",StaticFiles(directory=ROOT/"frontend/dist",html=True),name="studio")
+    if (ROOT/"frontend/dist").is_dir():
+        @app.get("/demo", include_in_schema=False)
+        @app.get("/app", include_in_schema=False)
+        def browser_route(): return FileResponse(ROOT/"frontend/dist/index.html")
+        app.mount("/",StaticFiles(directory=ROOT/"frontend/dist",html=True),name="studio")
     return app
 
 

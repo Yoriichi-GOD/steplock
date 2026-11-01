@@ -1,0 +1,8 @@
+{
+  "asset": "product-proof.png",
+  "sha256": "d8dd476974315ad443941fdb6da69dfb9d9ac0a81f2a43ace9dec6f2528a4fad",
+  "source": "screenshots/nebius/nemotron-live-1920.png",
+  "class": "ACTUAL_APPLICATION_CAPTURE",
+  "population": "SYNTHETIC_FIXTURE",
+  "description": "Unmodified source screenshot from the prior live-model rehearsal; not a generated UI mockup or new physical validation."
+}

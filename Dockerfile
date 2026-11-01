@@ -18,6 +18,6 @@ COPY fixtures/synthetic/*_00.avi /app/fixtures/synthetic/
 COPY --from=frontend /build/dist /app/frontend/dist
 RUN mkdir /app/runtime && chown steplock:steplock /app/runtime
 USER steplock
-ENV PYTHONUNBUFFERED=1 STEPLOCK_RUNTIME=/app/runtime ENABLE_NEBIUS_AGENT=0
+ENV PYTHONUNBUFFERED=1 STEPLOCK_RUNTIME=/app/runtime ENABLE_NEBIUS_AGENT=0 STEPLOCK_PUBLIC_MODE=1
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "backend.app:app", "--host", "0.0.0.0", "--port", "8000", "--no-access-log"]
