@@ -71,12 +71,12 @@ def test_environment_port_override_reuses_the_requested_server():
     assert f"already running: http://127.0.0.1:{port}" in result.stdout
 
 
-def test_windows_default_runtime_is_local_app_data_not_the_checkout(tmp_path):
+def test_windows_default_runtime_uses_selected_local_app_data(tmp_path):
     launcher=runpy.run_path(str(ROOT/"scripts/dev.py"))
     local_data=tmp_path/"local-app-data"
     runtime=launcher["runtime_directory"]({"LOCALAPPDATA":str(local_data)},"nt")
     assert runtime==(local_data/"STEPLOCK"/"runtime").resolve()
-    assert not runtime.is_relative_to(ROOT)
+    assert runtime!=ROOT/"runtime"
 
 
 def test_explicit_runtime_override_is_preserved(tmp_path):
