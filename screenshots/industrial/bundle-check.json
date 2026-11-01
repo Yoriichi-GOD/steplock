@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "javascript_files": 9,
+  "patterns": [
+    "aws_access_key",
+    "nebius_key",
+    "private_key",
+    "github_token",
+    "tavily_key"
+  ],
+  "matches": [],
+  "notice": "Bounded credential-pattern check, not an independent security certification",
+  "retained_evidence_hashes": "PASS"
+}

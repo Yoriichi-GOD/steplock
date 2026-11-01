@@ -26,13 +26,23 @@ function StationGeometry(){return <group>
   <mesh position={[0,-1,0]}><boxGeometry args={[.24,1.3,3.4]}/><meshStandardMaterial color="#1b2730" metalness={.6} roughness={.5}/></mesh>
  </group>)}
  </group>}
+function RenderBudget({onSlow}:{onSlow:()=>void}){
+ const samples=useRef<number[]>([]);
+ // Measure submission work, not time between demand frames (which includes idle
+ // time). This is a CPU-side fallback signal, never a claimed GPU benchmark.
+ useFrame(({gl,scene,camera})=>{const start=performance.now();gl.render(scene,camera);const elapsed=performance.now()-start;
+  gl.domElement.dataset.drawCalls=String(gl.info.render.calls);gl.domElement.dataset.geometries=String(gl.info.memory.geometries);
+  if(samples.current.length<90){samples.current.push(elapsed);if(samples.current.length===90){const mean=samples.current.reduce((a,b)=>a+b,0)/90;gl.domElement.dataset.renderCpuMeanMs=mean.toFixed(1);if(mean>65)onSlow()}}
+ },1);
+ return null;
+}
 function World(props:Props){
- const {camera,gl,invalidate}=useThree();const group=useRef<Group>(null);const factory=useRef<Group>(null);const covers=useRef<(Group|null)[]>([]);const grid=useRef<Group>(null);const keyLight=useRef<DirectionalLight>(null);const lastFrame=useRef(0);const samples=useRef<number[]>([]);
+ const {camera,gl,invalidate}=useThree();const group=useRef<Group>(null);const factory=useRef<Group>(null);const covers=useRef<(Group|null)[]>([]);const grid=useRef<Group>(null);const keyLight=useRef<DirectionalLight>(null);
  const parts=useMemo<AssemblyPart[]>(()=>labels.map((part,i)=>({step:{id:`S${i+1}`,part,zone:`${part}_SLOT`,requires:i?[`S${i}`]:[]},tone:props.warning&&part==='COVER'?'uncertain':'pending',label:'Illustration',finding:undefined,evidence:undefined})),[props.warning]);
  const cameraTarget=useMemo(()=>new Vector3(),[]);
  useEffect(()=>{const refresh=()=>invalidate();window.addEventListener('steplock-story-frame',refresh);invalidate();return()=>{window.removeEventListener('steplock-story-frame',refresh);document.body.style.cursor=''}},[gl,invalidate]);
  useFrame(()=>{
-  const p=props.pose.current;gl.domElement.dataset.drawCalls=String(gl.info.render.calls);gl.domElement.dataset.geometries=String(gl.info.memory.geometries);const now=performance.now();if(lastFrame.current){const elapsed=now-lastFrame.current;if(elapsed<250){samples.current.push(elapsed);if(samples.current.length===90){const mean=samples.current.reduce((a,b)=>a+b,0)/90;gl.domElement.dataset.frameMeanMs=mean.toFixed(1);if(mean>65)props.onSlow()}}}lastFrame.current=now;
+  const p=props.pose.current;
   if(group.current){group.current.position.set(p.travel*3.4,0,0);group.current.rotation.y=p.turn}
   covers.current.forEach((node,i)=>{if(node){node.position.y=p.lift*i*.78+(i===1?p.deviation*.8:i===2?-p.deviation*.5:0);node.visible=p.isolation<.6||i===2;if(i===2)node.position.x=p.deviation*.25}});
   if(keyLight.current){keyLight.current.intensity=3.8*p.light;keyLight.current.position.x=3+p.turn*5}
@@ -47,6 +57,7 @@ function World(props:Props){
  <group ref={group}>{parts.map((part,i)=><group ref={node=>{covers.current[i]=node}} key={part.step.part}><MechanicalPart part={part} motion={zero} index={0} selected={props.selected===part.step.part} onSelect={props.onSelect} industrial/></group>)}</group>
  <group ref={grid}><gridHelper args={[40,60,'#324655','#152531']} position={[0,-.7,0]}/><mesh rotation={[-Math.PI/2,0,0]} position={[0,-.72,0]} receiveShadow><planeGeometry args={[60,60]}/><shadowMaterial opacity={.22}/></mesh></group>
  {props.manual&&<OrbitControls target={[0,1.4,0]} enablePan={false} enableZoom={false} minPolarAngle={.25} maxPolarAngle={1.5} enableDamping/>}
+ <RenderBudget onSlow={props.onSlow}/>
  </>
 }
 export default function FactoryScene(props:Props){
@@ -54,5 +65,5 @@ export default function FactoryScene(props:Props){
  // Fiber intentionally loses its context during disposal. That is not a graphics
  // failure: detach our listener before unmounting or changing to the 2D mode.
  useLayoutEffect(()=>()=>cleanup.current?.(),[]);
- return <Canvas className="factory-canvas" aria-label="Interactive mechanical factory illustration, not camera evidence" frameloop="demand" shadows={!props.lowQuality} dpr={props.lowQuality?1:[1,1.5]} camera={{position:[8.5,6.2,10.7],fov:39}} onCreated={({gl})=>{const lost=(event:Event)=>{if(gl.domElement.isConnected){event.preventDefault();props.onFailure()}};gl.domElement.addEventListener('webglcontextlost',lost);cleanup.current=()=>gl.domElement.removeEventListener('webglcontextlost',lost);gl.domElement.dataset.ready='true'}} gl={{alpha:true,antialias:true,toneMapping:ACESFilmicToneMapping}}><World {...props}/></Canvas>
+ return <Canvas className="factory-canvas" aria-label="Interactive mechanical factory illustration, not camera evidence" frameloop="demand" shadows={!props.lowQuality} dpr={props.lowQuality?1:[1,1.25]} camera={{position:[8.5,6.2,10.7],fov:39}} onCreated={({gl})=>{const lost=(event:Event)=>{if(gl.domElement.isConnected){event.preventDefault();props.onFailure()}};gl.domElement.addEventListener('webglcontextlost',lost);cleanup.current=()=>gl.domElement.removeEventListener('webglcontextlost',lost);gl.domElement.dataset.ready='true'}} gl={{alpha:true,antialias:true,toneMapping:ACESFilmicToneMapping}}><World {...props}/></Canvas>
 }

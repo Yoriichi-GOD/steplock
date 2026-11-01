@@ -1,0 +1,130 @@
+{
+  "base_commit": "872e478f3f99d3b0649b151a4c9f894d801948c2",
+  "notice": "Exact final source inputs including working-tree follow-up fixes; this receipt is included in the release commit.",
+  "inputs": [
+    {
+      "path": ".github/workflows/prelaunch.yml",
+      "sha256": "455b14aa2401f5a319014a21c84f29909c8f326ed89f89c896b422a0449dbcf3"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "b767758d73a863cef58991559fb60d63ed378f1668a681a5aa181229208df2fb"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "ab6c2642a2526910e22f7f6c11c54bd5ca16dda53b0ba22d54568e65630e627d"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "b73a0dae93cd15102c08b9ef3dfa42bda5cef75f2530e343b4d03c96e0665fd6"
+    },
+    {
+      "path": "frontend/public/assets/industrial/evidence-case.json",
+      "sha256": "084ab9c83dc8e882e4e58283f766afdbfdf7f3c20a4fd306fb9cffa491114250"
+    },
+    {
+      "path": "frontend/public/assets/industrial/overlay.jpg",
+      "sha256": "373b14deec8282e97dffb2fa851b8765fe6c1db39e31abc15cca6dca1ea8e488"
+    },
+    {
+      "path": "frontend/public/assets/industrial/source.png",
+      "sha256": "4b513835efc281e69c4f3bf56491333e523ee9c528c97d1df7cb5801850c06a2"
+    },
+    {
+      "path": "frontend/public/assets/licenses/geist-OFL.txt",
+      "sha256": "71609cbb5c78b5870d712eab73a31d76622635c6ed034ab5cee3b9ecbda8685f"
+    },
+    {
+      "path": "frontend/public/assets/licenses/ibm-plex-mono-OFL.txt",
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f"
+    },
+    {
+      "path": "frontend/public/assets/licenses/instrument-serif-OFL.txt",
+      "sha256": "b6106a757902d2d412e09d94dc4a226fe3da80485208a98003969f1b8b6b1d74"
+    },
+    {
+      "path": "frontend/public/assets/licenses/space-grotesk-OFL.txt",
+      "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943"
+    },
+    {
+      "path": "frontend/src/components/assembly/AssemblyScene.tsx",
+      "sha256": "aaba8b733298e8dd023a55f7bf1b0bc21ceedb3faff5470cfc9831a3c95b5c59"
+    },
+    {
+      "path": "frontend/src/components/assembly/MechanicalPart.tsx",
+      "sha256": "483e6205026e1afe2b33bd7ea4b3ab8eb36708d18eb3fa87d2a3a00632a1ee73"
+    },
+    {
+      "path": "frontend/src/components/marketing/CinematicStory.tsx",
+      "sha256": "63bae8c5390d96bfd2d7235826e99d4054af1e1d28e5e19bfa925dd6a3c38de6"
+    },
+    {
+      "path": "frontend/src/components/marketing/EvidenceDocument.tsx",
+      "sha256": "95cdd197c47c9741e833e105f730434e791f756285937e9e1a7279530c512393"
+    },
+    {
+      "path": "frontend/src/components/marketing/FactoryDiagram.tsx",
+      "sha256": "2b06b8512a3bd18dea1dc32c754c82ba2ee478c047fd2357f534ac3a5a424cfc"
+    },
+    {
+      "path": "frontend/src/components/marketing/FactoryScene.tsx",
+      "sha256": "afe559bc728496c876d46af6413daf918a2ac86b70376eb998f43f9457ce7c3c"
+    },
+    {
+      "path": "frontend/src/components/marketing/PublicChrome.tsx",
+      "sha256": "5dd474cc63a1603e3516b3f56332adbd2edc654ce8dffa049bec47970f862833"
+    },
+    {
+      "path": "frontend/src/components/marketing/motion.ts",
+      "sha256": "19ea5b953da9605d5c364b25d7610ca9606c5250aa3944f6d3c7dbae0bf788e0"
+    },
+    {
+      "path": "frontend/src/components/marketing/storyState.ts",
+      "sha256": "8bd2b8ca0e2a4d2c07ebba625bd1d72533aaf003c6d0f885ec628fe978f02270"
+    },
+    {
+      "path": "frontend/src/hooks/useSession.ts",
+      "sha256": "d5770279e15785fb145f3779536aa5c19824ba766e155c0de05b3622e15b3ece"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "sha256": "9c925d64c93bd68848bd06d571cc1f8e25b7fe87521230116e0c617f3860b8e7"
+    },
+    {
+      "path": "frontend/src/pages/LandingPage.tsx",
+      "sha256": "053ae0cda6b20916fd37d2b6c6d9b0e2a379be40c64936bb045ba9da9616ac9b"
+    },
+    {
+      "path": "frontend/src/pages/PublicDemo.tsx",
+      "sha256": "c52e07cc5b20a578532b1552a428e8d2573197da7e6f183f5aefe2437e271153"
+    },
+    {
+      "path": "frontend/src/styles/cockpit.css",
+      "sha256": "a79861876b218d84b006db568df4cccde0ac3536d2a35b6377f1edeb10b5fdf1"
+    },
+    {
+      "path": "frontend/src/styles/fonts.css",
+      "sha256": "9c55d95473a344cab7c2aa85967355c5b951f342e79ccf03d872d3017ec9699a"
+    },
+    {
+      "path": "frontend/src/styles/industrial.css",
+      "sha256": "ea0770704a62196b9d1c9abefe8bdb5385834ac5933aa041d352fd7e29c0fc6a"
+    },
+    {
+      "path": "frontend/src/theme/theme.test.mjs",
+      "sha256": "0b34b1d2da3721cb7bec919476105696bc2e8e1c40963be380473216bea9dddf"
+    },
+    {
+      "path": "scripts/capture_marketing_evidence.py",
+      "sha256": "67ad46e2c82d16131b575ab4e23a16e22ff73e40c94a41c99d73257936948b70"
+    },
+    {
+      "path": "scripts/industrial_browser_qa.cjs",
+      "sha256": "c7c3cb50a08858f90cba235058899a9505a9b4b42c56f73b22a5c595d22fdb29"
+    },
+    {
+      "path": "scripts/prelaunch_workbench_qa.cjs",
+      "sha256": "4216cc687178683a7445566e0c2cdce9970b94e07b9e8934a7711cd94bb74478"
+    }
+  ]
+}

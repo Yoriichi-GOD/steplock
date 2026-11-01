@@ -42,4 +42,3 @@ export function MechanicalPart({part, index, motion, selected, onSelect,industri
     {selected && <mesh position={[0, part.step.part === 'BASE' ? .215 : part.step.part === 'SPACER' ? 1.02 : part.step.part === 'COVER' ? 1.38 : 1.9, 0]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[part.step.part === 'BASE' || part.step.part === 'COVER' ? 1.98 : .62, part.step.part === 'BASE' || part.step.part === 'COVER' ? 2.005 : .64, 80]}/><meshBasicMaterial color={industrial?'#ddc491':'#d7ff63'} transparent opacity={.8} depthWrite={false}/></mesh>}
   </group>;
 }
-

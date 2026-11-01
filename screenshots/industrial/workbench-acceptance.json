@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-01T12:39:37.358Z",
+  "origin": "http://127.0.0.1:62402",
+  "browser": "156.0.8078.4",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "original_workspace_replay",
+      "example": "normal",
+      "verdict": "PASS",
+      "source_loaded": true
+    },
+    {
+      "check": "original_workspace_replay",
+      "example": "wrong_component",
+      "verdict": "HOLD",
+      "source_loaded": true
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Evidence explorer"
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Assembly explorer"
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Evaluation lab"
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Recipe designer"
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Demo kit"
+    },
+    {
+      "check": "original_workspace_tab",
+      "title": "Procedure studio"
+    },
+    {
+      "check": "original_workspace_stalled_heartbeat_no_pass",
+      "pass": true,
+      "request_timeout_ms": 2500
+    },
+    {
+      "check": "original_workspace_source_loss_no_pass",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

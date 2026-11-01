@@ -1,0 +1,135 @@
+{
+  "capture_kind": "ACTUAL_ISOLATED_CHROMIUM",
+  "population": "SYNTHETIC_FIXTURE",
+  "public_test_origin": "http://127.0.0.1:62404",
+  "preview_origin": "http://127.0.0.1:62401",
+  "notice": "Unaltered browser captures of the production build. Mechanical story is illustrative. Source frames are actual generated-pixel inspections. No physical-camera or hosted AWS claim.",
+  "files": [
+    {
+      "file": "connection-loss.png",
+      "bytes": 58003,
+      "sha256": "2f29e977feb2e0a62b6d2d8dcb9b987a532d40a896c3234e3ddcbbf8cd12f16d"
+    },
+    {
+      "file": "demo-correction.png",
+      "bytes": 110447,
+      "sha256": "5af29f4c2b41302bdedb701ff4b39b8561c3f45f064fcf49353db18d38a0880d"
+    },
+    {
+      "file": "demo-evidence.png",
+      "bytes": 105648,
+      "sha256": "ef7d7e160b142d63c2c0887d49ccff8a7d7f9d575ce025d2a31bca68919ce34c"
+    },
+    {
+      "file": "demo-normal.png",
+      "bytes": 150630,
+      "sha256": "a706e5baebf82dc7ce1810438437792caaad2350c84c242ec509194ee11eddc0"
+    },
+    {
+      "file": "demo-wrong-component.png",
+      "bytes": 119713,
+      "sha256": "c439e350844653b3c8552d4b6f628c8acb1054b83fe45695719dd8ef87f626e0"
+    },
+    {
+      "file": "demo-wrong-order.png",
+      "bytes": 120773,
+      "sha256": "67097aac0227cc385d82d9d382f538bcb533f87870d51c71bedd010a86d28a98"
+    },
+    {
+      "file": "desktop-hero.png",
+      "bytes": 829124,
+      "sha256": "9ff85aab5e8bea2717695e04f8c9a9dbf98c7e71a7b8ccb9ee8add168983c52a"
+    },
+    {
+      "file": "invitation.png",
+      "bytes": 123626,
+      "sha256": "5aeba26bd11e6f8c41d8522209b6a3f61349446e24babd0c3f7ea60fc1eac568"
+    },
+    {
+      "file": "knowledge-gap.png",
+      "bytes": 875122,
+      "sha256": "1388aeb0b135efcca3e88cfe8cf9cf0453d9118666b86e54ce4389acaf393f20"
+    },
+    {
+      "file": "late-inspection.png",
+      "bytes": 783516,
+      "sha256": "1ad27cc30fde3e0402307b006e9728aad92711ea70eb8ec72e3e00849baafab7"
+    },
+    {
+      "file": "mobile-demo.png",
+      "bytes": 42173,
+      "sha256": "325e8dfd25d66d8b1bdd890b9b71a5c864b0760d19347ac9a06f34fafbf6c265"
+    },
+    {
+      "file": "mobile-hero.png",
+      "bytes": 134749,
+      "sha256": "86c9040f6ca2152f3a9a888470cead65ab43696da2f4e8572443d8bda2ce79d0"
+    },
+    {
+      "file": "mobile-invitation.png",
+      "bytes": 44258,
+      "sha256": "e8811f0d7067cb5c9a635166a3246e169a76f67eb076f3d1a4c18e8623220e40"
+    },
+    {
+      "file": "moment-of-stillness.png",
+      "bytes": 583011,
+      "sha256": "526250e859903bd4e6a234818d880cc9d6bbe1c96e23915af2472ab650f16118"
+    },
+    {
+      "file": "product-reveal.png",
+      "bytes": 686261,
+      "sha256": "03d22a0c8cd7c240839202e32d65bd99a841861a8b4e137cc26c7668dd0b2a13"
+    },
+    {
+      "file": "prototype-proof.png",
+      "bytes": 334916,
+      "sha256": "559081f59f13ff566b960a6e9dbbeb987ddc2ad67221131b3b6d35dfcc4187c4"
+    },
+    {
+      "file": "reduced-motion.png",
+      "bytes": 128678,
+      "sha256": "4e9b4348206b681dfe9879993d050df0f5d624e42d77c3493b399add4aaf864f"
+    },
+    {
+      "file": "retained-evidence.png",
+      "bytes": 131491,
+      "sha256": "513704d836cae327aa891991bc32000bec21371a931fd1ab2b1e22e6a25e961b"
+    },
+    {
+      "file": "startup-frontend-only.png",
+      "bytes": 71768,
+      "sha256": "1e1307ac4505bd3e7589f6c7b56965071ba1931cad50f956e91227ead5b242a9"
+    },
+    {
+      "file": "technical-2d.png",
+      "bytes": 594245,
+      "sha256": "d1d6597502409267a0ecc0767ce881b62284483dd8a0e725684ceffd1b3d7a89"
+    },
+    {
+      "file": "webgl-fallback.png",
+      "bytes": 594491,
+      "sha256": "8e2bbfcf0d0eba5697d7f788196680c5d77acefa14173c5b9c789d2f99e15afc"
+    },
+    {
+      "file": "workbench-normal.png",
+      "bytes": 576150,
+      "sha256": "2b9e7638698b0e2bdbf828f55a4e64149c63c49cf45cc658eb40c18826707b95"
+    },
+    {
+      "file": "workbench-source-loss.png",
+      "bytes": 580938,
+      "sha256": "3e9c83fab4262d7d39bcad9b7ed3a382f7f2f2ba900e98d78c4e1c80cce82aba"
+    },
+    {
+      "file": "workbench-wrong_component.png",
+      "bytes": 556734,
+      "sha256": "1d1910e221664d13655c726c9c4f2a9070c3d8b54e6d3a0d5610128bbcee6289"
+    },
+    {
+      "file": "full-landing-reduced-motion.png",
+      "bytes": 2773600,
+      "sha256": "374ea0fed67af06ca2dd936959d6e55f539a0f7302e1d11091dea00c1fc87886"
+    }
+  ],
+  "full_page_notice": "Full-page layout capture uses reduced motion; chapter captures show animated 3D story states."
+}

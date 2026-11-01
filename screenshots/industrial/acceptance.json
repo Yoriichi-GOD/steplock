@@ -1,0 +1,877 @@
+{
+  "at": "2026-11-01T12:44:57.827Z",
+  "origin": "http://127.0.0.1:62404",
+  "browser": "156.0.8078.4",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "initial_desktop",
+      "width": 1440,
+      "document_width": 1440,
+      "dom_nodes": 386,
+      "cls": 0.0012842217339409723,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 84
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 112
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 227734
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 3757
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 141880
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 70040
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 12956
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 13312
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 14708
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 13296
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 22128
+        },
+        {
+          "name": "FactoryScene-CwBmtvls.js",
+          "encoded_bytes": 5280
+        },
+        {
+          "name": "MechanicalPart-BoEanvvq.js",
+          "encoded_bytes": 1002922
+        }
+      ],
+      "canvases": 1
+    },
+    {
+      "check": "self_hosted_fonts_loaded",
+      "pass": true
+    },
+    {
+      "check": "continuous_story_scene",
+      "progress": 0.26,
+      "name": "knowledge-gap",
+      "act": "2",
+      "canvas_preserved": true
+    },
+    {
+      "check": "continuous_story_scene",
+      "progress": 0.52,
+      "name": "late-inspection",
+      "act": "3",
+      "canvas_preserved": true
+    },
+    {
+      "check": "continuous_story_scene",
+      "progress": 0.69,
+      "name": "moment-of-stillness",
+      "act": "3",
+      "canvas_preserved": true
+    },
+    {
+      "check": "continuous_story_scene",
+      "progress": 0.92,
+      "name": "product-reveal",
+      "act": "4",
+      "canvas_preserved": true
+    },
+    {
+      "check": "desktop_scroll_profile",
+      "sample_count": 90,
+      "frame_interval_p50_ms": 17,
+      "frame_interval_p95_ms": 63,
+      "notice": "Headless desktop animation-frame interval proxy, no CPU throttling; not physical mobile GPU performance"
+    },
+    {
+      "check": "webgl_diagnostics",
+      "draw_calls": "30",
+      "geometries": "55"
+    },
+    {
+      "check": "keyboard_component_selection_and_2d_explode",
+      "pass": true
+    },
+    {
+      "check": "webgl_loss_keeps_story_in_2d",
+      "pass": true
+    },
+    {
+      "check": "responsive_scroll_controller_and_pause_cleanup",
+      "pass": true
+    },
+    {
+      "check": "actual_retained_evidence_flip_and_comparison",
+      "pass": true
+    },
+    {
+      "check": "no_public_email_or_fake_contact_submission",
+      "pass": true
+    },
+    {
+      "check": "landing_viewport",
+      "width": 360,
+      "document_width": 360,
+      "dom_nodes": 416,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 48
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 48
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "landing_viewport",
+      "width": 390,
+      "document_width": 390,
+      "dom_nodes": 414,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 32
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "landing_viewport",
+      "width": 768,
+      "document_width": 768,
+      "dom_nodes": 414,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 40
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "landing_viewport",
+      "width": 1280,
+      "document_width": 1280,
+      "dom_nodes": 386,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 40
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "FactoryScene-CwBmtvls.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "MechanicalPart-BoEanvvq.js",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 1
+    },
+    {
+      "check": "landing_viewport",
+      "width": 1440,
+      "document_width": 1440,
+      "dom_nodes": 386,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 56
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "FactoryScene-CwBmtvls.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "MechanicalPart-BoEanvvq.js",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 1
+    },
+    {
+      "check": "landing_viewport",
+      "width": 1920,
+      "document_width": 1920,
+      "dom_nodes": 388,
+      "cls": 0,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 28
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 40
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "LandingPage-BsiZ5b9c.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "index-xgxdCp6f.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "FactoryScene-CwBmtvls.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "MechanicalPart-BoEanvvq.js",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 1
+    },
+    {
+      "check": "mobile_native_reduced_motion_and_anchor",
+      "pass": true,
+      "profile": {
+        "dom_nodes": 377,
+        "paint": [
+          {
+            "name": "first-paint",
+            "ms": 44
+          },
+          {
+            "name": "first-contentful-paint",
+            "ms": 44
+          }
+        ],
+        "webgl_requests": 0
+      }
+    },
+    {
+      "check": "webgl_unavailable_at_startup_2d_story",
+      "pass": true
+    },
+    {
+      "check": "private_workspace_gate",
+      "pass": true
+    },
+    {
+      "check": "actual_engine_demo",
+      "scenario": "Normal",
+      "verdict": "PASS",
+      "completed_visible_ms": 6060,
+      "foreign_token_denied": true
+    },
+    {
+      "check": "actual_engine_demo",
+      "scenario": "Wrong Component",
+      "verdict": "HOLD_FOR_REVIEW",
+      "completed_visible_ms": 6127,
+      "foreign_token_denied": true
+    },
+    {
+      "check": "actual_engine_demo",
+      "scenario": "Wrong Order",
+      "verdict": "HOLD_FOR_REVIEW",
+      "completed_visible_ms": 6144,
+      "foreign_token_denied": true
+    },
+    {
+      "check": "actual_engine_demo",
+      "scenario": "Correction",
+      "verdict": "PASS",
+      "completed_visible_ms": 8460,
+      "foreign_token_denied": true
+    },
+    {
+      "check": "demo_viewport",
+      "width": 360,
+      "document_width": 360,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "demo_viewport",
+      "width": 390,
+      "document_width": 390,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "demo_viewport",
+      "width": 768,
+      "document_width": 768,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "demo_viewport",
+      "width": 1280,
+      "document_width": 1280,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "demo_viewport",
+      "width": 1440,
+      "document_width": 1440,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "demo_viewport",
+      "width": 1920,
+      "document_width": 1920,
+      "dom_nodes": 208,
+      "cls": 0.04809372866030094,
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 12
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 28
+        }
+      ],
+      "resources": [
+        {
+          "name": "index-DsYDb-ek.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "space-grotesk-latin-500-normal-lFbtlQH6.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-400-normal-B40WzpMT.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "geist-latin-500-normal-CTWBw9NS.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "PublicDemo-xjTjcuv5.js",
+          "encoded_bytes": 9968
+        },
+        {
+          "name": "PublicChrome-CQLQwbOo.js",
+          "encoded_bytes": 0
+        },
+        {
+          "name": "instrument-serif-latin-400-italic-DKMiL14s.woff2",
+          "encoded_bytes": 0
+        }
+      ],
+      "canvases": 0
+    },
+    {
+      "check": "stalled_heartbeat_cannot_keep_pass",
+      "pass": true,
+      "request_timeout_ms": 2500
+    },
+    {
+      "check": "source_loss_no_stale_pass_and_neutral_refresh",
+      "pass": true
+    },
+    {
+      "check": "runtime_errors_remote_resources_and_asset_failures",
+      "errors": [],
+      "remote": [],
+      "httpErrors": []
+    }
+  ]
+}

@@ -25,8 +25,7 @@ The rest of the page makes a visible handoff to actual application evidence.
 ## Timing and interaction ownership
 
 Intervals describe the master story playhead, not a timer or promised reading
-duration. Desktop text scenes occupy approximately 100–115 viewport heights in
-CSS percent units (roughly one viewport each); Act III includes a separate quiet
+duration. Desktop text scenes occupy approximately 100–115vh (about one viewport each); Act III includes a separate quiet
 scene. Mobile gets its own visual/text stack and longer reading space. The exact
 scene state is defined in `storyState.ts`, not duplicated in React state.
 

@@ -35,6 +35,9 @@ Tokens remain in the demo page's memory, not URLs, logs or persisted local stora
 A refresh is deliberately neutral and does not resume an old result. Unknown,
 expired and wrong-capability requests return the same generic 404. Network loss
 suppresses PASS and confirmed step styling. Evidence errors are explicit.
+Both public and private session polling now have a 2,500 ms heartbeat deadline.
+A request that stays open also makes the result stale; failure does not depend
+on receiving an immediate network error. Successful later polling can reconnect.
 
 ## Boundaries
 

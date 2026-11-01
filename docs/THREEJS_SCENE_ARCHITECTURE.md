@@ -30,7 +30,7 @@ illustrative diagnostic. Current demo decisions cannot be overridden by animatio
 ## Rendering and failure behavior
 
 WebGL is lazy and desktop-first. Mobile, reduced motion, data-saver or low reported
-CPU concurrency default to SVG. Canvas uses DPR 1–1.5, one environment capture,
+CPU concurrency default to SVG. Canvas uses DPR 1–1.25, one environment capture,
 bounded shadow maps, fog and physically based materials. GSAP invalidates the
 demand loop only while the pose changes; no idle RAF is required. Orbit controls
 invalidate during direct interaction and do not own scroll or wheel zoom.
@@ -40,9 +40,10 @@ explicitly disposed. Context loss is handled at renderer creation, before the
 world's later effects. Rendering failure selects `FactoryDiagram`, which keeps
 the same mechanical story with SVG part transforms and station labels.
 
-The renderer collects bounded frame-interval samples during active rendering. A
-mean over 65 ms for 90 qualifying intervals selects the simpler path. That is an
-adaptive UI threshold, not a measured device guarantee. WebGL diagnostics expose
+The renderer collects 90 bounded samples of CPU-side render submission time. A
+mean over 65 ms selects the simpler path. Time between demand frames is excluded
+because it includes idle time. This is an adaptive UI threshold, not a GPU timing
+measurement or a measured device guarantee. WebGL diagnostics expose
 only draw-call/geometry counts on the local canvas element. No analytics, user
 video or personal information is collected.
 

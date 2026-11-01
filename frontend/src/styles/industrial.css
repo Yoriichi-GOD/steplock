@@ -91,3 +91,7 @@
 @media(max-width:650px){.stage-parts{left:6%;right:auto;bottom:0;gap:8px}.stage-parts button{font-size:5px;min-height:35px;padding:6px 2px;gap:4px}.stage-parts button span{font-size:5px}.stage-disclosure{bottom:-12px;font-size:4px;width:auto;max-width:none;right:6%;left:6%;text-align:left}.factory-intro{padding-top:37svh}}
 
 @media(max-width:650px){.stage-parts button{font-size:8px;min-height:38px;gap:4px}.stage-parts button span{font-size:6px}.stage-disclosure{font-size:6.5px;bottom:-26px;line-height:1.5;letter-spacing:.1px}.stage-controls>button{font-size:9px}.stage-controls .mode-switch button{font-size:9px}.story-kicker{font-size:8px}.origin-note{font-size:8px}.station-track>div>span{font-size:6px}.station-track small{font-size:8px}}
+
+.knowledge-opposing{overflow:clip}
+
+@media(max-width:650px){.stage-parts button,.stage-controls>button,.stage-controls .mode-switch button{min-height:44px}.industrial-page .public-nav .compact,.industrial-page .contact-options button{min-height:44px}}
