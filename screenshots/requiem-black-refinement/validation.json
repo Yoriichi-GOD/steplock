@@ -33,5 +33,6 @@
     "demo_desktop_total_header_px": 248,
     "ornament_overlap": "Roadmap art moved to grid; broken arch clears text and process label"
   },
-  "scope": "Public presentation only; generated software examples, no new physical or GPU performance claim."
+  "scope": "Public presentation only; generated software examples, no new physical or GPU performance claim.",
+  "screenshot_review": "All 16 captures visually reviewed; one transient loading frame replaced by the exact inspected browser screenshot before push."
 }
