@@ -92,6 +92,25 @@ test('landing contact remains unavailable until configured, and evidence is labe
   assert.doesNotMatch(source,/â†|â€™|Ã/);
 });
 
+test('cinematic timeline is bounded, pauses at late feedback, and cannot emit an inspection result',async()=>{
+  const {storyPose}=await server.ssrLoadModule('/src/components/marketing/storyState.ts');
+  assert.equal(storyPose(-1).progress,0);assert.equal(storyPose(2).progress,1);assert.equal(storyPose(NaN).progress,0);
+  const stillA=storyPose(.66),stillB=storyPose(.72);
+  for(const key of ['lift','travel','turn','factory','isolation','deviation','light'])assert.equal(stillA[key],stillB[key],key);
+  assert.equal(storyPose(1).lift,0);assert.equal(storyPose(1).deviation,0);
+  assert.ok(!('decision' in stillA)&&!('status' in stillA));
+});
+
+test('retained marketing finding keeps actual source bytes, event hashes and generated provenance',async()=>{
+  const folder=new URL('public/assets/industrial/',root);
+  const receipt=JSON.parse(await readFile(new URL('evidence-case.json',folder),'utf8'));
+  assert.equal(receipt.capture_kind,'RETAINED_ENGINE_RESULT');assert.equal(receipt.population,'SYNTHETIC_FIXTURE');
+  assert.equal(receipt.finding.kind,'WRONG_COMPONENT');assert.equal(receipt.decision.status,'HOLD_FOR_REVIEW');
+  for(const file of receipt.files){const bytes=await readFile(new URL(file.file,folder));assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256);assert.equal(bytes.length,file.bytes)}
+  assert.equal(receipt.files.find(file=>file.file==='source.png').sha256,receipt.finding.frame_sha256);
+  assert.equal(receipt.finding.source_sha256,receipt.source_sha256);assert.match(receipt.notice,/not live factory/);
+});
+
 test('real app HTML retains truthful offline alert, disabled run action and all six tabs', async () => {
   const {default: App} = await server.ssrLoadModule('/src/App.tsx');
   const html = renderToStaticMarkup(React.createElement(App));

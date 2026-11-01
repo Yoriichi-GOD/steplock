@@ -1,7 +1,7 @@
 name: Prelaunch regression and Linux container
 on:
   push:
-    branches: [prelaunch-experience]
+    branches: [prelaunch-experience, industrial-requiem]
   pull_request:
   workflow_dispatch:
 permissions:

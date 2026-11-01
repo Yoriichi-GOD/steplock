@@ -1,6 +1,13 @@
 # Pre-launch deployment readiness
 
 Date: 2026-11-01. **IMPLEMENTED_AND_CONTAINER_VERIFIED / AWS_NOT_DEPLOYED.**
+
+The Industrial Requiem evolution is on branch `industrial-requiem`. New story,
+motion helpers and self-hosted fonts are browser-side; they require no AWS GPU
+or paid model. The one-container route/security architecture below is retained.
+The earlier Linux receipt covers its named pre-launch commit, not automatically
+this newer source. Current acceptance and any new container run are recorded in
+`PRELAUNCH_ACCEPTANCE.md`. No AWS resource change is authorized by this design brief.
 The latest brief authorizes preparation and testing, and reserves paid deployment,
 cloud changes, domain purchase and public contact publication for explicit approval.
 No AWS account API or resource mutation was performed for this pre-launch work.

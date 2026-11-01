@@ -1,5 +1,17 @@
 # Public demonstration contract
 
+The Industrial Requiem presentation retains this API boundary. Its three-column
+desktop cockpit separates actual source pixels, backend-derived procedure steps
+and the current finding. Vision p95 is the measured processing value from that
+session; it is not labeled end-to-end alert latency. Mobile uses the same source,
+procedure, finding and evidence in a vertical reading order.
+
+The landing's expandable case is separately labeled RETAINED SOFTWARE TEST.
+`scripts/capture_marketing_evidence.py` captures a real wrong-component replay,
+original frame, overlay and event/hash receipt through this restricted API. It
+writes no token. The retained panel never impersonates a current inspection or
+factory recording. A fresh session runs only when the visitor uses `/demo`.
+
 The public demo processes only the four checked-in generated examples: Normal,
 Wrong Component, Wrong Order and Correction. Catalog hashes and actual media
 bytes are checked before exposing an available scenario. The same OpenCV detector,

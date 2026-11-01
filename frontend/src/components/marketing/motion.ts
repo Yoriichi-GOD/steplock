@@ -1,0 +1,10 @@
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {SplitText} from 'gsap/SplitText';
+import {Flip} from 'gsap/Flip';
+import {MotionPathPlugin} from 'gsap/MotionPathPlugin';
+import {CustomEase} from 'gsap/CustomEase';
+import {useGSAP} from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger,SplitText,Flip,MotionPathPlugin,CustomEase,useGSAP);
+CustomEase.create('requiem','0.22, 1, 0.36, 1');
+export {gsap,ScrollTrigger,SplitText,Flip,MotionPathPlugin,useGSAP};

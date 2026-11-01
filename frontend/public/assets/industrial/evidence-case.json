@@ -1,0 +1,45 @@
+{
+  "capture_kind": "RETAINED_ENGINE_RESULT",
+  "population": "SYNTHETIC_FIXTURE",
+  "captured_at": "2026-11-01T12:18:25.197464+00:00",
+  "notice": "Actual engine result on generated software test pixels. Retained example, not live factory footage.",
+  "recipe_sha256": "1bfe5455493600f71940fc087d442c8d6350a8bcec31c309fcd6038dbcc3bda5",
+  "source_sha256": "1867fe05fb236c6ce4451e9303bf683b94a90773a5aa3861be3de0d40734e64b",
+  "decision": {
+    "status": "HOLD_FOR_REVIEW",
+    "reason": "WRONG_FASTENER is not a required component here. Remove it and use the recipe's tagged component.",
+    "reason_codes": [
+      "MISSING_AT_CHECKPOINT",
+      "WRONG_COMPONENT"
+    ],
+    "advisory_only": true
+  },
+  "finding": {
+    "event_id": "evt-00009",
+    "kind": "WRONG_COMPONENT",
+    "source_time_ms": 5000.0,
+    "frame_id": "f000025-4b513835ef",
+    "frame_sha256": "4b513835efc281e69c4f3bf56491333e523ee9c528c97d1df7cb5801850c06a2",
+    "source_sha256": "1867fe05fb236c6ce4451e9303bf683b94a90773a5aa3861be3de0d40734e64b",
+    "reason": "WRONG_FASTENER is not a required component here. Remove it and use the recipe's tagged component.",
+    "part_id": "WRONG_FASTENER",
+    "zone_id": "FASTENER_SLOT",
+    "evidence_ids": [
+      "f000024-1fabf7f6f6-tag14",
+      "f000025-4b513835ef-tag14"
+    ],
+    "resolves_event_id": null
+  },
+  "files": [
+    {
+      "file": "source.png",
+      "bytes": 122241,
+      "sha256": "4b513835efc281e69c4f3bf56491333e523ee9c528c97d1df7cb5801850c06a2"
+    },
+    {
+      "file": "overlay.jpg",
+      "bytes": 43853,
+      "sha256": "373b14deec8282e97dffb2fa851b8765fe6c1db39e31abc15cca6dca1ea8e488"
+    }
+  ]
+}
