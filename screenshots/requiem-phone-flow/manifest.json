@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-02",
+  "source": "Actual browser captures; unedited",
+  "viewport_source": "browser-audit.json and demo-audit.json",
+  "captures": [
+    {
+      "file": "after-story-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 48648,
+      "sha256": "a07bfdf51144e92ccdda5e0721b341f986d657e4052ae92fe9d8bcf48021c57b"
+    },
+    {
+      "file": "chapter-transition-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 40615,
+      "sha256": "594670c339db12f9b40b0e98aaa0baca7648ae3c755f86432928b285a90b402b"
+    },
+    {
+      "file": "closing-caption-1691.jpg",
+      "format": "JPEG",
+      "raster_width": 1676,
+      "raster_height": 922,
+      "bytes": 175541,
+      "sha256": "198e5e95515bc29ebf942a21148bcb14af1a34a8f9e33c839d9831421e9a885f"
+    },
+    {
+      "file": "closing-caption-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 52762,
+      "sha256": "7feb855133fb6383d13beaa5e396f31781c335a9917088a0604282d38f3d050e"
+    },
+    {
+      "file": "controls-and-scroll-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 46292,
+      "sha256": "7839488b754239177aa10d41993ef1109dfe0c016f5917be6edb1e131c20e7c6"
+    },
+    {
+      "file": "demo-normal-frame-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 38419,
+      "sha256": "318e16c87d0bd7badca876b1cd2ed667646d8269039cc5438c51407435c11a80"
+    },
+    {
+      "file": "desktop-1024.jpg",
+      "format": "JPEG",
+      "raster_width": 1004,
+      "raster_height": 753,
+      "bytes": 131449,
+      "sha256": "fbb5ed509e1b0705dfb156398188bf20087f3cbe23cd344a0dc90dd5daeefd90"
+    },
+    {
+      "file": "desktop-1280.jpg",
+      "format": "JPEG",
+      "raster_width": 1253,
+      "raster_height": 705,
+      "bytes": 160406,
+      "sha256": "b48741852bfdcfe4a3f3a480136fb624d34fa1e1ccfef770e8afe34e35e3823d"
+    },
+    {
+      "file": "desktop-1691.jpg",
+      "format": "JPEG",
+      "raster_width": 1676,
+      "raster_height": 922,
+      "bytes": 242300,
+      "sha256": "8ae792a1f48693dd528f3aba3f39b9bac78c00d33d3c37eab253c17d7b62679a"
+    },
+    {
+      "file": "exit-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 29431,
+      "sha256": "aed4f4d6b1be27b3dd49a120febdf8dfcc8a3ac19ac4c536a6e140de1bce154c"
+    },
+    {
+      "file": "first-load-3d-320.jpg",
+      "format": "JPEG",
+      "raster_width": 305,
+      "raster_height": 705,
+      "bytes": 34921,
+      "sha256": "00af03dcdad109ca99fb0b5a4f5a1361e118967a7e9d8849cf17f49f050bc19b"
+    },
+    {
+      "file": "first-load-3d-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 50370,
+      "sha256": "c5df77df982ee891811221943497c2385c7e6adf847a406211a45b44c4d3630d"
+    },
+    {
+      "file": "graphics-fallback-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 45378,
+      "sha256": "e9537c4885a4c8b3de5a857b5fb1924e63078ebca3336c3742c2473b98e3747a"
+    },
+    {
+      "file": "knowledge-320.jpg",
+      "format": "JPEG",
+      "raster_width": 305,
+      "raster_height": 705,
+      "bytes": 29361,
+      "sha256": "71d6f9b3b0121c68434434e89fafa6f38062cf30fa628b99a4a22950212db1e1"
+    },
+    {
+      "file": "knowledge-tail-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 35869,
+      "sha256": "c0dd9892fda95326d6f59b6d7fbb1a226a53799e3f19d5bee4aea79c58e6fef8"
+    },
+    {
+      "file": "late-feedback-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 43102,
+      "sha256": "6054ffa7ca6bbb32626afba6ae0f0a63efec0cfa4333b04d17b9669073b20ddf"
+    },
+    {
+      "file": "late-tail-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 20611,
+      "sha256": "8a2a4deaf485b62f2b85694fb408ec8513d31ce49f3d36b1f41daa681a32a1f4"
+    },
+    {
+      "file": "product-3d-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 38216,
+      "sha256": "ab6a453556757c44420e8e5d36b697fcf8337987c1674adc0db9038b4555428c"
+    },
+    {
+      "file": "reduced-motion-390.jpg",
+      "format": "JPEG",
+      "raster_width": 375,
+      "raster_height": 812,
+      "bytes": 45571,
+      "sha256": "bf37411336c9f106ebc19ca9fcdba4ae103b974f5f85a893cf9fc26ae384eafd"
+    }
+  ]
+}

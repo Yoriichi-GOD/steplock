@@ -1,0 +1,15 @@
+{
+  "generated": true,
+  "normal": {
+    "analyzed": "30",
+    "sourceFilter": "none",
+    "status": "PASS",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "reset": {
+    "status": "PENDING"
+  }
+}

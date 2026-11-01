@@ -2,6 +2,8 @@
 
 Implemented and browser-reviewed on 2026-11-01. The user requested a dedicated lower-half illustration on phones, scrolling text above it, a natural exit when the cinematic story ends, more deliberate navigation wording, and a reliable local address.
 
+Follow-up: [tighter phone chapter flow, native first-load 3D, caption-only closing scene and shifted navigation](REQUIEM_PHONE_FLOW_REFINEMENT.md), implemented and browser-reviewed on 2026-11-02.
+
 ## Phone behavior
 
 For widths up to 767px, the existing story stage is sticky inside the cinematic story. Its illustration occupies the lower half of the viewport. The chapter instrument sits immediately above it; the text uses the upper reading area and scrolls behind the dock's opaque black edge. Chapter spacing lets the final text, links and dividers clear the reading area before the stage exits.

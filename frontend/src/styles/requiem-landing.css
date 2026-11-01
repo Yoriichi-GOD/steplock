@@ -131,7 +131,7 @@
 
 /* Art direction: one architectural subject per scene; ornament scale follows content. */
 .public-page.rq-landing .public-nav,.public-page.rq-demo .public-nav{gap:24px}
-.public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:18%;margin-right:auto;gap:26px;font-size:14px;white-space:nowrap}
+.public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:22%;margin-right:auto;gap:26px;font-size:14px;white-space:nowrap}
 .public-page.rq-landing .public-nav .rq-brand,.public-page.rq-demo .public-nav .rq-brand{margin-left:auto}
 .public-page .public-nav .rq-brand img{width:280px!important;height:140px!important}
 .rq-landing .story-kicker{font-size:12px;line-height:1.65;color:#e6cc9a;letter-spacing:1.5px}
@@ -167,8 +167,7 @@
 .rq-closing-assembly{position:relative;height:clamp(330px,29vw,500px);isolation:isolate;overflow:clip;display:grid;place-items:center}
 .rq-assembly-setting{position:absolute;inset:0;z-index:-1;background:url('/assets/steplock-header/celestial-full.webp') center center/cover no-repeat;pointer-events:none}
 .rq-closing-assembly:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#070707,transparent 28%);pointer-events:none}
-.rq-landing .rq-closing-assembly .final-mechanism{width:min(620px,53%);margin:0;opacity:1;z-index:1;transform:translateY(-20%)}
-.rq-landing .rq-closing-assembly .final-mechanism>span{bottom:10%;font-size:11px;line-height:1.8;letter-spacing:1px;color:#efdbb1;background:#070707b8;padding:8px 12px;width:fit-content;margin:auto}
+.rq-landing .rq-next-chapter{position:relative;z-index:1;margin:0 7%;max-width:1000px;text-align:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(38px,4.2vw,72px);line-height:1.2;letter-spacing:-.03em;color:#ddd4c3;text-wrap:balance}
 .industrial-page.rq-landing .early-access{padding-top:70px;padding-bottom:70px;background:transparent;gap:65px}
 .rq-invitation-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070707e8 0%,#07070794 40%,transparent 75%);pointer-events:none}
 .rq-landing .early-access form{background:#090909e8;backdrop-filter:blur(8px);border-color:#cbb98966}
@@ -179,11 +178,11 @@
 .rq-landing .rq-closing-brand{width:360px}
 @media(min-width:1800px){.rq-future-heading{grid-template-columns:minmax(0,1fr) 480px}}
 @media(max-width:1400px){
- .public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:12%;gap:20px;font-size:13px}
+ .public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:16%;gap:20px;font-size:13px}
  .public-page .public-nav .rq-brand img{width:240px!important;height:120px!important}
 }
 @media(max-width:1100px){
- .public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:4%;gap:16px;font-size:12px}
+ .public-page.rq-landing .public-nav nav,.public-page.rq-demo .public-nav nav{margin-left:10%;gap:16px;font-size:12px}
  .public-page .public-nav .rq-brand img{width:205px!important;height:102.5px!important}
  .rq-future-heading{grid-template-columns:minmax(0,1fr) 32%;gap:4%}
  .rq-landing .story-copy p{font-size:14px}
@@ -218,8 +217,7 @@
  .rq-landing .future-section{padding-bottom:30px}
  .rq-closing-assembly{height:300px}
  .rq-assembly-setting{background-position:66% center}
- .rq-landing .rq-closing-assembly .final-mechanism{width:95%;max-width:450px;transform:translateY(-18%)}
- .rq-landing .rq-closing-assembly .final-mechanism>span{font-size:9px;bottom:5%;max-width:85%}
+ .rq-landing .rq-next-chapter{font-size:32px}
  .industrial-page.rq-landing .early-access{padding-top:45px;padding-bottom:45px;gap:30px}
  .rq-invitation-scenery{object-position:65% center}
  .rq-invitation-art:after{background:linear-gradient(90deg,#070707da,transparent),linear-gradient(#07070788,transparent 70%)}
@@ -235,9 +233,9 @@
  .rq-landing .cinematic-story{background:transparent;margin-top:calc(-1 * var(--rq-nav-height))}
  .rq-landing .story-stage{position:sticky;top:0;height:100svh;z-index:4;overflow:clip}
  .rq-landing .story-stage:before,.rq-landing .story-stage>.rq-hero-world{display:none}
- .rq-landing .story-pages{z-index:2;margin-top:-100svh;padding-top:var(--rq-nav-height)}
+ .rq-landing .story-pages{z-index:2;margin-top:-100svh;padding-top:var(--rq-nav-height);padding-bottom:calc(50svh + 52px)}
  .rq-landing .story-visual{inset:50svh 0 0;height:auto;background:#070707;opacity:1;box-shadow:0 -12px 24px #070707}
- .rq-landing .story-instrument{top:calc(50svh - 52px);bottom:auto;left:0;right:0;height:52px;padding:8px 6%;gap:10px;background:#070707;border-top:1px solid #d8bc8433;z-index:5}
+ .rq-landing .story-instrument{top:calc(50svh - 52px);bottom:auto;left:0;right:0;height:52px;padding:8px 6%;gap:10px;background:#070707;border:0;z-index:5}
  .rq-landing .story-instrument>span{display:none}
  .rq-landing .story-instrument>div{gap:8px;min-width:0}
  .rq-landing .story-instrument b{font-size:17px}
@@ -253,11 +251,12 @@
  .rq-landing .stage-parts button{min-height:44px;font-size:8px;gap:4px}
  .rq-landing .stage-parts button span{font-size:6px}
  .rq-landing .stage-disclosure{bottom:4px;left:6%;right:6%;width:auto;max-width:none;font-size:6px;text-align:left;line-height:1.5}
- .industrial-page.rq-landing .story-act{min-height:100svh;padding:32px 6% calc(50svh + 84px);justify-content:flex-start}
- .industrial-page.rq-landing .knowledge-act,.industrial-page.rq-landing .idea-act{padding-bottom:calc(50svh + 160px)}
+ .industrial-page.rq-landing .story-act{min-height:0;padding:28px 6% 32px;justify-content:flex-start}
+ .industrial-page.rq-landing .knowledge-act,.industrial-page.rq-landing .idea-act{padding-bottom:76px}
  .industrial-page.rq-landing .factory-intro{padding-top:28px;padding-left:6%}
  .rq-landing .story-copy,.rq-landing .factory-intro .story-copy,.rq-landing .stillness-act .story-copy{width:100%;max-width:none}
  .rq-landing .story-copy a{scroll-margin-bottom:calc(50svh + 70px)}
- .rq-landing .rq-story-divider{bottom:calc(50svh + 78px)}
+ .rq-landing .rq-story-divider{bottom:0}
+ .rq-landing .rq-story-divider .rq-divider{margin-bottom:0}
  .rq-landing .stillness-act .story-copy h2{font-size:clamp(43px,10.5vw,65px)}
 }

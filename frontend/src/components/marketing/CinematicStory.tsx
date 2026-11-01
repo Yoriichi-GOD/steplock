@@ -12,13 +12,12 @@ class SceneBoundary extends Component<{children:ReactNode;onFailure:()=>void},{f
 
 export default function CinematicStory(){
  const root=useRef<HTMLElement>(null),stage=useRef<HTMLDivElement>(null),pose=useRef(storyPose(0));
- const [act,setAct]=useState(0),[mode,setMode]=useState<'2d'|'3d'>('2d'),[failed,setFailed]=useState(false),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(false),[selected,setSelected]=useState('COVER'),[manual,setManual]=useState(false),[lowQuality,setLowQuality]=useState(false),[exploded,setExploded]=useState(false);
+ const [act,setAct]=useState(0),[mode,setMode]=useState<'2d'|'3d'>(()=>typeof window!=='undefined'&&matchMedia('(prefers-reduced-motion: reduce)').matches?'2d':'3d'),[failed,setFailed]=useState(false),[paused,setPaused]=useState(false),[reduced,setReduced]=useState(false),[selected,setSelected]=useState('COVER'),[manual,setManual]=useState(false),[lowQuality,setLowQuality]=useState(false),[exploded,setExploded]=useState(false);
  const fail=useCallback(()=>{setFailed(true);setMode('2d')},[]);
  const slow=useCallback(()=>{setLowQuality(true);setMode('2d')},[]);
  const manualLift=useRef<number|null>(null);
  useEffect(()=>{const query=matchMedia('(prefers-reduced-motion: reduce)');const update=()=>{setReduced(query.matches);if(query.matches)setMode('2d')};update();query.addEventListener('change',update);
-  const timer=setTimeout(()=>{if(query.matches||innerWidth<1000||navigator.hardwareConcurrency<4||(navigator as Navigator&{connection?:{saveData:boolean}}).connection?.saveData)return;try{const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2');if(gl){gl.getExtension('WEBGL_lose_context')?.loseContext();setMode('3d')}}catch{/* The SVG story is already visible. */}},250);
-  return()=>{clearTimeout(timer);query.removeEventListener('change',update)}},[]);
+  return()=>query.removeEventListener('change',update)},[]);
  useGSAP(()=>{
   const node=root.current;if(!node)return;const mm=gsap.matchMedia();let disposed=false;
   mm.add({all:'(min-width: 0px)',desktop:'(min-width: 1000px)',fine:'(pointer: fine)',motion:'(prefers-reduced-motion: no-preference)'},context=>{

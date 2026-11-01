@@ -1,0 +1,1786 @@
+{
+  "date": "2026-11-02",
+  "origin": "http://127.0.0.1:62401",
+  "phone": [
+    {
+      "name": "first-load-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": 567.1041870117188,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 86
+        },
+        {
+          "copyBottom": 1157.5729370117188,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00006103515624,
+          "paddingBottom": "76px",
+          "top": 599.1041870117188
+        },
+        {
+          "copyBottom": 1871.072998046875,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 1233.572998046875
+        },
+        {
+          "copyBottom": 2183.7084197998047,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 1903.072998046875
+        },
+        {
+          "copyBottom": 2787.48974609375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 2215.70849609375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 4373.36474609375,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 3337.48974609375
+      },
+      "ready": "true",
+      "scrollY": 0,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "scroll-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -150.22918701171875,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00001525878906,
+          "paddingBottom": "32px",
+          "top": -631.3333740234375
+        },
+        {
+          "copyBottom": 440.2395782470703,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.0000457763672,
+          "paddingBottom": "76px",
+          "top": -118.22917175292967
+        },
+        {
+          "copyBottom": 1153.7396240234375,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 516.2396240234375
+        },
+        {
+          "copyBottom": 1466.3750457763672,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 59.99995422363281,
+          "paddingBottom": "32px",
+          "top": 1185.7396240234375
+        },
+        {
+          "copyBottom": 2070.15625,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 1498.375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 3656.03125,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 2620.15625
+      },
+      "ready": "true",
+      "scrollY": 717.3333129882812,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "knowledge-tail-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -410.2291870117187,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -891.3333740234375
+        },
+        {
+          "copyBottom": 180.23956298828125,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00003051757812,
+          "paddingBottom": "76px",
+          "top": -378.2291870117187
+        },
+        {
+          "copyBottom": 893.7395935058594,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60.000030517578125,
+          "paddingBottom": "32px",
+          "top": 256.2395935058594
+        },
+        {
+          "copyBottom": 1206.3750457763672,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 59.99995422363281,
+          "paddingBottom": "32px",
+          "top": 925.7396240234376
+        },
+        {
+          "copyBottom": 1810.15625,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 1238.375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 3396.03125,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 2360.15625
+      },
+      "ready": "true",
+      "scrollY": 977.3333129882812,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "manual-2d",
+      "canvas": false,
+      "mode": [
+        {
+          "pressed": "false",
+          "text": "3D"
+        },
+        {
+          "pressed": "true",
+          "text": "2D"
+        }
+      ],
+      "svg": true
+    },
+    {
+      "name": "controls-and-scroll-390",
+      "bar": {
+        "bottom": -283.84375,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -335.84375
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -2632.2293090820312,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -3113.33349609375
+        },
+        {
+          "copyBottom": -2041.760498046875,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -2600.229248046875
+        },
+        {
+          "copyBottom": -1328.260498046875,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -1965.760498046875
+        },
+        {
+          "copyBottom": -1015.6250762939452,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": -1296.260498046875
+        },
+        {
+          "copyBottom": -411.84375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": -983.625
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 1174.03125,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 138.15625
+      },
+      "ready": "true",
+      "scrollY": 3199.333251953125,
+      "stage": {
+        "bottom": 138.15625,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -705.84375
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 138.15625,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -283.84375
+      }
+    },
+    {
+      "name": "late-feedback-390",
+      "bar": {
+        "bottom": -202.5104217529297,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -254.5104217529297
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -2550.8958129882812,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 59.99981689453125,
+          "paddingBottom": "32px",
+          "top": -3032
+        },
+        {
+          "copyBottom": -1960.42724609375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.0001220703125,
+          "paddingBottom": "76px",
+          "top": -2518.89599609375
+        },
+        {
+          "copyBottom": -1246.9271240234375,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -1884.4271240234375
+        },
+        {
+          "copyBottom": -934.2917022705078,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00001525878906,
+          "paddingBottom": "32px",
+          "top": -1214.9271240234375
+        },
+        {
+          "copyBottom": -330.51043701171875,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": -902.2916870117188
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 1255.3645935058594,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 219.48959350585935
+      },
+      "ready": "true",
+      "scrollY": 3118,
+      "stage": {
+        "bottom": 219.48956298828125,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -624.5104370117188
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 219.4895782470703,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -202.5104217529297
+      }
+    },
+    {
+      "name": "late-feedback-settled-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -641.5625610351562,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -1122.666748046875
+        },
+        {
+          "copyBottom": -51.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -609.5625
+        },
+        {
+          "copyBottom": 662.40625,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 24.90625
+        },
+        {
+          "copyBottom": 975.0416717529296,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 694.40625
+        },
+        {
+          "copyBottom": 1578.822998046875,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 1007.0416870117188
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 3164.697998046875,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 2128.822998046875
+      },
+      "ready": "true",
+      "scrollY": 1208.6666259765625,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "late-tail-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -1071.5625610351562,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -1552.666748046875
+        },
+        {
+          "copyBottom": -481.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -1039.5625
+        },
+        {
+          "copyBottom": 232.40625,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -405.09375
+        },
+        {
+          "copyBottom": 545.0416717529297,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00001525878906,
+          "paddingBottom": "32px",
+          "top": 264.40625
+        },
+        {
+          "copyBottom": 1148.8229370117188,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 577.0416870117188
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 2734.697998046875,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 1698.822998046875
+      },
+      "ready": "true",
+      "scrollY": 1638.6666259765625,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "native-2d-toggle-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -1071.5625610351562,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -1552.666748046875
+        },
+        {
+          "copyBottom": -481.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -1039.5625
+        },
+        {
+          "copyBottom": 232.40625,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -405.09375
+        },
+        {
+          "copyBottom": 545.0416717529297,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00001525878906,
+          "paddingBottom": "32px",
+          "top": 264.40625
+        },
+        {
+          "copyBottom": 1148.8229370117188,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 577.0416870117188
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "false"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "true"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 2734.697998046875,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 1698.822998046875
+      },
+      "scrollY": 1638.6666259765625,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "native-3d-toggle-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -1071.5625610351562,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -1552.666748046875
+        },
+        {
+          "copyBottom": -481.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -1039.5625
+        },
+        {
+          "copyBottom": 232.40625,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -405.09375
+        },
+        {
+          "copyBottom": 545.0416717529297,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00001525878906,
+          "paddingBottom": "32px",
+          "top": 264.40625
+        },
+        {
+          "copyBottom": 1148.8229370117188,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 577.0416870117188
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 2734.697998046875,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 1698.822998046875
+      },
+      "ready": "true",
+      "scrollY": 1638.6666259765625,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "product-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -1621.5625610351562,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -2102.666748046875
+        },
+        {
+          "copyBottom": -1031.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -1589.5625
+        },
+        {
+          "copyBottom": -317.59375,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -955.09375
+        },
+        {
+          "copyBottom": -4.9583282470703125,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 59.999996185302734,
+          "paddingBottom": "32px",
+          "top": -285.59375
+        },
+        {
+          "copyBottom": 598.8229179382324,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 27.041667938232425
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 2184.697998046875,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 1148.822998046875
+      },
+      "ready": "true",
+      "scrollY": 2188.666748046875,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "exit-390",
+      "bar": {
+        "bottom": 226.8229217529297,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 174.8229217529297
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -2121.562561035156,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -2602.666748046875
+        },
+        {
+          "copyBottom": -1531.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -2089.5625
+        },
+        {
+          "copyBottom": -817.59375,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -1455.09375
+        },
+        {
+          "copyBottom": -504.9583282470703,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 59.99998474121094,
+          "paddingBottom": "32px",
+          "top": -785.59375
+        },
+        {
+          "copyBottom": 98.82290649414062,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": -472.9583435058594
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 1684.6979370117188,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 648.8229370117188
+      },
+      "ready": "true",
+      "scrollY": 2688.666748046875,
+      "stage": {
+        "bottom": 648.8229064941406,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -195.17709350585935
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 648.8229217529297,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 226.8229217529297
+      }
+    },
+    {
+      "name": "after-story-390",
+      "bar": {
+        "bottom": -573.1771240234375,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -625.1771240234375
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -2921.562561035156,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60.00006103515625,
+          "paddingBottom": "32px",
+          "top": -3402.666748046875
+        },
+        {
+          "copyBottom": -2331.09375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": -2889.5625
+        },
+        {
+          "copyBottom": -1617.59375,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": -2255.09375
+        },
+        {
+          "copyBottom": -1304.9583282470703,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 59.99995422363281,
+          "paddingBottom": "32px",
+          "top": -1585.59375
+        },
+        {
+          "copyBottom": -701.1771240234375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": -1272.9583740234375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 884.6979064941406,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -151.17709350585938
+      },
+      "ready": "true",
+      "scrollY": 3488.666748046875,
+      "stage": {
+        "bottom": -151.1771240234375,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -995.1771240234376
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": -151.1771240234375,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": -573.1771240234375
+      }
+    },
+    {
+      "name": "first-load-320",
+      "bar": {
+        "bottom": 370,
+        "height": 52,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 318
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": 603.2083435058594,
+          "height": 549.2083740234375,
+          "id": "factory",
+          "nextCopyGap": 60.000030517578125,
+          "paddingBottom": "32px",
+          "top": 86
+        },
+        {
+          "copyBottom": 1193.6771240234375,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104,
+          "paddingBottom": "76px",
+          "top": 635.2083740234375
+        },
+        {
+          "copyBottom": 2045.718811035156,
+          "height": 808.0416870117188,
+          "id": "late-feedback",
+          "nextCopyGap": 59.99993896484375,
+          "paddingBottom": "32px",
+          "top": 1269.6771240234375
+        },
+        {
+          "copyBottom": 2358.3541717529297,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 2077.71875
+        },
+        {
+          "copyBottom": 3036.5313720703125,
+          "height": 722.1771240234375,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 2390.354248046875
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 4557.4896240234375,
+        "height": 1022.9583740234376,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 3534.53125
+      },
+      "ready": "true",
+      "scrollY": 0,
+      "stage": {
+        "bottom": 740,
+        "height": 740,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "visual": {
+        "bottom": 740,
+        "height": 370,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 370
+      }
+    },
+    {
+      "name": "knowledge-settled-320",
+      "bar": {
+        "bottom": 370,
+        "height": 52,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 318
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": -6.791656494140625,
+          "height": 549.2083740234375,
+          "id": "factory",
+          "nextCopyGap": 59.99999237060547,
+          "paddingBottom": "32px",
+          "top": -524
+        },
+        {
+          "copyBottom": 583.6770858764648,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00003814697266,
+          "paddingBottom": "76px",
+          "top": 25.20833396911621
+        },
+        {
+          "copyBottom": 1435.7188110351562,
+          "height": 808.0416870117188,
+          "id": "late-feedback",
+          "nextCopyGap": 59.99993896484375,
+          "paddingBottom": "32px",
+          "top": 659.6771240234375
+        },
+        {
+          "copyBottom": 1748.3541717529297,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 1467.71875
+        },
+        {
+          "copyBottom": 2426.5313720703125,
+          "height": 722.1771240234375,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 1780.354248046875
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 3947.4896240234375,
+        "height": 1022.9583740234376,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 2924.53125
+      },
+      "ready": "true",
+      "scrollY": 610,
+      "stage": {
+        "bottom": 740,
+        "height": 740,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 740,
+        "width": 320
+      },
+      "visual": {
+        "bottom": 740,
+        "height": 370,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 370
+      }
+    },
+    {
+      "name": "reduced-motion-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": 567.1041870117188,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 86
+        },
+        {
+          "copyBottom": 1157.5729370117188,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00006103515624,
+          "paddingBottom": "76px",
+          "top": 599.1041870117188
+        },
+        {
+          "copyBottom": 1871.072998046875,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 1233.572998046875
+        },
+        {
+          "copyBottom": 2183.7084197998047,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 1903.072998046875
+        },
+        {
+          "copyBottom": 2787.48974609375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 2215.70849609375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "false"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "true"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 4373.36474609375,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 3337.48974609375
+      },
+      "scrollY": 0,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "closing-caption-desktop",
+      "caption": "The next chapter is still being built.",
+      "closingIllustrations": 0,
+      "font": "\"Instrument Serif\", serif",
+      "size": "71.036px",
+      "style": "italic",
+      "top": 456.7395935058594,
+      "viewport": {
+        "height": 930,
+        "width": 1691
+      }
+    },
+    {
+      "name": "studio-anchor-settled",
+      "scrollPadding": "100px",
+      "targetY": 100.1875,
+      "url": "http://127.0.0.1:62401/#prototype"
+    },
+    {
+      "name": "graphics-context-loss-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": 567.1041870117188,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 86
+        },
+        {
+          "copyBottom": 1157.5729370117188,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00006103515624,
+          "paddingBottom": "76px",
+          "top": 599.1041870117188
+        },
+        {
+          "copyBottom": 1871.072998046875,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 1233.572998046875
+        },
+        {
+          "copyBottom": 2183.7084197998047,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 1903.072998046875
+        },
+        {
+          "copyBottom": 2787.48974609375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 2215.70849609375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": true,
+          "label": "3D",
+          "pressed": "false"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "true"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 4373.36474609375,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 3337.48974609375
+      },
+      "scrollY": 0,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "failure-disclosure",
+      "text": "3D unavailable. ILLUSTRATIVE SCENE · NOT FACTORY FOOTAGE OR DETECTOR OUTPUT"
+    },
+    {
+      "name": "graphics-reload-recovery-390",
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 370
+      },
+      "barBorder": "0px",
+      "chapters": [
+        {
+          "copyBottom": 567.1041870117188,
+          "height": 513.1041870117188,
+          "id": "factory",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 86
+        },
+        {
+          "copyBottom": 1157.5729370117188,
+          "height": 634.46875,
+          "id": "knowledge-gap",
+          "nextCopyGap": 104.00006103515624,
+          "paddingBottom": "76px",
+          "top": 599.1041870117188
+        },
+        {
+          "copyBottom": 1871.072998046875,
+          "height": 669.5,
+          "id": "late-feedback",
+          "nextCopyGap": 60,
+          "paddingBottom": "32px",
+          "top": 1233.572998046875
+        },
+        {
+          "copyBottom": 2183.7084197998047,
+          "height": 312.63543701171875,
+          "id": "story-act stillness-act",
+          "nextCopyGap": 60.00007629394531,
+          "paddingBottom": "32px",
+          "top": 1903.072998046875
+        },
+        {
+          "copyBottom": 2787.48974609375,
+          "height": 647.78125,
+          "id": "product",
+          "nextCopyGap": null,
+          "paddingBottom": "76px",
+          "top": 2215.70849609375
+        }
+      ],
+      "modes": [
+        {
+          "disabled": false,
+          "label": "3D",
+          "pressed": "true"
+        },
+        {
+          "disabled": false,
+          "label": "2D",
+          "pressed": "false"
+        }
+      ],
+      "overflow": -15,
+      "prototype": {
+        "bottom": 4373.36474609375,
+        "height": 1035.875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 3337.48974609375
+      },
+      "ready": "true",
+      "scrollY": 0,
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "visual": {
+        "bottom": 844,
+        "height": 422,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 422
+      }
+    },
+    {
+      "name": "closing-caption-phone",
+      "caption": "The next chapter is still being built.",
+      "closingIllustrations": 0,
+      "font": "\"Instrument Serif\", serif",
+      "size": "32px",
+      "style": "italic",
+      "top": 96.76042175292967,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  ],
+  "desktop": [
+    {
+      "name": "desktop-1691",
+      "cta": {
+        "background": "rgb(214, 191, 148)",
+        "bottom": 77.86458587646484,
+        "height": 45.72916793823242,
+        "right": 1600.5833435058594,
+        "width": 168.70834350585938,
+        "x": 1431.875,
+        "y": 32.13541793823242
+      },
+      "header": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 110,
+        "height": 110,
+        "right": 1676,
+        "width": 1676,
+        "x": 0,
+        "y": 0
+      },
+      "logo": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 125,
+        "height": 140,
+        "right": 1407.875,
+        "width": 280,
+        "x": 1127.875,
+        "y": -15
+      },
+      "nav": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 66.89583587646484,
+        "height": 23.791667938232425,
+        "right": 845.0312805175781,
+        "width": 434.0833435058594,
+        "x": 410.9479370117187,
+        "y": 43.10416793823242
+      },
+      "overflow": 0,
+      "ready": "true",
+      "reduced": false,
+      "scrollY": 0,
+      "viewport": {
+        "height": 930,
+        "width": 1691
+      }
+    },
+    {
+      "name": "desktop-1280",
+      "cta": {
+        "background": "rgb(214, 191, 148)",
+        "bottom": 77.86458587646484,
+        "height": 45.72916793823242,
+        "right": 1207.7604675292969,
+        "width": 168.70834350585938,
+        "x": 1039.0521240234375,
+        "y": 32.13541793823242
+      },
+      "header": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 110,
+        "height": 110,
+        "right": 1264.666748046875,
+        "width": 1264.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "logo": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 115,
+        "height": 120,
+        "right": 1015.0521240234376,
+        "width": 240,
+        "x": 775.0521240234375,
+        "y": -5
+      },
+      "nav": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 66.04166793823242,
+        "height": 22.09375,
+        "right": 631.6771087646484,
+        "width": 390.6354370117187,
+        "x": 241.0416717529297,
+        "y": 43.94791793823242
+      },
+      "overflow": 0,
+      "ready": "true",
+      "reduced": false,
+      "scrollY": 0,
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "name": "desktop-1024",
+      "cta": {
+        "background": "rgb(214, 191, 148)",
+        "bottom": 77.86458587646484,
+        "height": 45.72916793823242,
+        "right": 963.281280517578,
+        "width": 168.70834350585938,
+        "x": 794.5729370117188,
+        "y": 32.13541793823242
+      },
+      "header": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 110,
+        "height": 110,
+        "right": 1008.6666870117188,
+        "width": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "logo": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 106.25,
+        "height": 102.5,
+        "right": 770.5729370117188,
+        "width": 205,
+        "x": 565.5729370117188,
+        "y": 3.75
+      },
+      "nav": {
+        "background": "rgba(0, 0, 0, 0)",
+        "bottom": 65.19791984558105,
+        "height": 20.39583396911621,
+        "right": 490.37501525878906,
+        "width": 353.2083435058594,
+        "x": 137.1666717529297,
+        "y": 44.80208587646485
+      },
+      "overflow": 0,
+      "ready": "true",
+      "reduced": false,
+      "scrollY": 0,
+      "viewport": {
+        "height": 768,
+        "width": 1024
+      }
+    }
+  ],
+  "notes": [
+    "Phone viewport dimensions are emulated, not physical device testing.",
+    "Negative raw overflow values are scrollbar width, not page overflow.",
+    "An early late-feedback anchor sample was captured during smooth scrolling; use the settled sample.",
+    "Graphics-context loss was induced through WEBGL_lose_context and cleared by reloading; native 3D recovery verified.",
+    "Reduced-motion emulation reset after the test.",
+    "No-WebGL initialization override is unsupported; startup without WebGL was not separately verified."
+  ]
+}
