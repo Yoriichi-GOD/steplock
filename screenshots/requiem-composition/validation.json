@@ -1,0 +1,51 @@
+{
+  "headingHeight": 138,
+  "navBackground": "rgba(0, 0, 0, 0)",
+  "navHeight": 110,
+  "overflow": 0,
+  "panelBackground": "rgb(16, 16, 16)",
+  "viewport": {
+    "height": 930,
+    "width": 1691
+  },
+  "normal": {
+    "verdict": "PASS",
+    "analyzedFrames": 30,
+    "events": 10,
+    "evidenceFilter": "none",
+    "evidenceOpacity": "1"
+  },
+  "reset": {
+    "verdict": "DETERMINISTIC FINDING\nPENDING\n\nNo inspection has run. Select a prepared example.\n\nBaseline inspection uses local computer vision and procedure rules. No external AI call is required.",
+    "analyzedFrames": 0
+  },
+  "wrongComponent": {
+    "verdict": "DETERMINISTIC FINDING\nHOLD FOR REVIEW\n\nWRONG_FASTENER is not a required component here. Remove it and use the recipe's tagged component.\n\nBaseline inspection uses local computer vision and procedure rules. No external AI call is required.",
+    "analyzedFrames": 30,
+    "events": 11
+  },
+  "phone": {
+    "height": 844,
+    "overflow": 0,
+    "width": 390
+  },
+  "phoneReadability": {
+    "backing": "rgb(7, 7, 7)",
+    "overflow": 0,
+    "scrollY": 2382,
+    "stops": [
+      {
+        "bottom": 378.2083435058594,
+        "top": 333.2083435058594
+      },
+      {
+        "bottom": 455.7083435058594,
+        "top": 410.7083435058594
+      },
+      {
+        "bottom": 533.2083435058594,
+        "top": 488.2083435058594
+      }
+    ]
+  }
+}

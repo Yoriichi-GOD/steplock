@@ -1,5 +1,7 @@
 # Black theme and transparent masthead correction
 
+Follow-up: [REQUIEM composition correction](REQUIEM_COMPOSITION_CORRECTION.md) supersedes the fragment placements and closing-section composition below following the user's marked review.
+
 User-requested follow-up to `e12bf3f`, implemented locally on 2026-11-01. Preview remains <http://127.0.0.1:62401/> and the generated-example demo remains `/demo`.
 
 ## What changed

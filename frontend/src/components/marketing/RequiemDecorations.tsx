@@ -37,18 +37,16 @@ export function RequiemDivider({kind='halo'}:{kind?:'halo'|'vine'|'moon'|'mounta
 }
 export function RequiemWorld(){
  const root=useVisibleArtwork();
- return <div ref={root} className="rq-hero-world" aria-hidden="true"><img className="rq-celestial" src="/assets/steplock-header/celestial-full.webp" width="2149" height="732" alt="" fetchPriority="high"/><Ornament kind="arch" className="rq-hero-arch"/><Ornament kind="sparkles" className="rq-hero-sparkles"/></div>;
+ return <div ref={root} className="rq-hero-world" aria-hidden="true"><img className="rq-celestial" src="/assets/steplock-header/celestial-full.webp" width="2149" height="732" alt="" fetchPriority="high"/><Ornament kind="sparkles" className="rq-hero-sparkles"/></div>;
 }
 export function RequiemPortal(){
  return <div className="rq-portal-art" aria-hidden="true"><img className="rq-portal-sky" src="/assets/requiem/celestial-arches.webp" width="1691" height="930" alt="" loading="lazy"/><img className="rq-window rq-window-left" src="/assets/requiem/right-arch-landscape.webp" width="300" height="533" alt="" loading="lazy"/><img className="rq-window rq-window-right" src="/assets/requiem/right-arch-landscape.webp" width="300" height="533" alt="" loading="lazy"/></div>;
 }
-export function RequiemChapterOrnaments({chapter}:{chapter:'knowledge'|'mistake'|'reveal'|'future'|'invitation'}){
+export function RequiemChapterOrnaments({chapter}:{chapter:'reveal'|'future'|'invitation'}){
  return <div className={`rq-chapter-art rq-${chapter}-art`} aria-hidden="true">
-  {chapter==='knowledge'&&<Ornament kind="column"/>}
-  {chapter==='mistake'&&<Ornament kind="broken"/>}
   {chapter==='reveal'&&<Ornament kind="ornateCorner"/>}
   {chapter==='future'&&<Ornament kind="twin"/>}
-  {chapter==='invitation'&&<><Ornament kind="upperLeft" className="rq-invitation-upper"/><Ornament kind="lowerRight" className="rq-invitation-lower"/></>}
+  {chapter==='invitation'&&<img className="rq-invitation-scenery" src="/assets/requiem/celestial-arches.webp" width="1691" height="930" alt="" loading="lazy"/>}
  </div>;
 }
 export function RequiemDemoMasthead(){
