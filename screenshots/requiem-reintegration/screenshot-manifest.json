@@ -1,0 +1,239 @@
+{
+  "capture": "Actual local browser JPEG; no artwork compositing. Browser capture excludes scrollbar/chrome. Before/after hero pairs use reduced-motion 2D; manual orbit is a separate native 3D capture.",
+  "screenshots": [
+    {
+      "file": "after-closing-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "6324439fdfa058beae937cd0202c065b3818a650644f36b9f6a77d771739906a"
+    },
+    {
+      "file": "after-demo-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "b17f96b8385d6a55d6302c5c515b160a79a9de1a667888a78ce9f1fb71db39e0"
+    },
+    {
+      "file": "after-demo-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "72636105c2065e6238e7bd4b2b2396e0113336854d9423439b4b0ff30a219119"
+    },
+    {
+      "file": "after-evidence-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "dd0963e2aed3a83e3c3f4d665d949e709e08cd361a0f74e72ffe7cbf3594b27b"
+    },
+    {
+      "file": "after-hero-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "7891db815e449a9118f44c8eefe93a3884654af6ecb67b896536fa83ad1ace59"
+    },
+    {
+      "file": "after-hero-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "8eb24acd4de7ef18f9d054e8654f170e3d842671a04a8f32aedb6483d84fc86e"
+    },
+    {
+      "file": "after-prototype-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "98b127edbfe1cd3b7395925f8985cbbd0c7ff94716c4f5208c3db8d175561fa4"
+    },
+    {
+      "file": "after-prototype-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "9d2356753a40ba0cb8d2898213d3788139680a819d86d6eb97487125fe9d34eb"
+    },
+    {
+      "file": "assembly-2d-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "f105ee774911623a74bcbb34feede7d9b9d22d84dd20cea7cb971841e9adbf59"
+    },
+    {
+      "file": "assembly-orbit-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "bc5c8013a2b4018364155ee25c5dee42ed6bf30e27f52444491c94dd3fc7f8b3"
+    },
+    {
+      "file": "before-demo-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "31b9fe7a19f2166cac35a329dc632ead85d49b147f759520ab2297e6f015e7fb"
+    },
+    {
+      "file": "before-demo-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "287b6e93207a688030b53e8dedbafa24a2161f121d85438fdaa813c69450edae"
+    },
+    {
+      "file": "before-hero-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "235955d95aa2599fb5d708f3a8e589287a1fb4290fb41e70c5cf2de988ad15eb"
+    },
+    {
+      "file": "before-hero-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "0b677b32747a83143429a178d742450619b436b99a4fd1b4fbbc686e8b11a782"
+    },
+    {
+      "file": "before-prototype-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "0f865b107f142307cd76d72aafd27f2265be60462102fda7d5df0907c43de8a5"
+    },
+    {
+      "file": "demo-320.jpg",
+      "format": "JPEG",
+      "size_px": [
+        305,
+        804
+      ],
+      "sha256": "a06507cdbab319616f3bb2ae1b71c88e072b005fc5ed50309c5afedba2485cbe"
+    },
+    {
+      "file": "demo-correction-source-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "ab31700c750de0d9045f973e4809f6c155a328ce87e185fc8fde8eb538821625"
+    },
+    {
+      "file": "demo-normal-390.jpg",
+      "format": "JPEG",
+      "size_px": [
+        375,
+        812
+      ],
+      "sha256": "bed0f4d9a356b8fd6115105b22a76655661d0aad33b5c3760b0a6599598d86d6"
+    },
+    {
+      "file": "demo-source-lost-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "1f2b98809195179cc0cb2139330955a067821c8e4027d1d8ffd1a1121922c29d"
+    },
+    {
+      "file": "demo-wrong-component-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "6189fd5e1d21839fb6a3a5c3af566149a2b6c85a43deb99f1b45d142fc97e2fc"
+    },
+    {
+      "file": "demo-wrong-order-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "56019ff85ebb8e1a0a848192059b08cae8f3ec048a2ecb4bf78b53bbef43fcc9"
+    },
+    {
+      "file": "evidence-record-1691.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1676,
+        922
+      ],
+      "sha256": "d9010dfa0a7bd12923ddd9344803904d09b955f1dde67b5afd96ba432234a2e6"
+    },
+    {
+      "file": "landing-1024.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1003,
+        705
+      ],
+      "sha256": "32a94d8fb5a070e9d5c25b882ea07a717d9386674f98395a6b1958a403e7c427"
+    },
+    {
+      "file": "landing-1280.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1253,
+        705
+      ],
+      "sha256": "16bd9bbdf4142c4e1cb28f3f2bd28f74b9c9e471eb94c0c554a66f876f71416e"
+    },
+    {
+      "file": "landing-1920.jpg",
+      "format": "JPEG",
+      "size_px": [
+        1880,
+        705
+      ],
+      "sha256": "80eec6f0b253738117864f722d7e3ed20e3cba0bd1ca1e8aaa9f826112c1ce77"
+    },
+    {
+      "file": "landing-320.jpg",
+      "format": "JPEG",
+      "size_px": [
+        305,
+        804
+      ],
+      "sha256": "a86533e00a204b778b9041a095b969c609af43ad7fef64880f8e15b540d9420c"
+    }
+  ]
+}

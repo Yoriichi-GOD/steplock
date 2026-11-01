@@ -1,3 +1,4 @@
 # Preserve production artwork and provenance hashes byte-for-byte.
 frontend/public/assets/requiem/** -text
 frontend/public/assets/steplock-header/** -text
+frontend/public/assets/requiem-ornaments/** -text

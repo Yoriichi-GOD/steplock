@@ -1,0 +1,57 @@
+[
+  {
+    "clientWidth": 1905,
+    "flowerAnimation": "none",
+    "headingFits": true,
+    "horizontalOverflow": 0,
+    "viewport": [
+      1920,
+      720
+    ],
+    "visibleImageFailures": []
+  },
+  {
+    "clientWidth": 1265,
+    "flowerAnimation": "none",
+    "headingFits": true,
+    "horizontalOverflow": 0,
+    "viewport": [
+      1280,
+      720
+    ],
+    "visibleImageFailures": []
+  },
+  {
+    "clientWidth": 1009,
+    "flowerAnimation": "none",
+    "headingFits": true,
+    "horizontalOverflow": 0,
+    "viewport": [
+      1024,
+      720
+    ],
+    "visibleImageFailures": []
+  },
+  {
+    "clientWidth": 305,
+    "flowerAnimation": "none",
+    "headingFits": true,
+    "horizontalOverflow": 0,
+    "viewport": [
+      320,
+      844
+    ],
+    "visibleImageFailures": []
+  },
+  {
+    "clientWidth": 375,
+    "flowerAnimation": "none",
+    "headingFits": true,
+    "horizontalOverflow": 0,
+    "viewport": [
+      390,
+      844
+    ],
+    "visibleImageFailures": []
+  }
+]

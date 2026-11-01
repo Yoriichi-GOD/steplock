@@ -1,0 +1,51 @@
+{
+  "test_date": "2026-11-01",
+  "preview": "http://127.0.0.1:62401",
+  "baseline_commit": "555e4b863e769a7fe14861902a3dee5dac416668",
+  "frontend_tests": {
+    "passed": 26
+  },
+  "backend_tests": {
+    "passed": 122,
+    "warnings": "Existing upstream Starlette/httpx deprecation warning",
+    "execution": "Normal local process execution; restricted runs hit Windows socketpair/temp-file restrictions"
+  },
+  "browser_demo": [
+    {
+      "scenario": "normal",
+      "status": "PASS"
+    },
+    {
+      "scenario": "wrong_component",
+      "status": "HOLD_FOR_REVIEW"
+    },
+    {
+      "scenario": "wrong_order",
+      "status": "HOLD_FOR_REVIEW"
+    },
+    {
+      "scenario": "correction",
+      "status": "PASS",
+      "original_finding_retained": true
+    }
+  ],
+  "browser_controls": {
+    "source_toggle": "Unaltered generated source frame visible",
+    "overlay_toggle": "Actual inspection overlay visible",
+    "offline_after_pass": "SOURCE LOST",
+    "reset": "PENDING",
+    "prototype_cta": "Opens /demo",
+    "landing_evidence_record": "aria-expanded=true; technical record visible with source hashes"
+  },
+  "scope": "Generated software examples only; no physical factory or camera accuracy validation",
+  "browser_assembly": {
+    "native_webgl_canvas": "rendered",
+    "part_selection": "BASE aria-pressed true",
+    "explode": "changed action to Assemble",
+    "2d_switch": "SVG present; canvas absent",
+    "3d_switch": "canvas restored",
+    "manual_orbit": "visually changed camera orientation; assembly-orbit-1691.jpg",
+    "reduced_motion": "2D default; decorative animations none",
+    "offscreen_flower": "animation-play-state paused under full motion"
+  }
+}

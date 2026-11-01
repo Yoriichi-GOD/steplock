@@ -1,0 +1,79 @@
+/* Public visual layer only. Studio, renderer geometry and evidence pixels are untouched. */
+.public-page.rq-landing,.public-page.rq-demo{--rq-black:#060808;--rq-gold:#d8bc84;background:var(--rq-black)}
+.rq-ornament,.rq-hero-world,.rq-portal-art,.rq-demo-art,.rq-flower,.rq-divider{pointer-events:none;user-select:none}
+.rq-ornament{display:block;height:auto;object-fit:contain}
+.rq-landing .public-nav,.rq-demo .public-nav{position:relative;height:110px;padding:0 4.5%;max-width:none;background:transparent;border:0;z-index:10}
+.rq-landing .wordmark.rq-brand,.rq-demo .wordmark.rq-brand{display:block;flex-shrink:0;line-height:0}
+.rq-brand img{display:block;width:240px!important;height:120px!important;max-width:100%;object-fit:contain}
+.rq-landing .public-nav nav{gap:25px}
+.rq-landing .public-nav .compact{min-height:44px;padding:12px 18px}
+.rq-landing h1,.rq-landing h2,.rq-demo .demo-heading h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.055em}
+.rq-landing .story-copy h1{font-size:clamp(64px,6vw,102px);line-height:1.02;letter-spacing:-.055em}
+.rq-landing .story-copy h1 em,.rq-landing .story-copy h2 em{font-family:'Instrument Serif',Georgia,serif}
+.rq-landing .cinematic-story,.rq-landing .after-story{background:var(--rq-black)}
+.rq-landing .story-stage:before{background:linear-gradient(0deg,#060808 0%,#06080800 48%);z-index:0}
+.rq-hero-world{position:absolute;inset:0;opacity:1;transition:opacity 1.3s}
+.rq-celestial{position:absolute;top:0;left:0;width:100%;height:auto;aspect-ratio:2149/732;object-fit:contain}
+.rq-hero-arch{position:absolute;width:clamp(110px,13vw,215px);right:-45px;top:38%;opacity:.85}
+.rq-hero-sparkles{position:absolute;width:24%;right:25%;top:10%;opacity:.65}
+.rq-landing .story-visual{z-index:1}
+.rq-landing .story-copy{position:relative}
+.industrial-page.rq-landing .public-nav{height:110px;background:transparent;border:0}
+.industrial-page.rq-landing .factory-intro{padding-top:8vh;padding-left:8%}
+.industrial-page.rq-landing .factory-intro .story-copy{width:47%}
+.industrial-page.rq-landing .story-copy h1{font-size:clamp(64px,5.5vw,94px);line-height:1.02;letter-spacing:-.055em}
+.rq-landing .factory-intro .story-kicker{background:#060808a8;width:fit-content;padding:4px 8px;margin-left:-8px}
+.rq-landing .factory-intro .story-copy{width:46%;max-width:740px}
+.rq-landing .factory-intro .story-kicker{margin-bottom:22px}
+.rq-landing .story-copy p{color:#d0d0c9}
+.rq-landing .cinematic-story[data-act="2"] .rq-hero-world,.rq-landing .cinematic-story[data-act="3"] .rq-hero-world{opacity:.08}
+.rq-landing .cinematic-story[data-act="4"] .rq-hero-arch{opacity:.4}
+.rq-story-divider{position:absolute;bottom:3%;left:4.5%;width:35%;opacity:.75}
+.rq-divider{position:relative;width:min(75%,900px);margin:0 auto 55px}
+.rq-divider img{width:100%;height:auto}
+.rq-landing .prototype-section{position:relative;isolation:isolate;overflow:clip;border:0;padding-top:95px;padding-bottom:95px}
+.rq-portal-art{position:absolute;inset:0;z-index:-1;overflow:clip}
+.rq-portal-sky{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6;mask-image:linear-gradient(transparent,#000 15%,#000 75%,transparent)}
+.rq-window{position:absolute;width:clamp(100px,12vw,190px);height:auto;top:42%;opacity:.95}
+.rq-window-left{left:1%;transform:scaleX(-1)}
+.rq-window-right{right:1%}
+.rq-landing .prototype-copy{position:relative;gap:45px;margin-inline:3%;margin-bottom:50px}
+.rq-landing .prototype-copy h2{font-size:clamp(54px,5.7vw,96px)}
+.rq-landing .prototype-copy>div{background:linear-gradient(90deg,#060808bb,transparent);padding:15px 0 15px 25px}
+.rq-landing .prototype-copy p:first-child{font-size:16px;line-height:1.8}
+.rq-landing .prototype-copy .rq-prototype-label{font:9px 'IBM Plex Mono',monospace;color:#d9c395;letter-spacing:2px;display:block;margin-bottom:20px}
+.rq-landing .prototype-screen{position:relative;width:79%;margin:auto;border-color:#baa57c80;box-shadow:0 30px 80px #0009;background:#060808;border-radius:10px;overflow:clip}
+.rq-landing .prototype-flow{margin:35px 11% 0}
+.rq-landing .evidence-section{background:#080c0e}
+.rq-landing .future-section>.rq-divider{margin-top:0}
+.rq-landing .early-access{position:relative;isolation:isolate;margin:0;padding:110px 7% 100px;overflow:clip;border:0;background:#060808;gap:65px}
+.rq-landing .early-access:before{content:'';position:absolute;z-index:-1;inset:0;background:url('/assets/steplock-header/celestial-full.webp') center bottom/100% auto no-repeat;opacity:.8;pointer-events:none}
+.rq-closing-brand{display:block;width:min(360px,85%);height:auto;margin:-20px 0 25px}
+.rq-landing .early-access h2{font-family:Georgia,serif;font-size:clamp(42px,4.2vw,72px);letter-spacing:-.05em}
+.rq-landing .early-access>div>p,.rq-landing .contact-options{position:relative;background:#060808b8;padding:8px 12px;border-radius:5px;width:fit-content}
+.rq-landing .early-access form{background:#080b0bd9;border:1px solid #d8bc8440;padding:30px;border-radius:16px;align-self:start}
+.rq-flower{width:155px;margin:25px 0 0}
+.rq-flower img{display:block;width:100%;height:auto}
+.rq-landing .public-footer,.rq-demo .public-footer{background:#060808}
+.rq-landing .public-footer .rq-brand img,.rq-demo .public-footer .rq-brand img{width:220px!important;height:110px!important}
+.rq-demo .demo-main{padding-top:0}
+.rq-demo .demo-heading{position:relative;isolation:isolate;min-height:248px;margin:0 -5.93% 38px;padding:30px 5.3%;overflow:clip}
+.rq-demo-art{position:absolute;inset:0;z-index:-1}
+.rq-demo-art>img:first-child{display:block;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:right center}
+.rq-demo-corner{position:absolute;right:0;top:0;width:145px;opacity:.65;transform:scaleX(-1)}
+.rq-demo .demo-heading h1{margin:0 0 8px;line-height:0}
+.rq-procedure-title{display:block;width:min(510px,55vw);height:auto}
+.rq-demo .demo-heading p{font-size:13px;color:#f0e9d9;max-width:540px;background:#060808b8;padding:7px 10px;width:fit-content;border-radius:4px}
+.rq-demo .demo-heading .kicker{font-size:9px;letter-spacing:1.5px;color:#d4c197}
+.rq-demo .demo-advisory{background:#070909b8;padding:12px;border:1px solid #d8bc8450;position:relative}
+.rq-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:1700px){.rq-landing .factory-intro{padding-top:8vh}.rq-landing .factory-intro .story-copy{max-width:780px}}
+@media(max-width:1100px){.rq-brand img{width:200px!important;height:100px!important}.rq-landing .public-nav nav{gap:16px}.rq-landing .story-copy h1{font-size:72px}.rq-landing .prototype-screen{width:82%}.rq-window{width:12%;top:53%}}
+@media(max-width:767px){.rq-landing .public-nav,.rq-demo .public-nav{height:86px;padding:0 6%}.rq-brand img{width:170px!important;height:85px!important}.rq-landing .public-nav .compact,.rq-demo .public-nav .compact{font-size:10px;padding:10px 12px;gap:8px}.rq-hero-arch{display:none}.rq-hero-sparkles{width:36%;right:9%;top:5%}.rq-celestial{width:100%;top:0}.rq-landing .story-stage:before{background:linear-gradient(0deg,#060808 50%,transparent 82%)}.rq-landing .factory-intro{padding-top:37svh}.rq-landing .factory-intro .story-copy{width:100%}.rq-landing .story-copy h1{font-size:clamp(46px,12vw,72px);line-height:1.02}.rq-landing .story-copy h2{font-size:clamp(43px,10.5vw,65px)}.rq-landing .factory-intro .story-kicker{margin-bottom:16px}.rq-story-divider{width:65%;left:6%;bottom:2%}.rq-divider{width:88%;margin-bottom:30px}.rq-landing .prototype-section{padding-top:65px;padding-bottom:65px}.rq-landing .prototype-copy{margin-inline:0;gap:18px}.rq-landing .prototype-copy>div{padding:0;background:none}.rq-landing .prototype-copy h2{font-size:48px}.rq-landing .prototype-copy p:first-child{font-size:12px}.rq-landing .prototype-screen{width:100%;border-radius:7px}.rq-window{top:12%;width:70px;opacity:.4}.rq-window-left{left:-32px}.rq-window-right{right:-32px}.rq-portal-sky{object-fit:cover;object-position:70% center;opacity:.5}.rq-landing .prototype-flow{margin:25px 0 0}.rq-landing .early-access{padding:65px 6%;gap:30px}.rq-landing .early-access:before{background-size:auto 420px;background-position:70% bottom;opacity:.55}.rq-landing .early-access form{padding:22px;margin:0}.rq-closing-brand{width:260px;margin:-15px 0 15px}.rq-flower{width:100px}.rq-demo .demo-heading{min-height:240px;margin:0 -6.82% 25px;padding:25px 6%}.rq-demo-art>img:first-child{height:100%;width:100%;object-fit:cover;object-position:72% center}.rq-demo-corner{width:85px;opacity:.4}.rq-procedure-title{width:100%;max-width:400px}.rq-demo .demo-heading p{font-size:11px;max-width:280px}.rq-demo .demo-heading .kicker{font-size:7px}.rq-demo .demo-heading h1{margin:5px 0 10px}}
+@media(max-width:360px){.rq-brand img{width:140px!important;height:70px!important}.rq-landing .public-nav .compact,.rq-demo .public-nav .compact{font-size:9px;padding:10px}.rq-landing .story-copy h1{font-size:43px}.rq-landing .prototype-copy h2{font-size:44px}}
+@media(max-width:767px){.industrial-page.rq-landing .public-nav{height:86px}.industrial-page.rq-landing .factory-intro{padding-top:37svh;padding-left:6%}.industrial-page.rq-landing .factory-intro .story-copy{width:100%}.industrial-page.rq-landing .story-copy h1{font-size:clamp(46px,12vw,72px)}}
+@media(max-width:360px){.industrial-page.rq-landing .story-copy h1{font-size:43px}}
+@keyframes rq-flower-float{to{transform:translateY(-8px) rotate(2deg)}}
+@keyframes rq-celestial-glint{0%,100%{opacity:.4}50%{opacity:.85}}
+@media(prefers-reduced-motion:no-preference){.rq-flower img{animation:rq-flower-float 5s ease-in-out infinite alternate;animation-play-state:paused}.rq-flower[data-visible="true"] img{animation-play-state:running}.rq-hero-world[data-visible="true"] .rq-hero-sparkles{animation:rq-celestial-glint 2.4s ease-in-out 1}}
+@media(prefers-reduced-motion:reduce){.rq-hero-world{transition:none}}

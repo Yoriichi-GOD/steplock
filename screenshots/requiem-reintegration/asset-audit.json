@@ -1,0 +1,170 @@
+{
+  "source": "User separated kit, no recropping",
+  "count": 18,
+  "png_bytes": 4753634,
+  "webp_bytes": 1473566,
+  "assets": [
+    {
+      "asset": "corners/corner-lower-left.png",
+      "hashes": "verified",
+      "dimensions": [
+        649,
+        481
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "corners/corner-lower-right.png",
+      "hashes": "verified",
+      "dimensions": [
+        640,
+        467
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "corners/corner-upper-left.png",
+      "hashes": "verified",
+      "dimensions": [
+        634,
+        512
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "corners/corner-upper-right.png",
+      "hashes": "verified",
+      "dimensions": [
+        598,
+        500
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "dividers/divider-celestial-diamond.png",
+      "hashes": "verified",
+      "dimensions": [
+        1507,
+        156
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "dividers/divider-crescent-moon.png",
+      "hashes": "verified",
+      "dimensions": [
+        1663,
+        135
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "dividers/divider-floral-vine.png",
+      "hashes": "verified",
+      "dimensions": [
+        1511,
+        110
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "dividers/divider-halo-star.png",
+      "hashes": "verified",
+      "dimensions": [
+        1509,
+        175
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "dividers/divider-mountain-crest.png",
+      "hashes": "verified",
+      "dimensions": [
+        1572,
+        140
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-broken-arch.png",
+      "hashes": "verified",
+      "dimensions": [
+        565,
+        344
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-carved-rubble.png",
+      "hashes": "verified",
+      "dimensions": [
+        524,
+        188
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-finial-pedestal.png",
+      "hashes": "verified",
+      "dimensions": [
+        277,
+        378
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-fluted-column.png",
+      "hashes": "verified",
+      "dimensions": [
+        393,
+        459
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-grand-arch.png",
+      "hashes": "verified",
+      "dimensions": [
+        683,
+        760
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-ornate-upper-corner.png",
+      "hashes": "verified",
+      "dimensions": [
+        464,
+        404
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-stone-rubble.png",
+      "hashes": "verified",
+      "dimensions": [
+        369,
+        194
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "fragments/fragment-twin-arches.png",
+      "hashes": "verified",
+      "dimensions": [
+        488,
+        402
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    },
+    {
+      "asset": "sparkles/celestial-sparkles-cluster.png",
+      "hashes": "verified",
+      "dimensions": [
+        1468,
+        505
+      ],
+      "alpha": "RGBA, includes transparent pixels"
+    }
+  ]
+}

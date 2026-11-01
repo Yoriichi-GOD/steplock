@@ -1,0 +1,224 @@
+{
+  "provenance": "User-supplied separated REQUIEM landing kit; decorative illustrations, never inspection evidence. Original PNGs preserved byte-for-byte.",
+  "source_pack": "STEPLOCK_REQUIEM_LANDING_ASSET_KIT.zip",
+  "conversion": "Pillow WebP quality=88 method=6 exact=True; unchanged dimensions; no recropping",
+  "files": [
+    {
+      "source": "corners/corner-lower-left.png",
+      "size_px": [
+        649,
+        481
+      ],
+      "source_sha256": "d8ad7aec6101458262c4cb7fc38ea9de5d86147b717f3853d2e3a3827b1b8f23",
+      "source_bytes": 367573,
+      "optimized": "corners/corner-lower-left.webp",
+      "optimized_sha256": "40a4060ce47b219ab957335c1e1ccc48922d7e497f809e11ae115d4d50dcd5cd",
+      "optimized_bytes": 61744
+    },
+    {
+      "source": "corners/corner-lower-right.png",
+      "size_px": [
+        640,
+        467
+      ],
+      "source_sha256": "394bc35665ef0199444770f4af1cd510363e8b91010b76baea165f20f442ac4d",
+      "source_bytes": 348516,
+      "optimized": "corners/corner-lower-right.webp",
+      "optimized_sha256": "9a2f8089064f8fed2f4c9402452ed8a4b055fe1a40da73d3d4ee55ce0a52fc0b",
+      "optimized_bytes": 62412
+    },
+    {
+      "source": "corners/corner-upper-left.png",
+      "size_px": [
+        634,
+        512
+      ],
+      "source_sha256": "2d699c5d8f78b2f30ac8c5d04bc663b07ee5f83f75388ed5365d838df4cf250e",
+      "source_bytes": 423059,
+      "optimized": "corners/corner-upper-left.webp",
+      "optimized_sha256": "bafc31ee00d59e3340926365779e56b30e7fdf3960ab9e9a254bc86eb6309f23",
+      "optimized_bytes": 78332
+    },
+    {
+      "source": "corners/corner-upper-right.png",
+      "size_px": [
+        598,
+        500
+      ],
+      "source_sha256": "900ea16d0176baf3df0989bc9ca01a4682b5170984ec727d6854f63367d445d0",
+      "source_bytes": 382946,
+      "optimized": "corners/corner-upper-right.webp",
+      "optimized_sha256": "360b1598e18407ea5ddc4f282f542a92a07a81ae2ac0a69e5668cfd9f6e27d52",
+      "optimized_bytes": 68992
+    },
+    {
+      "source": "dividers/divider-celestial-diamond.png",
+      "size_px": [
+        1507,
+        156
+      ],
+      "source_sha256": "3eb8e160bb0b81799da54ed7a169f0e87d601ea11342673d84a8057338353a0b",
+      "source_bytes": 94325,
+      "optimized": "dividers/divider-celestial-diamond.webp",
+      "optimized_sha256": "faf06e7369cc560df9cfc7fa2b1c54c438dd2cc9c66397d11cde356938a752be",
+      "optimized_bytes": 63530
+    },
+    {
+      "source": "dividers/divider-crescent-moon.png",
+      "size_px": [
+        1663,
+        135
+      ],
+      "source_sha256": "c3a7b400d86cbd38b5d2b2cbf991dbd45547abb51106345ab425c57464167626",
+      "source_bytes": 88869,
+      "optimized": "dividers/divider-crescent-moon.webp",
+      "optimized_sha256": "731ca21a97bd6d16d30bdb8049eb87ddc4455b2c77deea11a4d9b341610fc0ea",
+      "optimized_bytes": 60134
+    },
+    {
+      "source": "dividers/divider-floral-vine.png",
+      "size_px": [
+        1511,
+        110
+      ],
+      "source_sha256": "ee88827662ed8133e4b20826556f96912e89f090d289ff4528d89341a84fcbc2",
+      "source_bytes": 148965,
+      "optimized": "dividers/divider-floral-vine.webp",
+      "optimized_sha256": "7ba9fc03de44159dbe308b7d4e1c065e72e60f587b206d4a99aa3dca0dff72f1",
+      "optimized_bytes": 78030
+    },
+    {
+      "source": "dividers/divider-halo-star.png",
+      "size_px": [
+        1509,
+        175
+      ],
+      "source_sha256": "4809402de4fdb57ad2cd591d2567aef6d433a8e3720eec8e09139b67af3e12bd",
+      "source_bytes": 110446,
+      "optimized": "dividers/divider-halo-star.webp",
+      "optimized_sha256": "36a8bf12e216403a9d9e4ba5726931d8b34a5c4250ce4192604da2191ed06727",
+      "optimized_bytes": 75250
+    },
+    {
+      "source": "dividers/divider-mountain-crest.png",
+      "size_px": [
+        1572,
+        140
+      ],
+      "source_sha256": "bd08ca305617ec5904cb4d4ea70946968c6208124e783b708e7f15ca264cd311",
+      "source_bytes": 138853,
+      "optimized": "dividers/divider-mountain-crest.webp",
+      "optimized_sha256": "498478b5534addbcc55f794e220554bd90af40bebd05e20adbce3a8692c9fb22",
+      "optimized_bytes": 71234
+    },
+    {
+      "source": "fragments/fragment-broken-arch.png",
+      "size_px": [
+        565,
+        344
+      ],
+      "source_sha256": "17c5b2ef68f8d06103da8038242013ec04840304f3cf33f14a45c4b78de81374",
+      "source_bytes": 252269,
+      "optimized": "fragments/fragment-broken-arch.webp",
+      "optimized_sha256": "061fb7dc09f0b0f7d7b3c4400a1506a1194a048b3b5957d4d0b6950e82219cbe",
+      "optimized_bytes": 73030
+    },
+    {
+      "source": "fragments/fragment-carved-rubble.png",
+      "size_px": [
+        524,
+        188
+      ],
+      "source_sha256": "22cc89ddd8324ed0ac55d976060684e8dd4328297d6526a496957af243142469",
+      "source_bytes": 153076,
+      "optimized": "fragments/fragment-carved-rubble.webp",
+      "optimized_sha256": "e79db036e999596e1a92d7fb64caf68f6d1361ecc31438b68ded975ecb638df6",
+      "optimized_bytes": 43292
+    },
+    {
+      "source": "fragments/fragment-finial-pedestal.png",
+      "size_px": [
+        277,
+        378
+      ],
+      "source_sha256": "27462a2ef2ccbb61c81416bf2ae7dc6bc834d87fc22f580c783a63e90ee9fa79",
+      "source_bytes": 150497,
+      "optimized": "fragments/fragment-finial-pedestal.webp",
+      "optimized_sha256": "9a7852f4f93adb2dfd23e76db96aa6cadc7a7ea8f139435040b52466530b210d",
+      "optimized_bytes": 46078
+    },
+    {
+      "source": "fragments/fragment-fluted-column.png",
+      "size_px": [
+        393,
+        459
+      ],
+      "source_sha256": "ccde94cd6970267548700ab283c09e53b35024f36df1cd60822c2d093058480e",
+      "source_bytes": 258242,
+      "optimized": "fragments/fragment-fluted-column.webp",
+      "optimized_sha256": "c908f69c3215bd0753babb0421d52468005a48e5d27a53e4feb664fd8e676f97",
+      "optimized_bytes": 75308
+    },
+    {
+      "source": "fragments/fragment-grand-arch.png",
+      "size_px": [
+        683,
+        760
+      ],
+      "source_sha256": "a8c61cbba9fac028f2edc9024f5a2a9d3d4386f463b6ddd7687794518cfbcc9b",
+      "source_bytes": 771449,
+      "optimized": "fragments/fragment-grand-arch.webp",
+      "optimized_sha256": "26c0724e787ca0727e1d1e9233ced82b66032b71cb0ad4b33741cfa29888ac98",
+      "optimized_bytes": 212944
+    },
+    {
+      "source": "fragments/fragment-ornate-upper-corner.png",
+      "size_px": [
+        464,
+        404
+      ],
+      "source_sha256": "989e644a3a47b07367e393c71cacb17cea254536a15e6130879eeff6de89e3da",
+      "source_bytes": 287216,
+      "optimized": "fragments/fragment-ornate-upper-corner.webp",
+      "optimized_sha256": "eeb83eabe5d236ab47d20ff848b3d8b9dd0a0372336e7a236c593211a0a6e929",
+      "optimized_bytes": 78050
+    },
+    {
+      "source": "fragments/fragment-stone-rubble.png",
+      "size_px": [
+        369,
+        194
+      ],
+      "source_sha256": "f189d7551ad9ca00eac4055f311421328e70c87aecb17732129254afd769a948",
+      "source_bytes": 108873,
+      "optimized": "fragments/fragment-stone-rubble.webp",
+      "optimized_sha256": "7b457c824fc6d97d29075b78722972e0c8fa677316f84a508e328b047fd0888e",
+      "optimized_bytes": 33654
+    },
+    {
+      "source": "fragments/fragment-twin-arches.png",
+      "size_px": [
+        488,
+        402
+      ],
+      "source_sha256": "cccdec5c539f671547d526499d395df620eaa2cedb712d18e12657193aa4ea80",
+      "source_bytes": 302037,
+      "optimized": "fragments/fragment-twin-arches.webp",
+      "optimized_sha256": "527b04c3c7e4eb8ce8d547f65191def14596211ae18cd666585663d6bd8cec99",
+      "optimized_bytes": 90436
+    },
+    {
+      "source": "sparkles/celestial-sparkles-cluster.png",
+      "size_px": [
+        1468,
+        505
+      ],
+      "source_sha256": "fedfa7cbafd88348c5cae16c1786ed70e1bd3ab56e7c83f0319978425a39f397",
+      "source_bytes": 366423,
+      "optimized": "sparkles/celestial-sparkles-cluster.webp",
+      "optimized_sha256": "f94a1759f2ac05104bb58a533c47d6724a252fbc9c04739f5c6729f34b04a912",
+      "optimized_bytes": 201116
+    }
+  ],
+  "source_pack_sha256": "4f16027462f103e5c42eab2b0e640d9a02a0e401e63cbbbff09b96d0b0d62ad9"
+}
