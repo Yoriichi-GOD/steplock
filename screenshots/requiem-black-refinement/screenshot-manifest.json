@@ -1,0 +1,150 @@
+{
+  "baseline_commit": "e12bf3f7403b71eedf058da012c07b5c014dfa51",
+  "capture": "Actual browser JPEG. Before files copied from the original integration receipt. After views captured from the corrected local build. Browser chrome/scrollbars excluded.",
+  "files": [
+    {
+      "file": "before-demo-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "b17f96b8385d6a55d6302c5c515b160a79a9de1a667888a78ce9f1fb71db39e0"
+    },
+    {
+      "file": "before-header-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "7891db815e449a9118f44c8eefe93a3884654af6ecb67b896536fa83ad1ace59"
+    },
+    {
+      "file": "before-invitation-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "6324439fdfa058beae937cd0202c065b3818a650644f36b9f6a77d771739906a"
+    },
+    {
+      "file": "demo-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "37a7a60ae78680c9f84ff8804d2e59b30cf379cbd13f2b50981dba47121cebf2"
+    },
+    {
+      "file": "demo-390.jpg",
+      "size_px": [
+        375,
+        812
+      ],
+      "format": "JPEG",
+      "sha256": "fe3dee84465f453d7f0c53c5e14b570b43699c3e513c2833ad2633bcae016604"
+    },
+    {
+      "file": "header-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "86b0c6ed34f111251e7be8f2fbf824d2a26c0f6b05e1e1eefeb7d91371a4492b"
+    },
+    {
+      "file": "header-390.jpg",
+      "size_px": [
+        375,
+        812
+      ],
+      "format": "JPEG",
+      "sha256": "441aee7334807baa20887cf20978548824379e5149a7842824a389aaa40a75a0"
+    },
+    {
+      "file": "header-native-3d-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "3c43a5f195a04547886139b58a0352332a3d95483ce48ef8498b04ec645140dc"
+    },
+    {
+      "file": "invitation-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "47ee9c786af210964b44b0c0d06efdfb28892cc0bf56c04b5ba9b7376d26df9c"
+    },
+    {
+      "file": "invitation-390.jpg",
+      "size_px": [
+        375,
+        812
+      ],
+      "format": "JPEG",
+      "sha256": "c2c7bedab14d9ee497ec4d2508e71638cddc0ebd4c4c043c09e0fa9b9459c2ee"
+    },
+    {
+      "file": "knowledge-ornaments-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "82b9e985cd263111cc9abb9ece4064b72acd309257166bf77b995231849258b8"
+    },
+    {
+      "file": "mistake-ornament-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "4cbf3abd54e27b452d5060c27d684bfebb6e12318740e2ab4658f9ff8d50e748"
+    },
+    {
+      "file": "normal-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "1d9a099e497c6f423873ddbc9987cd1d6bb224b0de56b2439a6f48431d6a491d"
+    },
+    {
+      "file": "reveal-ornament-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "5eb799b08e3a3e3bd3f969cb2fbf4dd2f7332e80b21030eb9e5d3ebff96952db"
+    },
+    {
+      "file": "roadmap-ornament-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "d9f85aae0360d13bc66c0cf48e2be1bfbffe522535ba222fd9aabd994c1b572d"
+    },
+    {
+      "file": "wrong-component-1691.jpg",
+      "size_px": [
+        1676,
+        922
+      ],
+      "format": "JPEG",
+      "sha256": "fb73ea10d09ec4442babaa0c746c5de4395dbb43bd95c1667f9e362b82f51303"
+    }
+  ]
+}

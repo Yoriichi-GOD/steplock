@@ -90,6 +90,10 @@ test('landing contact remains unavailable until configured, and evidence is labe
   const source=await readFile(new URL('src/pages/LandingPage.tsx',root),'utf8');
   assert.match(source,/Generated fixture evidence/);assert.match(source,/EXPERIMENTAL \/ LIMITED/);
   assert.doesNotMatch(source,/â†|â€™|Ã/);
+  for(const file of ['CinematicStory','PublicChrome']){
+    const copy=await readFile(new URL(`src/components/marketing/${file}.tsx`,root),'utf8');
+    assert.doesNotMatch(copy,/â†|â€™|â€”|Ã|\uFFFD/,`${file} must preserve UTF-8 copy`);
+  }
 });
 
 test('cinematic timeline is bounded, pauses at late feedback, and cannot emit an inspection result',async()=>{

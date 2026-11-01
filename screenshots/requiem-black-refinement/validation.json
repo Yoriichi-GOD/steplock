@@ -1,0 +1,37 @@
+{
+  "preview": "http://127.0.0.1:62401/",
+  "date": "2026-11-01",
+  "build": "passed",
+  "frontend_tests": 26,
+  "public_demo_backend_tests": 8,
+  "backend_seconds": 36.63,
+  "backend_warning": "Existing Starlette/httpx deprecation warning",
+  "browser": {
+    "normal": "PASS",
+    "wrong_component": "HOLD_FOR_REVIEW",
+    "reset": "PENDING",
+    "phone_demo_navigation": "working",
+    "contact_choice": "Share an idea reflected in form button; submission remains disabled",
+    "native_webgl_canvas": true,
+    "marketing_flower_count": 0,
+    "runtime_kit_assets": 13,
+    "chapter_pointer_events": "none",
+    "evidence_filters": "none",
+    "evidence_opacity": 1,
+    "page_rgb": [
+      7,
+      7,
+      7
+    ],
+    "panel_rgb": [
+      16,
+      16,
+      16
+    ],
+    "header_background": "transparent",
+    "header_backdrop": "none",
+    "demo_desktop_total_header_px": 248,
+    "ornament_overlap": "Roadmap art moved to grid; broken arch clears text and process label"
+  },
+  "scope": "Public presentation only; generated software examples, no new physical or GPU performance claim."
+}

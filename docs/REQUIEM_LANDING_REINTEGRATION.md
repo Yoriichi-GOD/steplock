@@ -1,5 +1,7 @@
 # REQUIEM landing and public demo reintegration
 
+Follow-up visual corrections are documented in [REQUIEM_BLACK_REFINEMENT.md](REQUIEM_BLACK_REFINEMENT.md): transparent navigation over the artwork, neutral black panels, structured chapter ornaments, and a closing frame replacing the wallpaper/flower. The report below retains the original integration checkpoint's history.
+
 Implemented and locally reviewed on 2026-11-01. Preview: <http://127.0.0.1:62401/>; working generated-example demo: <http://127.0.0.1:62401/demo>.
 
 ## Ownership and scope
