@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "scope": "Production frontend contact and style bundle byte identity; not a browser render",
+  "checks": [
+    {
+      "origin": "https://step-lock.xyz",
+      "file": "assets/PublicChrome-COFctcaV.js",
+      "sha256": "35a1a5f68a098390089d5f679dee4dc2947ee353578799757f1a2421632c8029",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://step-lock.xyz",
+      "file": "assets/industrial-BKMgk7Ru.css",
+      "sha256": "5d5fb2940aacdc0c190713e67c86f313e8da4172421667a630bdc601ad13e639",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://step-lock.xyz",
+      "file": "assets/index-CNhf-RpZ.js",
+      "sha256": "ab1a6ac11beabba4c59e891d9c6bf2f5f56dad23e418b87746589ae54fc081c5",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://step-lock.xyz",
+      "file": "assets/index-xgxdCp6f.js",
+      "sha256": "83d7752fd9a43b4f4bbc3e7ef1e218a3e04bae72f3d71aaedd437403c743aa6c",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://www.step-lock.xyz",
+      "file": "assets/PublicChrome-COFctcaV.js",
+      "sha256": "35a1a5f68a098390089d5f679dee4dc2947ee353578799757f1a2421632c8029",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://www.step-lock.xyz",
+      "file": "assets/industrial-BKMgk7Ru.css",
+      "sha256": "5d5fb2940aacdc0c190713e67c86f313e8da4172421667a630bdc601ad13e639",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://www.step-lock.xyz",
+      "file": "assets/index-CNhf-RpZ.js",
+      "sha256": "ab1a6ac11beabba4c59e891d9c6bf2f5f56dad23e418b87746589ae54fc081c5",
+      "matches_local_release": true
+    },
+    {
+      "origin": "https://www.step-lock.xyz",
+      "file": "assets/index-xgxdCp6f.js",
+      "sha256": "83d7752fd9a43b4f4bbc3e7ef1e218a3e04bae72f3d71aaedd437403c743aa6c",
+      "matches_local_release": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Static release — 2 November 2026
 
-Status: **CUSTOM_DOMAINS_HTTP_VERIFIED / AUTOMATIC_CONTACT_RECIPIENT_CONFIRMED / AWS_RETIREMENT_IN_PROGRESS**.
+Status: **CUSTOM_DOMAINS_HTTP_VERIFIED / AUTOMATIC_CONTACT_RECIPIENT_CONFIRMED / AWS_RETIREMENT_PERMISSION_BLOCKED**.
 
 Update at 14:45 UTC: Cloudflare reports apex and www Active / SSL enabled. Both
 hostnames now pass normal system-DNS HTTPS checks for the static routes, three
@@ -21,6 +21,10 @@ receiving its complete `CUSTOM DOMAIN TEST 2026-11-02` email. The retired AWS
 trial's service cleanup was requested only after the static-domain checks passed.
 Deletion-request acceptance is not evidence that its chargeable resources are
 gone; see the subsequent retirement receipt before claiming cost closure.
+The attempted service deletion failed on its WAF association read permission;
+automatic approval review requires explicit approval for the temporary IAM fix.
+See [retirement diagnosis](AWS_RETIREMENT_20261102.md). No new permission was
+applied and the foundation remains while that blocker is open.
 
 The founder selected USD 0 hosting with a recorded walkthrough. The public
 preview is [STEPLOCK](https://steplock-xt9.pages.dev) and its
