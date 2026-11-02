@@ -1,0 +1,12 @@
+step-lock.xyz@185.24.64.42:  
+dig NS +noadditional +noquestion +nocomments +nocmd +nostats +norec step-lock.xyz. @185.24.64.42
+
+step-lock.xyz.		3600	IN	NS	ns29.domaincontrol.com.
+step-lock.xyz.		3600	IN	NS	ns30.domaincontrol.com.
+
+
+
+
+
+ 
+ 

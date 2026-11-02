@@ -60,6 +60,28 @@ Cloudflare domain activation, apex Pages binding, www activation and both HTTPS
 hostnames still require final confirmation. Public resolver caches may retain
 the earlier GoDaddy delegation. The preview is independently available.
 
+Follow-up diagnosis at 13:25–13:29 UTC (18:55–18:59 IST): a normal HTTPS GET
+to the root returned 301 to `https://www.step-lock.xyz`, which returned 200.
+Browser rendering confirmed that this is still the original AWS application,
+not the static release. The GoDaddy forwarding service returns 405 for HEAD;
+that response alone must not be interpreted as a failed homepage GET.
+
+The registry RDAP database records the new nameservers and a last-changed time
+of 13:11:19 UTC, but direct DNS queries to two IANA-listed `.xyz` servers
+(`x.nic.xyz` and `y.nic.xyz`) still returned `ns29.domaincontrol.com` and
+`ns30.domaincontrol.com`. The latter query was explicitly non-recursive. This
+identifies incomplete parent-zone publication, not merely a browser cache.
+Local direct TCP DNS could not connect, so the independent queries used the
+public diagnostic interface recommended by Cloudflare. No security setting,
+domain lock or DNSSEC protection was changed during this follow-up.
+
+A fresh Cloudflare activation check was requested. Its dashboard still reports
+pending nameserver publication, and attempting the root binding still leads to
+the DNS-management prerequisite. Do not repeatedly re-save nameservers or claim
+the migration complete on the basis of the registrar panel or RDAP alone.
+Cloudflare's [pending-zone troubleshooting procedure](https://developers.cloudflare.com/dns/zone-setups/troubleshooting/pending-nameservers/)
+identifies the parent DNS response as the decisive check.
+
 The original AWS service and foundation remain running while those gates are
 open. The seven-day fallback cleanup schedule is unchanged. No new paid service
 was created. A USD 0 static replacement is not evidence that old AWS charges
