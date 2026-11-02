@@ -227,35 +227,36 @@
 }
 @media(max-width:360px){.public-page .public-nav .rq-brand img{width:140px!important;height:70px!important}.public-page.rq-landing .public-nav,.public-page.rq-demo .public-nav{gap:8px}}
 
-/* Phone story: one upper reading area and one lower illustration dock.
-   The sticky stage is bounded by the story, so it leaves with the final chapter. */
+/* Phone story: use the same dynamic height for the sticky stage and its flow
+   overlap, so collapsing browser chrome cannot expose content below the dock.
+   Both dock edges follow that stage; it still leaves with the final chapter. */
 @media(max-width:767px){
  .rq-landing .cinematic-story{background:transparent;margin-top:calc(-1 * var(--rq-nav-height))}
- .rq-landing .story-stage{position:sticky;top:0;height:100svh;z-index:4;overflow:clip}
+ .rq-landing .story-stage{position:sticky;top:0;height:100vh;height:100dvh;z-index:4;overflow:clip}
  .rq-landing .story-stage:before,.rq-landing .story-stage>.rq-hero-world{display:none}
- .rq-landing .story-pages{z-index:2;margin-top:-100svh;padding-top:var(--rq-nav-height);padding-bottom:calc(50svh + 52px)}
- .rq-landing .story-visual{inset:50svh 0 0;height:auto;background:#070707;opacity:1;box-shadow:0 -12px 24px #070707}
- .rq-landing .story-instrument{top:calc(50svh - 52px);bottom:auto;left:0;right:0;height:52px;padding:8px 6%;gap:10px;background:#070707;border:0;z-index:5}
+ .rq-landing .story-pages{z-index:2;margin-top:-100vh;margin-top:-100dvh;padding-top:var(--rq-nav-height);padding-bottom:calc(50vh + 52px + env(safe-area-inset-bottom,0px));padding-bottom:calc(50dvh + 52px + env(safe-area-inset-bottom,0px))}
+ .rq-landing .story-visual{inset:50% 0 0;height:auto;background:#070707;opacity:1;box-shadow:0 -12px 24px #070707}
+ .rq-landing .story-instrument{top:auto;bottom:50%;left:0;right:0;height:52px;padding:8px 6%;gap:10px;background:#070707;border:0;z-index:5}
  .rq-landing .story-instrument>span{display:none}
  .rq-landing .story-instrument>div{gap:8px;min-width:0}
  .rq-landing .story-instrument b{font-size:17px}
  .rq-landing .story-instrument p{font-size:8px;min-width:0}
  .rq-landing .story-instrument>a{font-size:8px;white-space:nowrap}
  .rq-landing .story-instrument button{font-size:8px;min-height:36px}
- .rq-landing .factory-model{inset:52px 0 68px;touch-action:pan-y}
+ .rq-landing .factory-model{inset:52px 0 calc(68px + env(safe-area-inset-bottom,0px));touch-action:pan-y}
  .rq-landing .model-annotation,.rq-landing .stage-crosshair{display:none}
  .rq-landing .stage-orbit{top:48px;left:18%;width:64%}
  .rq-landing .stage-controls{top:6px;bottom:auto;left:6%;right:6%;justify-content:space-between;gap:8px}
  .rq-landing .stage-controls>button,.rq-landing .stage-controls .mode-switch button{min-height:44px;font-size:9px}
- .rq-landing .stage-parts{bottom:22px;left:6%;right:6%;gap:5px;justify-content:space-between}
+ .rq-landing .stage-parts{bottom:calc(22px + env(safe-area-inset-bottom,0px));left:6%;right:6%;gap:5px;justify-content:space-between}
  .rq-landing .stage-parts button{min-height:44px;font-size:8px;gap:4px}
  .rq-landing .stage-parts button span{font-size:6px}
- .rq-landing .stage-disclosure{bottom:4px;left:6%;right:6%;width:auto;max-width:none;font-size:6px;text-align:left;line-height:1.5}
+ .rq-landing .stage-disclosure{bottom:calc(4px + env(safe-area-inset-bottom,0px));left:6%;right:6%;width:auto;max-width:none;font-size:6px;text-align:left;line-height:1.5}
  .industrial-page.rq-landing .story-act{min-height:0;padding:28px 6% 32px;justify-content:flex-start}
  .industrial-page.rq-landing .knowledge-act,.industrial-page.rq-landing .idea-act{padding-bottom:76px}
  .industrial-page.rq-landing .factory-intro{padding-top:28px;padding-left:6%}
  .rq-landing .story-copy,.rq-landing .factory-intro .story-copy,.rq-landing .stillness-act .story-copy{width:100%;max-width:none}
- .rq-landing .story-copy a{scroll-margin-bottom:calc(50svh + 70px)}
+ .rq-landing .story-copy a{scroll-margin-bottom:calc(50vh + 70px);scroll-margin-bottom:calc(50dvh + 70px + env(safe-area-inset-bottom,0px))}
  .rq-landing .rq-story-divider{bottom:0}
  .rq-landing .rq-story-divider .rq-divider{margin-bottom:0}
  .rq-landing .stillness-act .story-copy h2{font-size:clamp(43px,10.5vw,65px)}

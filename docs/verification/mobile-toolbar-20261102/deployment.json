@@ -1,0 +1,13 @@
+{
+  "id": "db5df9cb-a99c-4b85-90f0-e43f087002ed",
+  "created_on": "2026-11-02T15:31:00.189166Z",
+  "environment": "production",
+  "stage_at_creation_response": {
+    "name": "queued",
+    "started_on": null,
+    "ended_on": null,
+    "status": "idle"
+  },
+  "dashboard_confirmation": "Success",
+  "production_asset_checks": "Both apex and www match tested entry script and stylesheet"
+}

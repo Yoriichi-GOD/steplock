@@ -1,0 +1,9 @@
+{
+  "files": 102,
+  "bytes": 9731159,
+  "sha256": "bad5b17e430659277337bd645fe88f773da0b60f793486ec222c15334b77481a",
+  "source_base_commit": "534910ee8505341cd46177eaa24f879bff22990d",
+  "modified_application_files": [
+    "frontend/src/styles/requiem-landing.css"
+  ]
+}

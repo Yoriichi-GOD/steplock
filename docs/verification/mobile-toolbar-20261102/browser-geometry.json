@@ -1,0 +1,1508 @@
+{
+  "method": "Chrome CDP small-versus-large viewport difference and safe-area emulation; native scrolling and read-only DOM bounds",
+  "physical_phone_tested": false,
+  "localOrigin": "http://127.0.0.1:62420",
+  "measurements": [
+    {
+      "label": "before-390-hidden-toolbar",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 413.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 368,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 720,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 711,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 724,
+          "height": 362,
+          "left": 0,
+          "right": 390,
+          "top": 362,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 362,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 310,
+          "width": 390
+        },
+        "model": {
+          "bottom": 656,
+          "height": 242,
+          "left": 0,
+          "right": 390,
+          "top": 414,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2342.416748046875,
+          "height": 3186.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 702,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 658,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3387.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2342.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 724,
+          "height": 724,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2342.416748046875,
+          "height": 3186.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 120
+    },
+    {
+      "label": "after-390-hidden-toolbar",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3447.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2402.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "candidate-2-390-hidden-toolbar",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 3246.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 4291.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 3246.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 3246.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "final-390-hidden-toolbar-3d",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3447.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2402.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "final-320-safe-area-34",
+      "viewport": {
+        "clientHeight": 740,
+        "clientWidth": 320,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 880,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 421.3333358764648,
+          "height": 45.33333587646485,
+          "left": 19.197917938232425,
+          "right": 300.8021049499512,
+          "top": 376,
+          "width": 281.60418701171875
+        },
+        "disclosure": {
+          "bottom": 702,
+          "height": 9,
+          "left": 19.197917938232425,
+          "right": 300.8021049499512,
+          "top": 693,
+          "width": 281.60418701171875
+        },
+        "docWidth": 320,
+        "dock": {
+          "bottom": 740,
+          "height": 370,
+          "left": 0,
+          "right": 320,
+          "top": 370,
+          "width": 320
+        },
+        "instrument": {
+          "bottom": 370,
+          "height": 52,
+          "left": 0,
+          "right": 320,
+          "top": 318,
+          "width": 320
+        },
+        "model": {
+          "bottom": 638,
+          "height": 216,
+          "left": 0,
+          "right": 320,
+          "top": 422,
+          "width": 320
+        },
+        "pages": {
+          "bottom": 2617.760498046875,
+          "height": 3497.760498046875,
+          "left": 0,
+          "right": 320,
+          "top": -880,
+          "width": 320
+        },
+        "parts": {
+          "bottom": 684,
+          "height": 44,
+          "left": 19.197917938232425,
+          "right": 300.8021049499512,
+          "top": 640,
+          "width": 281.60418701171875
+        },
+        "prototype": {
+          "bottom": 3649.500122070313,
+          "height": 1031.7396240234375,
+          "left": 0,
+          "right": 320,
+          "top": 2617.760498046875,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "stage": {
+          "bottom": 740,
+          "height": 740,
+          "left": 0,
+          "right": 320,
+          "top": 0,
+          "width": 320
+        },
+        "story": {
+          "bottom": 2617.760498046875,
+          "height": 3497.760498046875,
+          "left": 0,
+          "right": 320,
+          "top": -880,
+          "width": 320
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "final-story-exit-390",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 3572,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": null,
+        "controls": {
+          "bottom": -696.2500381469727,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": -741.5833740234375,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": -329.5833435058594,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": -338.5833435058594,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": -325.5833740234375,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": -747.5833740234375,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": -747.5833740234375,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": -799.5833740234375,
+          "width": 390
+        },
+        "model": {
+          "bottom": -393.5833740234375,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": -695.5833740234375,
+          "width": 390
+        },
+        "pages": {
+          "bottom": -325.583251953125,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -3572,
+          "width": 390
+        },
+        "parts": {
+          "bottom": -347.5833435058594,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": -391.5833435058594,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 719.0937805175781,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": -325.5833435058594,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": -325.5833740234375,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": -1169.5833740234375,
+          "width": 390
+        },
+        "story": {
+          "bottom": -325.583251953125,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -3572,
+          "width": 390
+        }
+      },
+      "gap": 1169.5833740234375
+    },
+    {
+      "label": "final-desktop-1280",
+      "viewport": {
+        "clientHeight": 704.6666870117188,
+        "clientWidth": 1264.666748046875,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 736.4062728881836,
+          "height": 43.33333587646485,
+          "left": 851.0208740234375,
+          "right": 1208.0104675292969,
+          "top": 693.0729370117188,
+          "width": 356.9895935058594
+        },
+        "disclosure": {
+          "bottom": 772.40625,
+          "height": 12.59375,
+          "left": 918.90625,
+          "right": 1208.0104370117188,
+          "top": 759.8125,
+          "width": 289.10418701171875
+        },
+        "docWidth": 1265,
+        "dock": {
+          "bottom": 830,
+          "height": 720,
+          "left": 455.2708435058594,
+          "right": 1264.6667175292969,
+          "top": 110,
+          "width": 809.3958740234375
+        },
+        "instrument": {
+          "bottom": 808.4062919616699,
+          "height": 38.66666793823242,
+          "left": 56.90625,
+          "right": 1207.760498046875,
+          "top": 769.7396240234375,
+          "width": 1150.854248046875
+        },
+        "model": {
+          "bottom": 794.0000228881836,
+          "height": 712.7916870117188,
+          "left": 358.1458435058594,
+          "right": 1402.2604675292969,
+          "top": 81.20833587646484,
+          "width": 1044.1146240234375
+        },
+        "pages": {
+          "bottom": 4292.08349609375,
+          "height": 4182.08349609375,
+          "left": 0,
+          "right": 1264.666748046875,
+          "top": 110,
+          "width": 1264.666748046875
+        },
+        "parts": {
+          "bottom": 693.2083740234375,
+          "height": 35,
+          "left": 983.0625,
+          "right": 1208.0104217529297,
+          "top": 658.2083740234375,
+          "width": 224.9479217529297
+        },
+        "prototype": {
+          "bottom": 5690.7293701171875,
+          "height": 1398.6458740234375,
+          "left": 0,
+          "right": 1264.666748046875,
+          "top": 4292.08349609375,
+          "width": 1264.666748046875
+        },
+        "scrollWidth": 1265,
+        "stage": {
+          "bottom": 830,
+          "height": 720,
+          "left": 0,
+          "right": 1264.666748046875,
+          "top": 110,
+          "width": 1264.666748046875
+        },
+        "story": {
+          "bottom": 4292.08349609375,
+          "height": 4182.08349609375,
+          "left": 0,
+          "right": 1264.666748046875,
+          "top": 110,
+          "width": 1264.666748046875
+        }
+      },
+      "gap": -125.33331298828125
+    },
+    {
+      "label": "production-390-hidden-toolbar",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 0,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 3246.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 4291.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 3246.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 3246.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        }
+      },
+      "gap": 0,
+      "accepted_as_final_proof": false,
+      "reason": "Viewport difference reset after reload; retained as an invalid prepublication sample"
+    },
+    {
+      "label": "production-390-scrolled-hidden-toolbar",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3447.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2402.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 0,
+      "accepted_as_final_proof": false,
+      "reason": "Viewport difference reset after reload; retained as an invalid prepublication sample"
+    },
+    {
+      "label": "VERIFIED-production-390-hidden-toolbar-difference-reapplied",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": null,
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3447.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2402.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "VERIFIED-production-native-3d",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 844,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3447.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2402.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2402.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -844,
+          "width": 390
+        }
+      },
+      "gap": 0
+    },
+    {
+      "label": "VERIFIED-production-3d-after-native-scroll",
+      "viewport": {
+        "clientHeight": 844,
+        "clientWidth": 390,
+        "offsetX": 0,
+        "offsetY": 0,
+        "pageX": 0,
+        "pageY": 838,
+        "scale": 1,
+        "zoom": 1
+      },
+      "geometry": {
+        "canvasReady": "true",
+        "controls": {
+          "bottom": 473.3333358764648,
+          "height": 45.33333587646485,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 428,
+          "width": 343.2083435058594
+        },
+        "disclosure": {
+          "bottom": 840,
+          "height": 9,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 831,
+          "width": 343.2083435058594
+        },
+        "docWidth": 390,
+        "dock": {
+          "bottom": 844,
+          "height": 422,
+          "left": 0,
+          "right": 390,
+          "top": 422,
+          "width": 390
+        },
+        "instrument": {
+          "bottom": 422,
+          "height": 52,
+          "left": 0,
+          "right": 390,
+          "top": 370,
+          "width": 390
+        },
+        "model": {
+          "bottom": 776,
+          "height": 302,
+          "left": 0,
+          "right": 390,
+          "top": 474,
+          "width": 390
+        },
+        "pages": {
+          "bottom": 2408.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -838,
+          "width": 390
+        },
+        "parts": {
+          "bottom": 822,
+          "height": 44,
+          "left": 23.39583396911621,
+          "right": 366.6041774749756,
+          "top": 778,
+          "width": 343.2083435058594
+        },
+        "prototype": {
+          "bottom": 3453.0938720703125,
+          "height": 1044.6771240234375,
+          "left": 0,
+          "right": 390,
+          "top": 2408.416748046875,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "stage": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390
+        },
+        "story": {
+          "bottom": 2408.416748046875,
+          "height": 3246.416748046875,
+          "left": 0,
+          "right": 390,
+          "top": -838,
+          "width": 390
+        }
+      },
+      "gap": 0
+    }
+  ],
+  "resizeCases": [
+    {
+      "width": 390,
+      "height": 724,
+      "difference": 0,
+      "label": "390-bars-visible",
+      "visualHeight": 724,
+      "visualWidth": 390,
+      "pageY": 844,
+      "bar": {
+        "bottom": 362,
+        "height": 52,
+        "top": 310
+      },
+      "dock": {
+        "bottom": 724,
+        "height": 362,
+        "top": 362
+      },
+      "parts": {
+        "bottom": 702,
+        "height": 44,
+        "top": 658
+      },
+      "reading": {
+        "bottom": 160.42708587646484,
+        "height": 70.1875,
+        "top": 90.23958587646484
+      },
+      "stage": {
+        "bottom": 724,
+        "height": 724,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 390,
+      "height": 784,
+      "difference": 60,
+      "label": "390-mid-transition",
+      "visualHeight": 784,
+      "visualWidth": 390,
+      "pageY": 844,
+      "bar": {
+        "bottom": 392,
+        "height": 52,
+        "top": 340
+      },
+      "dock": {
+        "bottom": 784,
+        "height": 392,
+        "top": 392
+      },
+      "parts": {
+        "bottom": 762,
+        "height": 44,
+        "top": 718
+      },
+      "reading": {
+        "bottom": 160.42708587646484,
+        "height": 70.1875,
+        "top": 90.23958587646484
+      },
+      "stage": {
+        "bottom": 784,
+        "height": 784,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "difference": 120,
+      "label": "390-bars-hidden",
+      "visualHeight": 844,
+      "visualWidth": 390,
+      "pageY": 844,
+      "bar": {
+        "bottom": 422,
+        "height": 52,
+        "top": 370
+      },
+      "dock": {
+        "bottom": 844,
+        "height": 422,
+        "top": 422
+      },
+      "parts": {
+        "bottom": 822,
+        "height": 44,
+        "top": 778
+      },
+      "reading": {
+        "bottom": 160.42708587646484,
+        "height": 70.1875,
+        "top": 90.23958587646484
+      },
+      "stage": {
+        "bottom": 844,
+        "height": 844,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 390,
+      "height": 724,
+      "difference": 0,
+      "label": "390-bars-returned",
+      "visualHeight": 724,
+      "visualWidth": 390,
+      "pageY": 844,
+      "bar": {
+        "bottom": 362,
+        "height": 52,
+        "top": 310
+      },
+      "dock": {
+        "bottom": 724,
+        "height": 362,
+        "top": 362
+      },
+      "parts": {
+        "bottom": 702,
+        "height": 44,
+        "top": 658
+      },
+      "reading": {
+        "bottom": 160.42708587646484,
+        "height": 70.1875,
+        "top": 90.23958587646484
+      },
+      "stage": {
+        "bottom": 724,
+        "height": 724,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "difference": 100,
+      "label": "320-bars-hidden",
+      "visualHeight": 740,
+      "visualWidth": 320,
+      "pageY": 880,
+      "bar": {
+        "bottom": 370,
+        "height": 52,
+        "top": 318
+      },
+      "dock": {
+        "bottom": 740,
+        "height": 370,
+        "top": 370
+      },
+      "parts": {
+        "bottom": 718,
+        "height": 44,
+        "top": 674
+      },
+      "reading": {
+        "bottom": 183.92708587646484,
+        "height": 93.58333587646484,
+        "top": 90.34375
+      },
+      "stage": {
+        "bottom": 740,
+        "height": 740,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "difference": 0,
+      "label": "320-bars-visible",
+      "visualHeight": 640,
+      "visualWidth": 320,
+      "pageY": 880,
+      "bar": {
+        "bottom": 320,
+        "height": 52,
+        "top": 268
+      },
+      "dock": {
+        "bottom": 640,
+        "height": 320,
+        "top": 320
+      },
+      "parts": {
+        "bottom": 618,
+        "height": 44,
+        "top": 574
+      },
+      "reading": {
+        "bottom": 183.92708587646484,
+        "height": 93.58333587646484,
+        "top": 90.34375
+      },
+      "stage": {
+        "bottom": 640,
+        "height": 640,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "difference": 120,
+      "label": "430-bars-hidden",
+      "visualHeight": 932,
+      "visualWidth": 430,
+      "pageY": 866.6666870117188,
+      "bar": {
+        "bottom": 466,
+        "height": 52,
+        "top": 414
+      },
+      "dock": {
+        "bottom": 932,
+        "height": 466,
+        "top": 466
+      },
+      "parts": {
+        "bottom": 910,
+        "height": 44,
+        "top": 866
+      },
+      "reading": {
+        "bottom": 160.73958587646484,
+        "height": 70.1875,
+        "top": 90.55208587646484
+      },
+      "stage": {
+        "bottom": 932,
+        "height": 932,
+        "top": 0
+      },
+      "gap": 0
+    },
+    {
+      "width": 430,
+      "height": 812,
+      "difference": 0,
+      "label": "430-bars-visible",
+      "visualHeight": 812,
+      "visualWidth": 430,
+      "pageY": 814,
+      "bar": {
+        "bottom": 406,
+        "height": 52,
+        "top": 354
+      },
+      "dock": {
+        "bottom": 812,
+        "height": 406,
+        "top": 406
+      },
+      "parts": {
+        "bottom": 790,
+        "height": 44,
+        "top": 746
+      },
+      "reading": {
+        "bottom": 160.77083587646484,
+        "height": 70.1875,
+        "top": 90.58333587646484
+      },
+      "stage": {
+        "bottom": 812,
+        "height": 812,
+        "top": 0
+      },
+      "gap": 0
+    }
+  ],
+  "productionResizeCases": [
+    {
+      "height": 724,
+      "difference": 0,
+      "visibleHeight": 724,
+      "dockBottom": 724,
+      "readTop": 90.23958587646484,
+      "gap": 0
+    },
+    {
+      "height": 844,
+      "difference": 120,
+      "visibleHeight": 844,
+      "dockBottom": 844,
+      "readTop": 90.23958587646484,
+      "gap": 0
+    },
+    {
+      "height": 724,
+      "difference": 0,
+      "visibleHeight": 724,
+      "dockBottom": 724,
+      "readTop": 90.23958587646484,
+      "gap": 0
+    }
+  ],
+  "rejectedCandidate": "The first grid overlap candidate closed the geometric gap but its local 3D screenshot hid reading text; it was discarded. Final candidate retains normal flow with matched dynamic height and overlap."
+}

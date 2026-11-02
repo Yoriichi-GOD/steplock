@@ -1,0 +1,50 @@
+[
+  {
+    "file": "after-docked-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 99868,
+    "sha256": "465b99690d6657fb8eec3b5f47f50992142b5fc0ac9796732d47a486fc506d7f",
+    "edited": false
+  },
+  {
+    "file": "before-gap-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 94120,
+    "sha256": "0cfb7332e26ed5558bb6919bf91a10948aaf8877abf5f7961d2ca83c08f9eab9",
+    "edited": false
+  },
+  {
+    "file": "desktop-1280.png",
+    "width": 1280,
+    "height": 720,
+    "bytes": 965476,
+    "sha256": "83730efa20dac626a79ff61eaf9ed6cd0d1f2cbafaae824da44a6d21cdb0c587",
+    "edited": false
+  },
+  {
+    "file": "production-docked-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 99909,
+    "sha256": "c668fc23b5ad46ed28de23c5344a023df44b103f58fcf55d5c585b1e1d9b1d5c",
+    "edited": false
+  },
+  {
+    "file": "safe-area-320.png",
+    "width": 320,
+    "height": 740,
+    "bytes": 55522,
+    "sha256": "743110c116d8230851e7353b076ee93bb85ef13f2e45ebd095321b21c989c15d",
+    "edited": false
+  },
+  {
+    "file": "story-exit-390.png",
+    "width": 390,
+    "height": 844,
+    "bytes": 262404,
+    "sha256": "116a30daeb2dcd028204964a2a3813adcd1b2e6d83efc90926d90c2936dfc0e0",
+    "edited": false
+  }
+]

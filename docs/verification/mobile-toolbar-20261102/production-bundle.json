@@ -1,0 +1,24 @@
+[
+  {
+    "origin": "https://step-lock.xyz",
+    "entry_script": "/assets/index-wUle5PYK.js",
+    "matches_tested_release": true
+  },
+  {
+    "origin": "https://step-lock.xyz",
+    "file": "assets/PublicChrome-TsNZAnVR.css",
+    "sha256": "7ab7defafab84a29cc71139cbe1636c99dedfd9f17e68d4233d03492beec162d",
+    "matches_tested_release": true
+  },
+  {
+    "origin": "https://www.step-lock.xyz",
+    "entry_script": "/assets/index-wUle5PYK.js",
+    "matches_tested_release": true
+  },
+  {
+    "origin": "https://www.step-lock.xyz",
+    "file": "assets/PublicChrome-TsNZAnVR.css",
+    "sha256": "7ab7defafab84a29cc71139cbe1636c99dedfd9f17e68d4233d03492beec162d",
+    "matches_tested_release": true
+  }
+]

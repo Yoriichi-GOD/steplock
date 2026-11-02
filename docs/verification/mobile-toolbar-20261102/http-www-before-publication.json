@@ -1,0 +1,66 @@
+{
+  "result": "PASS",
+  "origin": "https://www.step-lock.xyz",
+  "checked_at_utc": "2026-11-02T15:27:41.903522+00:00",
+  "normal_dns": true,
+  "dns_transport": "System resolver",
+  "tls_validation": true,
+  "transport": "Installed curl with default identity; urllib was rejected with CF error 1010. No protection was disabled.",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "final_url": "https://www.step-lock.xyz/",
+      "headers_verified": true
+    },
+    {
+      "route": "/demo",
+      "status": 200,
+      "final_url": "https://www.step-lock.xyz/demo",
+      "headers_verified": true
+    },
+    {
+      "route": "/app",
+      "status": 200,
+      "final_url": "https://www.step-lock.xyz/app",
+      "headers_verified": true
+    },
+    {
+      "route": "/api/health",
+      "status": 404,
+      "final_url": "https://www.step-lock.xyz/api/health",
+      "headers_verified": true
+    },
+    {
+      "route": "/missing-static-route",
+      "status": 404,
+      "final_url": "https://www.step-lock.xyz/missing-static-route",
+      "headers_verified": true
+    },
+    {
+      "video": "normal",
+      "sha256": "f3604df057ae052dd54c73eb69fdcb40f408cac6824d935ee02e811543110138",
+      "bytes": 276474,
+      "range_status": 206,
+      "partial_range_supported": true,
+      "captions": true
+    },
+    {
+      "video": "wrong-component",
+      "sha256": "85480885164524918dcd6c7199ee5c433333c9a8cba6866f925758ff615724e9",
+      "bytes": 264057,
+      "range_status": 206,
+      "partial_range_supported": true,
+      "captions": true
+    },
+    {
+      "video": "correction",
+      "sha256": "95c8f9bfcbee1de3fcf84512825ff37ac7c5499be18a55f4b293b053d2654876",
+      "bytes": 247402,
+      "range_status": 206,
+      "partial_range_supported": true,
+      "captions": true
+    }
+  ],
+  "limits": "Static HTTP delivery and integrity only; browser rendering/playback checked separately. No live inspection or physical accuracy claimed."
+}
