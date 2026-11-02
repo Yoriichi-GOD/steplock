@@ -78,10 +78,17 @@ restrictions remain. Page loads do not submit form fields.
   ZIP SHA-256 is `0974c9417ca2a65afbbb419d74d43a579c08e524cbd1e363aa4b6e2f5ef1446f`.
 - Normal DNS / validated HTTPS checks now pass for apex and www. Earlier public
   DNS diagnostic checks are labeled separately; no TLS protection was bypassed.
+- The production-domain endpoint initially requested its own activation. The
+  founder activated `https://step-lock.xyz/`; a subsequent endpoint request with
+  production Origin/Referer returned HTTP 200 / `success:true`. The founder
+  confirmed receiving the complete **STEPLOCK — Discuss a pilot** test containing
+  **CUSTOM DOMAIN TEST 2026-11-02**. This is recipient-confirmed production
+  delivery, separate from the earlier preview browser submission.
 
 Limits: forwarding acceptance does not prove inbox placement or reading. The
-delivered body and Reply-To were not inspected; ImprovMX's message-download
-attempt timed out, and the connected Gmail account returned no matching test.
+Reply-To was not independently inspected; ImprovMX's message-download attempt
+timed out, and the connected Gmail account returned no matching test. The founder
+confirmed the complete production test in the actual forwarding inbox.
 The final phone-layout pass and custom-domain browser render were blocked when
 local browser access was disabled. Existing earlier responsive receipts do not
 prove the new form's phone layout. AWS retirement remains a separate gate.
