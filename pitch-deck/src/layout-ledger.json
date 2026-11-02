@@ -1,33 +1,6 @@
 [
   {
     "slide": 1,
-    "text": "STEPLOCK / A16Z SPEEDRUN SR008",
-    "x": 0.65,
-    "y": 0.36,
-    "w": 7,
-    "h": 0.3,
-    "fontSize": 11
-  },
-  {
-    "slide": 1,
-    "text": "Saishreek Singh / Sole founder / Technical prototype",
-    "x": 0.65,
-    "y": 7.05,
-    "w": 11.35,
-    "h": 0.23,
-    "fontSize": 10
-  },
-  {
-    "slide": 1,
-    "text": "01",
-    "x": 12.1,
-    "y": 7.03,
-    "w": 0.55,
-    "h": 0.25,
-    "fontSize": 11
-  },
-  {
-    "slide": 1,
     "text": "Catch the wrong move\nbefore the next step",
     "x": 0.72,
     "y": 3,
@@ -517,7 +490,7 @@
     "text": "Observe",
     "x": 0.85,
     "y": 6.25,
-    "w": 2.1,
+    "w": 1.8,
     "h": 0.4,
     "fontSize": 19
   },
@@ -526,7 +499,7 @@
     "text": "Verify",
     "x": 3.2800000000000002,
     "y": 6.25,
-    "w": 2.1,
+    "w": 1.8,
     "h": 0.4,
     "fontSize": 19
   },
@@ -535,7 +508,7 @@
     "text": "Alert",
     "x": 5.71,
     "y": 6.25,
-    "w": 2.1,
+    "w": 1.8,
     "h": 0.4,
     "fontSize": 19
   },
@@ -544,7 +517,7 @@
     "text": "Correct",
     "x": 8.14,
     "y": 6.25,
-    "w": 2.1,
+    "w": 1.8,
     "h": 0.4,
     "fontSize": 19
   },
@@ -553,7 +526,7 @@
     "text": "Keep evidence",
     "x": 10.57,
     "y": 6.25,
-    "w": 2.1,
+    "w": 2.2,
     "h": 0.4,
     "fontSize": 19
   },
@@ -1536,33 +1509,6 @@
     "y": 6.65,
     "w": 11.8,
     "h": 0.22,
-    "fontSize": 11
-  },
-  {
-    "slide": 14,
-    "text": "STEPLOCK / SPEEDRUN SR008",
-    "x": 0.65,
-    "y": 0.36,
-    "w": 7,
-    "h": 0.3,
-    "fontSize": 11
-  },
-  {
-    "slide": 14,
-    "text": "Technical prototype / Application materials / No investor endorsement claimed",
-    "x": 0.65,
-    "y": 7.05,
-    "w": 11.35,
-    "h": 0.23,
-    "fontSize": 10
-  },
-  {
-    "slide": 14,
-    "text": "14",
-    "x": 12.1,
-    "y": 7.03,
-    "w": 0.55,
-    "h": 0.25,
     "fontSize": 11
   },
   {

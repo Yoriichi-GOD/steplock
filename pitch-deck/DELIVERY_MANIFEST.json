@@ -1,0 +1,459 @@
+{
+  "recorded_utc": "2026-11-02T08:30:14.119039+00:00",
+  "status": "PASS",
+  "slides": 19,
+  "primary_slides": 14,
+  "appendix_slides": 5,
+  "native_editability": [
+    {
+      "slide": 1,
+      "text_runs": 6,
+      "editable_shapes": 5,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 2,
+      "text_runs": 15,
+      "editable_shapes": 60,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 3,
+      "text_runs": 18,
+      "editable_shapes": 34,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 4,
+      "text_runs": 16,
+      "editable_shapes": 12,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 5,
+      "text_runs": 15,
+      "editable_shapes": 46,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 6,
+      "text_runs": 12,
+      "editable_shapes": 11,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 7,
+      "text_runs": 18,
+      "editable_shapes": 30,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 8,
+      "text_runs": 12,
+      "editable_shapes": 14,
+      "native_tables": 0,
+      "native_charts": 1
+    },
+    {
+      "slide": 9,
+      "text_runs": 14,
+      "editable_shapes": 43,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 10,
+      "text_runs": 19,
+      "editable_shapes": 21,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 11,
+      "text_runs": 22,
+      "editable_shapes": 23,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 12,
+      "text_runs": 22,
+      "editable_shapes": 23,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 13,
+      "text_runs": 39,
+      "editable_shapes": 7,
+      "native_tables": 1,
+      "native_charts": 0
+    },
+    {
+      "slide": 14,
+      "text_runs": 7,
+      "editable_shapes": 7,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 15,
+      "text_runs": 22,
+      "editable_shapes": 11,
+      "native_tables": 1,
+      "native_charts": 0
+    },
+    {
+      "slide": 16,
+      "text_runs": 15,
+      "editable_shapes": 14,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 17,
+      "text_runs": 23,
+      "editable_shapes": 6,
+      "native_tables": 1,
+      "native_charts": 0
+    },
+    {
+      "slide": 18,
+      "text_runs": 14,
+      "editable_shapes": 14,
+      "native_tables": 0,
+      "native_charts": 0
+    },
+    {
+      "slide": 19,
+      "text_runs": 17,
+      "editable_shapes": 23,
+      "native_tables": 0,
+      "native_charts": 0
+    }
+  ],
+  "chart_values_verified": [
+    24.0,
+    28.0,
+    32.0
+  ],
+  "actual_screenshot_byte_identical": true,
+  "text_height_warnings": 0,
+  "pdf_pages": 19,
+  "all_previews_px": [
+    1920,
+    1080
+  ],
+  "standalone_fonts_distributed": false,
+  "financial_scenarios": "HYPOTHETICAL_NOT_MEASURED",
+  "limitations": "Founder credentials are founder-reported; real factory accuracy and customer ROI unvalidated. Physical PowerPoint rendering was performed; other viewers can substitute fonts.",
+  "files": [
+    {
+      "path": "assets/celestial-arches.png",
+      "bytes": 2315278,
+      "sha256": "316b948569a240e1c3f5034cccdc8bebe94915020ade912355c96830dae4e658"
+    },
+    {
+      "path": "assets/corner-florals.png",
+      "bytes": 251064,
+      "sha256": "a73d59ad025552f3f56cf3f9e1e1e26d4be9ada3c3329db575a05d76a9ba1914"
+    },
+    {
+      "path": "assets/floating-flower.png",
+      "bytes": 464744,
+      "sha256": "94659b4e8fb8f70e484d6e9274131a61f39d8f35b4a07481005703fd07edd288"
+    },
+    {
+      "path": "assets/inspection-native.png",
+      "bytes": 608411,
+      "sha256": "7b039d5167ec7ad336b96f8dc51a1da8858d631d237dde2a9fa647119453644e"
+    },
+    {
+      "path": "assets/LICENSES.md",
+      "bytes": 1444,
+      "sha256": "cb316a0624ea65e3a207310c9b4ff34b9a9060bf3376b7e4aca32796469613cf"
+    },
+    {
+      "path": "assets/manifest.json",
+      "bytes": 4268,
+      "sha256": "eed2911388cd7aeb6a303c53eb1e00eb1130073a0a349b18823252a61001935b"
+    },
+    {
+      "path": "assets/procedure-studio-ornate-title.png",
+      "bytes": 516555,
+      "sha256": "edea6ce4177a9226dc7e16cd9965bdb5eeba133e02e20b25f75cdfba42b4aa1d"
+    },
+    {
+      "path": "assets/right-arch-landscape.png",
+      "bytes": 288306,
+      "sha256": "004fee632f17c6973ded5dcddac89f790bba24fffdd4b6cc0eaa30bfbdd6bc7f"
+    },
+    {
+      "path": "assets/steplock-crest-compact.png",
+      "bytes": 50068,
+      "sha256": "89ebce24c5f057af0d4b1d532b1f7382782d77fc57757e4908df93d27cf794f1"
+    },
+    {
+      "path": "assets/steplock-ornate-logo.png",
+      "bytes": 693503,
+      "sha256": "c81d3888b2a7ac456dbed73b11d29609b344b2b00a951eac0a4ce94e5e70233a"
+    },
+    {
+      "path": "assets/studio-native.png",
+      "bytes": 1114629,
+      "sha256": "51bae5c0afc97bcd12366be019b1fb71bfba9680d01a5b852c947672be732dee"
+    },
+    {
+      "path": "assets/workshop-pexels-3822844.jpg",
+      "bytes": 318143,
+      "sha256": "3bf5494fb9b9dd92e0998064af47f0d82f2799db004625907edce19f342b701c"
+    },
+    {
+      "path": "assets/wrong-component-source.png",
+      "bytes": 122241,
+      "sha256": "4b513835efc281e69c4f3bf56491333e523ee9c528c97d1df7cb5801850c06a2"
+    },
+    {
+      "path": "charts/economics-preview.png",
+      "bytes": 101702,
+      "sha256": "6a37579dbeb88663c5284c71d3295568202e6e4329000e94e88dfc2c1bcf7791"
+    },
+    {
+      "path": "charts/scenarios.csv",
+      "bytes": 368,
+      "sha256": "d26903413f77608c6ac496ee5232bbd1f25a63b5558f8408494a43c53feb53e9"
+    },
+    {
+      "path": "charts/scenarios.json",
+      "bytes": 1366,
+      "sha256": "69bef3dbcd7c61e556b08089a49fe03703f1cd4b24f2d35d6b894c221be41c2b"
+    },
+    {
+      "path": "DESIGN_SYSTEM.md",
+      "bytes": 3120,
+      "sha256": "41f7967833cfcd77b5c80a76c23ad801f6d1763f428f32f3f351214bc05c13be"
+    },
+    {
+      "path": "package.json",
+      "bytes": 303,
+      "sha256": "65d253b2c84b1a3eabfd07f8ddd7d5c0f5d1ce38cd4418f7e9dccd673239e5f2"
+    },
+    {
+      "path": "previews/contact-sheet.png",
+      "bytes": 1449624,
+      "sha256": "51398ec2dbd4ea2839bb1100bf5b5d25db2e371d70a3774d8e82ce36c8fae622"
+    },
+    {
+      "path": "previews/slide-01.png",
+      "bytes": 3033302,
+      "sha256": "c3220dc80a04bb91ef74843fa79f2537f0685608181268171f52ee73e1d7042e"
+    },
+    {
+      "path": "previews/slide-02.png",
+      "bytes": 58496,
+      "sha256": "29abbdf264688beee2540e76f976c2f57cfcd18e55c5614344801b0c69597d06"
+    },
+    {
+      "path": "previews/slide-03.png",
+      "bytes": 69680,
+      "sha256": "6e240679ae479e5a237c2aa848c929e47a043a38fa16a997d037360435d4b94b"
+    },
+    {
+      "path": "previews/slide-04.png",
+      "bytes": 622597,
+      "sha256": "39ea3809605dc9f11901a19f5aff6deacb37ded27944a1d54a3304620e674820"
+    },
+    {
+      "path": "previews/slide-05.png",
+      "bytes": 73257,
+      "sha256": "a8c3db409bf1afc79067db9fc9aca2db5882736b732d9a671b97676de9369fc1"
+    },
+    {
+      "path": "previews/slide-06.png",
+      "bytes": 523441,
+      "sha256": "78bfc1dc8f48327d380581ccf418d6fc9bc651729f94e919f57ff0453639be2a"
+    },
+    {
+      "path": "previews/slide-07.png",
+      "bytes": 80956,
+      "sha256": "a83b91a3043fbb8fdabb87fa1747abaccc8ad59cdaae347393452b2bf717fafc"
+    },
+    {
+      "path": "previews/slide-08.png",
+      "bytes": 63018,
+      "sha256": "45f088145f52586d19aa718d8edd0a3393d5ab508acc4290cfe647c29600a34c"
+    },
+    {
+      "path": "previews/slide-09.png",
+      "bytes": 99823,
+      "sha256": "d342946f73a6ecde9ce541d03f077efb1c68b765233fac39b0e368aafa3d71f3"
+    },
+    {
+      "path": "previews/slide-10.png",
+      "bytes": 50304,
+      "sha256": "5d96b8fe33ab0ca58d3935e10a0e1c22c69de48b978ba04442e6a40fffbdad1f"
+    },
+    {
+      "path": "previews/slide-11.png",
+      "bytes": 58558,
+      "sha256": "0626c56c38d7119705d282870d5c21e3c83242a1781548c3a1d82bda43d86271"
+    },
+    {
+      "path": "previews/slide-12.png",
+      "bytes": 92906,
+      "sha256": "0154b67bc4a83c63a3ff9b475505b558ff3eb9f3337ac1b86614d202472e35de"
+    },
+    {
+      "path": "previews/slide-13.png",
+      "bytes": 76275,
+      "sha256": "dae393bb467bf1b0a5d2014bb5a7f0de6bb41b7efffc5daf8e093b2aa0ccd803"
+    },
+    {
+      "path": "previews/slide-14.png",
+      "bytes": 2745042,
+      "sha256": "f663ba5257eae5db69a5c38f89bbc7c8a12381fde5c877775c241d45f5b8eb29"
+    },
+    {
+      "path": "previews/slide-15.png",
+      "bytes": 96174,
+      "sha256": "5d932ec76e7eb9273b7038a4cd253b83207133abba236e615891535280692b83"
+    },
+    {
+      "path": "previews/slide-16.png",
+      "bytes": 49379,
+      "sha256": "aed3201f8b37de70d9c3c79e50fad68ef1b29b4281fcb8a5537aa594ebb9f49f"
+    },
+    {
+      "path": "previews/slide-17.png",
+      "bytes": 62046,
+      "sha256": "d3262a9896360a175ae0196d7730c7c8351fc733ed33a1cc48671913468402b7"
+    },
+    {
+      "path": "previews/slide-18.png",
+      "bytes": 102603,
+      "sha256": "ba4ce02a97ae7ca5a31a5e4bfdf23aa2c0c184ee38a09646cd3a76df2a31e569"
+    },
+    {
+      "path": "previews/slide-19.png",
+      "bytes": 53194,
+      "sha256": "a431763a73ed2210fc0ac50e2629c1f08a3c0b145454e86ee27fb02b9d385289"
+    },
+    {
+      "path": "QA_REPORT.md",
+      "bytes": 3675,
+      "sha256": "a0d36544b428d361b941b3438aba43d50b96284889a9a576bbc91047fc0736d3"
+    },
+    {
+      "path": "QA_RESULTS.json",
+      "bytes": 1698,
+      "sha256": "8058de960a91f9ec861ceb3ee44745d6ecfe02d3809b5e23580424092e39c830"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3484,
+      "sha256": "9dcf1d3f6836527dc77c6ef14fd72eadc54566d6ab89882c96b8f585babafd3f"
+    },
+    {
+      "path": "SOURCE_LEDGER.md",
+      "bytes": 8493,
+      "sha256": "6c881c626dc6f62ba754175ae9a8e52608b7fdb8e7a71ac8b5d0488914f8e186"
+    },
+    {
+      "path": "SOURCE_OF_TRUTH.md",
+      "bytes": 3986,
+      "sha256": "14c9639244c0d79c28f12b5deb098aee702aa45ef121854e1b8eaddf33ed0f09"
+    },
+    {
+      "path": "SPEAKER_NOTES.md",
+      "bytes": 16846,
+      "sha256": "2e462432cdc80ed94efae52316ff9b4c0ce42aaa096092047a9e356eb92565d6"
+    },
+    {
+      "path": "src/build_deck.cjs",
+      "bytes": 38819,
+      "sha256": "bcef220d71177bcb9b5799576dacd6a0a72885811f66ed966891cbcc50b381e2"
+    },
+    {
+      "path": "src/contact_sheet.py",
+      "bytes": 657,
+      "sha256": "c31f3a261ad1e446110d20fd446fa3f7c91e003d32ab65b042f6de5c51bddc82"
+    },
+    {
+      "path": "src/economics_workbook.py",
+      "bytes": 7377,
+      "sha256": "a49a6ccb325703559a17f95f321c31d119d43c3b1386920e7e80c7b37380c819"
+    },
+    {
+      "path": "src/finish_package.py",
+      "bytes": 1318,
+      "sha256": "ea05c432373f37a6bc70fb79c360644800aecf9a7010d21fa5774c280c903f3c"
+    },
+    {
+      "path": "src/layout-ledger.json",
+      "bytes": 34928,
+      "sha256": "b3272b3cd48355322d1d7d1aeaa0f06c28f5a0429d5da2d3f53fcc66be2fa0e4"
+    },
+    {
+      "path": "src/package_delivery.py",
+      "bytes": 3654,
+      "sha256": "8e94ccabdb54b6fc348138433b61f8900155069f32f50af8688913b9f2c83451"
+    },
+    {
+      "path": "src/prepare_assets.cjs",
+      "bytes": 2788,
+      "sha256": "d043ec924cc28af748644b4870e7a2609ee2c07a874dc9a6532068744d496c66"
+    },
+    {
+      "path": "src/prepare_fonts.py",
+      "bytes": 1018,
+      "sha256": "34710c381cde8178d5fed4e745d9fc25099a699670ba5d9c62d47f22ac269763"
+    },
+    {
+      "path": "src/recalculate_workbook.mjs",
+      "bytes": 1149,
+      "sha256": "6a30aaa19c024b4723c45f2efc79d693198c7ea76597f30a91a0616e206e1dc3"
+    },
+    {
+      "path": "src/references.json",
+      "bytes": 1720,
+      "sha256": "b5f80b8dc9086856502d9258821ccc6fe087e63f1e08e09a802e513466d3bef7"
+    },
+    {
+      "path": "src/render_powerpoint.ps1",
+      "bytes": 3235,
+      "sha256": "a27a615fe020a796252c90a2e0d4e6d8c0a544180c4eff548af8b2cbe758dc35"
+    },
+    {
+      "path": "src/verify_delivery.py",
+      "bytes": 4833,
+      "sha256": "376abf6b0ae69c383d2a593ca66bd17308e018a60ad51706d70de2e04218c905"
+    },
+    {
+      "path": "STEPLOCK_Illustrative_Economics.xlsx",
+      "bytes": 5549,
+      "sha256": "db68c5aaf6fccee8246d94450baeb7587dc00b1adcf70d38059f223531797818"
+    },
+    {
+      "path": "STEPLOCK_Speedrun_SR008.pdf",
+      "bytes": 1477568,
+      "sha256": "630259cb3329963b198bcba39cac03edd7b3ceae06e1994c0bd16d7caf2000fa"
+    },
+    {
+      "path": "STEPLOCK_Speedrun_SR008.pptx",
+      "bytes": 4568720,
+      "sha256": "cb047c5ae04ca3ae2b3c17e0f1a622346d8fa79456704e84ae86a4c391e3ad42"
+    },
+    {
+      "path": "STORYBOARD.md",
+      "bytes": 2713,
+      "sha256": "4426c7031ac075a132d196e6e65aa5a78eac0050d3bb0b88dfa01ee55211f614"
+    }
+  ]
+}

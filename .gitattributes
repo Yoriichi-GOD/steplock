@@ -4,3 +4,5 @@ frontend/public/assets/steplock-header/** -text
 frontend/public/assets/requiem-ornaments/** -text
 # Keep the captured AWS receipt bytes identical to their SHA-256 manifest.
 screenshots/aws-trial-20261102/** -text
+# Preserve investor deliverable/source hashes across Windows checkouts.
+pitch-deck/** -text

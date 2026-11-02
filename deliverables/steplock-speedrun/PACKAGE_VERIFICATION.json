@@ -1,0 +1,11 @@
+{
+  "archive": "STEPLOCK_Speedrun_SR008_Package.zip",
+  "bytes": 22025276,
+  "sha256": "c0aa251ac2bf554210fe536c93bdc8349c537d80a7e54602ede90e1484ae60bf",
+  "files": 61,
+  "zip_crc": "PASS",
+  "native_deck_hash_matches": "PASS",
+  "pdf_hash_matches": "PASS",
+  "standalone_fonts_included": false,
+  "private_runtime_or_credentials_included": false
+}

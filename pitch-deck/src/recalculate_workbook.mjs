@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {pathToFileURL,fileURLToPath} from 'node:url';
+const modules=process.env.STEPLOCK_NODE_MODULES||'C:/Users/nrgen/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
+const require=createRequire(path.join(modules,'package.json'));
+const {FileBlob,SpreadsheetFile}=await import(pathToFileURL(require.resolve('@oai/artifact-tool')).href);
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const file=path.join(root,'STEPLOCK_Illustrative_Economics.xlsx');
+const workbook=await SpreadsheetFile.importXlsx(await FileBlob.load(file));
+workbook.recalculate();
+await (await SpreadsheetFile.exportXlsx(workbook)).save(file);
+console.log((await workbook.inspect({kind:'region',sheetId:'Station economics',range:'A18:D21',maxChars:1500,tableMaxRows:4,tableMaxCols:4})).ndjson);
+const preview=await workbook.render({sheetName:'Station economics',range:'A1:D25',scale:1,format:'png'});
+await fs.writeFile(path.join(root,'charts/economics-preview.png'),new Uint8Array(await preview.arrayBuffer()));

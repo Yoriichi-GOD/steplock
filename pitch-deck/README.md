@@ -43,6 +43,7 @@ python pitch-deck/src/prepare_fonts.py
 node pitch-deck/src/build_deck.cjs
 python pitch-deck/src/finish_package.py
 python pitch-deck/src/economics_workbook.py
+# Optional bundled verification: node pitch-deck/src/recalculate_workbook.mjs
 ./pitch-deck/src/render_powerpoint.ps1
 python pitch-deck/src/contact_sheet.py
 python pitch-deck/src/verify_delivery.py

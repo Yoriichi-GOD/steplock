@@ -21,7 +21,7 @@ function dot(sl,x,y,r=.06,color=C.blue){sl.addShape(S.ellipse,{x:x-r,y:y-r,w:r*2
 function label(sl,text,x,y,w=7,color=C.blue,size=11){tx(sl,text,x,y,w,.3,size,color,{fontFace:F.mono,charSpacing:1.3});}
 function image(sl,name,x,y,w,h,crop=false,opt={}){const file=path.join(A,name);const m=imageSize(fs.readFileSync(file));const scale=Math.min(w/m.width,h/m.height);const dw=m.width*scale,dh=m.height*scale;sl.addImage({path:file,x:x+(w-dw)/2,y:y+(h-dh)/2,w:dw,h:dh,...opt});}
 function foot(sl,text,num){line(sl,.65,6.96,12.68,6.96,C.line,.6);tx(sl,text,.65,7.05,11.35,.23,10,C.muted);tx(sl,String(num).padStart(2,'0'),12.1,7.03,.55,.25,11,C.muted,{fontFace:F.mono,align:'right'});}
-function slide(section,title,source,opt={}){const sl=pptx.addSlide();sl.background={color:C.bg};const n=pptx._slides.length;label(sl,section.toUpperCase(),.65,.36);if(title)tx(sl,title,.65,.98,opt.titleW||12.0,opt.titleH||1.5,opt.titleSize||38,C.text,{fontFace:F.head,breakLine:false});foot(sl,source||'STEPLOCK / Early-stage technical prototype',n);return sl;}
+function slide(section,title,source,opt={}){const sl=pptx.addSlide();sl.background={color:C.bg};const n=pptx._slides.length;if(section.startsWith('STEPLOCK /'))return sl;label(sl,section.toUpperCase(),.65,.36);if(title)tx(sl,title,.65,.98,opt.titleW||12.0,opt.titleH||1.5,opt.titleSize||38,C.text,{fontFace:F.head,breakLine:false});foot(sl,source||'STEPLOCK / Early-stage technical prototype',n);return sl;}
 function note(sl,body,sources=[],kind='A'){const n=pptx._slides.length;const full=`Investor takeaway: ${body}\n\nClaim class: ${kind}\n\nSources:\n${sources.join('\n')}\n\nPrepared 2 November 2026. Scope and limitations are part of the claim.`;sl.addNotes(full);notes.push({slide:n,text:full});}
 function row(sl,head,body,x,y,w,accent=C.blue){line(sl,x,y,x+w,y,C.line,.8);tx(sl,head,x,y+.16,w,.42,21,accent,{fontFace:F.medium});tx(sl,body,x,y+.75,w,.9,18,C.sub,{valign:'top'});}
 function plate(sl,x,y,w=1.45,color=C.blue,num='',kind='plate'){
@@ -87,7 +87,7 @@ line(sl,1.6,4.1,5.3,4.1,C.line);label(sl,'A / SPACER',1.6,3.65,1.6,C.ice,12);lab
 plate(sl,3.75,4.35,1.45,C.amber,'','plate');tag(sl,4.25,4.47,.24);
 sl.addShape(S.rect,{x:2.9,y:2.7,w:.9,h:.34,fill:{color:'526878'},line:{color:C.ice,width:1}});sl.addShape(S.ellipse,{x:3.22,y:2.77,w:.17,h:.17,fill:{color:C.bg},line:{color:C.blue,width:1}});line(sl,3.35,3.04,2.2,3.5,C.blue,.8,{dashType:'dash'});line(sl,3.35,3.04,4.9,3.5,C.blue,.8,{dashType:'dash'});
 label(sl,'HOLD / B REQUIRES A',6.65,3.25,5.7,C.amber,14);tx(sl,'Cover before spacer',6.65,3.78,5.7,.53,29,C.text,{fontFace:F.head});tx(sl,'The engine checks earlier supported observations before confirming the next placement.',6.65,4.55,5.7,1.25,21,C.sub);
-const steps=['Observe','Verify','Alert','Correct','Keep evidence'];steps.forEach((s,i)=>{const dx=.85+i*2.43;tx(sl,s,dx,6.25,2.1,.4,19,i===2?C.amber:C.ice,{fontFace:F.geo});if(i<4)arrow(sl,dx+1.9,6.43,dx+2.25,6.43)});
+const steps=['Observe','Verify','Alert','Correct','Keep evidence'];steps.forEach((s,i)=>{const dx=.85+i*2.43;tx(sl,s,dx,6.25,i===4?2.2:1.8,.4,19,i===2?C.amber:C.ice,{fontFace:F.geo});if(i<4)arrow(sl,dx+1.9,6.43,dx+2.25,6.43)});
 note(sl,'Example B: the cover requires the spacer. Earlier usable clear-zone history and repeated independent support are required to accuse an order violation. Starting midassembly cannot prove order and must remain uncertain. The physical station is illustrative; current successful recognition examples are generated.',[refs.architecture,refs.limits],'A + B');
 }
 // 06 / Genuine reveal

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-11-02T08:30:13.261423+00:00",
+  "pptx_sha256": "cb047c5ae04ca3ae2b3c17e0f1a622346d8fa79456704e84ae86a4c391e3ad42",
+  "pdf_sha256": "630259cb3329963b198bcba39cac03edd7b3ceae06e1994c0bd16d7caf2000fa",
+  "renderer": "Microsoft PowerPoint 16 via COM",
+  "slide_count": 19,
+  "primary_slides": 14,
+  "appendix_slides": 5,
+  "slide_size_inches": [
+    13.333333,
+    7.5
+  ],
+  "render_pixels": [
+    1920,
+    1080
+  ],
+  "native_chart_owner_slides": [
+    8
+  ],
+  "native_table_owner_slides": [
+    13,
+    15,
+    17
+  ],
+  "package_integrity_findings": 0,
+  "layout_findings": 0,
+  "layout_warnings": 0,
+  "native_text_height_warnings": 0,
+  "first_party_import_passed": true,
+  "native_chart_workbook_validation_passed": true,
+  "live_links": {
+    "demo_http": 200,
+    "landing_http": 200,
+    "endpoint": "https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws",
+    "recorded_utc": "2026-11-02T08:26:13.6232172Z",
+    "scope": "Read-only reachability; no new inspection or paid API calls",
+    "health_http": 200
+  },
+  "visual_review": "Every slide individually inspected; contact sheet inspected; modified slides re-inspected after fixes. Automated checks supplement visual review.",
+  "font_policy": "Requested REQUIEM families retained; verified in PDF resources; no standalone fonts distributed. PPTX font embedding disabled.",
+  "limits": [
+    "Generated benchmark is not industrial accuracy",
+    "IMPACT tests ingestion/refusal, not successful native recognition",
+    "Founder background is attributed to the founder",
+    "ROI and scale scenarios are hypothetical",
+    "Non-PowerPoint viewers may substitute fonts"
+  ]
+}
