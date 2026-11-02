@@ -1,85 +1,62 @@
 # Hosting STEPLOCK throughout the application cycle
 
-Decision candidate, 2 November 2026. **Not deployed.** The existing seven-day AWS
-trial remains unchanged while the recurring budget is selected. Render is excluded.
+Decision, 2 November 2026: **USD 0 hosting; website plus recorded walkthrough.**
+The founder selected this option instead of a recurring live-server budget.
+Render is excluded. No Supabase, paid container or new database is needed.
 
-## What the website actually needs
+## Chosen architecture
 
-The pre-launch frontend builds into static HTML, JavaScript, fonts and artwork.
-The 3D scene runs in the visitor's browser. Its retained inspection record is a
-bundled, explicitly labeled software-test capture. Neither needs a running
-Python service. The live `/demo` inspection does need Python/OpenCV, temporary
-evidence storage and its process-local session manager.
+- Cloudflare Pages Free hosts the existing REQUIEM story, browser-rendered 3D,
+  bundled fonts/artwork, retained evidence and actual prototype recordings.
+- GoDaddy remains registrar for the founder-owned `step-lock.xyz`. Nameservers
+  change DNS hosting, not domain ownership. Domain renewal remains separate.
+- No public inspection backend. `/demo` is explicitly recorded playback. The
+  unchanged Python/OpenCV application is available in the repository locally.
+- No public contact address or collection. Contact submission remains disabled;
+  the static release does not make a configuration API request.
 
-Verified locally in this preparation:
+Build with `node scripts/build-static-site.mjs`. The opt-in build leaves the
+normal live application behavior intact. See [deployment instructions](../infra/static-pages/README.md)
+and the [release receipt](STATIC_RELEASE_20261102.md).
 
-- TypeScript/Vite production build passed into isolated ignored runtime storage.
-- A browser loaded the story and 3D canvas with **no inspection backend**.
-- The retained technical record opened with its event, source time and hashes.
-- Contact remained truthfully unconfigured; no personal data was submitted.
-- This does not establish that a live inspection works without a backend.
+## Evidence boundaries
 
-No application code, domain records, cloud service or paid subscription was
-changed for this preparation. Runtime proof is under `runtime/application-cycle/`.
+Recordings show the actual application inspecting generated marker fixtures:
+normal sequence, wrong component and correction. They are historical software
+examples, not physical footage, industrial accuracy, new benchmarks or current
+workstation status. Preserve their watermarks and recording labels.
 
-## Recommended split
+The first hosted check caught `/demo` redirecting to `/`; native extensionless
+HTML route files fixed it. HTTPS checks then returned 200 for `/demo` and `/app`,
+and 404 for `/api/health`. Browser checks establish emulated viewport behavior,
+not physical-phone performance or universal browser compatibility.
 
-| Part | Candidate | Cost basis | Why |
-|---|---|---|---|
-| Pre-launch website | Cloudflare Pages, static assets only | Free plan within published limits | No application process to sleep; website independent of the demo server |
-| Actual inspection backend | One Lightsail Linux instance | 1 GB IPv4 bundle: USD 7/month base; 2 GB: USD 12/month base | Running server, bundled disk and transfer allowance, predictable compute ceiling |
-| Database service | None for this stage | No new service | Current demo already has local SQLite and bounded temporary files |
+## Migration and cost closure
 
-These are base prices, not an unlimited all-in bill. Tax, transfer beyond the
-bundle, optional snapshots and other add-ons can cost extra. A 1 GB instance is
-a candidate, not a verified capacity result; test the unchanged image at that
-limit before selecting it. Do not claim that a free service guarantees perpetual
-availability or that an always-running server cannot fail or restart.
+The tested static preview is https://steplock-xt9.pages.dev. Custom-domain
+activation and certificate checks are separate gates. The founder approved
+replacing the two old apex forwarding addresses and www target, preserving
+verification/DMARC records, and moving delegation to
+`agustin.ns.cloudflare.com` and `novalee.ns.cloudflare.com`.
 
-Vercel can serve the frontend too. Its Hobby plan restricts use to personal,
-non-commercial projects, so review the actual account/plan before using it for
-the company website. Supabase is unnecessary for the current frontend and is
-not a direct host for this unchanged OpenCV process. Supabase Free projects may
-pause after a low-activity seven-day period, conflicting with the stated need.
-Railway is another viable container platform, but its USD 5 Hobby amount is a
-minimum with usage charges above included credits, not a fixed USD 5 ceiling.
+Keep the old AWS trial until custom-domain HTTPS and recording checks pass,
+then retire only `steplock-service` and `steplock-foundation` through their
+inventoried cleanup path. Do not touch other projects. Retain the expiry
+control until deletion is verified. Its fallback expiry remains 9 November
+2026 at 00:53:05 IST, with foundation cleanup 30 minutes later. Do not claim
+zero ongoing AWS cost until chargeable resources are actually removed.
 
-## Migration boundaries before any paid cutover
+Free hosting has no running application process to sleep, but is not an uptime
+guarantee. Keep the reproducible release and repository. No paid Functions,
+Stream, R2 or additional subscription is authorized by this USD 0 decision.
 
-1. Confirm recurring monthly budget and account access. Preserve the working
-   trial and immutable history until the replacement is verified.
-2. Publish the static site to a preview URL. For a Cloudflare Pages apex domain,
-   migrate authoritative DNS to its free zone while retaining GoDaddy as
-   registrar. Copy and verify all existing records, including certificate and
-   mail-related records; add project-recommended values, never guessed addresses.
-3. Run the existing digest-pinned application as one worker on the selected
-   server, with a persistent runtime directory, automatic restart, bounded logs,
-   HTTPS and health checks. Keep the internal application port private.
-4. Replace the current gateway with verified equivalent body/rate limits and
-   exact proxy trust before public exposure. Preserve the private API, camera,
-   upload and model-call restrictions. Do not silently discard the current WAF
-   boundary just to meet the server price.
-5. Configure only the exact website origins and backend hostname. Verify browser
-   requests, bearer isolation, all four actual engine examples, correction,
-   source loss, restart behavior and desktop/phone views.
-6. Simulate backend loss and prove that the website and retained evidence remain
-   accessible, while the live demo stays honest about being unavailable.
-7. Confirm certificate issuance, root and www behavior, cost settings and restart
-   monitoring. Only then change production DNS and retire the old chargeable
-   infrastructure through its inventoried cleanup path.
+## Sources
 
-The current service is still scheduled to expire on **9 November 2026 at
-00:53:05 IST**. This document does not extend it or authorize a new recurring
-payment. A static-only website could continue without a running inspection
-server, but its live-demo promise must then be changed explicitly, with consent;
-a recorded example must never masquerade as a fresh engine result.
+- [Static requests](https://developers.cloudflare.com/pages/functions/routing/)
+- [Free limits](https://developers.cloudflare.com/pages/platform/limits/)
+- [Custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
+- [Native route matching](https://developers.cloudflare.com/pages/configuration/serving-pages/)
+- [Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/)
 
-## Sources checked
-
-- [Cloudflare Pages static requests](https://developers.cloudflare.com/pages/functions/routing/)
-- [Cloudflare Pages limits](https://developers.cloudflare.com/pages/platform/limits/)
-- [Cloudflare apex/custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
-- [AWS Lightsail instance bundles](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-bundles.html)
-- [Vercel Hobby eligibility](https://vercel.com/docs/plans/hobby)
-- [Supabase project pausing](https://supabase.com/docs/guides/platform/free-project-pausing)
-- [Railway pricing](https://railway.com/pricing)
+The earlier paid-server candidates were not provisioned. This decision
+supersedes that planning proposal.

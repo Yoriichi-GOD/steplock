@@ -1,0 +1,23 @@
+.recorded-page{min-height:100vh;background:#05070b;color:#f2f0e9}
+.recorded-page .public-nav{position:relative}
+.recorded-main{max-width:1280px;margin:auto;padding:80px 5vw 60px}
+.recorded-main h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,78px);line-height:1.04;letter-spacing:-.045em;margin:24px 0}
+.recorded-main h1 em,.recorded-context h2 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#b8d7ed}
+.recorded-intro{max-width:680px;font-size:18px;line-height:1.7;color:#b7bec8}
+.recorded-notice{border-left:2px solid #58a6ff;padding:14px 18px;background:#101722;font-size:14px;line-height:1.65;color:#b7bec8;margin:28px 0}
+.recorded-notice strong{color:#f2f0e9}
+.recorded-tabs{display:flex;gap:0;margin-top:36px;border-bottom:1px solid #293646}
+.recorded-tabs button{flex:1;background:none;color:#b7bec8;border:0;border-bottom:2px solid transparent;text-align:left;padding:20px 16px;font:inherit;cursor:pointer}
+.recorded-tabs button span{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#788594;margin-bottom:8px}
+.recorded-tabs button[aria-pressed=true]{color:#f2f0e9;border-color:#58a6ff;background:#101722}
+.recorded-tabs button:focus-visible{outline:2px solid #76c7ff;outline-offset:-3px}
+.recorded-player{margin:24px 0 70px;border:1px solid #293646;background:#090d14}
+.recorded-player .document-top{display:flex;justify-content:space-between;gap:16px;padding:15px 20px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#b7bec8}
+.recorded-player video{display:block;width:100%;height:auto;aspect-ratio:1265/712;background:#000}
+.recorded-caption{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:24px}
+.recorded-caption p{color:#b7bec8;max-width:670px;line-height:1.7;margin-bottom:0}
+.recorded-caption .button-outline{white-space:nowrap}
+.recorded-context{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;border-top:1px solid #293646;padding-top:40px}
+.recorded-context h2{font-family:Georgia,serif;font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.1}
+.recorded-context p{color:#b7bec8;line-height:1.8}
+@media(max-width:650px){.recorded-main{padding-top:40px}.recorded-tabs button{padding:15px 10px;font-size:13px}.recorded-player .document-top{flex-direction:column;font-size:9px;padding:12px}.recorded-caption{display:block;padding:20px}.recorded-caption .button-outline{display:inline-flex;margin-top:20px;white-space:normal}.recorded-context{grid-template-columns:1fr;gap:12px}.recorded-intro{font-size:16px}}

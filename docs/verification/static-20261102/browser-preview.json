@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "document_width": 1265,
+      "live_verdicts": 0,
+      "notice": "Recorded playback. No live inspection is running. These are generated software tests, not physical assembly footage or measured factory accuracy.",
+      "route": "/demo",
+      "width": 1280
+    },
+    {
+      "duration": 10.534,
+      "ended": true,
+      "error": null,
+      "test": "normal_playback",
+      "time": 10.534
+    },
+    {
+      "duration": 10.467,
+      "error": null,
+      "ready": 4,
+      "test": "wrong_component_playback",
+      "time": 0
+    },
+    {
+      "duration": 11.8,
+      "ended": true,
+      "error": null,
+      "test": "correction_playback",
+      "time": 11.8
+    },
+    {
+      "document_width": 1265,
+      "notice": "Recorded playback. No live inspection is running. These are generated software tests, not physical assembly footage or measured factory accuracy.",
+      "test": "phone_walkthrough",
+      "width": 1280
+    },
+    {
+      "document_width": 375,
+      "test": "phone_walkthrough_corrected_viewport",
+      "width": 390
+    },
+    {
+      "document_width": 305,
+      "test": "narrow_walkthrough",
+      "width": 320
+    },
+    {
+      "duration": 10.467,
+      "ended": true,
+      "error": null,
+      "test": "wrong_component_native_playback",
+      "time": 10.467
+    },
+    {
+      "test": "final_static_landing",
+      "canvas": 0,
+      "contact": "Email contact is not configured yet. You can explore the code on GitHub while the contact channel is being prepared.",
+      "demo_links": [
+        "Watch the walkthrough↗",
+        "Watch the walkthrough ↗",
+        "Or watch the walkthrough ↗",
+        "Watch the walkthrough ↗",
+        "STEPLOCK / ACTUAL APPLICATION CAPTUREADVISORY PROTOTYPEGenerated fixture evidence. Actual application capture, not a UI mockup.WATCH THE RECORDED WALKTHROUGH ↗",
+        "Watch the recorded walkthrough ↗",
+        "Watch walkthrough ↗"
+      ],
+      "document_width": 1265,
+      "route": "/",
+      "width": 1280
+    },
+    {
+      "test": "requests_observed",
+      "api_requests": [],
+      "external_origins": [
+        "https://steplock-xt9.pages.dev"
+      ]
+    },
+    {
+      "canvas": 1,
+      "selected_mode": "3D",
+      "test": "final_3d_ready"
+    },
+    {
+      "configured_contact": false,
+      "document_width": 375,
+      "test": "static_landing_phone",
+      "width": 390
+    },
+    {
+      "configured_contact": false,
+      "document_width": 305,
+      "test": "static_landing_phone",
+      "width": 320
+    }
+  ],
+  "limits": "Browser-emulated viewports; generated recorded examples; no live inspection or factory accuracy."
+}

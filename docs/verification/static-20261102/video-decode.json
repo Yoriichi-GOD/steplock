@@ -1,0 +1,20 @@
+[
+  {
+    "name": "normal",
+    "decoded_frames": 158,
+    "fps": 15.0,
+    "sha256": "f3604df057ae052dd54c73eb69fdcb40f408cac6824d935ee02e811543110138"
+  },
+  {
+    "name": "wrong-component",
+    "decoded_frames": 157,
+    "fps": 15.0,
+    "sha256": "85480885164524918dcd6c7199ee5c433333c9a8cba6866f925758ff615724e9"
+  },
+  {
+    "name": "correction",
+    "decoded_frames": 177,
+    "fps": 15.0,
+    "sha256": "95c8f9bfcbee1de3fcf84512825ff37ac7c5499be18a55f4b293b053d2654876"
+  }
+]

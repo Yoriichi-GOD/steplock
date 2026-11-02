@@ -1,0 +1,22 @@
+[
+  {
+    "file": "landing-1280.png",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "sha256": "e19fd70c7a41f11f2833b4e4fb95a57179445669b33e1e78ec39e7074d8417f8",
+    "kind": "ACTUAL_STATIC_WEBSITE_SCREENSHOT",
+    "population": "GENERATED_FIXTURE_RECORDING"
+  },
+  {
+    "file": "walkthrough-390.png",
+    "dimensions": [
+      390,
+      844
+    ],
+    "sha256": "31ec8a927e783a8fdfdbb4fbb9875c77f68d771b12ea4320b48be901b3be559e",
+    "kind": "ACTUAL_STATIC_WEBSITE_SCREENSHOT",
+    "population": "GENERATED_FIXTURE_RECORDING"
+  }
+]
