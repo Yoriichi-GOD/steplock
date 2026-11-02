@@ -78,12 +78,20 @@ restrictions remain. Page loads do not submit form fields.
   ZIP SHA-256 is `0974c9417ca2a65afbbb419d74d43a579c08e524cbd1e363aa4b6e2f5ef1446f`.
 - Normal DNS / validated HTTPS checks now pass for apex and www. Earlier public
   DNS diagnostic checks are labeled separately; no TLS protection was bypassed.
+- Both production hostnames serve the tested contact JavaScript and styles
+  byte-for-byte. HTTP OPTIONS checks allow the form's POST and Content-Type for
+  both origins. These are network checks, not a replacement for a phone render.
 - The production-domain endpoint initially requested its own activation. The
   founder activated `https://step-lock.xyz/`; a subsequent endpoint request with
   production Origin/Referer returned HTTP 200 / `success:true`. The founder
   confirmed receiving the complete **STEPLOCK — Discuss a pilot** test containing
   **CUSTOM DOMAIN TEST 2026-11-02**. This is recipient-confirmed production
   delivery, separate from the earlier preview browser submission.
+- The `www.step-lock.xyz` origin was separately tested and requested its own
+  activation. The founder activated it; the subsequent www-origin request
+  returned HTTP 200 / `success:true`. Do not assume the provider's activation is
+  shared across hostnames. The root test body is recipient-confirmed; the www
+  test is provider-accepted, not independently inbox-inspected.
 
 Limits: forwarding acceptance does not prove inbox placement or reading. The
 Reply-To was not independently inspected; ImprovMX's message-download attempt

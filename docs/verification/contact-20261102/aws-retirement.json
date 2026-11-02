@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-11-02T15:06:37.290626+00:00",
+  "stacks": [
+    {
+      "name": "steplock-service",
+      "status": "DELETE_COMPLETE",
+      "deletion_operation_started_utc": "2026-11-02T14:55:58.898000+00:00"
+    },
+    {
+      "name": "steplock-foundation",
+      "status": "DELETE_COMPLETE",
+      "deletion_operation_started_utc": "2026-11-02T15:05:05.276000+00:00"
+    }
+  ],
+  "temporary_permission_removed": true,
+  "remaining_inline_policy_names": [
+    "DeleteOnlyInventoriedTrialResources"
+  ],
+  "independent_absence_checks": {
+    "load_balancer": "LoadBalancerNotFound",
+    "image_repository": "RepositoryNotFoundException",
+    "vpc": "InvalidVpcID.NotFound"
+  },
+  "scope": "Only the inventoried STEPLOCK trial in Sydney. No account-wide cost audit or deletion of other projects.",
+  "limits": "Stack DeletionTime is the operation start, not its completion time. Both stacks were observed DELETE_COMPLETE at checked_at_utc. Previously incurred charges may appear later."
+}

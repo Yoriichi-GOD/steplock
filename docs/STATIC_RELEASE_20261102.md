@@ -1,6 +1,12 @@
 # Static release — 2 November 2026
 
-Status: **CUSTOM_DOMAINS_HTTP_VERIFIED / AUTOMATIC_CONTACT_RECIPIENT_CONFIRMED / AWS_RETIREMENT_PERMISSION_BLOCKED**.
+Status: **CUSTOM_DOMAINS_HTTP_VERIFIED / AUTOMATIC_CONTACT_RECIPIENT_CONFIRMED / AWS_TRIAL_RETIRED**.
+
+Final update at 15:06:37 UTC: the old STEPLOCK service and foundation stacks are
+DELETE_COMPLETE. Exact resource checks confirm the load balancer, image registry
+and dedicated VPC are absent. The approved temporary read permission was removed.
+See [retirement verification](AWS_RETIREMENT_20261102.md). The earlier retained-AWS
+and cleanup-failure paragraphs below describe the migration history.
 
 Update at 14:45 UTC: Cloudflare reports apex and www Active / SSL enabled. Both
 hostnames now pass normal system-DNS HTTPS checks for the static routes, three
@@ -23,8 +29,10 @@ Deletion-request acceptance is not evidence that its chargeable resources are
 gone; see the subsequent retirement receipt before claiming cost closure.
 The attempted service deletion failed on its WAF association read permission;
 automatic approval review requires explicit approval for the temporary IAM fix.
-See [retirement diagnosis](AWS_RETIREMENT_20261102.md). No new permission was
-applied and the foundation remains while that blocker is open.
+The founder then approved the exact temporary read permission, validation passed
+and deletion was retried. See [retirement diagnosis](AWS_RETIREMENT_20261102.md).
+The service subsequently completed deletion, followed by the foundation and
+removal of the temporary policy, as recorded in the final update above.
 
 The founder selected USD 0 hosting with a recorded walkthrough. The public
 preview is [STEPLOCK](https://steplock-xt9.pages.dev) and its

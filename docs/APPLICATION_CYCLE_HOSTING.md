@@ -52,6 +52,12 @@ control until deletion is verified. Its fallback expiry remains 9 November
 2026 at 00:53:05 IST, with foundation cleanup 30 minutes later. Do not claim
 zero ongoing AWS cost until chargeable resources are actually removed.
 
+Closure at 15:06:37 UTC on 2 November: both trial stacks are deleted and the
+load balancer, registry and dedicated VPC are independently absent. The temporary
+read permission used to repair cleanup was removed. The original audit/expiry
+control remains; previous charges can still post later. See
+[retirement verification](AWS_RETIREMENT_20261102.md).
+
 Free hosting has no running application process to sleep, but is not an uptime
 guarantee. Keep the reproducible release and repository. No paid Functions,
 Stream, R2 or additional subscription is authorized by this USD 0 decision.

@@ -1,0 +1,19 @@
+{
+  "scope": "Production-origin HTTP preflight, not a full browser render",
+  "checks": [
+    {
+      "origin": "https://step-lock.xyz",
+      "allow_origin": "*",
+      "allow_methods": "GET, POST, PUT, OPTIONS",
+      "allow_headers": "Content-Type, Accept, X-Requested-With, Application",
+      "result": "PASS"
+    },
+    {
+      "origin": "https://www.step-lock.xyz",
+      "allow_origin": "*",
+      "allow_methods": "GET, POST, PUT, OPTIONS",
+      "allow_headers": "Content-Type, Accept, X-Requested-With, Application",
+      "result": "PASS"
+    }
+  ]
+}
