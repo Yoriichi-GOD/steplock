@@ -1,5 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Seven-day STEPLOCK trial expiry. Only the inventoried trial stacks/resources may be deleted. This small control stack is retained for audit.
+Metadata:
+  AWSToolsMetrics: {AWSAgentToolkit: aws-cloudformation@3}
 Parameters:
   ServiceStackArn: {Type: String}
   FoundationStackArn: {Type: String}
@@ -18,6 +20,10 @@ Parameters:
 Resources:
   DeletionRole:
     Type: AWS::IAM::Role
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Delete only inventoried trial resources, including the custom SNI binding and ACM certificate in the same service stack.
+        must: [Exact resource ARNs only for mutations, never widen cleanup to unrelated projects, preserve original expiry times]
     Properties:
       RoleName: !Sub '${AWS::StackName}-resources'
       AssumeRolePolicyDocument:
@@ -82,6 +88,10 @@ Resources:
                   - elasticloadbalancing:SetWebACL
                   - elasticloadbalancing:DeleteWebACLAssociation
                   - elasticloadbalancing:GetLoadBalancerWebACL
+                  - elasticloadbalancing:RemoveListenerCertificates
+                  - elasticloadbalancing:DescribeListenerCertificates
+                  - acm:DescribeCertificate
+                  - acm:DeleteCertificate
                 Resource: !Ref DeletionResourceArns
               - Sid: PassOnlyTrialRolesForCleanup
                 Effect: Allow

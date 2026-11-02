@@ -1,5 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: STEPLOCK single-task public demo, initially restricted behind WAF until hosted acceptance passes.
+Metadata:
+  AWSToolsMetrics: {AWSAgentToolkit: aws-cloudformation@3}
 Parameters:
   ClusterArn: {Type: String}
   SubnetA: {Type: 'AWS::EC2::Subnet::Id'}
@@ -14,6 +16,11 @@ Parameters:
     Type: String
     Default: 127.0.0.1,localhost
     AllowedPattern: '[a-zA-Z0-9.,-]+'
+  CustomDomain:
+    Type: String
+    Default: ''
+    AllowedPattern: '^$|([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,63}'
+    Description: Optional exact HTTPS hostname; publish its ACM validation CNAME at the existing DNS provider.
   TestIpv4:
     Type: String
     AllowedPattern: '[0-9.]+/32'
@@ -23,9 +30,14 @@ Parameters:
     AllowedValues: [restricted, public]
 Conditions:
   PublicAccess: !Equals [!Ref Access, public]
+  HasCustomDomain: !Not [!Equals [!Ref CustomDomain, '']]
 Resources:
   Service:
     Type: AWS::ECS::ExpressGatewayService
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Single-task public generated-example trial. Exact trusted hosts include the generated AWS URL and any verified custom hostname.
+        must: [Keep one task, keep the immutable image digest, keep the original trial expiry and public API restrictions]
     Properties:
       ServiceName: steplock-prelaunch
       Cluster: !Ref ClusterArn
@@ -48,6 +60,28 @@ Resources:
           - {Name: FORWARDED_ALLOW_IPS, Value: '10.241.10.0/24,10.241.20.0/24'}
       ScalingTarget: {MinTaskCount: 1, MaxTaskCount: 1}
       Tags: [{Key: Project, Value: STEPLOCK}, {Key: Environment, Value: prelaunch}]
+  DomainCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Condition: HasCustomDomain
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Free non-exportable public certificate for the existing regional ALB; DNS stays at the registrar.
+        must: [DNS validation only, never enable certificate export, delete with the trial stack]
+    Properties:
+      DomainName: !Ref CustomDomain
+      ValidationMethod: DNS
+      CertificateExport: DISABLED
+      Tags: [{Key: Project, Value: STEPLOCK}, {Key: Environment, Value: prelaunch}]
+  DomainListenerCertificate:
+    Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
+    Condition: HasCustomDomain
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Add SNI for the custom hostname without replacing the generated AWS listener certificate. The dependency detaches it before certificate or service deletion.
+        must: [Preserve the original listener certificate and AWS URL, keep both resources in trial cleanup]
+    Properties:
+      ListenerArn: !GetAtt Service.ECSManagedResourceArns.IngressPath.ListenerArn
+      Certificates: [{CertificateArn: !Ref DomainCertificate}]
   TestIps:
     Type: AWS::WAFv2::IPSet
     Properties:
@@ -102,6 +136,9 @@ Resources:
       ResourceArn: !GetAtt Service.ECSManagedResourceArns.IngressPath.LoadBalancerArn
       WebACLArn: !GetAtt WebAcl.Arn
 Outputs:
+  DomainCertificateArn:
+    Condition: HasCustomDomain
+    Value: !Ref DomainCertificate
   Endpoint: {Value: !GetAtt Service.Endpoint}
   ServiceArn: {Value: !GetAtt Service.ServiceArn}
   LoadBalancerArn: {Value: !GetAtt Service.ECSManagedResourceArns.IngressPath.LoadBalancerArn}

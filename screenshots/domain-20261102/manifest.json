@@ -1,0 +1,44 @@
+[
+  {
+    "file": "screenshots/domain-20261102/actual-normal-pass.png",
+    "bytes": 475648,
+    "sha256": "045fc33004b20efa4f94e7c6c69af54f22cef9472858f0514355a940e240049a",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/demo-phone-neutral.png",
+    "bytes": 210909,
+    "sha256": "c632d8407072fe8fe035645ee1ae934daa5b71441a8eb388eadb3f5776fffdf1",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/landing-1280.png",
+    "bytes": 973978,
+    "sha256": "9ce28e307523bc1e0d7677157aee7f92af9bad2bc140ba74e8ecc0395ab0ae77",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/landing-390.png",
+    "bytes": 186689,
+    "sha256": "a946e2480697cc359dc3d85c99d580f661a559beee894fe327d92e2a457593da",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/source-loss.png",
+    "bytes": 444525,
+    "sha256": "916b07b11ee0ba01cd0253fcccf1712c3ff57eabc450c6431d30374ccfc83f41",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/unavailable-backend.png",
+    "bytes": 439057,
+    "sha256": "87e6f11602e73a82f055224e549fb5916122b380e18009fb1e6ab89f340e6312",
+    "provenance": "Actual hosted app; generated inspection fixture; diagnostic DNS routing disclosed in checks.json"
+  },
+  {
+    "file": "screenshots/domain-20261102/godaddy-forwarding-saved.png",
+    "bytes": 49227,
+    "sha256": "9ff738b2df252c54c5c76699209579321444de4c34f1ddb122e832fe01a861b7",
+    "provenance": "Actual GoDaddy forwarding settings; public domain and destination only"
+  }
+]

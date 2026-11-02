@@ -1,0 +1,236 @@
+{
+  "recorded_at_utc": "2026-11-02T12:19:57.724408+00:00",
+  "status": "WWW_VERIFIED_ROOT_TLS_PENDING",
+  "endpoint": "https://www.step-lock.xyz",
+  "application_image_digest": "sha256:fe77c48ef879350c0cc83c2c26413c5413da97aafd3d11c9e164caab226d8447",
+  "application_changes": false,
+  "external_network": {
+    "result": "PASS",
+    "build_id": "777dfdf0-63ae-4582-94fa-bf43fb8ca487",
+    "normal_dns_and_tls": true,
+    "original_aws_health_200": true,
+    "population": "SYNTHETIC_FIXTURE",
+    "provider_calls": 0,
+    "scenarios": [
+      {
+        "scenario": "normal",
+        "decision": "PASS",
+        "finding": "CHECKPOINT"
+      },
+      {
+        "scenario": "wrong_component",
+        "decision": "HOLD_FOR_REVIEW",
+        "finding": "WRONG_COMPONENT"
+      },
+      {
+        "scenario": "wrong_order",
+        "decision": "HOLD_FOR_REVIEW",
+        "finding": "ORDER_VIOLATION"
+      },
+      {
+        "scenario": "correction",
+        "decision": "PASS",
+        "finding": "CORRECTED"
+      }
+    ]
+  },
+  "browser": {
+    "result": "PASS",
+    "endpoint": "https://www.step-lock.xyz",
+    "population": "SYNTHETIC_FIXTURE",
+    "browser_dns_override": "ecs-express-gateway-alb-9b87b79f-506039654.ap-southeast-2.elb.amazonaws.com",
+    "checks": [
+      {
+        "test": "https_public_boundary",
+        "pass": true,
+        "hsts": "max-age=86400",
+        "owner_access": false,
+        "contact_configured": false
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 1280,
+        "documentWidth": 1280,
+        "barBorder": "1px",
+        "visualTop": 110,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 1280,
+        "status": "PENDING"
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 390,
+        "documentWidth": 390,
+        "barBorder": "0px",
+        "visualTop": 422,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 390,
+        "status": "PENDING"
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 320,
+        "documentWidth": 320,
+        "barBorder": "0px",
+        "visualTop": 370,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 320,
+        "status": "PENDING"
+      },
+      {
+        "test": "private_workspace_gate",
+        "pass": true
+      },
+      {
+        "test": "actual_generated_normal",
+        "decision": "PASS",
+        "completion_ms": 8060,
+        "runtime": "Analyzed frames\n30\nVision p95\n45.7 ms",
+        "ledger": "EVIDENCE LEDGER / 10 EVENTS\nREPLAY COMPLETE",
+        "evidence_style": {
+          "filter": "none",
+          "opacity": "1"
+        }
+      },
+      {
+        "test": "stalled_heartbeat_clears_pass",
+        "observed_ms": 3375,
+        "confirmed_steps": 0
+      },
+      {
+        "test": "reconnect_and_delete_reset",
+        "pass": true
+      },
+      {
+        "test": "clean_start_without_api",
+        "pass": true
+      }
+    ],
+    "page_errors": [],
+    "external_origins": [],
+    "limits": "Browser-emulated viewports, one measured run; no factory accuracy or physical-phone performance claim. Any diagnostic DNS override is explicit; verify public DNS and outside-network reachability separately."
+  },
+  "original_endpoint_browser_regression": {
+    "result": "PASS",
+    "endpoint": "https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws",
+    "population": "SYNTHETIC_FIXTURE",
+    "browser_dns_override": null,
+    "checks": [
+      {
+        "test": "https_public_boundary",
+        "pass": true,
+        "hsts": "max-age=86400",
+        "owner_access": false,
+        "contact_configured": false
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 1280,
+        "documentWidth": 1280,
+        "barBorder": "1px",
+        "visualTop": 110,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 1280,
+        "status": "PENDING"
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 390,
+        "documentWidth": 390,
+        "barBorder": "0px",
+        "visualTop": 422,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 390,
+        "status": "PENDING"
+      },
+      {
+        "test": "landing_viewport",
+        "viewport": 320,
+        "documentWidth": 320,
+        "barBorder": "0px",
+        "visualTop": 370,
+        "mode": "3D"
+      },
+      {
+        "test": "demo_viewport",
+        "width": 320,
+        "status": "PENDING"
+      },
+      {
+        "test": "private_workspace_gate",
+        "pass": true
+      },
+      {
+        "test": "actual_generated_normal",
+        "decision": "PASS",
+        "completion_ms": 7863,
+        "runtime": "Analyzed frames\n30\nVision p95\n44.9 ms",
+        "ledger": "EVIDENCE LEDGER / 10 EVENTS\nREPLAY COMPLETE",
+        "evidence_style": {
+          "filter": "none",
+          "opacity": "1"
+        }
+      },
+      {
+        "test": "stalled_heartbeat_clears_pass",
+        "observed_ms": 3366,
+        "confirmed_steps": 0
+      },
+      {
+        "test": "reconnect_and_delete_reset",
+        "pass": true
+      },
+      {
+        "test": "clean_start_without_api",
+        "pass": true
+      }
+    ],
+    "page_errors": [],
+    "external_origins": [],
+    "limits": "Browser-emulated viewports, one measured run; no factory accuracy or physical-phone performance claim. Any diagnostic DNS override is explicit; verify public DNS and outside-network reachability separately."
+  },
+  "local_public_boundary_regression": {
+    "passed": 8,
+    "seconds": 34.38,
+    "warnings": 1
+  },
+  "infra_validation": {
+    "cfn_lint_version": "1.59.0",
+    "cfn_lint_findings": 0,
+    "aws_template_validation": "PASS",
+    "aws_change_set_validation": "PASS",
+    "cleanup_access_analyzer_findings": 0,
+    "cfn_guard": "NOT_AVAILABLE_NOT_RUN"
+  },
+  "expiry_utc": "2026-11-08T19:23:05Z",
+  "root": {
+    "forwarding_saved": true,
+    "destination": "https://www.step-lock.xyz",
+    "http_home": 301,
+    "https_home": "NOT_WORKING_YET_TIMEOUT_OR_RESET",
+    "http_demo_deep_link": 404
+  },
+  "limits": [
+    "All inspections use generated fixtures.",
+    "Local ISP resolver still reaches the previous destination.",
+    "Browser run uses explicit diagnostic routing with TLS validation enabled.",
+    "Independent AWS run uses normal DNS and TLS.",
+    "Root HTTPS and path forwarding are not verified.",
+    "An initial external runner probe failed because no source checkout existed; corrected by embedding the unchanged smoke script."
+  ]
+}

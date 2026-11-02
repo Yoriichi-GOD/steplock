@@ -5,6 +5,14 @@ for the endpoint, immutable image, hosted acceptance, security findings and sche
 expiry. `foundation.yaml`, `service.yaml` and `expiry.yaml` describe that trial;
 `hosted_browser_check.cjs` records its reproducible browser checks.
 
+The [custom-domain receipt](../../docs/DOMAIN_SETUP_20261102.md) covers the
+verified `www.step-lock.xyz` hostname and GoDaddy root-forwarding limitations.
+`CustomDomain` adds a DNS-validated, non-exportable ACM certificate and SNI
+binding to this same trial stack. Add the exact hostname to `TrustedHosts` too.
+GoDaddy retains DNS ownership. After any Express service update, verify the
+managed listener rule still includes the AWS hostname and custom hostname;
+the documented direct host-rule customization is outside the Express template.
+
 The section below preserves the **historical 1 November preparation snapshot**;
 its NOT_DEPLOYED wording does not describe the current trial.
 

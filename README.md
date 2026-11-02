@@ -25,9 +25,10 @@ Public mode enforces API restrictions server-side and disables anonymous camera,
 upload, recipe and cloud-model operations. [Product architecture](docs/PRELAUNCH_PRODUCT.md)
 · [public-demo boundary](docs/PUBLIC_DEMO.md).
 
-**Live AWS trial:** [Landing page](https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws)
-· [Run the inspection demo](https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws/demo)
-· [Deployment checks, costs and limitations](docs/AWS_DEPLOYMENT_20261102.md).
+**Live AWS trial:** [Landing page](https://www.step-lock.xyz)
+· [Run the inspection demo](https://www.step-lock.xyz/demo)
+· [Domain verification and propagation status](docs/DOMAIN_SETUP_20261102.md)
+· [Original AWS endpoint, costs and limitations](docs/AWS_DEPLOYMENT_20261102.md).
 The public demo uses generated fixtures and the actual inspection engine. Teardown
 is scheduled for **9 November 2026, 00:53 IST**. The USD 25 trial allowance is not
 an instant billing hard cap. No login, paid model or anonymous uploads are enabled.

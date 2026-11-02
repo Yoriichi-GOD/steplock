@@ -4,9 +4,31 @@ const root=path.resolve(__dirname,'../..');
 process.env.PLAYWRIGHT_BROWSERS_PATH=path.join(root,'runtime/browser_qa/browsers');
 const {chromium}=require(path.join(root,'runtime/browser_qa/node_modules/playwright'));
 const base=process.argv[2];assert(base&&new URL(base).protocol==='https:','Provide the actual HTTPS endpoint');
-const out=path.join(root,'runtime/aws-deploy-20261102/browser');fs.mkdirSync(out,{recursive:true});
+// A new domain run must keep the original trial's evidence intact.
+const out=process.argv[3]?path.resolve(root,process.argv[3]):path.join(root,'runtime/aws-deploy-20261102/browser');fs.mkdirSync(out,{recursive:true});
+// Optional diagnostic DNS mapping, only to the verified regional ALB hostname.
+// TLS still validates the public origin. Normal DNS must be checked separately.
+const dnsTarget=process.argv[4]||null;
+if(dnsTarget)assert(/^[a-zA-Z0-9.-]+\.elb\.amazonaws\.com$/.test(dnsTarget),'Expected the verified ALB DNS name');
+async function diagnosticDnsTunnel(){
+ if(!dnsTarget)return null;
+ // Both Chromium and Playwright's separate HTTP client need the same route.
+ // CONNECT carries opaque TLS: this never decrypts traffic or bypasses cert checks.
+ const http=require('node:http'),net=require('node:net'),sockets=new Set();
+ const server=http.createServer((req,res)=>{res.writeHead(403);res.end();});
+ server.on('connect',(req,client,head)=>{
+  if(req.url!==new URL(base).hostname+':443'){client.end('HTTP/1.1 403 Forbidden\r\n\r\n');return;}
+  const upstream=net.connect(443,dnsTarget,()=>{client.write('HTTP/1.1 200 Connection Established\r\n\r\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});
+  for(const socket of [client,upstream]){sockets.add(socket);socket.on('close',()=>sockets.delete(socket));}
+  upstream.on('error',()=>client.destroy());client.on('error',()=>upstream.destroy());
+ });
+ await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+ return {proxy:{server:`http://127.0.0.1:${server.address().port}`},close:()=>{for(const socket of sockets)socket.destroy();server.close();}};
+}
 (async()=>{
- const browser=await chromium.launch({headless:true}),context=await browser.newContext({viewport:{width:1280,height:720}}),page=await context.newPage();
+ const tunnel=await diagnosticDnsTunnel(),proxy=tunnel?.proxy;
+ const browser=await chromium.launch({headless:true,proxy}),context=await browser.newContext({viewport:{width:1280,height:720},proxy}),page=await context.newPage();
+ page.setDefaultNavigationTimeout(60000);
  const errors=[],remote=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
  page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==base)remote.push(new URL(r.url()).origin);});
  try{
@@ -41,8 +63,8 @@ const out=path.join(root,'runtime/aws-deploy-20261102/browser');fs.mkdirSync(out
   await page.waitForFunction(()=>document.querySelector('[data-testid="demo-verdict"]')?.getAttribute('data-status')==='PASS',null,{timeout:12000});
   const removed=page.waitForResponse(r=>r.request().method()==='DELETE'&&r.url().includes('/api/public/demo/sessions/'));await page.getByRole('button',{name:'Reset',exact:true}).click();assert.equal((await removed).status(),200);assert.equal(await page.getByTestId('demo-verdict').getAttribute('data-status'),'PENDING');
   checks.push({test:'reconnect_and_delete_reset',pass:true});await page.reload({waitUntil:'networkidle'});assert.equal(await page.getByTestId('demo-verdict').getAttribute('data-status'),'PENDING');
-  const offlineContext=await browser.newContext({viewport:{width:1280,height:720}}),offline=await offlineContext.newPage();await offline.route('**/api/**',r=>r.abort());await offline.goto(base+'/demo',{waitUntil:'networkidle'});await offline.locator('.demo-error').waitFor();assert.equal(await offline.getByTestId('demo-verdict').getAttribute('data-status'),'PENDING');assert(await offline.getByRole('button',{name:/Run inspection/}).isDisabled());await offline.screenshot({path:path.join(out,'unavailable-backend.png')});await offlineContext.close();checks.push({test:'clean_start_without_api',pass:true});
+  const offlineContext=await browser.newContext({viewport:{width:1280,height:720},proxy}),offline=await offlineContext.newPage();await offline.route('**/api/**',r=>r.abort());await offline.goto(base+'/demo',{waitUntil:'networkidle'});await offline.locator('.demo-error').waitFor();assert.equal(await offline.getByTestId('demo-verdict').getAttribute('data-status'),'PENDING');assert(await offline.getByRole('button',{name:/Run inspection/}).isDisabled());await offline.screenshot({path:path.join(out,'unavailable-backend.png')});await offlineContext.close();checks.push({test:'clean_start_without_api',pass:true});
   await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(out,'demo-phone-neutral.png')});assert.deepEqual(errors,[]);assert.deepEqual([...new Set(remote)],[]);
-  const receipt={result:'PASS',endpoint:base,population:'SYNTHETIC_FIXTURE',checks,page_errors:errors,external_origins:[...new Set(remote)],limits:'Browser-emulated viewports, one measured run; no factory accuracy or physical-phone performance claim.'};fs.writeFileSync(path.join(out,'acceptance.json'),JSON.stringify(receipt,null,2));console.log(JSON.stringify(receipt));
- }catch(e){await page.screenshot({path:path.join(out,'failure.png')}).catch(()=>{});fs.writeFileSync(path.join(out,'partial.json'),JSON.stringify({checks,errors,remote,error:e.message},null,2));throw e;}finally{await context.close();await browser.close();}
+  const receipt={result:'PASS',endpoint:base,population:'SYNTHETIC_FIXTURE',browser_dns_override:dnsTarget,checks,page_errors:errors,external_origins:[...new Set(remote)],limits:'Browser-emulated viewports, one measured run; no factory accuracy or physical-phone performance claim. Any diagnostic DNS override is explicit; verify public DNS and outside-network reachability separately.'};fs.writeFileSync(path.join(out,'acceptance.json'),JSON.stringify(receipt,null,2));console.log(JSON.stringify(receipt));
+ }catch(e){await page.screenshot({path:path.join(out,'failure.png')}).catch(()=>{});fs.writeFileSync(path.join(out,'partial.json'),JSON.stringify({checks,errors,remote,error:e.message},null,2));throw e;}finally{await context.close();await browser.close();tunnel?.close();}
 })().catch(e=>{console.error(e.stack);process.exitCode=1});
