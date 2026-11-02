@@ -1,0 +1,59 @@
+{
+  "status": "HYPOTHETICAL_NOT_MEASURED",
+  "scenarios": [
+    {
+      "name": "Conservative",
+      "stations": 4,
+      "errors": 2,
+      "rate": 0.35,
+      "minutes": 15,
+      "weeks": 48,
+      "labor": 200,
+      "material": 50,
+      "hours": 33.599999999999994,
+      "incidents": 134.39999999999998,
+      "labor_savings": 6719.999999999999,
+      "material_savings": 6719.999999999999,
+      "gross_savings": 13439.999999999998,
+      "subscription": 72000,
+      "setup": 20000,
+      "net_first_year": -78560
+    },
+    {
+      "name": "Base",
+      "stations": 4,
+      "errors": 4,
+      "rate": 0.5,
+      "minutes": 30,
+      "weeks": 48,
+      "labor": 200,
+      "material": 100,
+      "hours": 192,
+      "incidents": 384,
+      "labor_savings": 38400,
+      "material_savings": 38400,
+      "gross_savings": 76800,
+      "subscription": 72000,
+      "setup": 20000,
+      "net_first_year": -15200
+    },
+    {
+      "name": "Optimistic",
+      "stations": 4,
+      "errors": 6,
+      "rate": 0.65,
+      "minutes": 45,
+      "weeks": 48,
+      "labor": 200,
+      "material": 150,
+      "hours": 561.6,
+      "incidents": 748.8000000000001,
+      "labor_savings": 112320,
+      "material_savings": 112320.00000000001,
+      "gross_savings": 224640,
+      "subscription": 72000,
+      "setup": 20000,
+      "net_first_year": 132640
+    }
+  ]
+}

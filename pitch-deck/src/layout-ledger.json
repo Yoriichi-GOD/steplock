@@ -1,0 +1,2081 @@
+[
+  {
+    "slide": 1,
+    "text": "STEPLOCK / A16Z SPEEDRUN SR008",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 1,
+    "text": "Saishreek Singh / Sole founder / Technical prototype",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 1,
+    "text": "01",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 1,
+    "text": "Catch the wrong move\nbefore the next step",
+    "x": 0.72,
+    "y": 3,
+    "w": 10.3,
+    "h": 1.7,
+    "fontSize": 45
+  },
+  {
+    "slide": 1,
+    "text": "Visual procedure verification for smaller manufacturers",
+    "x": 0.75,
+    "y": 5.12,
+    "w": 9,
+    "h": 0.55,
+    "fontSize": 21
+  },
+  {
+    "slide": 1,
+    "text": "SAISHREEK SINGH / SOLE FOUNDER",
+    "x": 0.75,
+    "y": 6.42,
+    "w": 9,
+    "h": 0.3,
+    "fontSize": 12
+  },
+  {
+    "slide": 1,
+    "text": "SPEEDRUN SR008 / NOVEMBER 2026",
+    "x": 0.75,
+    "y": 0.35,
+    "w": 10,
+    "h": 0.3,
+    "fontSize": 10
+  },
+  {
+    "slide": 2,
+    "text": "01 / THE PROBLEM",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 2,
+    "text": "The mistake happens now.\nWe find it later.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 40
+  },
+  {
+    "slide": 2,
+    "text": "Conceptual assembly analogy / Native editable objects / Not factory observations",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 2,
+    "text": "02",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 2,
+    "text": "REQUIRED ORDER",
+    "x": 0.7,
+    "y": 2.92,
+    "w": 2,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 2,
+    "text": "OBSERVED ORDER",
+    "x": 0.7,
+    "y": 4.82,
+    "w": 2,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 2,
+    "text": "1",
+    "x": 3.3,
+    "y": 3.55,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "2",
+    "x": 6.25,
+    "y": 3.55,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "3",
+    "x": 9.2,
+    "y": 3.55,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "1",
+    "x": 3.3,
+    "y": 5.45,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "3",
+    "x": 6.25,
+    "y": 5.45,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "2",
+    "x": 9.2,
+    "y": 5.45,
+    "w": 1.55,
+    "h": 0.4,
+    "fontSize": 20
+  },
+  {
+    "slide": 2,
+    "text": "Cover before spacer",
+    "x": 7.8,
+    "y": 4.18,
+    "w": 4,
+    "h": 0.4,
+    "fontSize": 17
+  },
+  {
+    "slide": 2,
+    "text": "The same parts can produce the wrong procedure.",
+    "x": 0.7,
+    "y": 6.28,
+    "w": 11.8,
+    "h": 0.43,
+    "fontSize": 23
+  },
+  {
+    "slide": 3,
+    "text": "02 / LATE DISCOVERY",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Every later step can add\nto the cost of fixing it.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 38
+  },
+  {
+    "slide": 3,
+    "text": "Illustrative wrong-zone housing assembly / Potential rework, not measured cost savings",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 3,
+    "text": "03",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "01",
+    "x": 0.9,
+    "y": 2.7,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Place insert",
+    "x": 0.7,
+    "y": 3.7,
+    "w": 2.15,
+    "h": 0.8,
+    "fontSize": 19
+  },
+  {
+    "slide": 3,
+    "text": "02",
+    "x": 3.25,
+    "y": 2.7,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Wrong zone",
+    "x": 3.05,
+    "y": 3.7,
+    "w": 2.15,
+    "h": 0.8,
+    "fontSize": 19
+  },
+  {
+    "slide": 3,
+    "text": "03",
+    "x": 5.6,
+    "y": 2.7,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Close housing",
+    "x": 5.3999999999999995,
+    "y": 3.7,
+    "w": 2.15,
+    "h": 0.8,
+    "fontSize": 19
+  },
+  {
+    "slide": 3,
+    "text": "04",
+    "x": 7.95,
+    "y": 2.7,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Final inspection",
+    "x": 7.75,
+    "y": 3.7,
+    "w": 2.15,
+    "h": 0.8,
+    "fontSize": 19
+  },
+  {
+    "slide": 3,
+    "text": "05",
+    "x": 10.3,
+    "y": 2.7,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 3,
+    "text": "Reopen + rework",
+    "x": 10.100000000000001,
+    "y": 3.7,
+    "w": 2.15,
+    "h": 0.8,
+    "fontSize": 19
+  },
+  {
+    "slide": 3,
+    "text": "Insert belongs here",
+    "x": 0.9,
+    "y": 6.17,
+    "w": 3.3,
+    "h": 0.32,
+    "fontSize": 14
+  },
+  {
+    "slide": 3,
+    "text": "The next operation can hide the error.",
+    "x": 5,
+    "y": 5,
+    "w": 7.4,
+    "h": 0.5,
+    "fontSize": 25
+  },
+  {
+    "slide": 3,
+    "text": "An earlier placement check could let the operator correct it before closing the assembly.",
+    "x": 5,
+    "y": 5.72,
+    "w": 7.4,
+    "h": 0.75,
+    "fontSize": 20
+  },
+  {
+    "slide": 4,
+    "text": "03 / THE INITIAL CUSTOMER",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 4,
+    "text": "Quality control should fit\nthe factory using it.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 38
+  },
+  {
+    "slide": 4,
+    "text": "Sources: Ministry of MSME RAMP; photo Andrea Piacquadio / Pexels, illustrative workshop",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 4,
+    "text": "04",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 4,
+    "text": "Origin: a friend’s family factory. A few supervisors held the procedural know-how.",
+    "x": 0.72,
+    "y": 2.42,
+    "w": 11.9,
+    "h": 0.36,
+    "fontSize": 17
+  },
+  {
+    "slide": 4,
+    "text": "RESOURCE-RICH INSTALLATION",
+    "x": 0.72,
+    "y": 2.94,
+    "w": 6,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 4,
+    "text": "Dedicated engineering.\nIntegrated inspection hardware.\nApplication-specific setup.",
+    "x": 0.72,
+    "y": 3.4,
+    "w": 6.4,
+    "h": 1.15,
+    "fontSize": 21
+  },
+  {
+    "slide": 4,
+    "text": "OUR STARTING CUSTOMER / HYPOTHESIS",
+    "x": 0.72,
+    "y": 4.88,
+    "w": 6,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 4,
+    "text": "A repeatable assembly bench.\nA few supervisors.\nA need for manageable setup and cost.",
+    "x": 0.72,
+    "y": 5.25,
+    "w": 6.4,
+    "h": 1.15,
+    "fontSize": 22
+  },
+  {
+    "slide": 4,
+    "text": "Illustrative stock workshop; not the founder’s factory.\nLocation unspecified. No affiliation or endorsement.",
+    "x": 7.78,
+    "y": 6.48,
+    "w": 4.9,
+    "h": 0.37,
+    "fontSize": 10
+  },
+  {
+    "slide": 5,
+    "text": "04 / THE IDEA",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 5,
+    "text": "What if the process could\nverify its next step?",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 38
+  },
+  {
+    "slide": 5,
+    "text": "Supported prototype: tagged visible placements and explicit temporal rules / Illustration, not a deployed station",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 5,
+    "text": "05",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 5,
+    "text": "A / SPACER",
+    "x": 1.6,
+    "y": 3.65,
+    "w": 1.6,
+    "h": 0.3,
+    "fontSize": 12
+  },
+  {
+    "slide": 5,
+    "text": "B / COVER",
+    "x": 3.65,
+    "y": 3.65,
+    "w": 1.6,
+    "h": 0.3,
+    "fontSize": 12
+  },
+  {
+    "slide": 5,
+    "text": "HOLD / B REQUIRES A",
+    "x": 6.65,
+    "y": 3.25,
+    "w": 5.7,
+    "h": 0.3,
+    "fontSize": 14
+  },
+  {
+    "slide": 5,
+    "text": "Cover before spacer",
+    "x": 6.65,
+    "y": 3.78,
+    "w": 5.7,
+    "h": 0.53,
+    "fontSize": 29
+  },
+  {
+    "slide": 5,
+    "text": "The engine checks earlier supported observations before confirming the next placement.",
+    "x": 6.65,
+    "y": 4.55,
+    "w": 5.7,
+    "h": 1.25,
+    "fontSize": 21
+  },
+  {
+    "slide": 5,
+    "text": "Observe",
+    "x": 0.85,
+    "y": 6.25,
+    "w": 2.1,
+    "h": 0.4,
+    "fontSize": 19
+  },
+  {
+    "slide": 5,
+    "text": "Verify",
+    "x": 3.2800000000000002,
+    "y": 6.25,
+    "w": 2.1,
+    "h": 0.4,
+    "fontSize": 19
+  },
+  {
+    "slide": 5,
+    "text": "Alert",
+    "x": 5.71,
+    "y": 6.25,
+    "w": 2.1,
+    "h": 0.4,
+    "fontSize": 19
+  },
+  {
+    "slide": 5,
+    "text": "Correct",
+    "x": 8.14,
+    "y": 6.25,
+    "w": 2.1,
+    "h": 0.4,
+    "fontSize": 19
+  },
+  {
+    "slide": 5,
+    "text": "Keep evidence",
+    "x": 10.57,
+    "y": 6.25,
+    "w": 2.1,
+    "h": 0.4,
+    "fontSize": 19
+  },
+  {
+    "slide": 6,
+    "text": "05 / THE PRODUCT",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 6,
+    "text": "Actual application capture / Controlled generated test / Source: README_SCREENSHOT_PROVENANCE.md",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 6,
+    "text": "06",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 6,
+    "text": "Meet STEPLOCK",
+    "x": 0.7,
+    "y": 0.83,
+    "w": 7,
+    "h": 0.72,
+    "fontSize": 42
+  },
+  {
+    "slide": 6,
+    "text": "Visible placements. Procedure checks. Linked evidence.",
+    "x": 0.72,
+    "y": 1.69,
+    "w": 11.7,
+    "h": 0.46,
+    "fontSize": 21
+  },
+  {
+    "slide": 6,
+    "text": "ACTUAL UI",
+    "x": 11.07,
+    "y": 2.49,
+    "w": 1.7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 6,
+    "text": "PASS",
+    "x": 11.06,
+    "y": 3.06,
+    "w": 1.8,
+    "h": 0.62,
+    "fontSize": 29
+  },
+  {
+    "slide": 6,
+    "text": "4 visible\nplacements\nconfirmed",
+    "x": 11.06,
+    "y": 3.98,
+    "w": 1.65,
+    "h": 1.1,
+    "fontSize": 19
+  },
+  {
+    "slide": 6,
+    "text": "Generated fixture.\nNot camera footage.",
+    "x": 11.06,
+    "y": 5.65,
+    "w": 1.65,
+    "h": 0.65,
+    "fontSize": 13
+  },
+  {
+    "slide": 7,
+    "text": "06 / TRUST AND EVIDENCE",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 7,
+    "text": "Not just a warning.\nAn explanation you can inspect.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 37
+  },
+  {
+    "slide": 7,
+    "text": "Source: architecture, procedure engine and NVIDIA/Nebius integration / Optional advice never owns the verdict",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 7,
+    "text": "07",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 7,
+    "text": "Camera / video",
+    "x": 0.85,
+    "y": 3.08,
+    "w": 2.32,
+    "h": 0.68,
+    "fontSize": 18
+  },
+  {
+    "slide": 7,
+    "text": "Source pixels + time",
+    "x": 0.85,
+    "y": 3.92,
+    "w": 2.32,
+    "h": 0.26,
+    "fontSize": 13
+  },
+  {
+    "slide": 7,
+    "text": "Observe + calibrate",
+    "x": 3.98,
+    "y": 3.08,
+    "w": 2.32,
+    "h": 0.68,
+    "fontSize": 18
+  },
+  {
+    "slide": 7,
+    "text": "Markers, anchors, zones",
+    "x": 3.98,
+    "y": 3.92,
+    "w": 2.32,
+    "h": 0.26,
+    "fontSize": 13
+  },
+  {
+    "slide": 7,
+    "text": "Temporal recipe",
+    "x": 7.11,
+    "y": 3.08,
+    "w": 2.32,
+    "h": 0.68,
+    "fontSize": 18
+  },
+  {
+    "slide": 7,
+    "text": "Support + prerequisites",
+    "x": 7.11,
+    "y": 3.92,
+    "w": 2.32,
+    "h": 0.26,
+    "fontSize": 13
+  },
+  {
+    "slide": 7,
+    "text": "Current advisory",
+    "x": 10.24,
+    "y": 3.08,
+    "w": 2.32,
+    "h": 0.68,
+    "fontSize": 18
+  },
+  {
+    "slide": 7,
+    "text": "PASS / HOLD / uncertain",
+    "x": 10.24,
+    "y": 3.92,
+    "w": 2.32,
+    "h": 0.26,
+    "fontSize": 13
+  },
+  {
+    "slide": 7,
+    "text": "Linked frames + event history",
+    "x": 8.13,
+    "y": 5.13,
+    "w": 4.25,
+    "h": 0.45,
+    "fontSize": 21
+  },
+  {
+    "slide": 7,
+    "text": "Operator reviews the actual evidence",
+    "x": 8.13,
+    "y": 5.71,
+    "w": 4.25,
+    "h": 0.3,
+    "fontSize": 15
+  },
+  {
+    "slide": 7,
+    "text": "Optional NVIDIA / Nebius guidance",
+    "x": 0.95,
+    "y": 5.12,
+    "w": 5.13,
+    "h": 0.45,
+    "fontSize": 21
+  },
+  {
+    "slide": 7,
+    "text": "Evidence in → advisory text out; disabled in public demo",
+    "x": 0.95,
+    "y": 5.7,
+    "w": 5.13,
+    "h": 0.32,
+    "fontSize": 14
+  },
+  {
+    "slide": 7,
+    "text": "OBSERVED FACTS → EXPLICIT RULES → TRACEABLE DECISION",
+    "x": 0.72,
+    "y": 6.49,
+    "w": 11.8,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 8,
+    "text": "07 / CONTROLLED TECHNICAL PROOF",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 8,
+    "text": "Built. Tested. Measured.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 0.9,
+    "fontSize": 42
+  },
+  {
+    "slide": 8,
+    "text": "Source: saved 29 Oct 2026 benchmark / 32 generated test clips / 864 frames / Not industrial accuracy",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 8,
+    "text": "08",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 8,
+    "text": "CORRECT FINAL STATUS / SAME 32 CLIPS",
+    "x": 0.8,
+    "y": 2.35,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 8,
+    "text": "32/32",
+    "x": 8.6,
+    "y": 2.65,
+    "w": 4,
+    "h": 1.25,
+    "fontSize": 62
+  },
+  {
+    "slide": 8,
+    "text": "correct final statuses",
+    "x": 8.64,
+    "y": 4,
+    "w": 4,
+    "h": 0.45,
+    "fontSize": 21
+  },
+  {
+    "slide": 8,
+    "text": "0/24",
+    "x": 8.64,
+    "y": 4.94,
+    "w": 1.9,
+    "h": 0.62,
+    "fontSize": 31
+  },
+  {
+    "slide": 8,
+    "text": "4/4",
+    "x": 10.8,
+    "y": 4.94,
+    "w": 1.7,
+    "h": 0.62,
+    "fontSize": 31
+  },
+  {
+    "slide": 8,
+    "text": "false PASS",
+    "x": 8.64,
+    "y": 5.66,
+    "w": 1.95,
+    "h": 0.36,
+    "fontSize": 15
+  },
+  {
+    "slide": 8,
+    "text": "corrections",
+    "x": 10.8,
+    "y": 5.66,
+    "w": 1.9,
+    "h": 0.36,
+    "fontSize": 15
+  },
+  {
+    "slide": 8,
+    "text": "CONTROLLED GENERATED FIXTURES. NOT INDUSTRIAL ACCURACY.",
+    "x": 0.8,
+    "y": 6.36,
+    "w": 11.8,
+    "h": 0.3,
+    "fontSize": 12
+  },
+  {
+    "slide": 9,
+    "text": "08 / THE FOUNDER",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 9,
+    "text": "Machines first.\nSoftware next. STEPLOCK now.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 38
+  },
+  {
+    "slide": 9,
+    "text": "Founder-reported background; product/build evidence in public repository / Sole founder",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 9,
+    "text": "09",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 9,
+    "text": "Saishreek\nSingh",
+    "x": 0.75,
+    "y": 2.9,
+    "w": 5.35,
+    "h": 1.6,
+    "fontSize": 49
+  },
+  {
+    "slide": 9,
+    "text": "SOLE FOUNDER / MECHATRONICS",
+    "x": 0.8,
+    "y": 4.8,
+    "w": 5.2,
+    "h": 0.3,
+    "fontSize": 12
+  },
+  {
+    "slide": 9,
+    "text": "STEPLOCK / HACKATHON RUNNER-UP*",
+    "x": 0.8,
+    "y": 5.3,
+    "w": 5.5,
+    "h": 0.3,
+    "fontSize": 10
+  },
+  {
+    "slide": 9,
+    "text": "Robotics taught precision",
+    "x": 6.65,
+    "y": 2.96,
+    "w": 5.9,
+    "h": 0.42,
+    "fontSize": 21
+  },
+  {
+    "slide": 9,
+    "text": "Robotics club president; World Robot Olympiad India gold.",
+    "x": 6.65,
+    "y": 3.55,
+    "w": 5.9,
+    "h": 0.9,
+    "fontSize": 18
+  },
+  {
+    "slide": 9,
+    "text": "Software turned it into a product",
+    "x": 6.65,
+    "y": 4.71,
+    "w": 5.9,
+    "h": 0.42,
+    "fontSize": 21
+  },
+  {
+    "slide": 9,
+    "text": "Independent builds: Peekolitix, Warscythe and SATQuery AI.",
+    "x": 6.65,
+    "y": 5.3,
+    "w": 5.9,
+    "h": 0.9,
+    "fontSize": 18
+  },
+  {
+    "slide": 9,
+    "text": "≈20 hours/week while studying. Ready to build full-time.",
+    "x": 0.8,
+    "y": 6.44,
+    "w": 11.6,
+    "h": 0.37,
+    "fontSize": 18
+  },
+  {
+    "slide": 10,
+    "text": "09 / THE MARKET WEDGE",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 10,
+    "text": "Start where the need is visible.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1,
+    "fontSize": 40
+  },
+  {
+    "slide": 10,
+    "text": "Market context: MoSPI ASUSE 2023–24 and Ministry of MSME RAMP / Revenue arithmetic is hypothetical",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 10,
+    "text": "10",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 10,
+    "text": "WHO WE WOULD QUALIFY FIRST",
+    "x": 0.8,
+    "y": 2.5,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 10,
+    "text": "01",
+    "x": 0.8,
+    "y": 3.03,
+    "w": 0.55,
+    "h": 0.35,
+    "fontSize": 13
+  },
+  {
+    "slide": 10,
+    "text": "Repeatable manual assembly",
+    "x": 1.55,
+    "y": 2.98,
+    "w": 6.4,
+    "h": 0.47,
+    "fontSize": 22
+  },
+  {
+    "slide": 10,
+    "text": "02",
+    "x": 0.8,
+    "y": 3.6999999999999997,
+    "w": 0.55,
+    "h": 0.35,
+    "fontSize": 13
+  },
+  {
+    "slide": 10,
+    "text": "Tags and a fixed camera are practical",
+    "x": 1.55,
+    "y": 3.65,
+    "w": 6.4,
+    "h": 0.47,
+    "fontSize": 22
+  },
+  {
+    "slide": 10,
+    "text": "03",
+    "x": 0.8,
+    "y": 4.37,
+    "w": 0.55,
+    "h": 0.35,
+    "fontSize": 13
+  },
+  {
+    "slide": 10,
+    "text": "A supervisor owns the procedure",
+    "x": 1.55,
+    "y": 4.32,
+    "w": 6.4,
+    "h": 0.47,
+    "fontSize": 22
+  },
+  {
+    "slide": 10,
+    "text": "04",
+    "x": 0.8,
+    "y": 5.04,
+    "w": 0.55,
+    "h": 0.35,
+    "fontSize": 13
+  },
+  {
+    "slide": 10,
+    "text": "Downstream rework can be measured",
+    "x": 1.55,
+    "y": 4.99,
+    "w": 6.4,
+    "h": 0.47,
+    "fontSize": 22
+  },
+  {
+    "slide": 10,
+    "text": "A SCALE SCENARIO / NOT TAM",
+    "x": 8.85,
+    "y": 2.55,
+    "w": 3.65,
+    "h": 0.3,
+    "fontSize": 10
+  },
+  {
+    "slide": 10,
+    "text": "1,000",
+    "x": 8.85,
+    "y": 3.02,
+    "w": 3.7,
+    "h": 0.9,
+    "fontSize": 45
+  },
+  {
+    "slide": 10,
+    "text": "hypothetical eligible factories",
+    "x": 8.87,
+    "y": 4,
+    "w": 3.6,
+    "h": 0.55,
+    "fontSize": 17
+  },
+  {
+    "slide": 10,
+    "text": "× 2 stations × ₹3,000/month",
+    "x": 8.87,
+    "y": 4.78,
+    "w": 3.6,
+    "h": 0.65,
+    "fontSize": 20
+  },
+  {
+    "slide": 10,
+    "text": "= ₹7.2 crore ARR",
+    "x": 8.87,
+    "y": 5.57,
+    "w": 3.6,
+    "h": 0.56,
+    "fontSize": 26
+  },
+  {
+    "slide": 10,
+    "text": "The eligible account count, willingness to pay and installation economics still need validation.",
+    "x": 0.8,
+    "y": 6.25,
+    "w": 11.8,
+    "h": 0.47,
+    "fontSize": 18
+  },
+  {
+    "slide": 11,
+    "text": "10 / CUSTOMER DEVELOPMENT",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 11,
+    "text": "Earn one repeatable deployment.\nThen earn the next.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 38
+  },
+  {
+    "slide": 11,
+    "text": "Planned milestones / No customers, paid deployments or contracted pilots claimed",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 11,
+    "text": "11",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 11,
+    "text": "01",
+    "x": 0.8,
+    "y": 2.64,
+    "w": 1,
+    "h": 0.3,
+    "fontSize": 15
+  },
+  {
+    "slide": 11,
+    "text": "Supervised pilots",
+    "x": 0.8,
+    "y": 3.48,
+    "w": 2.7,
+    "h": 0.9,
+    "fontSize": 24
+  },
+  {
+    "slide": 11,
+    "text": "One suitable tagged workflow.\nFreeze manual ground truth.",
+    "x": 0.8,
+    "y": 4.65,
+    "w": 2.7,
+    "h": 1.25,
+    "fontSize": 18
+  },
+  {
+    "slide": 11,
+    "text": "02",
+    "x": 3.9299999999999997,
+    "y": 2.64,
+    "w": 1,
+    "h": 0.3,
+    "fontSize": 15
+  },
+  {
+    "slide": 11,
+    "text": "Measure the station",
+    "x": 3.9299999999999997,
+    "y": 3.48,
+    "w": 2.7,
+    "h": 0.9,
+    "fontSize": 24
+  },
+  {
+    "slide": 11,
+    "text": "Misses, false alerts, setup time,\noperator acceptance, rework.",
+    "x": 3.9299999999999997,
+    "y": 4.65,
+    "w": 2.7,
+    "h": 1.25,
+    "fontSize": 18
+  },
+  {
+    "slide": 11,
+    "text": "03",
+    "x": 7.06,
+    "y": 2.64,
+    "w": 1,
+    "h": 0.3,
+    "fontSize": 15
+  },
+  {
+    "slide": 11,
+    "text": "Package installation",
+    "x": 7.06,
+    "y": 3.48,
+    "w": 2.7,
+    "h": 0.9,
+    "fontSize": 24
+  },
+  {
+    "slide": 11,
+    "text": "Repeatable recipe, camera setup,\ntraining and support.",
+    "x": 7.06,
+    "y": 4.65,
+    "w": 2.7,
+    "h": 1.25,
+    "fontSize": 18
+  },
+  {
+    "slide": 11,
+    "text": "04",
+    "x": 10.190000000000001,
+    "y": 2.64,
+    "w": 1,
+    "h": 0.3,
+    "fontSize": 15
+  },
+  {
+    "slide": 11,
+    "text": "Expand distribution",
+    "x": 10.190000000000001,
+    "y": 3.48,
+    "w": 2.7,
+    "h": 0.9,
+    "fontSize": 24
+  },
+  {
+    "slide": 11,
+    "text": "Manufacturing clusters and\nimplementation partners.",
+    "x": 10.190000000000001,
+    "y": 4.65,
+    "w": 2.7,
+    "h": 1.25,
+    "fontSize": 18
+  },
+  {
+    "slide": 11,
+    "text": "Proposed business model: per-station software subscription + paid setup/support",
+    "x": 1,
+    "y": 6.17,
+    "w": 11.38,
+    "h": 0.32,
+    "fontSize": 18
+  },
+  {
+    "slide": 12,
+    "text": "11 / THE COMPANY WE COULD BUILD",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "From detecting mistakes\nto anticipating them.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 39
+  },
+  {
+    "slide": 12,
+    "text": "Today is marker-assisted / Every later capability is planned or a research direction",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 12,
+    "text": "12",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "TODAY",
+    "x": 0.8,
+    "y": 2.58,
+    "w": 2.55,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "Tagged procedure\nverification",
+    "x": 0.8,
+    "y": 3.65,
+    "w": 2.6,
+    "h": 1.3,
+    "fontSize": 25
+  },
+  {
+    "slide": 12,
+    "text": "Implemented prototype",
+    "x": 0.8,
+    "y": 5.17,
+    "w": 2.6,
+    "h": 0.5,
+    "fontSize": 15
+  },
+  {
+    "slide": 12,
+    "text": "NEXT",
+    "x": 3.9,
+    "y": 2.58,
+    "w": 2.55,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "Factory validation +\nmore workflows",
+    "x": 3.9,
+    "y": 3.65,
+    "w": 2.6,
+    "h": 1.3,
+    "fontSize": 25
+  },
+  {
+    "slide": 12,
+    "text": "Planned",
+    "x": 3.9,
+    "y": 5.17,
+    "w": 2.6,
+    "h": 0.5,
+    "fontSize": 15
+  },
+  {
+    "slide": 12,
+    "text": "LATER",
+    "x": 7,
+    "y": 2.58,
+    "w": 2.55,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "Broader observation +\nprocess analytics",
+    "x": 7,
+    "y": 3.65,
+    "w": 2.6,
+    "h": 1.3,
+    "fontSize": 25
+  },
+  {
+    "slide": 12,
+    "text": "Research direction",
+    "x": 7,
+    "y": 5.17,
+    "w": 2.6,
+    "h": 0.5,
+    "fontSize": 15
+  },
+  {
+    "slide": 12,
+    "text": "LONG TERM",
+    "x": 10.1,
+    "y": 2.58,
+    "w": 2.55,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 12,
+    "text": "Predictive process\nintelligence",
+    "x": 10.1,
+    "y": 3.65,
+    "w": 2.6,
+    "h": 1.3,
+    "fontSize": 25
+  },
+  {
+    "slide": 12,
+    "text": "Long-term ambition",
+    "x": 10.1,
+    "y": 5.17,
+    "w": 2.6,
+    "h": 0.5,
+    "fontSize": 15
+  },
+  {
+    "slide": 12,
+    "text": "A trusted record of what happened could become a foundation for learning what fails next.",
+    "x": 0.8,
+    "y": 6,
+    "w": 11.7,
+    "h": 0.85,
+    "fontSize": 24
+  },
+  {
+    "slide": 13,
+    "text": "12 / ILLUSTRATIVE ECONOMICS",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 13,
+    "text": "Earlier correction has an\neconomic mechanism to test.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 37
+  },
+  {
+    "slide": 13,
+    "text": "Hypothetical inputs only / Not measured ROI / Currency INR / Full editable model in companion XLSX",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 13,
+    "text": "13",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 13,
+    "text": "Hours = stations × weekly errors × early detection × minutes avoided × weeks ÷ 60",
+    "x": 0.8,
+    "y": 6.25,
+    "w": 11.8,
+    "h": 0.33,
+    "fontSize": 14
+  },
+  {
+    "slide": 13,
+    "text": "48 weeks; ₹200/hour; material ₹50/100/150 per early incident; subscription ₹72k/year + ₹20k setup.",
+    "x": 0.8,
+    "y": 6.65,
+    "w": 11.8,
+    "h": 0.22,
+    "fontSize": 11
+  },
+  {
+    "slide": 14,
+    "text": "STEPLOCK / SPEEDRUN SR008",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 14,
+    "text": "Technical prototype / Application materials / No investor endorsement claimed",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 14,
+    "text": "14",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 14,
+    "text": "Quality shouldn’t begin\nat the end.",
+    "x": 0.8,
+    "y": 2.65,
+    "w": 10.5,
+    "h": 1.8,
+    "fontSize": 49
+  },
+  {
+    "slide": 14,
+    "text": "Move manufacturing verification to the moment work happens.",
+    "x": 0.82,
+    "y": 4.65,
+    "w": 10.1,
+    "h": 0.9,
+    "fontSize": 25
+  },
+  {
+    "slide": 14,
+    "text": "Saishreek Singh · Sole founder",
+    "x": 0.83,
+    "y": 5.78,
+    "w": 8,
+    "h": 0.43,
+    "fontSize": 21
+  },
+  {
+    "slide": 14,
+    "text": "Ready to build full-time and relocate to San Francisco if selected.",
+    "x": 0.83,
+    "y": 6.34,
+    "w": 11.7,
+    "h": 0.4,
+    "fontSize": 18
+  },
+  {
+    "slide": 14,
+    "text": "Open the working demo ↗",
+    "x": 0.84,
+    "y": 7,
+    "w": 5.5,
+    "h": 0.25,
+    "fontSize": 12
+  },
+  {
+    "slide": 14,
+    "text": "github.com/Yoriichi-GOD/steplock ↗",
+    "x": 7.1,
+    "y": 7,
+    "w": 5.4,
+    "h": 0.25,
+    "fontSize": 12
+  },
+  {
+    "slide": 15,
+    "text": "APPENDIX A / BENCHMARK METHOD",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 15,
+    "text": "What the 32/32 result means",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1,
+    "fontSize": 35
+  },
+  {
+    "slide": 15,
+    "text": "Saved generated benchmark; reports and historical failures preserved",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 15,
+    "text": "15",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 15,
+    "text": "Same observations. Three rule sets.",
+    "x": 1.02,
+    "y": 2.73,
+    "w": 5.26,
+    "h": 0.5,
+    "fontSize": 20
+  },
+  {
+    "slide": 15,
+    "text": "32 test clips; 864 frames.\n16 separate development clips.\nAll arms receive the same frame stream.",
+    "x": 1.02,
+    "y": 3.4,
+    "w": 5.26,
+    "h": 1,
+    "fontSize": 18
+  },
+  {
+    "slide": 15,
+    "text": "The corpus shares a renderer and a four-part recipe. These results establish controlled software behavior; they do not estimate factory accuracy.",
+    "x": 0.8,
+    "y": 5.05,
+    "w": 11.75,
+    "h": 0.95,
+    "fontSize": 24
+  },
+  {
+    "slide": 15,
+    "text": "Corrected outcomes: 4/4. Scored events: TP 60, FP 0, FN 0. Physical capture-to-visible latency remains unmeasured.",
+    "x": 0.8,
+    "y": 6.21,
+    "w": 11.75,
+    "h": 0.58,
+    "fontSize": 16
+  },
+  {
+    "slide": 16,
+    "text": "APPENDIX B / PHYSICAL VALIDATION",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 16,
+    "text": "Real input tested.\nIndustrial recognition still open.",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1.5,
+    "fontSize": 36
+  },
+  {
+    "slide": 16,
+    "text": "Source: IMPACT physical-video compatibility experiment / No dataset frames redistributed",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 16,
+    "text": "16",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 16,
+    "text": "2,700",
+    "x": 0.8,
+    "y": 2.8,
+    "w": 5.5,
+    "h": 1,
+    "fontSize": 59
+  },
+  {
+    "slide": 16,
+    "text": "real source frames processed",
+    "x": 0.83,
+    "y": 3.96,
+    "w": 5.6,
+    "h": 0.5,
+    "fontSize": 22
+  },
+  {
+    "slide": 16,
+    "text": "45/45",
+    "x": 7,
+    "y": 2.8,
+    "w": 5.4,
+    "h": 1,
+    "fontSize": 59
+  },
+  {
+    "slide": 16,
+    "text": "windows: calibration required",
+    "x": 7.03,
+    "y": 3.96,
+    "w": 5.2,
+    "h": 0.5,
+    "fontSize": 22
+  },
+  {
+    "slide": 16,
+    "text": "What this proves",
+    "x": 0.8,
+    "y": 5.14,
+    "w": 5.3,
+    "h": 0.43,
+    "fontSize": 23
+  },
+  {
+    "slide": 16,
+    "text": "What must come next",
+    "x": 7,
+    "y": 5.14,
+    "w": 5.3,
+    "h": 0.43,
+    "fontSize": 23
+  },
+  {
+    "slide": 16,
+    "text": "Real-video ingestion and safe refusal.\nThree executions; correlated windows.",
+    "x": 0.8,
+    "y": 5.7,
+    "w": 5.35,
+    "h": 1.2,
+    "fontSize": 18
+  },
+  {
+    "slide": 16,
+    "text": "Consented tagged trials, independent labels,\nmiss/false-alert rates and setup economics.",
+    "x": 7,
+    "y": 5.7,
+    "w": 5.35,
+    "h": 1,
+    "fontSize": 18
+  },
+  {
+    "slide": 17,
+    "text": "APPENDIX C / ALTERNATIVES",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 17,
+    "text": "A narrow entry point in an existing market",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1,
+    "fontSize": 35
+  },
+  {
+    "slide": 17,
+    "text": "Vendor statements checked 2 Nov 2026 / Not a price or head-to-head performance comparison",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 17,
+    "text": "17",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 17,
+    "text": "Our hypothesis: make a limited class of procedure checks easier to start and review.",
+    "x": 0.8,
+    "y": 6.39,
+    "w": 11.7,
+    "h": 0.33,
+    "fontSize": 18
+  },
+  {
+    "slide": 18,
+    "text": "APPENDIX D / COMMERCIAL ASSUMPTIONS",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 18,
+    "text": "A model to challenge, not a forecast",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1,
+    "fontSize": 35
+  },
+  {
+    "slide": 18,
+    "text": "All STEPLOCK pricing and economic inputs are hypothetical / No customer ROI measured",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 18,
+    "text": "18",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 18,
+    "text": "Market context is not addressability",
+    "x": 1.02,
+    "y": 2.7,
+    "w": 5.26,
+    "h": 0.5,
+    "fontSize": 20
+  },
+  {
+    "slide": 18,
+    "text": "≈2.36m unincorporated manufacturing establishments with hired workers (ASUSE 2023–24).\n\nNot an addressable-market estimate.\n\nEligible tagged assembly stations remain uncounted.",
+    "x": 1.02,
+    "y": 3.37,
+    "w": 5.26,
+    "h": 2.6,
+    "fontSize": 18
+  },
+  {
+    "slide": 18,
+    "text": "Financial model inputs",
+    "x": 7.05,
+    "y": 2.7,
+    "w": 5.26,
+    "h": 0.5,
+    "fontSize": 20
+  },
+  {
+    "slide": 18,
+    "text": "48 weeks/year; ₹200/hour labor value.\nMaterials avoided: ₹50 / ₹100 / ₹150.\n\nROI model: ₹1,500/station/month + ₹20k setup.\nScale sensitivity: ₹3,000/station/month.",
+    "x": 7.05,
+    "y": 3.37,
+    "w": 5.26,
+    "h": 2.6,
+    "fontSize": 18
+  },
+  {
+    "slide": 18,
+    "text": "Validation gates: willingness to pay · installation time · support burden · measured rework avoided",
+    "x": 0.8,
+    "y": 6.38,
+    "w": 11.7,
+    "h": 0.35,
+    "fontSize": 17
+  },
+  {
+    "slide": 19,
+    "text": "APPENDIX E / REFERENCES",
+    "x": 0.65,
+    "y": 0.36,
+    "w": 7,
+    "h": 0.3,
+    "fontSize": 11
+  },
+  {
+    "slide": 19,
+    "text": "Sources behind the story",
+    "x": 0.65,
+    "y": 0.98,
+    "w": 12,
+    "h": 1,
+    "fontSize": 36
+  },
+  {
+    "slide": 19,
+    "text": "Full claim ledger, asset hashes and speaker notes accompany this deck",
+    "x": 0.65,
+    "y": 7.05,
+    "w": 11.35,
+    "h": 0.23,
+    "fontSize": 10
+  },
+  {
+    "slide": 19,
+    "text": "19",
+    "x": 12.1,
+    "y": 7.03,
+    "w": 0.55,
+    "h": 0.25,
+    "fontSize": 11
+  },
+  {
+    "slide": 19,
+    "text": "01 / Product + evidence",
+    "x": 0.8,
+    "y": 2.47,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Public code, architecture, limitations, source PNG provenance",
+    "x": 4.2,
+    "y": 2.47,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "02 / Technical measurements",
+    "x": 0.8,
+    "y": 3.12,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Saved benchmark metrics + IMPACT compatibility report",
+    "x": 4.2,
+    "y": 3.12,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "03 / Manufacturing context",
+    "x": 0.8,
+    "y": 3.7700000000000005,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "MoSPI ASUSE 2023–24 + Ministry of MSME RAMP",
+    "x": 4.2,
+    "y": 3.7700000000000005,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "04 / Alternatives",
+    "x": 0.8,
+    "y": 4.42,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Cognex, Tulip and Siemens Inspekto official materials",
+    "x": 4.2,
+    "y": 4.42,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "05 / Visual assets",
+    "x": 0.8,
+    "y": 5.07,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Founder-supplied REQUIEM; Andrea Piacquadio / Pexels",
+    "x": 4.2,
+    "y": 5.07,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "06 / Investor structure",
+    "x": 0.8,
+    "y": 5.720000000000001,
+    "w": 3.5,
+    "h": 0.35,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Sequoia business-plan guidance; official Speedrun FAQ",
+    "x": 4.2,
+    "y": 5.720000000000001,
+    "w": 8.25,
+    "h": 0.39,
+    "fontSize": 16
+  },
+  {
+    "slide": 19,
+    "text": "Founder biography is attributed to the founder; no independent award certificates or factory deployment evidence were supplied.",
+    "x": 0.8,
+    "y": 6.43,
+    "w": 11.7,
+    "h": 0.35,
+    "fontSize": 13
+  }
+]

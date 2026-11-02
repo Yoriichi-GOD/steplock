@@ -1,0 +1,4 @@
+scenario,stations,weekly_errors_per_station,early_detection_rate,minutes_avoided,weeks,labor_value_inr_hour,material_value_inr_incident,hours_saved,gross_annual_value_inr,first_year_net_inr
+Conservative,4,2,0.35,15,48,200,50,33.599999999999994,13439.999999999998,-78560
+Base,4,4,0.5,30,48,200,100,192,76800,-15200
+Optimistic,4,6,0.65,45,48,200,150,561.6,224640,132640

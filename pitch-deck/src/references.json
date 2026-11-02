@@ -1,0 +1,18 @@
+{
+  "benchmark": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/PHYSICAL_AI_EVAL.md",
+  "raw": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/benchmarks/runs/20261029_182255_717473_test/metrics.json",
+  "architecture": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/ARCHITECTURE.md",
+  "limits": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/TECHNICAL_LIMITATIONS.md",
+  "impact": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/IMPACT_PHYSICAL_RESULTS.md",
+  "shots": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/README_SCREENSHOT_PROVENANCE.md",
+  "aws": "https://github.com/Yoriichi-GOD/steplock/blob/cdeeb4e1e0c10b37977e6837452a552acccf58d1/docs/AWS_DEPLOYMENT_20261102.md",
+  "ramp": "https://ramp.msme.gov.in/ramp/about-us/about-ramp",
+  "asuse": "https://mospi.gov.in/sites/default/files/publication_reports/ASUSE_2023_24_Full_Report-L.pdf",
+  "tulip": "https://tulip.co/quality/inline-quality-inspection/",
+  "cognex": "https://www.cognex.cn/zh-cn/resources/white-papers-articles/zh-cn/library/media/literature/pdf/dl_assembly_verification_guide.pdf",
+  "siemens": "https://www.siemens.com/en-us/company/artificial-intelligence/industrial-ai/inspekto-ai-inspection/",
+  "photo": "https://www.pexels.com/photo/male-master-working-with-metal-tools-in-garage-3822844/",
+  "photoLicense": "https://www.pexels.com/license/",
+  "speedrun": "https://speedrun.a16z.com/faq",
+  "sequoia": "https://sequoiacap.com/article/writing-a-business-plan"
+}
