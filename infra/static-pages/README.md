@@ -2,8 +2,10 @@
 
 This is a separate, opt-in presentation build. It hosts the REQUIEM website and
 actual screen recordings of the prototype on generated marker fixtures. No
-Python/OpenCV process, database, Pages Functions, model API or anonymous data
-collection is deployed. Normal `npm --prefix frontend run build` retains the live
+Python/OpenCV process, database, Pages Functions or model API is deployed.
+The public contact form sends inquiries through FormSubmit to the authorized
+public alias; its retention notice and direct-email fallback are visible.
+See [contact operations](../../docs/CONTACT_AND_INQUIRIES.md). Normal `npm --prefix frontend run build` retains the live
 inspection application and its original backend requirements.
 
 ## Rebuild
@@ -20,7 +22,8 @@ verified project hostname is `steplock-xt9.pages.dev`. This is not a Git-linked
 project; a repository push alone does not deploy it. Direct Upload cannot be
 converted to Git integration in-place; create another project if that is wanted.
 
-The script enables `VITE_PUBLIC_PRESENTATION=recorded`, clears the API origin,
+The script enables `VITE_PUBLIC_PRESENTATION=recorded`, sets the authorized public
+contact alias and `VITE_CONTACT_FORM=formsubmit`, clears the inspection API origin,
 checks the 25 MiB/file and 20,000-file Free plan limits, and copies the static
 headers and routes. It creates `demo.html` and `app.html` as native extensionless
 Pages routes. Do not proxy `/demo` to `/index.html`: the host's canonical index
@@ -56,6 +59,8 @@ and all historical evaluation reports remain unchanged.
 - Confirm video decoding, native playback and provenance hashes.
 - Check desktop 1280×720 and phone 390×844 / 320×740 widths.
 - Verify no inspection API requests or external asset origins.
+- Verify actual contact delivery and error behavior; FormSubmit is the explicit
+  third-party contact endpoint, contacted only when a visitor submits.
 - Preserve existing verification/DMARC records when moving DNS.
 - Verify apex and www HTTPS and recordings before retiring the scoped AWS trial.
 

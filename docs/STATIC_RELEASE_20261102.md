@@ -1,6 +1,19 @@
 # Static release — 2 November 2026
 
-Status: **PREVIEW_VERIFIED / DOMAIN_ACTIVATION_PENDING / AWS_RETAINED**.
+Status: **CUSTOM_DOMAINS_HTTP_VERIFIED / AUTOMATIC_CONTACT_VERIFIED_ON_PREVIEW / AWS_RETAINED**.
+
+Update at 14:45 UTC: Cloudflare reports apex and www Active / SSL enabled. Both
+hostnames now pass normal system-DNS HTTPS checks for the static routes, three
+recordings, hashes and captions. New receipts are under
+`docs/verification/contact-20261102/`. The earlier failures below are historical.
+
+The founder subsequently authorized a public contact alias and automatic form
+delivery. `founder@step-lock.xyz` appears in the invitation and footer. The
+FormSubmit form was activated by the founder; an actual browser submission was
+accepted and ImprovMX reports forwarding to Gmail accepted in two seconds.
+This supersedes the earlier unconfigured-contact state below. See
+[contact operations](CONTACT_AND_INQUIRIES.md) for privacy, failure behavior and
+verification limits. No private forwarding destination is published.
 
 The founder selected USD 0 hosting with a recorded walkthrough. The public
 preview is [STEPLOCK](https://steplock-xt9.pages.dev) and its

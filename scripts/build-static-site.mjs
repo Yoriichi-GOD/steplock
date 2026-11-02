@@ -5,11 +5,13 @@ import path from 'node:path';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'frontend/static-dist');
+const contactEmail=process.env.VITE_PUBLIC_CONTACT_EMAIL??'founder@step-lock.xyz';
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail))throw new Error('Provide one valid public contact email');
 for(const name of ['normal','wrong-component','correction']){
   if(!existsSync(path.join(root,'frontend/public/assets/walkthrough',name+'.webm')))throw new Error('Missing verified recording: '+name);
 }
 execFileSync(process.execPath,[path.join(root,'frontend/node_modules/typescript/bin/tsc'),'-b'],{cwd:path.join(root,'frontend'),stdio:'inherit'});
-execFileSync(process.execPath,[path.join(root,'frontend/node_modules/vite/bin/vite.js'),'build','--outDir','static-dist'],{cwd:path.join(root,'frontend'),stdio:'inherit',env:{...process.env,VITE_PUBLIC_PRESENTATION:'recorded',VITE_API_BASE_URL:''}});
+execFileSync(process.execPath,[path.join(root,'frontend/node_modules/vite/bin/vite.js'),'build','--outDir','static-dist'],{cwd:path.join(root,'frontend'),stdio:'inherit',env:{...process.env,VITE_PUBLIC_PRESENTATION:'recorded',VITE_API_BASE_URL:'',VITE_PUBLIC_CONTACT_EMAIL:contactEmail,VITE_CONTACT_FORM:'formsubmit'}});
 cpSync(path.join(root,'infra/static-pages/public'),output,{recursive:true});
 // Native extensionless Pages routes avoid proxying /index.html, whose canonical
 // redirect would send /demo back to /. Keep the explicit top-level 404 for /api.

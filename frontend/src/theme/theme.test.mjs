@@ -96,6 +96,27 @@ test('landing contact remains unavailable until configured, and evidence is labe
   }
 });
 
+test('contact delivery includes all fields and accepts only an explicit provider success',async()=>{
+ const {submitInquiry}=await server.ssrLoadModule('/src/components/marketing/contactDelivery.ts');
+ const inquiry={name:' Example Visitor ',email:'visitor@example.com',organization:'Workshop',message:'Tagged assembly pilot',purpose:'Discuss a pilot',website:''};
+ let seen;
+ await submitInquiry('founder@step-lock.xyz',inquiry,async(url,options)=>{seen={url,options};return new Response(JSON.stringify({success:'true'}),{status:200})});
+ assert.equal(seen.url,'https://formsubmit.co/ajax/founder%40step-lock.xyz');
+ const payload=JSON.parse(seen.options.body);
+ assert.equal(payload.name,'Example Visitor');assert.equal(payload.email,inquiry.email);assert.equal(payload.organization,inquiry.organization);assert.equal(payload.message,inquiry.message);assert.equal(payload.purpose,inquiry.purpose);assert.equal(payload._subject,'STEPLOCK — Discuss a pilot');
+ assert.equal(seen.options.method,'POST');assert.ok(seen.options.signal);assert.ok(!('_autoresponse' in payload));
+ for(const response of [new Response('{"success":false}',{status:200}),new Response('{"success":"false"}',{status:200}),new Response('{}',{status:200}),new Response('not JSON',{status:200}),new Response('{}',{status:429})])await assert.rejects(submitInquiry('founder@step-lock.xyz',inquiry,async()=>response));
+ await assert.rejects(submitInquiry('founder@step-lock.xyz',inquiry,async()=>{throw new TypeError('Network unavailable')}));
+});
+
+test('contact delivery rejects empty messages and honeypot entries without a network request',async()=>{
+ const {submitInquiry}=await server.ssrLoadModule('/src/components/marketing/contactDelivery.ts');
+ const inquiry={name:'Visitor',email:'visitor@example.com',organization:'',message:'Hello',purpose:'Share an idea',website:''};
+ const transport=async()=>{assert.fail('Invalid inquiry must not leave the browser')};
+ await assert.rejects(submitInquiry('founder@step-lock.xyz',{...inquiry,message:'   '},transport));
+ await assert.rejects(submitInquiry('founder@step-lock.xyz',{...inquiry,website:'spam.example'},transport));
+});
+
 test('cinematic timeline is bounded, pauses at late feedback, and cannot emit an inspection result',async()=>{
   const {storyPose}=await server.ssrLoadModule('/src/components/marketing/storyState.ts');
   assert.equal(storyPose(-1).progress,0);assert.equal(storyPose(2).progress,1);assert.equal(storyPose(NaN).progress,0);

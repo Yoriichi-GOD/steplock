@@ -12,8 +12,11 @@ Render is excluded. No Supabase, paid container or new database is needed.
   change DNS hosting, not domain ownership. Domain renewal remains separate.
 - No public inspection backend. `/demo` is explicitly recorded playback. The
   unchanged Python/OpenCV application is available in the repository locally.
-- No public contact address or collection. Contact submission remains disabled;
-  the static release does not make a configuration API request.
+- The founder authorized `founder@step-lock.xyz` on 2 November. ImprovMX forwards
+  it to an existing private inbox. The public contact form uses FormSubmit for
+  automatic email delivery; no inspection backend or on-site database is needed.
+  FormSubmit's 30-day retention is disclosed before submission. See
+  [contact operations and verification](CONTACT_AND_INQUIRIES.md).
 
 Build with `node scripts/build-static-site.mjs`. The opt-in build leaves the
 normal live application behavior intact. See [deployment instructions](../infra/static-pages/README.md)
@@ -33,8 +36,11 @@ not physical-phone performance or universal browser compatibility.
 
 ## Migration and cost closure
 
-The tested static preview is https://steplock-xt9.pages.dev. Custom-domain
-activation and certificate checks are separate gates. The founder approved
+The static preview is https://steplock-xt9.pages.dev. On 2 November at 14:45 UTC,
+normal DNS and validated HTTPS checks passed for both https://step-lock.xyz and
+https://www.step-lock.xyz, including route status, recording hashes and captions.
+Cloudflare reports both custom domains Active with SSL enabled. Earlier failed
+checks and cached legacy responses are retained in the release history. The founder approved
 replacing the two old apex forwarding addresses and www target, preserving
 verification/DMARC records, and moving delegation to
 `agustin.ns.cloudflare.com` and `novalee.ns.cloudflare.com`.

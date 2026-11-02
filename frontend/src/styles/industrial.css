@@ -8,6 +8,7 @@
 .industrial-page .button-gold:hover{background:#f1d9ab;transform:translateY(-2px)}
 .industrial-page .button-outline{background:transparent;color:var(--paper)!important;border-color:#61707b}
 .industrial-page .button-outline:hover{background:#19232c;transform:none}
+.early-access .contact-fields{border:0;padding:0;margin:0;min-width:0;display:grid;gap:20px}.early-access .contact-fields legend{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.early-access [hidden]{display:none}.early-access form a{overflow-wrap:anywhere}.early-access .contact-fields:disabled{opacity:.75}
 .story-kicker,.section-index,.scene-label,.document-top,.origin-note,.stage-disclosure,.stage-controls,.model-annotation,.story-instrument,.hero-bottom,.station-track,.prototype-flow,.future-list>li>span,.final-mechanism>span{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:400;letter-spacing:1.3px;line-height:1.8}
 .story-kicker{color:var(--metal);display:block;margin:0 0 30px}
 .cinematic-story{position:relative;isolation:isolate;background:radial-gradient(ellipse at 80% 25%,#21334344,transparent 55%)}
