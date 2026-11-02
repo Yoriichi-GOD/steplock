@@ -1,0 +1,84 @@
+{
+  "result": "PASS",
+  "endpoint": "https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws",
+  "population": "SYNTHETIC_FIXTURE",
+  "checks": [
+    {
+      "test": "https_public_boundary",
+      "pass": true,
+      "hsts": "max-age=86400",
+      "owner_access": false,
+      "contact_configured": false
+    },
+    {
+      "test": "landing_viewport",
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "barBorder": "1px",
+      "visualTop": 110,
+      "mode": "3D"
+    },
+    {
+      "test": "demo_viewport",
+      "width": 1280,
+      "status": "PENDING"
+    },
+    {
+      "test": "landing_viewport",
+      "viewport": 390,
+      "documentWidth": 390,
+      "barBorder": "0px",
+      "visualTop": 422,
+      "mode": "3D"
+    },
+    {
+      "test": "demo_viewport",
+      "width": 390,
+      "status": "PENDING"
+    },
+    {
+      "test": "landing_viewport",
+      "viewport": 320,
+      "documentWidth": 320,
+      "barBorder": "0px",
+      "visualTop": 370,
+      "mode": "3D"
+    },
+    {
+      "test": "demo_viewport",
+      "width": 320,
+      "status": "PENDING"
+    },
+    {
+      "test": "private_workspace_gate",
+      "pass": true
+    },
+    {
+      "test": "actual_generated_normal",
+      "decision": "PASS",
+      "completion_ms": 7847,
+      "runtime": "Analyzed frames\n30\nVision p95\n44.1 ms",
+      "ledger": "EVIDENCE LEDGER / 10 EVENTS\nREPLAY COMPLETE",
+      "evidence_style": {
+        "filter": "none",
+        "opacity": "1"
+      }
+    },
+    {
+      "test": "stalled_heartbeat_clears_pass",
+      "observed_ms": 3314,
+      "confirmed_steps": 0
+    },
+    {
+      "test": "reconnect_and_delete_reset",
+      "pass": true
+    },
+    {
+      "test": "clean_start_without_api",
+      "pass": true
+    }
+  ],
+  "page_errors": [],
+  "external_origins": [],
+  "limits": "Browser-emulated viewports, one measured run; no factory accuracy or physical-phone performance claim."
+}

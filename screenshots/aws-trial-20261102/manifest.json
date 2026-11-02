@@ -1,0 +1,104 @@
+{
+  "recorded_utc": "2026-11-02T02:13:23.864612+00:00",
+  "endpoint": "https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws",
+  "source_commit": "c8577afaba7ed8b5474e697294829dc85e2eed1e",
+  "image_digest": "sha256:fe77c48ef879350c0cc83c2c26413c5413da97aafd3d11c9e164caab226d8447",
+  "population": "SYNTHETIC_FIXTURE",
+  "method": "Unmodified native browser screenshots of the actual AWS HTTPS service. Redacted JSON summaries serialized as UTF-8/LF without changing values; see browser-acceptance.json and infra/aws-steplock/hosted_browser_check.cjs",
+  "limits": "Generated software examples, one measured run, emulated phone viewports. No physical or industrial validation claim.",
+  "files": [
+    {
+      "file": "actual-normal-pass.png",
+      "bytes": 475648,
+      "sha256": "045fc33004b20efa4f94e7c6c69af54f22cef9472858f0514355a940e240049a",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG"
+    },
+    {
+      "file": "browser-acceptance.json",
+      "bytes": 1922,
+      "sha256": "fe81202e298a057617275cfc42e32eea8d2560fd42dfdcb4912c26f0a8f0c696"
+    },
+    {
+      "file": "demo-phone-neutral.png",
+      "bytes": 210909,
+      "sha256": "c632d8407072fe8fe035645ee1ae934daa5b71441a8eb388eadb3f5776fffdf1",
+      "width": 390,
+      "height": 844,
+      "format": "PNG"
+    },
+    {
+      "file": "expiry-summary.json",
+      "bytes": 417,
+      "sha256": "cd7148bfc48a7723286fa3c9580ba6fa4544ffd99ee7c4102278fa5536cd1f53"
+    },
+    {
+      "file": "external-access.json",
+      "bytes": 237,
+      "sha256": "c6a66f11d3c6068dd29c074bbdea5af0024bf36f02d6767f6d9d6f011d56cc73"
+    },
+    {
+      "file": "final-state.json",
+      "bytes": 712,
+      "sha256": "265ef318ed1fbd5ffbe933702e4bd96692b972a02751dcfc2c42525c97bdbc20"
+    },
+    {
+      "file": "hosted-http-smoke.json",
+      "bytes": 541,
+      "sha256": "c46e08d2d1dd9e9d8eb2663365f41b335fe5739074a99be158f09239c091255d"
+    },
+    {
+      "file": "image.json",
+      "bytes": 192,
+      "sha256": "da6eed9c23d24ffc5f290380d73051500acd4b2f7ad81c27023f74d32f05163d"
+    },
+    {
+      "file": "landing-1280.png",
+      "bytes": 974192,
+      "sha256": "fc93ebce5427b65a3c75269545c82b7c10f573e272d325e7f188cbfd53c2f576",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG"
+    },
+    {
+      "file": "landing-390.png",
+      "bytes": 186254,
+      "sha256": "b1794edc6d319182858da5e59f1023eebaf97fa05738ff25a364729948a03d25",
+      "width": 390,
+      "height": 844,
+      "format": "PNG"
+    },
+    {
+      "file": "scan-summary.json",
+      "bytes": 936,
+      "sha256": "beed66cc23d34fa6d9b001acd522b948b85b212cce06fd275c79457010779108"
+    },
+    {
+      "file": "service-expiry-schedule.json",
+      "bytes": 159,
+      "sha256": "0580518023ff269798357715e8bbc3a4b7104582cce7475641cf4f00524dc107"
+    },
+    {
+      "file": "source-loss.png",
+      "bytes": 444525,
+      "sha256": "916b07b11ee0ba01cd0253fcccf1712c3ff57eabc450c6431d30374ccfc83f41",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG"
+    },
+    {
+      "file": "unavailable-backend.png",
+      "bytes": 439057,
+      "sha256": "87e6f11602e73a82f055224e549fb5916122b380e18009fb1e6ab89f340e6312",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG"
+    },
+    {
+      "file": "waf-summary.json",
+      "bytes": 413,
+      "sha256": "58c5d4d4b32263fdf2e0d382b467476c7d865300d6c18e0607ab541c95d1ba96"
+    }
+  ]
+}

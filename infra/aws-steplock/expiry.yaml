@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Seven-day STEPLOCK trial expiry. Only the inventoried trial stacks/resources may be deleted. This small unbilled control stack is retained for audit.
+Description: Seven-day STEPLOCK trial expiry. Only the inventoried trial stacks/resources may be deleted. This small control stack is retained for audit.
 Parameters:
   ServiceStackArn: {Type: String}
   FoundationStackArn: {Type: String}

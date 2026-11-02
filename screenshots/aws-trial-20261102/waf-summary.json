@@ -1,0 +1,25 @@
+{
+  "DefaultAction": {
+    "Allow": {}
+  },
+  "Rules": [
+    {
+      "Name": "inspection-start-rate",
+      "Priority": 0,
+      "Rate": 20,
+      "WindowSeconds": 300
+    },
+    {
+      "Name": "all-requests-rate",
+      "Priority": 1,
+      "Rate": 2000,
+      "WindowSeconds": 300
+    },
+    {
+      "Name": "approved-test-ip",
+      "Priority": 10,
+      "Rate": null,
+      "WindowSeconds": null
+    }
+  ]
+}

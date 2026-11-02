@@ -1,0 +1,8 @@
+{
+  "probe_status": "DELETE_COMPLETE",
+  "probe_deletion_time": "2026-11-01T19:43:53.138000+00:00",
+  "service_teardown_utc": "2026-11-08T19:23:05",
+  "foundation_teardown_utc": "2026-11-08T19:53:05",
+  "method": "EventBridge Scheduler invokes DeleteStack with a separate inventoried-resource deletion RoleARN",
+  "scope": "Disposable log-group stack deletion verified; future full trial deletion not yet observed"
+}

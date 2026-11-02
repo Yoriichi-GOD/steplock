@@ -1,0 +1,6 @@
+{
+  "State": "ENABLED",
+  "Expression": "at(2026-11-08T19:23:05)",
+  "Timezone": "UTC",
+  "Target": "arn:aws:scheduler:::aws-sdk:cloudformation:deleteStack"
+}

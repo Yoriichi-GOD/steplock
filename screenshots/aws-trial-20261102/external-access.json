@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "outside_staging_ip": true,
+  "landing_http": 200,
+  "health_http": 200,
+  "public_config": true,
+  "private_api_http": 403,
+  "endpoint": "https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws"
+}

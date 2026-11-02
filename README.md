@@ -23,7 +23,14 @@ placement, prerequisites and correction; findings point to source-frame evidence
 generated-example demo at `/demo`, and the preserved full workspace at `/app`.
 Public mode enforces API restrictions server-side and disables anonymous camera,
 upload, recipe and cloud-model operations. [Product architecture](docs/PRELAUNCH_PRODUCT.md)
-· [public-demo boundary](docs/PUBLIC_DEMO.md). This branch is not a deployed AWS service.
+· [public-demo boundary](docs/PUBLIC_DEMO.md).
+
+**Live AWS trial:** [Landing page](https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws)
+· [Run the inspection demo](https://st-a69b6c98718945778059ba5124767253.ecs.ap-southeast-2.on.aws/demo)
+· [Deployment checks, costs and limitations](docs/AWS_DEPLOYMENT_20261102.md).
+The public demo uses generated fixtures and the actual inspection engine. Teardown
+is scheduled for **9 November 2026, 00:53 IST**. The USD 25 trial allowance is not
+an instant billing hard cap. No login, paid model or anonymous uploads are enabled.
 
 [Open the verified pre-launch captures](screenshots/prelaunch/desktop-hero.png) ·
 [verification receipt](docs/PRELAUNCH_TEST_RECEIPT.md) ·
@@ -46,8 +53,8 @@ from verified facts; unsupported output is refused.
 [Measured results and retained failures](docs/PHYSICAL_AI_EVAL.md) ·
 [Two-minute demo runbook](docs/PHYSICAL_AI_DEMO_RUNBOOK.md).
 
-The integration runs locally with optional cloud inference. STEPLOCK AWS is
-**NOT_DEPLOYED**; REFLEX's existing AWS service remains separate and unchanged.
+The integration runs locally with optional cloud inference. The public AWS trial
+keeps cloud inference disabled; REFLEX's existing service remains separate and unchanged.
 
 <details>
   <summary>See the actual NVIDIA/Nebius evidence panel</summary>

@@ -1,7 +1,12 @@
-# Independent STEPLOCK deployment preparation
+# Independent STEPLOCK AWS trial
 
-The section below preserves the 1 November preparation snapshot. Actual deployment
-work authorized on 2 November is recorded in [the deployment receipt](../../docs/AWS_DEPLOYMENT_20261102.md).
+**Deployed and checked on 2 November:** see [the live deployment receipt](../../docs/AWS_DEPLOYMENT_20261102.md)
+for the endpoint, immutable image, hosted acceptance, security findings and scheduled
+expiry. `foundation.yaml`, `service.yaml` and `expiry.yaml` describe that trial;
+`hosted_browser_check.cjs` records its reproducible browser checks.
+
+The section below preserves the **historical 1 November preparation snapshot**;
+its NOT_DEPLOYED wording does not describe the current trial.
 
 **NOT_DEPLOYED.** Prepared 2026-11-01 for a short, separately approved AWS trial.
 No AWS account API, resource creation, existing-resource update, image publication,

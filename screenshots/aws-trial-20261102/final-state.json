@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-11-01T20:09:04.417745+00:00",
+  "running_tasks": 1,
+  "desired_tasks": 1,
+  "pending_tasks": 0,
+  "image_digest_verified": "sha256:fe77c48ef879350c0cc83c2c26413c5413da97aafd3d11c9e164caab226d8447",
+  "task_health": [
+    "UNKNOWN"
+  ],
+  "service_metric_window": "Last 30 minutes, includes rollout, idle and generated acceptance; not a sustained-load benchmark",
+  "metrics": {
+    "CPUUtilization": {
+      "sample_count": 29,
+      "peak_percent": 23.53866195678711,
+      "mean_of_one_minute_averages": 0.5221608508506725
+    },
+    "MemoryUtilization": {
+      "sample_count": 29,
+      "peak_percent": 4.98046875,
+      "mean_of_one_minute_averages": 3.720244776700192
+    }
+  }
+}

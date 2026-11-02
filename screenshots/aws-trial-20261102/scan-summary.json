@@ -1,0 +1,25 @@
+{
+  "image_digest": "sha256:fe77c48ef879350c0cc83c2c26413c5413da97aafd3d11c9e164caab226d8447",
+  "scan_type": "ECR basic operating-system package scan",
+  "status": "COMPLETE",
+  "severity_counts": {
+    "HIGH": 15,
+    "MEDIUM": 17,
+    "LOW": 5
+  },
+  "critical_count": 0,
+  "security_package_updates_available": false,
+  "apt_probe_available_update": "tzdata only; no held-back packages",
+  "remaining_findings": "High-severity distro package findings remain; no exploitable-risk or complete security certification claim",
+  "scope_controls": [
+    "Included generated examples only",
+    "No anonymous uploads or camera",
+    "No owner key or cloud/model credential in application",
+    "Single-task bounded replay and session retention",
+    "WAF request limits"
+  ],
+  "upstream_examples": [
+    "https://security-tracker.debian.org/tracker/CVE-2026-86140",
+    "https://security-tracker.debian.org/tracker/CVE-2026-119586"
+  ]
+}
